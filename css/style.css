@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* backgrounds, borders, colors ------ */
+body {
+	background-color: #f0f0f0;  
+}
+#hed-wrap {
+	background:#fff;
+	border-bottom:1px solid #d9d9d9;
+	position:relative;
+	z-index:9999;
+}
+.boxshadow #hed-wrap {
+	border:none;
+	box-shadow:0 1px 3px rgba(0,0,0,0.2);
+}
+.gridContainer {
+	background:#fff;
+	border-right:1px solid #d9d9d9;
+	border-bottom:1px solid #d9d9d9;
+	border-left:1px solid #d9d9d9;
+}
+#hed-wrap .gridContainer {
+	border:none;
+}
+#title {
+	border-bottom:1px solid #d9d9d9;
+}
+#footer {
+	border-top:1px solid #d9d9d9;
+}
+
+
+/* header ------ */
+#header h1 {
+	text-indent:-9999px;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	width:163px;
+	height:59px;
+	background:url(../images/logo.png) no-repeat 0 0;
+}
+#login ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#login li {
+	display:inline;
+	font-family:"Reenie Beanie",sans-serif;
+	font-size:19px;
+	margin:0 10px;
+}
+#login a {
+	color:#e08619;
+	text-decoration:none;
+}
+#login a:hover,
+#login a:focus,
+#login a:active {
+	color:#000;
+}
+
+/* sub-headers ------ */
+#title h2 {
+	font-family:"Reenie Beanie",sans-serif;
+	font-size:48px;
+	font-weight:normal;
+	margin:0;
+	padding:0 0 0 7.6271%;
+}

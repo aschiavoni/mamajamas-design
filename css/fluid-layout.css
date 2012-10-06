@@ -36,8 +36,8 @@ img, object, embed, video {
 	margin-left: auto;
 	margin-right: auto;
 	width: 87.36%;
-	/*padding-left: 1.82%;
-	padding-right: 1.82%;*/
+	padding-left: 1.82%;
+	padding-right: 1.82%;
 }
 #header {
 	clear: both;
@@ -45,7 +45,7 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 100%;
 	display: block;
-	padding:10px 0 6px;
+	padding:10px 0 0;
 }
 #branding {
 	clear: both;
@@ -134,8 +134,8 @@ img, object, embed, video {
 @media only screen and (min-width: 481px) {
 .gridContainer {
 	width: 90.675%;
-	/*padding-left: 1.1625%;
-	padding-right: 1.1625%;*/
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
 }
 #header {
 	clear: both;
@@ -143,7 +143,6 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 100%;
 	display: block;
-	padding:10px 0 6px;
 }
 #branding {
 	clear: both;
@@ -231,9 +230,9 @@ img, object, embed, video {
 @media only screen and (min-width: 769px) {
 .gridContainer {
 	width: 88.5%;
-	max-width: 1232px;
-	/*padding-left: 0.75%;
-	padding-right: 0.75%;*/
+	max-width: 960px;
+	padding-left: 0;
+	padding-right: 0;
 	margin: auto;
 }
 #header {
@@ -296,7 +295,7 @@ img, object, embed, video {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 15.2542%;
+	width: 10.7542%;
 	display: block;
 	border:none;
 }
@@ -304,7 +303,7 @@ img, object, embed, video {
 	clear: none;
 	float: left;
 	margin-left: 1.6949%;
-	width: 66.1016%;
+	width: 70.6016%;
 	display: block;
 }
 #tertiary {
@@ -321,5 +320,8 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 100%;
 	display: block;
+}
+#footer .content {
+	padding:8px 1.05%;
 }
 }

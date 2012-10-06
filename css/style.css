@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* backgrounds, borders, colors ------ */
+/* general backgrounds, borders, colors ------ */
 body {
 	background-color: #f0f0f0;  
 }
@@ -9,7 +9,7 @@ body {
 	background:#fff;
 	border-bottom:1px solid #d9d9d9;
 	position:relative;
-	z-index:9999;
+	z-index:39999;
 }
 .boxshadow #hed-wrap {
 	border:none;
@@ -36,16 +36,40 @@ body {
 #header h1 {
 	text-indent:-9999px;
 	overflow:hidden;
-	margin:0;
+	margin:0 0 6px 10px;
 	padding:0;
 	font-size:14px;
 	width:163px;
 	height:59px;
 	background:url(../images/logo.png) no-repeat 0 0;
 }
+
+/* search field */
+#search {
+	padding-top:23px;
+}
+#search input[type=text] {
+	width: 161px;
+	padding:5px 4px 3px 25px;
+	outline: none;
+	border:1px solid #d9d9d9;
+	border-radius:5px;
+	line-height:1;
+	color:#b3b3b3;
+	background:url(../images/icon_search.png) no-repeat 5px 50%;
+} 
+#search input[type=text]:focus {
+	border-color:#b9b9b9;
+	color:#000;
+	box-shadow: inner 0 1px 3px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+}
+
+/* login links */
 #login ul {
 	list-style-type:none;
-	margin:0;
+	margin:23px 0 0 0;
 	padding:0;
 }
 #login li {
@@ -64,6 +88,29 @@ body {
 	color:#000;
 }
 
+/* progress */
+#progress {
+	text-align:center;
+}
+#progress ol {
+	list-style-type:none;
+	margin:.5em 0;
+	font-size:1.167em;
+	font-weight:bold;
+	color:#333;
+}
+#progress li {
+	display:inline;
+	padding:0 20px;
+}
+#progress strong {
+	position:relative;
+	top:.07em;
+	font-weight:300;
+	font-size:1.285em;
+	color:#ed9e2b;
+}
+
 /* sub-headers ------ */
 #title h2 {
 	font-family:"Reenie Beanie",sans-serif;
@@ -71,4 +118,205 @@ body {
 	font-weight:normal;
 	margin:0;
 	padding:0 0 0 7.6271%;
+}
+
+/* footer ------ */
+#footer {
+	text-align:center;
+	color:#999;
+}
+
+/* general ------ */
+p {
+	margin:0 0 1em;
+}
+.float-l {
+	float:left;
+}
+.float-r {
+	float:right;
+}
+.center {
+	text-align:center;
+}
+.note {
+	font-size:.916em;
+}
+.light {
+	color:#a6a6a6;
+}
+select {
+	padding:.25em;
+}
+
+/* links ------ */
+a {
+	color:#337ba3;
+	text-decoration:none;
+}
+a:hover,
+a:hover,
+a:focus {
+	color:#000;
+	background:#eee;
+}
+
+/* buttons ------ */
+button,
+.button {
+	font-size: 12px;
+	line-height: 1.5em;
+    border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.4);
+    cursor: pointer;
+    padding: 4px 15px 3px;
+    display: inline-block;
+    vertical-align: middle;
+    outline: none; 
+	border:1px solid #b3b3b3;
+	background-color: #b3b3b3;
+}
+button:hover,
+button:focus,
+button:active,
+.button:hover,
+.button:focus,
+.button:active {
+	border-color:#444;
+	background-color: #444;
+}
+/* create account buttons */
+#bt-fb-connect,
+#bt-account-email {
+	width:100%;
+	min-height:50px;
+	color:#000;
+	font-weight:bold;
+	text-shadow:0 1px 0 #fff;
+	border-color:#d4d4d4;
+	background-image: -moz-linear-gradient(center top, #f5f5f5, #f0f0f0);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#f0f0f0));
+}
+button#bt-fb-connect:hover,
+button#bt-account-email:hover,
+button#bt-fb-connect:focus,
+button#bt-account-email:focus,
+button#bt-fb-connect:focus,
+button#bt-account-email:focus {
+	border-color:#444;
+}
+
+
+/* sub-columns ------ */
+.grid {
+}
+.col5 {
+	width:4.9%;
+}
+.col35 {
+	width:34.9%;
+}
+.col40 {
+	width:39.9%;
+}
+.col45 {
+	width:44.9%;
+}
+.col50 {
+	width:49.9%;
+}
+.col60 {
+	width:59.9%;
+}
+
+/* modal windows  ------ */
+.modal-wrap{ 
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+	right: 0px; 
+	bottom: 0px; 
+    z-index:40001;
+	display:none; 
+}
+.modal-overlay { 
+	position: absolute; 	
+	top: 0px; 
+	left: 0px; 
+	right: 0px; 
+	bottom: 0px; 
+	display: block;
+	background-color:#f5f5f5;
+    opacity:.85; 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; 
+    filter:alpha(opacity=85); 
+	z-index: 40002; 
+}
+.vertical-offset { /* determines vertical positioning */
+	float:left; 
+	height:50%; 
+	margin-bottom:-200px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
+}
+.modal-box { 
+	clear:both; 
+	width: 480px; 
+	position: relative; 
+	z-index: 40003; 
+	left: 50%; 
+	margin-left:-240px;
+	background:#fff;
+	border:1px solid #d9d9d9;
+	box-shadow:1px 1px 4px rgba(0,0,0,0.35);
+	-moz-box-shadow:1px 1px 4px rgba(0,0,0,0.35);
+	-webkit-box-shadow:1px 1px 4px rgba(0,0,0,0.35);
+}
+
+/* modal box type, colors and spacing */
+.modal-box {
+	font-size:.92em;
+	color:#8c8c8c;
+}
+.modal-box h2 {
+	font-size:2em;
+	font-family:"Reenie Beanie",sans-serif;
+	font-weight:normal;
+	line-height:1em;
+	color:#333;
+	margin:0;
+	padding:5px 20px 3px;
+	border-bottom:1px solid #b3b3b3;
+}
+.modal-box h3 {
+	font-size:1.33em;
+	font-weight:300;
+	color:#407c40;
+	margin:0 0 .5em;
+	padding:.75em 0 0;
+	border-bottom:1px solid #ccc;
+}
+.modal-box h3 em.info-link {
+	font-size:.75em;
+	font-style:normal;
+	float:right;
+	margin-top:.4em;
+}
+.modal-box .content {
+	padding:10px 20px;
+}
+.modal-box select {
+	width:100%;
+	margin-bottom:1em;
+}
+.modal-box .note {
+	text-align:center;
+	margin-top:1em;
+}
+.modal-box .button-row {
+	padding:10px 20px;
+	text-align:center;
+	border-top:1px solid #b3b3b3;
 }

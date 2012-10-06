@@ -9,9 +9,17 @@
 <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mamajamas</title>
-<title>Mamajamas : Sign up</title>
+<title>Mamajamas : Create an account</title>
 <meta name="description" content="">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -77,47 +85,46 @@
   <div class="modal-overlay"> &nbsp; </div>
   <div class="vertical-offset"></div>
   <!-- modal window box -->
-  <div class="modal-box" id="create-account">
-    <form id="frm-create-account">
+  <div class="modal-box" id="create-account2">
+    <form class="label-infield" id="frm-create-account2">
       <!-- modal window header -->
-      <h2>Save your list</h2>
+      <h2>Create an account</h2>
       <!-- modal window content -->
       <div class="content">
-        <p>Please sign up to save your list. It's quick and free. </p>
-        <p class="instruction">Please sign up to save your list. It's quick and free. </p>
-        <h3>Privacy Level <em class="info-link"><a href="#">more info</a></em></h3>
-        <p>Select a privacy level so we can connect you appropriately.</p>
-        <select id="privacy-level">
-          <option>Please select...</option>
-          <option>High | My pregnancy is a secret for now. </option>
-          <option>Medium | Close family and friends know I’m pregnant.</option>
-          <option>Low | Everyone knows I’m pregnant. / My baby is already here!</option>
-        </select>
-        <h3>Account Registration</h3>
-        <div class="grid clearfix">
-          <div class="col50 float-l">
-            <button class="button" id="bt-fb-connect">Connect with Facebook</button>
-            <button type="submit" class="button" id="bt-fb-connect">Connect with Facebook</button>
-            <p class="note">We will never post or email your friends without your express approval.</p>
-            <p class="note light">By clicking Connect with Facebook, you accept the <a href="#">Terms of Service</a>. </p>
-          </div>
-          <div class="col5 float-l">
-            <p class="center">or</p>
-          </div>
-          <div class="col45 float-r">
-            <button class="button" id="bt-account-email">Create an account withyour email address</button>
-            <button type="submit" class="button" id="bt-account-email">Create an account with your email address</button>
-            <p class="note">But getting recommendations from your friends may be harder if you sign in this way. </p>
-          </div>
-        </div>
+        <p class="instruction">Please choose a username, enter your email address and choose a password.</p>
+        <fieldset>
+          <p>
+            <label for="field-username">Username</label>
+            <br />
+            <input name="field-username" type="text" class="error" id="field-username" value="">
+            <!-- error message--> 
+            <strong class="status-msg error">Sorry, but that username is already taken.</strong> 
+            <!-- / enderror message --> 
+          </p>
+          <p>
+            <label for="field-email">Email address</label>
+            <br />
+            <input type="text" name="field-email" value="" id="field-email">
+          </p>
+        </fieldset>
+        <fieldset>
+          <p>
+            <label for="field-pw">Password</label>
+            <br />
+            <input type="password" name="field-pw" value="" id="field-pw">
+            <strong class="status-msg pw-strong">Strong</strong> </p>
+          <p>
+            <label for="field-pw-confirm">Confirm password</label>
+            <br />
+            <input type="password" name="field-pw-confirm" value="" id="field-pw-confirm">
+          </p>
+        </fieldset>
       </div>
-      <!-- end modal window content
-    <!-- window bottom buttons -->
       <!-- end modal window content --> 
       <!-- window bottom buttons -->
       <div class="button-row">
-        <button class="button" id="bt-cancel">Cancel</button>
         <button type="submit" class="button" id="bt-cancel">Cancel</button>
+        <button type="submit" class="button" id="bt-create-account">Create Account</button>
       </div>
     </form>
   </div>

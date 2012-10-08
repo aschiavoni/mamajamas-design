@@ -19,3 +19,5 @@ Modal window notes:
 
 Oct 6, 11:23 PM: Added "Create Account" (username, email, pw) screen and adjustments to "Save your list" (create account 1)
 - jQuery plugin from http://fuelyourcoding.com/scripts/infield/ allows in-field labels that fade on field focus
+
+Oct 8: Added Log in modal window example (login.html), based on create-account2.html

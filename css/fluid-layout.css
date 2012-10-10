@@ -82,7 +82,7 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 100%;
 	display: block;
-	padding:15px 0 10px;
+	padding:17px 0 8px;
 }
 #subhed {
 	clear: both;
@@ -172,14 +172,12 @@ img, object, embed, video {
 	width: 100%;
 	display: block;
 }
-
 #title {
 	clear: both;
 	float: left;
 	margin-left: 0;
 	width: 100%;
 	display: block;
-	padding:15px 0 10px;
 }
 #subhed {
 	clear: both;
@@ -229,7 +227,7 @@ img, object, embed, video {
 
 @media only screen and (min-width: 769px) {
 .gridContainer {
-	width: 88.5%;
+	width: 93.5%;
 	max-width: 960px;
 	padding-left: 0;
 	padding-right: 0;
@@ -305,6 +303,9 @@ img, object, embed, video {
 	margin-left: 1.6949%;
 	width: 70.6016%;
 	display: block;
+}
+#secondary .content {
+	padding:4px 0;
 }
 #tertiary {
 	clear: none;

@@ -232,10 +232,13 @@ input.error {
 }
 .error,
 .pw-weak {
-	color:#e08619;
+	color:#e08619; /* orange */
+}
+.pw-good {
+	color: #398BC0;/* blue */
 }
 .pw-strong {
-	color:#5baa5d;
+	color:#5baa5d; /* green */
 }
 
 /* buttons ------ */
@@ -525,6 +528,7 @@ a.more-friends:focus {
 	right:0;
 }
 .modal-box .pw-strong,
+.modal-box .pw-good,
 .modal-box .pw-weak {
 	top:.5em;
 }

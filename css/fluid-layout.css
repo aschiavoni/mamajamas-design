@@ -30,7 +30,7 @@ img, object, embed, video {
 	http://goldengridsystem.com/
 */
 
-/* Mobile Layout: 480px and below. */
+/* Mobile Layout: 480px and below. 
 
 .gridContainer {
 	margin-left: auto;
@@ -127,9 +127,9 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 100%;
 	display: block;
-}
+}*/
 
-/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. 
 
 @media only screen and (min-width: 481px) {
 .gridContainer {
@@ -221,14 +221,15 @@ img, object, embed, video {
 	width: 100%;
 	display: block;
 }
-}
+}*/
 
-/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. 
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) {*/
 .gridContainer {
-	width: 93.5%;
-	max-width: 960px;
+	/*width: 93.5%;
+	max-width: 960px;*/
+	width: 960px;
 	padding-left: 0;
 	padding-right: 0;
 	margin: auto;
@@ -272,8 +273,10 @@ img, object, embed, video {
 	clear: both;
 	float: left;
 	margin-left: 0;
+	padding:7px 0;
 	width: 100%;
 	display: block;
+	position:relative;
 }
 #subhed {
 	clear: both;
@@ -293,15 +296,15 @@ img, object, embed, video {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 10.7542%;
+	width: 12.5%;
 	display: block;
 	border:none;
 }
 #secondary {
 	clear: none;
 	float: left;
-	margin-left: 1.6949%;
-	width: 70.6016%;
+	/*margin-left: 1.6949%;*/
+	width: 70.729%;
 	display: block;
 }
 #secondary .content {
@@ -309,9 +312,9 @@ img, object, embed, video {
 }
 #tertiary {
 	clear: none;
-	float: left;
-	margin-left: 1.6949%;
-	width: 15.2542%;
+	float: right;
+	/*margin-left: 1.6949%;*/
+	width: 16.6667%;
 	display: block;
 	border:none;
 }
@@ -325,4 +328,24 @@ img, object, embed, video {
 #footer .content {
 	padding:8px 1.05%;
 }
+
+/* layout adjustments for build list */
+#buildlist #title {
+	width:83.333%;
 }
+#buildlist #tertiary {
+	padding-top:2.5em;
+	margin-top:-6.25em;
+}
+#buildlist #subhed {
+	width: 50%;
+}
+#buildlist #title-links {
+	width: 38.75%;
+}
+#buildlist #secondary .content {
+	padding:1px 0;
+}
+
+
+/*}*/

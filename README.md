@@ -25,3 +25,13 @@ Oct 8: Added "Log in" modal window example (login.html), based on create-account
 Oct 10: Added "Follow Moms"
 - uses "ss-standard" webfont for checkmarks and "info" icon
 - includes new CSS class added to #hed-wrap for progress bar backgroung
+
+Oct 19: FB buttons, buttons example page
+- added "Connect with Facebook" graphic to create-account1.html
+- added "Connect with Facebook" button to log-in.html
+- added buttons.html example page
+
+Nov. 1: Visited link color, layout, buttons adjustments
+- Commented out boilerplate.css link colors
+- Removed (for now) smartphone and tablet-sized screen layout adjustments
+- Adjusted button padding and button icon alignment

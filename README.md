@@ -35,3 +35,8 @@ Nov. 1: Visited link color, layout, buttons adjustments
 - Commented out boilerplate.css link colors
 - Removed (for now) smartphone and tablet-sized screen layout adjustments
 - Adjusted button padding and button icon alignment
+
+Nov. 7: Build List, Layout changes
+- Added screens showing Build List product listings in various states — will require behaviors added via JS
+- Added wide layout — activated via media query when browser window width is greater than 1000px
+- (Build List is still a work in progress!)

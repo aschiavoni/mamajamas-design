@@ -2,6 +2,9 @@
 /* CSS Document */
 
 /* general backgrounds, borders, colors ------ */
+html {
+	background:#efefef;
+}
 body {
 	background: #f7f7f7; /* Old browsers */
 	background: -moz-linear-gradient(top,  #f7f7f7 20%, #efefef 80%); /* FF3.6+ */
@@ -49,7 +52,7 @@ body {
 #header h1 {
 	text-indent:-9999px;
 	overflow:hidden;
-	margin:0 0 3px 10px;
+	margin:10px 0 5px 10px;
 	padding:0;
 	font-size:14px;
 	width:163px;
@@ -165,6 +168,11 @@ body {
 p {
 	margin:0 0 1em;
 }
+.inline li {
+	list-style-type:none;
+	display:inline;
+	margin:0 1em 0 0;
+}
 .float-l {
 	float:left;
 }
@@ -189,6 +197,9 @@ p {
 .light {
 	color:#a6a6a6;
 }
+.small {
+	font-size:.923em;
+}
 
 
 /* links ------ */
@@ -204,7 +215,8 @@ a:focus {
 }
 nav a,
 nav a:visited {
-	color:#666;
+	color:#888;
+	text-shadow:0 1px 0 #fff;
 }
 nav a:hover,
 nav a:active,
@@ -232,7 +244,8 @@ a.ss-icon span {
 /* form elements ------ */
 input[type=email],
 input[type=text],
-input[type=password] {
+input[type=password],
+textarea {
 	padding:.25em .5em;
 	border:solid 1px #d9d9d9;
 	border-radius:3px;
@@ -241,7 +254,8 @@ input[type=password] {
 }
 input[type=email]:focus,
 input[type=text]:focus,
-input[type=password]:focus {
+input[type=password]:focus,
+textarea:focus {
 	border-color:#999;
 }
 label {
@@ -253,11 +267,22 @@ select {
 form p.instruction {
 	margin-bottom:2em;
 }
-form fieldset p {
+fieldset p {
 	margin-bottom:.75em;
 }
+fieldset ul {
+	margin:0 0 .75em;
+	padding:0 .5em;
+}
+legend span {
+	display: block;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	height:1px;
+}
 
-/* forms: in-field input labels */
+/* forms: in-field input labels -- */
 form.label-infield fieldset p { 
 	position: relative; 
 }
@@ -278,6 +303,17 @@ form.label-infield fieldset p input {
 form.label-infield fieldset p label {
 	display: block;
 	margin: .3em .5em;
+}
+
+/* override in-field input labels */
+.label-norm input {
+	display:inline !important;
+}
+.label-norm label {
+	position:static !important;
+	display:inline !important;
+	margin:0 !important;
+	color:#999 !important;
 }
 
 /* forms: status messages */
@@ -330,9 +366,9 @@ button:active,
 a.button:hover,
 a.button:focus,
 a.button:active,
-.prod-edit-links a:hover,
-.prod-edit-links a:focus,
-.prod-edit-links a:active { /* applied event to custom-color buttons */
+.prod-edit-menu a:hover,
+.prod-edit-menu a:focus,
+.prod-edit-menu a:active { /* applied event to custom-color buttons */
 	color:#fff;
 	border-color:#555 !important;
 	background: #555 !important;
@@ -707,18 +743,23 @@ a.more-friends:focus {
 
 /* build list ------ */
 
-/* page columns background */
+/* page background colors ---- */
 #buildlist {
-	background:#fff url(../images/bg_cols-lr.png) repeat-y 0 0;
+	background:#f1f3f5;
+}
+#buildlist #secondary {
+	background:#fff;
+	border-left: 1px solid #D9D9D9;
+    border-right: 1px solid #D9D9D9;
 }
 
-/* title bar menu */
+/* title bar menu ---- */
 #buildlist #title h2 {
 	padding-left:8.75%;
 }
 #title-links ul {
 	list-style-type:none;
-	margin: 2.5em 12px 0;
+	margin: 2.75em 12px 0;
     padding: 0;
     text-align: right;
 }
@@ -730,25 +771,42 @@ a.more-friends:focus {
 	top:15px;
 	right:10px;
 }
+#title-links .ss-plus {
+	font-size: 0.75em;
+    line-height: 1;
+    margin-right: 4px;
+}
 
-/* categories menu */
+/* categories menu ---- */
 #categories {
 	font-size:.923em;
-	padding:0 1.166em 1em;
 }
 #categories ul {
-	margin-bottom:1em;
-	padding-left:0;
+	margin: 0 0 1em;
+    padding: 0;
 }
 #categories ul li {
-	text-indent: -1em;
-    margin: 1em 0 1em 1em;
+    margin: 0;
 }
 #categories li a {
-	padding:.25em .333em;
+	display:block;
+	padding:0.5em 7px 0.5em 13px;
+	border-top:1px solid #fbfbfc;
+	border-bottom:1px solid #dbdddf;
+}
+#categories li a:hover,
+#categories li a:focus,
+#categories li a:active {
+	color:#000;
+	background:#fbfbfc;
+	border-top:1px solid #fefefe;
+}
+#categories li.cat-selected a {
+	font-weight:bold;
+	color:#000;
 }
 
-/* build list baby gear table */
+/* build list baby gear table ---- */
 #babygear {
 	border-bottom:solid 1px #d9d9d9;
 }
@@ -764,17 +822,18 @@ a.more-friends:focus {
 	padding-bottom:4px;
 	border-left:solid 1px #d4d4d4;
 }
-#babygear th:first {
+#babygear th:first-child  {
 	border-left:none;
 }
 #babygear td {
 	padding-top:9px;
 	padding-bottom:9px;
-	vertical-align:middle;
+	/*vertical-align:middle;*/
 	border-top:solid 1px #d9d9d9;
 }
 #babygear td.own {
 	width:7%;
+    padding-top: 2em;
 }
 .own label {
 	display:block;
@@ -786,7 +845,8 @@ a.more-friends:focus {
 	text-align:left;
 	padding-right:15px;
 }
-#babygear .rating {
+#babygear td.rating {
+    padding-top: 2.5em;
 }
 .rating .eggs {
 	overflow:auto;
@@ -808,11 +868,10 @@ a.more-friends:focus {
 #babygear td.when {
 	font-size:.923em;
 	color:#999;
+    padding-top: 2.75em;
 }
-#babygear .priority {
-}
-#babygear tr:hover {
-	background-color:#f9f9f9;
+#babygear td.priority {
+    padding-top: 2.25em;
 }
 .priority-high,
 .priority-med {
@@ -825,6 +884,10 @@ a.more-friends:focus {
 }
 .priority-med {
 	background-position: 0 -38px;
+}
+.prod:hover,
+.prod:focus {
+	background-color:#f9f9f9;
 }
 .prod-thumb {
 	width:62px;
@@ -842,13 +905,21 @@ a.more-friends:focus {
 	font-size:1em;
 	line-height:1.153em;
 	margin:0 0 0.25em;
+	min-height: 2.25em;
 }
+.prod-desc h3 a {
+	color:#000;
+} 
+.prod-desc h3 a:hover,
+.prod-desc h3 a:focus {
+	color:#337ba3;
+} 
 .prod-filled .prod-category {
 	color:#407c40;
 }
 .prod-note { 
-	position:absolute;
-	top:4.3em;
+	/*position:absolute;
+	top:4.3em;*/
 	font-size:.846em;
 	color:#888;
 	padding:2px 0 0px 19px;
@@ -857,44 +928,61 @@ a.more-friends:focus {
 .prod-links { 
 	margin:4px 0;
 }
-.prod-edit-links {
+.prod-links ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.prod-links li {
+	float:left;
+	margin:0 5px 0 0;
+	padding:0;
+}
+.prod-links .ss-plus {
+	font-size: 0.75em;
+    line-height: 1;
+    margin-right: 4px;
+}
+.prod-edit-menu {
 	font-size: .923em;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
 	position: absolute;
-	background: #999;
+	background:#999;
 	top: -9px;
 	right: -200px;
 	border-radius: 0 0 4px 4px;
 	-moz-border-radius: 0 0 4px 4px;
 	-webkit-border-radius: 0 0 4px 4px;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
-.prod-edit-links ul {
+.prod-edit-menu ul {
 	list-style-type:none;
 	margin:0;
 	padding:0;
 }
-.prod-edit-links li {
+.prod-edit-menu li {
 	float:left;
 	margin:0;
 	padding:0;
 	border-left:solid 1px #e6e6e6;
 }
-.prod-edit-links li:first-child {
+.prod-edit-menu li:first-child {
 	border-left:none;
 }
-.prod-edit-links a {
+.prod-edit-menu a {
 	color:#eee;
 	display:block;
 	padding:6px 10px 4px;
 } 
-.prod-edit-links a span {
+.prod-edit-menu a span {
 	padding-left:3px;
 	position:relative;
 	top:-1px;
 } 
-.prod-filled .prod-edit-links {
-	height: 0;
+
+/* -- product edit menu inactive state */
+.prod-edit-menu {
+	background:#fff;
+	height: 1px;
 	overflow: hidden;
 	-webkit-transition: all 200ms 75ms;
 	-moz-transition: all 200ms 75ms;
@@ -902,20 +990,56 @@ a.more-friends:focus {
 	-o-transition: all 200ms 75ms;
 	transition: all 200ms 75ms;
 }
-.prod-filled:hover .prod-edit-links,
-.prod-filled:focus .prod-edit-links {
+
+/* -- product edit menu active state */
+.prod-filled:hover .prod-edit-menu,
+.prod-filled:focus .prod-edit-menu,
+.menu-on .prod-edit-menu {
 	height:2em;
+	background:#999;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 
+/* product edit mode ---- */
+.edit-mode,
+.edit-mode:hover {
+	background:#fcf8e6;
+}
 
-/* babygear list: custom checkboxes (based on work by Wufoo, Ryan Seddon and Lea Verou) */
-#babygear input[type='checkbox'] {
+/* edit mode hidden elements hidden */
+.edit-mode h3,
+.edit-mode .prod-note,
+.edit-mode .prod-edit-menu {
+	display:none;
+}
+
+/* edit mode form elements */
+.edit-mode input[type=text],
+.edit-mode textarea {
+	width:95%;
+}
+
+/* edit mode alignment */
+#babygear .edit-mode .own,
+#babygear .edit-mode .rating,
+#babygear .edit-mode .when,
+#babygear .edit-mode .priority {
+	vertical-align:top;
+	padding-top:2em;
+}
+#babygear .edit-mode .when {
+	padding-top:2.5em;
+}
+
+/* babygear list: custom checkboxes ---- */
+/* (based on work by Wufoo, Ryan Seddon and Lea Verou) */
+.own input[type='checkbox'] {
     opacity: 0;
     float: left;
     width: 21px;
 	height:1px;
 }
-#babygear input[type='checkbox'] + label {
+.own input[type='checkbox'] + label {
     margin: 0;
     clear: left;
     padding: 2px 0 1px 21px;
@@ -924,18 +1048,22 @@ a.more-friends:focus {
 }
 
 /* change from unchecked to checked graphic */
-#babygear input[type='checkbox']:checked + label {
+.own input[type='checkbox']:checked + label {
     background-position: 50% -50px;
 }
 
+.own input[type='checkbox'][disabled] + label {
+    background-position: 50% -100px;
+}
+
 /* for older browsers: normal checkboxes */
-.oldie #babygear input[type='checkbox'] {
+.oldie .own input[type='checkbox'] {
     opacity: 1;
     float: none;
     width: auto;
 	height:auto;
 }
-.oldie #babygear input[type='checkbox'] + label {
+.oldie .own input[type='checkbox'] + label {
     margin: 0;
     clear: left;
     padding: 0;

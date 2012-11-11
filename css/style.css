@@ -52,7 +52,7 @@ body {
 #header h1 {
 	text-indent:-9999px;
 	overflow:hidden;
-	margin:10px 0 5px 10px;
+	margin:10px 0 6px 10px;
 	padding:0;
 	font-size:14px;
 	width:163px;
@@ -104,28 +104,77 @@ body {
 	color:#000;
 }
 
-/* progress */
+/* progress indicator (marked up as ordered list) */
+/* each list item LI labeled via class (.prog1, .prog2, .prog3) */
+/* changing class on the list OL changes which state appears active (.prog1, .prog2, .prog3) */
 #progress {
 	text-align:center;
+	height:35px;
+	overflow:hidden;
 }
 #progress ol {
 	list-style-type:none;
-	margin:.5em 0;
+	margin:9px 0;
+	padding:0;
 	font-size:1.167em;
 	font-weight:bold;
 	color:#333;
 }
 #progress li {
 	display:inline;
-	padding:0 20px;
+	padding:10px 10px 9px 0;
 }
-#progress strong {
-	position:relative;
-	top:.07em;
+#progress li strong {
+	color:#ed9e2b;
 	font-weight:300;
 	font-size:1.285em;
-	color:#ed9e2b;
+	line-height: 0.788;
+	position:relative;
+	top:1px;
+    padding: 7px 0 7px 25px;
+	background:transparent url(../images/progress.png) no-repeat 0 0;  /* the arrows preceding each step */
 }
+.oldie #progress ol {
+	margin:12px 0 8px;
+}
+.oldie #progress li {
+	position:relative;
+	padding:11px 10px 7px 37px;
+}
+.oldie #progress li strong {
+	position:absolute;
+	top:0;
+	left:0;
+	line-height:1;
+	padding:8px 0 8px 25px;
+}
+#progress li.prog3 {
+	background:transparent url(../images/progress.png) no-repeat 100% -56px; /* the arrow to the right of the final step */
+	padding-right:23px;
+}
+#progress .prog1 li.prog1,
+#progress .prog2 li.prog2,
+#progress .prog3 li.prog3,
+#progress .prog3 li.prog3 strong {
+	color:#fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.35);
+	background:transparent url(../images/progress.png) no-repeat 0 -112px; /* the active background color */
+}
+#progress .prog1 li.prog1 strong,
+#progress .prog2 li.prog2 strong {
+	color:#fff;
+	text-shadow:0 -1px 0 rgba(0,0,0,0.35);
+	background:transparent;
+}
+#progress .prog1 li.prog2 strong,
+#progress .prog2 li.prog3 strong {
+	background-position: 100% -112px; /* active background color cap on #2 when #1 is active...  */
+}
+#progress .prog3 li.prog3 {
+	background-position: 100% -168px; /* active background on #3 when #3 is active */
+	padding-right:23px !important;
+}
+
 
 /* sub-headers ------ */
 #title h2 {
@@ -745,12 +794,12 @@ a.more-friends:focus {
 
 /* page background colors ---- */
 #buildlist {
-	background:#f1f3f5;
+	background:#ecf1f4;
 }
 #buildlist #secondary {
 	background:#fff;
-	border-left: 1px solid #D9D9D9;
-    border-right: 1px solid #D9D9D9;
+	border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
 }
 
 /* title bar menu ---- */
@@ -784,6 +833,7 @@ a.more-friends:focus {
 #categories ul {
 	margin: 0 0 1em;
     padding: 0;
+	border-bottom:1px solid #fbfbfc;
 }
 #categories ul li {
     margin: 0;
@@ -842,6 +892,7 @@ a.more-friends:focus {
 }
 #babygear th.item,
 #babygear td.item {
+	width:auto;
 	text-align:left;
 	padding-right:15px;
 }

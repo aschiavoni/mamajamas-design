@@ -53,6 +53,7 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 100%;
 	display: block;
+	line-height:1;
 }
 #branding {
 	clear: both;
@@ -122,6 +123,7 @@ img, object, embed, video {
 }
 #secondary .content {
 	padding:4px 0;
+	min-height:400px;
 }
 #tertiary {
 	clear: none;

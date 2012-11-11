@@ -40,3 +40,7 @@ Nov. 7: Build List, Layout changes
 - Added screens showing Build List product listings in various states — will require behaviors added via JS
 - Added wide layout — activated via media query when browser window width is greater than 1000px
 - (Build List is still a work in progress!)
+
+Nov. 11: Progress bar enhancements
+- Added visual design to progress bar through CSS and background image sprite, requiring changes to HTML
+- Please see example files: progressbar1.html, progressbar2.html and progressbar3.html

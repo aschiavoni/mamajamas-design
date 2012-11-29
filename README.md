@@ -44,3 +44,8 @@ Nov. 7: Build List, Layout changes
 Nov. 11: Progress bar enhancements
 - Added visual design to progress bar through CSS and background image sprite, requiring changes to HTML
 - Please see example files: progressbar1.html, progressbar2.html and progressbar3.html
+
+Nov. 29: Build List dropdown menus, FB button changes
+- Added mockups showing When To Buy and Priority dropdown selection menus on the Build List page
+- Changed appearance of the Login with Facebook buttons on the Create Account and Log in pages
+- Fixed IE button color and width problems

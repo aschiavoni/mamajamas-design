@@ -123,7 +123,7 @@ img, object, embed, video {
 }
 #secondary .content {
 	padding:4px 0;
-	min-height:400px;
+	min-height:450px;
 }
 #tertiary {
 	clear: none;
@@ -160,7 +160,7 @@ img, object, embed, video {
 }
 #buildlist #secondary .content {
 	padding:1px 1px 20px 1px;
-	min-height:400px;
+	min-height:420px;
 }
 
 

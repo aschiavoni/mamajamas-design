@@ -127,6 +127,7 @@
 			var $field = $(
 				"input#" + for_attr + "[type='text']," + 
 				"input#" + for_attr + "[type='password']," + 
+				"input#" + for_attr + "[type='email']," + 
 				"textarea#" + for_attr
 				);
 				

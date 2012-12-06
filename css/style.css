@@ -1151,6 +1151,7 @@ div.priority-low {
 	background:#999;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 	line-height:1em;
+	z-index:1000;
 }
 .prod-drop ul,
 .prod-drop li {
@@ -1199,7 +1200,6 @@ div.priority-low {
 	top:18px;
 	left:-2px;
 	width:90px;
-	z-index:1000;
 }
 .oldie .when .prod-drop ul {
 	width:82px;

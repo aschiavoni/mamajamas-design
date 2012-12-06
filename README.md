@@ -49,3 +49,10 @@ Nov. 29: Build List dropdown menus, FB button changes
 - Added mockups showing When To Buy and Priority dropdown selection menus on the Build List page
 - Changed appearance of the Login with Facebook buttons on the Create Account and Log in pages
 - Fixed IE button color and width problems
+
+Dec. 6:  Added product note "open" state, new Sign Up modal, style changes to Log In modal, drop-down menu fix
+- Changed product notes to one-line preview (truncated with CSS): see Build List screens
+- Added "open" state" to show full product note when note preview is clicked (see: build-list05_note-open.html)
+- New Sign Up modal window (see sign-up.html)
+- Changes to Log In modal (see log-in.html)
+- Added high z-index to When to Buy and Priority drop-down menus

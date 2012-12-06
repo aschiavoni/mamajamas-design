@@ -9,20 +9,34 @@
 <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mamajamas : Log in</title>
+<title>Mamajamas : Sign Up</title>
 <meta name="description" content="">
 <!-- jquery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <!-- in-field form labels (jquery plugin from doug neiner) -->
-<script src="js/jquery.infieldlabel.min.js"></script>
+<script src="js/jquery.infieldlabel-e.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+<!-- collapsible panel -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		speed:200
+    });
+  });
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
 <script src="js/modernizr-dev.js"></script>
 </head>
 <body>
@@ -86,35 +100,52 @@
   <div class="vertical-offset"></div>
   <!-- modal window box -->
   <div class="modal-box" id="login-window">
-    <form class="label-infield" id="frm-login">
+    <form class="label-infield" id="frm-create-account3">
       <!-- modal window header -->
-      <h2>Log in</h2>
+      <h2>Sign Up</h2>
       <!-- modal window content -->
       <div class="content">
         <p></p>
         <p class="center"><a class="button" id="bt-fb-connect"><span>Login with Facebook</span></a></p>
         <p class="divider"><strong>or</strong></p>
-		<p class="instruction">Enter your Mamajamas username and password below:</p>
-        <fieldset>
-          <p>
-            <label for="field-log-in">Username or email</label>
-            <br />
-            <input name="field-log-in" type="text" id="field-log-in" value="">
-          </p>
-          <p>
-            <label for="field-pw">Password</label>
-            <br />
-            <input name="field-pw" type="password" id="field-pw" value="">
-          </p>
-        </fieldset>
-        <p class="helper"><a href="#">Forgot your username or password?</a></p>
+        
+        <p class="collapsible center" id="collapsible1"><strong>Create an account using your email address.</strong></p>
+         <div class="collapsible-content">
+                <p class="instruction">Please choose a username, enter your email address and choose a password.</p>
+          <fieldset>
+            <p>
+              <label for="field-username">Username</label>
+              <br />
+              <input name="field-username" type="text" id="field-username" value="">
+            </p>
+            <p>
+              <label for="field-email">Email address</label>
+              <br />
+              <input type="email" name="field-email" value="" id="field-email">
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="field-pw">Password</label>
+              <br />
+              <input type="password" name="field-pw" value="" id="field-pw">
+              </p>
+            <p>
+              <label for="field-pw-confirm">Confirm password</label>
+              <br />
+              <input type="password" name="field-pw-confirm" value="" id="field-pw-confirm">
+              </p>
+            </p>
+          </fieldset>
+          <!-- button row -->
+          <div class="button-row">
+            <button type="submit" class="button" id="bt-cancel">Cancel</button>
+       		<button type="submit" class="button" id="bt-create-account">Create Account</button>
+          </div>
+        </div>
+
       </div>
-      <!-- end modal window content --> 
-      <!-- window bottom buttons -->
-      <div class="button-row">
-        <button type="submit" class="button" id="bt-cancel">Cancel</button>
-        <button type="submit" class="button" id="bt-log-in">Log in</button>
-      </div>
+      <!-- end modal window content -->
     </form>
   </div>
   <!-- end modal window box --> 

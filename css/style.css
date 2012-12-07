@@ -1011,6 +1011,7 @@ div.priority-low {
 }
 .prod-filled .prod-thumb img {
 	width:60px;
+	height:60px;
 	border:solid 1px #ccc;
 }
 .prod-desc { 

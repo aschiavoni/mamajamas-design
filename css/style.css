@@ -464,7 +464,7 @@ a.button:active,
 	margin-right:0.2em;
 }
 .button-row {
-	margin-top:2em;
+	margin-top:1em;
 	padding:20px;
 	text-align:center;
 	border-top:1px solid #CCC;
@@ -498,7 +498,7 @@ a.button:active,
 	display:block;
 }
 #bt-fb-connect {
-	font-size:1.17em;
+	font-size:1.25em;
 	font-weight:bold;
 	line-height:1.57em;
 	text-align:center;
@@ -512,7 +512,7 @@ a#bt-fb-connect { /* fb login in A tag*/
 }
 #bt-fb-connect span {
 	display:block;
-	padding:5px 0 4px 8px;
+	padding:6px 0 3px 17px;
 }
 #bt-fb-connect:hover,
 #bt-fb-connect:focus,
@@ -704,7 +704,7 @@ a.more-friends:focus {
 	color:#333;
 	margin:0;
 	padding:5px 20px 3px;
-	border-bottom:1px solid #b3b3b3;
+	border-bottom:1px solid #c3c3c3;
 }
 .modal-box h3 {
 	font-size:1.33em;
@@ -727,7 +727,7 @@ a.more-friends:focus {
 .modal-box input[type=password],
 .modal-box label {
 	font-size:1.33em; /* equiv to 16px, based on 12px base for modal window */
-	width:58%;
+	width:57%;
 }
 .modal-box .status-msg {
 	width:37%;
@@ -745,10 +745,21 @@ a.more-friends:focus {
 	margin-top:1em;
 }
 .modal-box .button-row {
-	margin-top:1em;
+	margin-top:0;
 	padding:10px 20px;
 	text-align:center;
-	border-top:1px solid #b3b3b3;
+	border-top:1px solid #c3c3c3;
+}
+.modal-box .divider {
+	border-top:1px solid #d3d3d3;
+	text-align:center;
+	margin-top:2em;
+}
+.modal-box .divider strong {
+	background:#fff;
+	padding: 0 5px;
+	position:relative;
+	top:-.7em;
 }
 
 /* specific modal windows */
@@ -758,6 +769,10 @@ a.more-friends:focus {
 }
 #create-account .col5{
 	padding-top:1.5em;
+}
+#login-window.modal-box {
+	width: 410px; 
+	margin-left:-205px;
 }
 #login-window .helper {
 	margin:0 0 2em .7em;
@@ -909,7 +924,7 @@ a.more-friends:focus {
 }
 #babygear th.item,
 #babygear td.item {
-	width:auto;
+	width:64.5%;
 	text-align:left;
 	padding-right:15px;
 }
@@ -1019,12 +1034,32 @@ div.priority-low {
 	color:#407c40;
 }
 .prod-note { 
-	/*position:absolute;
-	top:4.3em;*/
+	position:relative;
 	font-size:.846em;
 	color:#888;
-	padding:2px 0 0px 19px;
+	padding:2px 0 0 22px;
+	min-height:15px;
 	background:url(../images/icon_note.png) no-repeat 0 0;
+}
+.note-content {
+	position:absolute;
+	top:-5px;
+	left:15px;
+	width:310px;
+	padding:6px;
+}
+.closed .note-content {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.open .note-content {
+	top:-6px;
+	left:14px;
+	height:auto;
+	border:solid 1px #d3d3d3;
+	background:#fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 }
 .prod-links { 
 	margin:4px 0;
@@ -1116,6 +1151,7 @@ div.priority-low {
 	background:#999;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.25);
 	line-height:1em;
+	z-index:1000;
 }
 .prod-drop ul,
 .prod-drop li {
@@ -1274,4 +1310,13 @@ div.priority-low {
     padding: 0;
     cursor: pointer;
     background: none; 
+}
+
+/* collapsible panels */
+.collapsible strong  {
+	padding-left:5px;
+}
+.ie7 .collapsible-content {
+	zoom:1;
+	position:relative;
 }

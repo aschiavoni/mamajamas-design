@@ -56,3 +56,9 @@ Dec. 6:  Added product note "open" state, new Sign Up modal, style changes to Lo
 - New Sign Up modal window (see sign-up.html)
 - Changes to Log In modal (see log-in.html)
 - Added high z-index to When to Buy and Priority drop-down menus
+
+Dec. 18: Added high-res logo, changed appearance of categories menu
+- new high-res logo, logo@2x.png, supports retina display and other high-resolution displays
+- CSS media queries use high-res logo on devices that support it, normal logo on standard displays
+- removed top and bottom borders on product category links in left menu
+- changed background color of selected product category

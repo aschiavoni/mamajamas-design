@@ -49,7 +49,7 @@ body {
 
 
 /* header ------ */
-#header h1 {
+#branding h1 {
 	text-indent:-9999px;
 	overflow:hidden;
 	margin:10px 0 6px 10px;
@@ -58,7 +58,18 @@ body {
 	width:163px;
 	height:59px;
 	background:url(../images/logo.png) no-repeat 0 0;
+	background-size: 163px 59px;
 }
+
+/* support for high-res devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-moz-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min-device-pixel-ratio: 1.5) {
+	  #branding h1 {
+	    background-image: url(../images/logo@2x.png);
+	  }
+	}
 
 /* search field */
 #search {
@@ -865,7 +876,6 @@ a.more-friends:focus {
 #categories ul {
 	margin: 0 0 1em;
     padding: 0;
-	border-bottom:1px solid #fbfbfc;
 }
 #categories ul li {
     margin: 0;
@@ -873,19 +883,17 @@ a.more-friends:focus {
 #categories li a {
 	display:block;
 	padding:0.5em 7px 0.5em 13px;
-	border-top:1px solid #fbfbfc;
-	border-bottom:1px solid #dbdddf;
 }
 #categories li a:hover,
 #categories li a:focus,
 #categories li a:active {
 	color:#000;
 	background:#fbfbfc;
-	border-top:1px solid #fefefe;
 }
 #categories li.cat-selected a {
 	font-weight:bold;
 	color:#000;
+	background:#fcfcfd;
 }
 
 /* build list baby gear table ---- */
@@ -1011,7 +1019,6 @@ div.priority-low {
 }
 .prod-filled .prod-thumb img {
 	width:60px;
-	height:60px;
 	border:solid 1px #ccc;
 }
 .prod-desc { 

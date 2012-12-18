@@ -1329,3 +1329,14 @@ div.priority-low {
 	zoom:1;
 	position:relative;
 }
+
+/* jquery ui elements */
+.ui-widget {
+	font-family:inherit;
+	font-size:1em;
+}
+
+/* jquery autocomplete */
+.ui-autocomplete {
+	box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+}

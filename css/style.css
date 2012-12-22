@@ -207,6 +207,12 @@ body {
 #tertiary .content {
 	padding:0 10px 10px;
 }
+#tertiary ul,
+#tertiary ol {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
 
 
 /* footer ------ */
@@ -651,6 +657,36 @@ a.more-friends:focus {
 	color:#337BA3;
 }
 
+/* follow sidebar  ------ */
+#module-follow {
+	margin-bottom:7px;
+}
+#module-follow li {
+	float:left;
+	width:99.5%;
+	margin-bottom:8px;
+	font-size:.917em;
+}
+#module-follow img {
+	width:40px;
+	height:40px;
+	float:left;
+	margin-right:5px;
+}
+#module-follow .firstname {
+	font-weight:bold;
+	display:block;
+	margin-top:.5em;
+}
+#module-follow ul a {
+	color:#555;
+	text-shadow:0 1px 0 #fff;
+}
+#module-follow ul a:hover {
+	color:#000;
+}
+
+
 /* modal windows  ------ */
 .modal-wrap{ 
 	position: absolute; 
@@ -874,6 +910,8 @@ a.more-friends:focus {
 #categories li a {
 	display:block;
 	padding:0.5em 7px 0.5em 13px;
+	border-bottom: 1px solid #ecf1f4;
+    border-top: 1px solid #ecf1f4;
 }
 #categories li a:hover,
 #categories li a:focus,
@@ -884,7 +922,11 @@ a.more-friends:focus {
 #categories li.cat-selected a {
 	font-weight:bold;
 	color:#000;
-	background:#fcfcfd;
+	background:#fff;
+	position: relative;
+	margin-right:-1px;
+	border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
 }
 
 /* build list baby gear table ---- */
@@ -1010,6 +1052,7 @@ div.priority-low {
 }
 .prod-filled .prod-thumb img {
 	width:62px;
+	height:62px;
 	border:solid 1px #ccc;
 }
 .prod-desc { 

@@ -66,3 +66,8 @@ Dec. 18 A: Added high-res logo, changed appearance of categories menu
 Dec. 18 B: CSS adjustments for jquery auto-complete widget
 - changed font from Verdana to inherit the font family and size set for the parent element
 - added drop-shadow to auto-complete panel
+
+Dec. 23: Added Follow sidebar, adjusted selected category appearance, removed retina.js from Build List pages
+- Ideal size of profile images for Follow sidebar is 80px, which is twice the size shown on the page, 40px. This will ensure support for retina displays.
+- Following the decision to use ony high-res product images, removed retina.js links on the Build List pages.
+- Gave the selected category a more tab-like appearance, connecting it visually to the middle column.

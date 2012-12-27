@@ -1381,6 +1381,15 @@ div.priority-low {
 }
 
 /* collapsible panels */
+.collapsible.ss-directright, .collapsible.ss-dropdown, .collapsible strong {
+  cursor:pointer;
+}
+.collapsible strong:hover,
+.collapsible strong:active,
+.collapsible strong:focus {
+	color:#337BA3;
+	text-decoration:underline;
+}
 .collapsible strong  {
 	padding-left:5px;
 }

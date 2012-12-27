@@ -12,8 +12,8 @@
 <title>Mamajamas</title>
 <meta name="description" content="">
 <!-- jquery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<!-- in-field form labels (jquery plugin from doug neiner) -->
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+--><!-- in-field form labels (jquery plugin from doug neiner) -->
 <script src="js/jquery.infieldlabel.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -108,20 +108,44 @@
             </tr>
           </thead>
           <tbody>
+            <!-- New Item ****** -->
+            <tr class="prod new-mode">
+              <td class="own"> </td>
+              <td class="item"><div class="prod-thumb"><img src="images/products/blank-mamabird.png" alt="bottle"></div>
+                <div class="prod-desc">
+                  <div class="prod-category">
+                  <fieldset>
+                    <p>
+                      <label for="field-prodtype">Unnamed item: Enter an item type</label>
+                      <br />
+                      <input type="text" name="field-prodtype" value="" id="field-prodtype">
+                    </p>
+                    </fieldset>
+                  </div>
+                  <div class="prod-links">
+                    <ul>
+                      <li><a href="#" class="button bt-light">Cancel</a></li>
+                      <li><a href="#" class="button bt-color"><span class="ss-check"></span>Save</a></li>
+                    </ul>
+                  </div>
+                </div></td>
+              <td class="rating">&nbsp;</td>
+              <td class="when">Pre-birth</td>
+              <td class="priority"><div class="priority-high">high</div></td>
+            </tr>
+            <!-- / New Item ****** --> 
             <!-- Item 1 ****** -->
             <tr class="prod">
               <td class="own"><input id="own01" type="checkbox" title="Do you own this item?">
                 <label for="own01">I own this item.</label></td>
-              <td class="item"><div class="prod-thumb"><img src="images/products/nursing-bottle.png" alt="bottle"></div>
+              <td class="item"><div class="prod-thumb"><img src="images/products/blank-mamabird.png" alt="bottle"></div>
                 <div class="prod-desc">
-                  <div class="prod-category">Bottle</div>
+                  <div class="prod-category">User-added Item</div>
                   <div class="prod-links">
                     <ul>
                       <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Choose</a></li>
-                      <li><a href="#" class="button">Get Recommendations</a></li>
                     </ul>
-                  </div
-                >
+                  </div>
                 </div></td>
               <td class="rating">&nbsp;</td>
               <td class="when">Pre-birth</td>
@@ -130,14 +154,14 @@
             <!-- / Item 1 ****** --> 
             <!-- Item 2 ****** -->
             <tr class="prod prod-filled">
-              <td class="own"><input id="own05" type="checkbox" title="Do you own this item?">
-                <label for="own05">I own this item.</label></td>
+              <td class="own"><input id="own02" type="checkbox" title="Do you own this item?">
+                <label for="own02">I own this item.</label></td>
               <td class="item"><div class="prod-thumb"><img src="images/products/thumb_nursing-pump@2x.jpg" alt="bottle"></div>
                 <div class="prod-desc">
                   <div class="prod-category">Breast Pump</div>
                   <h3><a href="#">Philips AVENT BPA-free Manual Breast Pump</a></h3>
-                  <!-- note -->
-                  <div class="prod-note open">
+                   <!-- note -->
+                  <div class="prod-note closed">
                   	<div class="note-content">Nunc aliquet adipiscing neque vel convallis. Sed mattis lacinia lacus a gravida. Morbi erat sem, luctus at porttitor ac, cursus luctus mauris. Sed eget orci orci. Sed eu ipsum velit, id elementum metus. Integer interdum sapien bibendum est iaculis quis adipiscing turpis cursus.</div></div>
                   <!-- / end note -->
                   <!-- drop-down editing menu -->
@@ -161,6 +185,39 @@
               <td class="priority"><div class="priority-med">medium</div></td>
             </tr>
             <!-- / Item 2 ****** -->
+            <!-- Item 3 ****** -->
+            <tr class="prod prod-filled">
+              <td class="own"><input id="own03" type="checkbox" title="Do you own this item?">
+                <label for="own03">I own this item.</label></td>
+              <td class="item"><div class="prod-thumb"><img src="images/products/thumb_nursing-pump@2x.jpg" alt="bottle"></div>
+                <div class="prod-desc">
+                  <div class="prod-category">Breast Pump</div>
+                  <h3><a href="#">Philips AVENT BPA-free Manual Breast Pump</a></h3>
+                   <!-- note -->
+                  <div class="prod-note closed">
+                  	<div class="note-content">Nunc aliquet adipiscing neque vel convallis. Sed mattis lacinia lacus a gravida. Morbi erat sem, luctus at porttitor ac, cursus luctus mauris. Sed eget orci orci. Sed eu ipsum velit, id elementum metus. Integer interdum sapien bibendum est iaculis quis adipiscing turpis cursus.</div></div>
+                  <!-- / end note -->
+                  <!-- drop-down editing menu -->
+                  <div class="prod-edit-menu">
+                    <ul class="clearfix">
+                      <li><a href="#" class="ss-write"><span>Edit</span></a></li>
+                      <li><a href="#" class="ss-cart"><span>Buy</span></a></li>
+                      <li><a href="#" class="ss-delete"><span>Delete</span></a></li>
+                    </ul>
+                  </div>
+                  <!-- / drop-down editing menu --> 
+                </div></td>
+              <td class="rating"><div class="eggs">
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg"></div>
+                </div></td>
+              <td class="when">Pre-birth</td>
+              <td class="priority"><div class="priority-low">low</div></td>
+            </tr>
+            <!-- / Item 3 ****** -->
           </tbody>
         </table>
         <!-- end baby gear table ******* -->

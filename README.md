@@ -71,3 +71,11 @@ Dec. 23: Added Follow sidebar, adjusted selected category appearance, removed re
 - Ideal size of profile images for Follow sidebar is 80px, which is twice the size shown on the page, 40px. This will ensure support for retina displays.
 - Following the decision to use ony high-res product images, removed retina.js links on the Build List pages.
 - Gave the selected category a more tab-like appearance, connecting it visually to the middle column.
+
+Dec. 27: Added New Item markup, adjusted button colors, added high-res priority icons
+
+Dec. 28: 
+- Adjusted selected category appearance: added more space above the category list and more space to the left of the products list
+- Adjusted alignment of the checkmark on the Follow page so it doesn't slip off the photos
+- Made new default photo for the Follow page (note the new file type and name): /images/profile_photo-default.png
+- Included Ryan's adjustments for Follow tag removal and appearance of Sign Up collapsible panel link

@@ -3,17 +3,17 @@
 
 /* general backgrounds, borders, colors ------ */
 html {
-	background:#ededed;
+	background:#efefef;
 }
 body {
-	background: #f6f6f6; /* Old browsers */
-	background: -moz-linear-gradient(top,  #f6f6f6 20%, #ededed 80%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#f6f6f6), color-stop(80%,#ededed)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #f6f6f6 20%,#ededed 80%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #f6f6f6 20%,#ededed 80%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #f6f6f6 20%,#ededed 80%); /* IE10+ */
-	background: linear-gradient(to bottom,  #f6f6f6 20%,#ededed 80%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	background: #f7f7f7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f7f7f7 20%, #efefef 80%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#f7f7f7), color-stop(80%,#efefef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f7f7f7 20%,#efefef 80%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f7f7f7 20%,#efefef 80%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f7f7f7 20%,#efefef 80%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f7f7f7 20%,#efefef 80%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
 }
 #hed-wrap {
 	background:#fff;
@@ -640,7 +640,7 @@ ul.follow-moms {
 .follow-moms .check {
 	position:absolute;
     top: -23px;
-    right: 5px;
+   	left: 65px;
     font-size: 1.167em;
     line-height: 1;
     color: #FFFFFF;
@@ -924,7 +924,7 @@ a.more-friends:focus {
 	font-size:.923em;
 }
 #categories ul {
-	margin: 0 0 1em;
+	margin: 2.125em 0 1em;
     padding: 0;
 }
 #categories ul li {
@@ -932,7 +932,7 @@ a.more-friends:focus {
 }
 #categories li a {
 	display:block;
-	padding:0.5em 7px 0.5em 13px;
+	padding:0.45em 7px 0.45em 13px;
 	border-bottom: 1px solid #ecf1f4;
     border-top: 1px solid #ecf1f4;
 }

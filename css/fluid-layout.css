@@ -159,7 +159,7 @@ img, object, embed, video {
     border-right: 1px solid #D9D9D9;
 }
 #buildlist #secondary .content {
-	padding:1px 1px 20px 1px;
+	padding:1px 1px 20px 3px;
 	min-height:420px;
 }
 

@@ -1,0 +1,220 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Create My Profile</title>
+<meta name="description" content="">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+<div id="hed-wrap" class="progressbar">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding">
+        <h1>Mamajamas</h1>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">My Account</a></li>
+        </ul>
+      </div>
+      <div id="progress">
+        <ol class="prog3">
+          <!-- comments between list items prevent whitespace insertion when displayed inline -->
+          <li class="prog1"><strong>1</strong> Take the quiz.</li>
+          <!--
+          -->
+          <li class="prog2"><strong>2</strong> Make your list and get advice.</li>
+          <!--
+          -->
+          <li class="prog3"><strong>3</strong> Share your list.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix" id="create-profile">
+  <div id="title">
+    <div id="subhed">
+      <h2>Create my profile</h2>
+    </div>
+    <p class="instruction"><strong>Before you share your list, why not tell folks a little more about yourself?</strong><br>
+      Or, go <a href="#">back</a> to your list</p>
+  </div>
+  <div id="primary">
+    <div class="content">
+      <div id="profile-photo"><img src="images/profile_photo-default-l.png" alt="Upload a profile photo"> <a class="button bt-light" id="bt-upload"><span class="ss-upload"></span>Upload</a>
+        <!-- instructions -->
+        <p class="instruction">Upload a photo, or drag one into the box.</p>
+      </div>
+    </div>
+  </div>
+  <div id="secondary">
+    <div class="content">
+      <form class="label-infield" id="frm-create-profile">
+        <h3>My Basics</h3>
+        <dl class="clearfix">
+          <fieldset>
+          	<!-- username -->
+            <dt>User name<strong class="required">*</strong></dt>
+            <dd>
+              <p>
+                <label for="field-username"><strong>[default username]</strong></label>
+                <br />
+                <input name="field-username" type="text" id="field-username" value="">
+              </p>
+            </dd>
+            <!-- URL -->
+            <dt>URL<strong class="required">*</strong></dt>
+            <dd class="pad">
+              <p>mamamaggie.mamjamas.com <em class="light">(generated from your username)</em></p>
+            </dd>
+            <!-- list title -->
+            <dt>List title<strong class="required">*</strong></dt>
+            <dd>
+              <p>
+                <label for="field-list-title"><strong>MamaMaggie's List</strong> (click to edit)</label>
+                <br />
+                <input name="field-list-title" type="text" id="field-list-title" value="">
+              </p>
+            </dd>
+          </fieldset>
+        </dl>
+        <h3>My Details</h3>
+        <dl class="clearfix">
+          <fieldset>
+          	<!-- name -->
+            <dt>Name</dt>
+            <dd class="half">
+              <p>
+                <label for="field-firstname">First</label>
+                <br />
+                <input name="field-firstname" type="text" id="field-firstname" value="">
+              </p>
+            </dd>
+            <dd class="half">
+              <p>
+                <label for="field-surname">Last</label>
+                <br />
+                <input name="field-surname" type="text" id="field-surname" value="">
+              </p>
+            </dd>
+          </fieldset>
+          <fieldset>
+          	<!-- birthday -->
+            <dt>Birthday</dt>
+            <dd class="half">
+              <p>
+                <label for="field-bdate">mm/dd/yy</label>
+                <br />
+                <input name="field-bdate" type="text" id="field-bdate" value="">
+                <img class="date-picker" src="images/icon_calendar@2x.png" alt="calendar"> </p>
+            </dd>
+          </fieldset>
+          <fieldset>
+          	<!-- more (comments) -->
+            <dt>More</dt>
+            <dd>
+              <p>
+                <label for="field-profile-notes">For example, what do you love about being a mom?</label>
+                <br />
+                <textarea name="field-profile-notes" value="" id="field-profile-notes" rows="5"></textarea>
+              </p>
+            </dd>
+            <!-- tags -->
+            <dt><span class="ss-icon" title="tags">Tags</span></dt>
+            <dd>
+              <p>
+                <label for="field-profile-tags">Enter keywords that help describe you.</label>
+                <br />
+                <input name="field-profile-tags" type="text" id="field-profile-tags" value="">
+                <br>
+                <span id="top-tags">top tags: <a href="#">green</a>, <a href="#">working mom</a>, <a href="#">stay-at-home-mom</a>, <a href="#">artsy</a></span> </p>
+            </dd>
+          </fieldset>
+        </dl>
+        <h3>My Kids</h3>
+        <dl id="mykids">
+          <!-- first child -->
+          <dt>First Child</dt>
+          <dd>
+            <fieldset>
+              <div class="baby-gender clearfix">
+                <p>Gender:</p>
+                <fieldset>
+                  <div>
+                    <input name="babygender01" type="radio" class="gender-f" id="babygender01-f" value="female">
+                    <label for="babygender01-f" title="girl">Girl</label>
+                  </div>
+                  <div>
+                    <input name="babygender01" type="radio" class="gender-m" id="babygender01-m" value="male">
+                    <label for="babygender01-m" title="boy">Boy</label>
+                  </div>
+                  <div>
+                    <input name="babygender01" type="radio" class="gender-na" id="babygender01-na" value="not-sure" checked>
+                    <label for="babygender01-na" title="not sure?">Not sure</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="baby-name">
+                <p>
+                  <label for="field-baby01-name">Name</label>
+                  <br />
+                  <input name="field-baby01-name" type="text" id="field-baby01-name" value="">
+                </p>
+              </div>
+              <div class="baby-bdate">
+                <p>
+                  <label for="field-baby01-bdate">Born / Due</label>
+                  <br />
+                  <input name="field-baby01-bdate" type="text" id="field-baby01-bdate" class="baby-bdate" value="">
+                  <img class="date-picker" src="images/icon_calendar@2x.png" alt="calendar"> </p>
+              </div>
+            </fieldset>
+          </dd>
+          <!-- end first chid -->
+       	  <!-- (more children here) -->
+          <div class="add-more"> <a href="#"><span class="ss-plus"></span>Add more</a> </div>
+        </dl>
+        <div class="button-row">
+          <button type="submit" class="button bt-color" id="bt-save"><span class="ss-check"></span>Save and Preview</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="tertiary">&nbsp;</div>
+  <div id="footer">
+    <div class="content">[footer]</div>
+  </div>
+</div>
+<!-- end body area --> 
+<!-- Google Analytics -->
+</body>
+</html>

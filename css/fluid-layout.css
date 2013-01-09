@@ -163,6 +163,21 @@ img, object, embed, video {
 	min-height:420px;
 }
 
+/* layout adjustments for create my profile */
+#create-profile #subhed {
+	width:39.5%;
+}
+#create-profile #primary {
+	width:28%;
+}
+#create-profile #primary .content {
+	padding-top:20px;
+	padding-left:48%;
+}
+#create-profile #secondary {
+	width:52%;
+	margin-left:20px;
+}
 
 /* Large screen layout */
 

@@ -79,3 +79,9 @@ Dec. 28:
 - Adjusted alignment of the checkmark on the Follow page so it doesn't slip off the photos
 - Made new default photo for the Follow page (note the new file type and name): /images/profile_photo-default.png
 - Included Ryan's adjustments for Follow tag removal and appearance of Sign Up collapsible panel link
+
+2013
+Jan. 9:
+- Added HTML (and CSS) for Create My Profile: /create-my-profile.html
+- CSS change addresses vertical squishing on tall product images
+- Color change to checkmark graphic (and high-res version): /images/icons_checkboxes.png and /images/icons_checkboxes@2x.png

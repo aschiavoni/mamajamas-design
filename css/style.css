@@ -1021,9 +1021,27 @@ div.priority-low {
 	vertical-align: middle;
 	height: 62px;
 }
+.bt-thumb-upload,
+.oldie .bt-thumb-upload {
+	position:absolute;
+    top: 70px;
+    left: -72px;
+	font-size: 0.846em;
+    line-height: 1.33em;
+    padding: 3px 5px 0.125em;
+	background:#ececec;
+}
+.bt-thumb-upload span {
+	position:relative;
+	top:.125em;
+	color:#888;
+}
+.bt-thumb-upload:hover span {
+	color:#fff;
+}
 .prod-desc {
 	position: relative;
-	margin-left: 70px;
+	margin-left: 72px;
 }
 .prod-desc h3 {
 	font-size: 1em;

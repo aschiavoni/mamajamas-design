@@ -440,7 +440,7 @@ button:hover, button:focus, button:active, a.button:hover, a.button:focus, a.but
 .ie7 .ss-plus, .ie7 .ss-check, .ie .ss-action {
 	margin-right: 0;
 }
-/* title link buttons (build list upper right)
+/* title link buttons (build list upper right) 
 #title-links .bt-light {
 	color:#fff;
 	text-shadow:0 -1px 0 rgba(0,0,0,0.35);

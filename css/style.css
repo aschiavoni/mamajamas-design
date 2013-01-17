@@ -58,6 +58,7 @@ body {
 	background: url(../images/logo.png) no-repeat 0 0;
 	background-size: 163px 59px;
 }
+
 /* search field */
 #search {
 	padding-top: 23px;
@@ -72,31 +73,102 @@ body {
 #search input[type=text]:focus {
 	color: #000;
 }
+
 /* login links */
 #login ul {
 	list-style-type: none;
-	margin: 23px 0 0 0;
-	padding: 0;
+	margin: 0;
+    padding: 0;
 }
-#login li {
-	display: inline;
+#login > ul {
+	margin: 23px 0 0 0;
+	text-align:right;
+}
+#login > ul > li {
 	font-family: "Reenie Beanie", sans-serif;
 	font-size: 19px;
+	display: inline;
 	margin: 0 10px;
 }
 #login a {
-	color: #e08619;
+	color: #ea7526;
 	text-decoration: none;
 }
 #login a:hover, #login a:focus, #login a:active {
 	color: #000;
 }
+
+/* my account link */
+#login li#myaccount {
+	display: block;
+	position:relative;
+	padding-bottom:2px; /* keeps dropdown open when jumping the gap */
+}
+#myaccount img { /* small profile photo */
+	width:24px;
+	height:auto;
+	margin-right:7px;
+}
+#myaccount .ss-dropdown { /* style the down arrow */
+	font-size:.42em;
+	color:#777;
+	margin-left:4px;
+}
+#myaccount:hover a {  /* hover state (even when over dropdown menu) */
+	color:#000;
+	background:#fff;
+}
+#myaccount:hover .nav-drop { /* move dropdown into view */
+	left:auto;
+	right: -1px;
+}
+
+/* drop down menus */
+.nav-drop {
+	font-family:sans-serif;
+	font-size: 12px;
+	text-align:left;
+	position: absolute;
+	top: 26px;
+	left:-9999px;
+	width: 160px;
+	background: #fff;
+	border:solid 1px #d9d9d9;
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+.nav-drop li a {
+	display: block;
+	padding: 0.45em 8px 0.45em 8px;
+	border-top: 1px solid #fff;
+}
+.oldie .nav-drop { /* adjust for old IE's lack of box shadow */
+	border-color:#ccc;
+	border-right-color:#aaa;
+	border-bottom-color:#999;
+}
+
+/* specific to my account dropdown */
+#myaccount .nav-drop li:first-child + li a {
+	border-color: #ddd; /* darker border under first link */
+}
+#myaccount .nav-drop li.last a {
+	border-top-color: #ddd; /* darker border under last link */
+}
+#myaccount .nav-drop a {
+	color:#444; /* overrides link color of parent menu */
+}
+#myaccount .nav-drop a:hover, #login .nav-drop a:focus, #login .nav-drop a:active { /* link hover colors */
+	color: #000;
+	background: #fbfbfc;
+}
+
 /* progress indicator (marked up as ordered list) */
 /* each list item LI labeled via class (.prog1, .prog2, .prog3) */
 /* changing class on the list OL changes which state appears active (.prog1, .prog2, .prog3) */
 #progress {
 	text-align: center;
 	height: 35px;
+	line-height:1;
 	overflow: hidden;
 }
 #progress ol {
@@ -305,7 +377,7 @@ legend span {
 	height:24px;
 }
 .required {
-	color: #e08619; /* orange */
+	color: #ea7526; /* orange */
 }
 /* forms: in-field input labels -- */
 form.label-infield fieldset p {
@@ -345,13 +417,13 @@ form.label-infield fieldset p label {
 }
 /* forms: status messages */
 input.error {
-	border-color: #e08619;
+	border-color: #ea7526;
 }
 .status-msg {
 	font-weight: normal;
 }
 .error, .pw-weak {
-	color: #e08619; /* orange */
+	color: #ea7526; /* orange */
 }
 .pw-good {
 	color: #398BC0;/* blue */
@@ -994,7 +1066,7 @@ div.priority-low {
 	background-position: 0 -76px;
 }
 .prod-drop-arrow {
-	color: #888;
+	color: #777;
 	text-shadow: 0 1px 0 #fff;
 	display: block;
 	float: left;

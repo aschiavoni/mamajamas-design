@@ -84,4 +84,8 @@ Dec. 28:
 Jan. 9:
 - Added HTML (and CSS) for Create My Profile: /create-my-profile.html
 - CSS change addresses vertical squishing on tall product images
-- Color change to checkmark graphic (and high-res version): /images/icons_checkboxes.png and /images/icons_checkboxes@2x.png
+- Color change to checkmark graphic (and high-res version): "/images/icons_checkboxes.png and /images/icons_checkboxes@2x.png"
+
+Jan. 17:
+- Added markup for the My Account link and dropdown menu.
+- Default profile photo (if user has not uploaded their own) can be /images/profile_photo-default-s.png

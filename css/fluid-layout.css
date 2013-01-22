@@ -162,6 +162,24 @@ img, object, embed, video {
 	min-height:420px;
 }
 
+/* layout adjustments for published list */
+#publist #subhed {
+	width:65.6%;
+}
+#publist #title-links {
+	width: 15.6%;
+}
+#publist #secondary .content {
+	padding:1px 1px 20px 3px;
+	min-height:500px;
+}
+#title .pubdate {
+	float:left;
+	width: 15.6%;
+	margin-left:2%;
+	padding-top:25px;
+}
+
 /* layout adjustments for create my profile */
 #create-profile #subhed {
 	width:39.5%;

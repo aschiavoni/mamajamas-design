@@ -89,3 +89,7 @@ Jan. 9:
 Jan. 17:
 - Added markup for the My Account link and dropdown menu.
 - Default profile photo (if user has not uploaded their own) can be /images/profile_photo-default-s.png
+
+Jan. 22:
+- Added markup for Published List Preview (published-list-preview.html)
+- Supporting files in /images and /css

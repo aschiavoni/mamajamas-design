@@ -93,3 +93,6 @@ Jan. 17:
 Jan. 22:
 - Added markup for Published List Preview (published-list-preview.html)
 - Supporting files in /images and /css
+
+Jan. 26:
+- Markup for Published List (published List Preview minus the message overlay DIV)

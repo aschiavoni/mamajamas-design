@@ -1,0 +1,207 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Published List Preview</title>
+<meta name="description" content="">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** --> 
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding">
+        <h1>Mamajamas</h1>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix" id="publist">
+  <div id="title">
+    <div id="subhed">
+      <h2>Margaret’s baby gear essentials</h2>
+    </div>
+    <p class="pubdate">Created Aug. 30, 2012<br>
+ 		Updated Sept. 12, 2012</p>
+    <div id="title-links">
+      <ul>
+        <li id="bt-follow"><a href="#" class="button">Follow</a></li>
+        <li id="print"><a href="#" class="ss-icon" title="Print"><span>Print</span></a></li>
+        <li id="pinterest"><a href="#" class="social" title="Pinterest">Pinterest</a></li>
+        <li id="twitter"><a href="#" class="social" title="Twitter">Twitter</a></li>
+        <li id="facebook"><a href="#" class="social" title="Facebook">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="primary">
+    <div class="content"> 
+      <!-- Catagories nav -->
+      <nav id="categories">
+        <ul>
+          <li><a href="#">Bathing</a></li>
+          <li><a href="#">Birthing/ Pregnancy</a></li>
+          <li><a href="#">Changing</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Decorating</a></li>
+          <li><a href="#">Feeding</a></li>
+          <li><a href="#">Getting Around</a></li>
+          <li><a href="#">Playing</a></li>
+          <li class="cat-selected"><a href="#">Nursing</a></li>
+          <li><a href="#">PottyTraining</a></li>
+          <li><a href="#">Reading</a></li>
+          <li><a href="#">Traveling</a></li>
+          <li><a href="#">Sleeping</a></li>
+          <li><a href="#">Staying Healthy</a></li>
+        </ul>
+      </nav>
+      <!-- /end Catagories nav --> 
+    </div>
+  </div>
+  <div id="secondary">
+    <div class="content">
+      <form class="label-infield">
+        <!-- baby gear table ******* -->
+        <table width="100%" cellspacing="0" id="babygear">
+          <thead>
+            <tr>
+              <th scope="col" class="own">Own</th>
+              <th scope="col" class="item">Item</th>
+              <th scope="col" class="rating">Rating</th>
+              <th scope="col" class="when">When to Buy</th>
+              <th scope="col" class="priority">Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Item 1 ****** -->
+            <tr class="prod prod-filled">
+              <td class="own"><input type="checkbox" id="own01" title="Do you own this item?" checked>
+              <label for="own01">I own this item.</label></td>
+              <td class="item"><div class="prod-thumb"><img src="images/products/thumb_nursing-bottle.jpg" alt="bottle"></div>
+                <div class="prod-desc">
+                  <div class="prod-category">Bottle</div>
+                  <h3><a href="#">Comotomo Natural Feel Baby Bottle Single Pack, Green, 150ml</a></h3>
+                  <!-- add to my list button -->
+                  <a href="#" class="button bt-color bt-add" title="Add to my list"><span class="ss-plus"></span><strong>Add</strong></a>
+                  <!-- / end add to my list button -->
+                  <!-- note -->
+                  <div class="prod-note closed">
+                    <div class="note-content">Morbi erat sem, luctus at porttitor ac, cursus luctus mauris. Sed eget orci orci. Sed eu ipsum velit, id elementum metus. Integer interdum sapien bibendum est iaculis quis adipiscing turpis cursus. Nunc aliquet adipiscing neque vel convallis. Sed mattis lacinia lacus a gravida. </div>
+                  </div>
+                  <!-- / end note --> 
+                </div></td>
+              <td class="rating"><div class="eggs">
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg"></div>
+                </div></td>
+              <td class="when">Pre-birth</td>
+              <td class="priority"><div class="priority-high">high</div></td>
+            </tr>
+            <!-- / Item 1 ****** --> 
+            <!-- Item 2 ****** -->
+            <tr class="prod prod-filled">
+              <td class="own"><input id="own05" type="checkbox" title="Do you own this item?">
+                <label for="own05">I own this item.</label></td>
+              <td class="item"><div class="prod-thumb"><img src="images/products/thumb_nursing-pump@2x.jpg" alt="bottle"></div>
+                <div class="prod-desc">
+                  <div class="prod-category">Breast Pump</div>
+                  <h3><a href="#">Philips AVENT BPA-free Manual Breast Pump</a></h3>
+                   <!-- add to my list button -->
+                  <a href="#" class="button bt-color bt-add" title="Add to my list"><span class="ss-plus"></span><strong>Add</strong></a>
+                  <!-- / end add to my list button -->
+                  <!-- note -->
+                  <div class="prod-note closed">
+                    <div class="note-content">Nunc aliquet adipiscing neque vel convallis. Sed mattis lacinia lacus a gravida. Morbi erat sem, luctus at porttitor ac, cursus luctus mauris. Sed eget orci orci. Sed eu ipsum velit, id elementum metus. Integer interdum sapien bibendum est iaculis quis adipiscing turpis cursus.</div>
+                  </div>
+                  <!-- / end note --> 
+                </div></td>
+              <td class="rating"><div class="eggs">
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg"></div>
+                </div></td>
+              <td class="when">Pre-birth</td>
+              <td class="priority"><div class="priority-med">medium</div></td>
+            </tr>
+            <!-- / Item 2 ****** -->
+          </tbody>
+        </table>
+        <!-- end baby gear table ******* -->
+      </form>
+    </div>
+  </div>
+  <div id="tertiary">
+    <div id="module-profile">
+      <div class="content">
+        <img src="images/profile_photo-default-l.png" alt="Profile photo">
+        <h3>Margaret Anderson</h3>
+        <h4>Eco Mom</h4>
+        <p>
+        Age 40<br>
+        Mom to Xander, 18 mos.<br>
+        Value shopper<br>
+        <em><span class="ss-tag"></span> Tags:</em> <a href="#">Urban</a></p>
+        <p class="right"><a href="#">Full profile</a></p>
+      </div>
+    </div>
+    <div id="module-friends">
+      <div class="content">
+        <h3>Margaret’s Friends</h3>
+        <ul class="clearfix">
+        	<li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Christina</span> Anderson</a></div></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Andrea</span> Bhosle-Morimoto</a></div></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Kathleen</span> Bowers</a></div></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Sally</span> Duarte</a></div></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Kim</span> Edwards</a></div></li>
+        </ul>
+        <p class="right"><a href="#">See all</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="content">[footer]</div>
+  </div>
+</div>
+
+<!-- end body area --> 
+<!-- Google Analytics -->
+
+</body>
+</html>

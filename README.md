@@ -96,3 +96,7 @@ Jan. 22:
 
 Jan. 26:
 - Markup for Published List (published List Preview minus the message overlay DIV)
+
+Feb. 1
+- Added markup for marking the sorted column in the products list. Current sorting column header needs the class, "sorting."
+- Changed cursor on the column headers to pointer.

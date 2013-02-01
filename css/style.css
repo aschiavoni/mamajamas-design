@@ -1024,7 +1024,7 @@ a.more-friends:hover, a.more-friends:focus {
 	border-bottom: solid 1px #d9d9d9;
 	border-collapse:separate;
 }
-#babygear th, #babygear td {
+#babygear td {
 	padding: 7px;
 	text-align: center;
 }
@@ -1032,16 +1032,22 @@ a.more-friends:hover, a.more-friends:focus {
 	font-weight: normal;
 	font-size: .846em;
 	color: #8c8c8c;
-	padding-bottom: 4px;
+	padding: 4px 7px 4px;
+	text-align: center;
+	border-top:3px solid #fff;
 	border-left: solid 1px #d4d4d4;
+	cursor:pointer;
 }
 #babygear th:first-child {
 	border-left: none;
 }
+#babygear th.sorting { /* mark the header of the current sorting column*/
+	color:#555;
+	border-top-color:#ccc;
+}
 #babygear td {
 	padding-top: 9px;
 	padding-bottom: 9px;
-	/*vertical-align:middle;*/
 	border-top: solid 1px #d9d9d9;
 }
 #babygear td.own {

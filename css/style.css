@@ -137,7 +137,8 @@ body {
 	border:solid 1px #d9d9d9;
 	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
 }
-.nav-drop li a {
+.nav-drop li a,
+.nav-drop li.user-email span {
 	display: block;
 	padding: 0.45em 8px 0.45em 8px;
 	border-top: 1px solid #fff;
@@ -149,13 +150,15 @@ body {
 }
 
 /* specific to my account dropdown */
-#myaccount .nav-drop li:first-child + li a {
+#myaccount .nav-drop li:first-child + li a,
+#myaccount .nav-drop li:first-child + li span {
 	border-color: #ddd; /* darker border under first link */
 }
 #myaccount .nav-drop li.last a {
 	border-top-color: #ddd; /* darker border under last link */
 }
 #myaccount .nav-drop a {
+<<<<<<< HEAD
 	color:#444; /* overrides link color of parent menu */
   font-weight:bold;
 }
@@ -165,8 +168,22 @@ body {
 }
 #myaccount .nav-drop .user-email a:hover {
   color:#737373; /* overrides link color of user email address */
+=======
+	color: #444; /* overrides link color of parent menu */
+	font-weight: bold;
 }
-#myaccount .nav-drop a:hover, #login .nav-drop a:focus, #login .nav-drop a:active { /* link hover colors */
+#myaccount .nav-drop .user-email a,
+#myaccount .nav-drop .user-email a:hover,
+#myaccount .nav-drop .user-email span {
+	color: #737373; /* overrides link color of user email address */
+	font-weight: normal;
+	background: #fff;
+	cursor:default;
+>>>>>>> Including changes for My Account drop-down link styling
+}
+#myaccount .nav-drop a:hover, 
+#login .nav-drop a:focus, 
+#login .nav-drop a:active { /* link hover colors */
 	color: #000;
 	background: #fbfbfc;
 }

@@ -100,3 +100,8 @@ Jan. 26:
 Feb. 1
 - Added markup for marking the sorted column in the products list. Current sorting column header needs the class, "sorting."
 - Changed cursor on the column headers to pointer.
+
+Feb. 15
+- Changed styling for user email link in My Account drop-down, including Ryan's changes:
+-- user email link tag can now be replaced with span tags to remove link without losing menu styling
+-- if user email is a link, background and text color will not change on hover, and cursor won't change to pointer

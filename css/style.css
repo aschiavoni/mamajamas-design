@@ -158,17 +158,6 @@ body {
 	border-top-color: #ddd; /* darker border under last link */
 }
 #myaccount .nav-drop a {
-<<<<<<< HEAD
-	color:#444; /* overrides link color of parent menu */
-  font-weight:bold;
-}
-#myaccount .nav-drop .user-email a {
-  color:#737373; /* overrides link color of user email address */
-  font-weight:normal;
-}
-#myaccount .nav-drop .user-email a:hover {
-  color:#737373; /* overrides link color of user email address */
-=======
 	color: #444; /* overrides link color of parent menu */
 	font-weight: bold;
 }
@@ -179,7 +168,6 @@ body {
 	font-weight: normal;
 	background: #fff;
 	cursor:default;
->>>>>>> Including changes for My Account drop-down link styling
 }
 #myaccount .nav-drop a:hover, 
 #login .nav-drop a:focus, 
@@ -309,6 +297,9 @@ p {
 }
 .center {
 	text-align: center;
+}
+.left {
+	text-align: left;
 }
 .right {
 	text-align: right;
@@ -538,7 +529,7 @@ button:hover, button:focus, button:active, a.button:hover, a.button:focus, a.but
 .ie7 .ss-plus, .ie7 .ss-check, .ie .ss-action {
 	margin-right: 0;
 }
-/* title link buttons (build list upper right)
+/* title link buttons (build list upper right) 
 #title-links .bt-light {
 	color:#fff;
 	text-shadow:0 -1px 0 rgba(0,0,0,0.35);
@@ -784,7 +775,7 @@ a.more-friends:hover, a.more-friends:focus {
 	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
 	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
 }
-/* modal box type, colors and spacing */
+/* modal box typography, colors and spacing */
 .modal-box {
 	font-size: .92em;
 	color: #8c8c8c;

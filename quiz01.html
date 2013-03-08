@@ -1,0 +1,100 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas : Quiz, Step 1</title>
+<meta name="description" content="">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding">
+        <h1>Mamajamas</h1>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+      <div id="progress">
+        <ol class="prog1"><!-- comments between list items prevent whitespace insertion when displayed inline -->
+        	<li class="prog1"><strong>1</strong> Take the quiz</li><!--
+          --><li class="prog2"><strong>2</strong> Make your list and get advice</li><!--
+          --><li class="prog3"><strong>3</strong> Share your list</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+  <div id="primary">
+    <div class="content"></div>
+  </div>
+  <div id="secondary">
+    <div class="content">
+    </div>
+  </div>
+  <div id="tertiary">
+  </div>
+  <div id="footer">
+    <div class="content"></div>
+  </div>
+</div>
+<!-- end body area --> 
+
+<!-- modal window ************ -->
+<div class="modal-wrap" style="display:block;">
+  <div class="modal-overlay"> &nbsp; </div>
+  <div class="vertical-offset"></div>
+  <!-- modal window box -->
+  <div class="quiz-box large" id="quiz01">
+  	  <!-- modal window close button -->
+      <a href="#" class="bt-close ss-icon">Close</a>
+      <!-- modal window content -->
+      <div class="content">
+      
+        <!-- question q01-01 ***** -->
+        <p>Tell us a little bit about you, so we can help you figure out what baby gear you’ll need.<br>
+<a href="#" class="button bt-color" id="bt-start">Start<span class="ss-navigateright"></span></a></p>
+        <!-- / question q01-01 ***** -->
+
+      </div>
+      <!-- end modal window content --> 
+      <!-- quiz progress bar -->
+      <div id="q-progress" title="Step 1 of 8">
+      	<div class="bar"></div>
+      </div>
+      <!-- end quiz progress bar -->
+  </div>
+  <!-- end modal window box --> 
+</div>
+<!-- /end modal window ************ --> 
+
+<!-- Google Analytics -->
+</body>
+</html>

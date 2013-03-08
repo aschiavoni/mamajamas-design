@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.vertical-offset { /* determines vertical positioning */
+	float: left;
+	height: 50%;
+	margin-bottom: -200px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
+}
+.quiz-box {
+	font-family: 'Open Sans', sans-serif;
+	clear: both;
+	width: 740px;
+	min-height:377px;
+	position: relative;
+	z-index: 40003;
+	left: 50%;
+	margin-left: -370px; /* half of the width */
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
+}
+
+/* modal box typography, colors and spacing */
+.quiz-box .content {
+	font-size:184.6%;
+	font-weight:300;
+	color: #000;
+	padding: 25px 20px;
+}
+.quiz-box.large .content {
+	font-size: 261.5%;
+	line-height:1.323;
+}
+.quiz-box h2 {
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 1em;
+	color: #333;
+	margin: 0;
+	padding: 5px 20px 3px;
+	border-bottom: 1px solid #c3c3c3;
+}
+.quiz-box h3 {
+	font-size: 1.33em;
+	font-weight: 300;
+	color: #407c40;
+	margin: .75em 0 .5em;
+	border-bottom: 1px solid #ccc;
+}
+.quiz-box h3 em.info-link {
+	font-size: .75em;
+	font-style: normal;
+	float: right;
+	margin-top: .4em;
+}
+.quiz-box input[type=email], .quiz-box input[type=text], .quiz-box input[type=password], .quiz-box label {
+	font-size: 1.33em; /* equiv to 16px, based on 12px base for modal window */
+	width: 57%;
+	text-align: left;
+}
+.quiz-box .status-msg {
+	width: 37%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.quiz-box .pw-strong, .quiz-box .pw-good, .quiz-box .pw-weak {
+	top: .5em;
+}
+.quiz-box .note {
+	text-align: center;
+	margin-top: 1em;
+}
+.quiz-box .button-row {
+	position:absolute;
+	bottom:0;
+	margin: 1px;
+	padding: 10px 20px 8px;
+	width:698px;
+	text-align: center;
+	border-top: none;
+	background:#f6f4f2;
+}
+.quiz-box .divider {
+	border-top: 1px solid #d3d3d3;
+	text-align: center;
+	margin-top: 2em;
+}
+.quiz-box .divider strong {
+	background: #fff;
+	padding: 0 5px;
+	position: relative;
+	top: -.7em;
+}
+
+/* quiz choice elements*/
+.q-question {
+	margin-bottom:1em;
+}
+div.choicedrop {
+	display:inline-block;
+	text-align:left;
+	border:solid 1px #D9D9D9;
+	position:relative;
+	z-index:6000;
+}
+.choicedrop a {
+	color:#000;
+	padding:0 3px;
+	text-decoration:none;
+}
+.choicedrop .ss-dropdown {
+	font-size:58.8%;
+	color:#CCC;
+	margin:0 8px;
+}
+.choicedrop a:hover {
+	color:#808080;
+	text-decoration:none;
+}
+.choicedrop:hover {
+	border-color:#D9D9D9;
+}
+.choicedrop:hover .ss-dropdown {
+	color:#000;
+}
+.choicedrop ol {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	border:solid 1px #D9D9D9;
+	background:#FFF;
+	box-shadow:0 1px 2px rgba(0,0,0,0.2);
+	position:absolute;
+	top:-1px;
+	left:-1px;
+	right:-1px;
+	/*display:none;*/
+}
+.choicedrop ol li {
+	margin:0;
+	padding:0.17em 0 0.17em 20px;
+	text-indent:-20px;
+	line-height:1;
+}
+.choicedrop li a:hover {
+	color:#5baa5d;
+}
+
+/* buttons */
+.quiz-box button, 
+.quiz-box .button {
+	font-family: 'Open Sans', sans-serif;
+	padding: 5px 25px .35em;
+	border: none;
+	background-color: #c7c7c7;
+	text-transform:uppercase;
+	letter-spacing:.15em;
+}
+.quiz-box .bt-color {
+	background: #874789;
+}
+span.ss-navigateleft,
+span.ss-navigateright {
+	position:relative;
+	top:1px;
+	opacity:0.7;
+}
+a.bt-close {
+	position:absolute;
+	top:10px;
+	right:10px;
+	color:#c9c9c9;
+}
+#bt-start {
+	margin-top:30px;
+}
+#bt-start,
+#bt-next {
+	padding-left: 32px;
+}
+#bt-prev {
+	padding-right: 32px;
+}
+
+
+/* quiz progress */
+#q-progress {
+	width:160px;
+	background:#FFF;
+	border:solid 1px #C9C9C9;
+	position:absolute;
+	bottom:-28px;
+	left:50%;
+	margin-left:-80px; /* negative half of element width */
+}
+#q-progress .bar {
+	background:#C9C9C9;
+	height:10px;
+}
+#quiz01 .bar {
+	width:12.5%;
+}
+#quiz02 .bar {
+	width:25%;
+}
+#quiz03 .bar {
+	width:37.5%;
+}
+#quiz04 .bar {
+	width:50%;
+}
+#quiz05 .bar {
+	width:62.5%;
+}
+#quiz06 .bar {
+	width:75%;
+}
+#quiz07 .bar {
+	width:87.5%;
+}
+#quiz08 .bar {
+	width:100%;
+}
+
+
+/* specific quiz slides */
+#quiz01 .content {
+	text-align:center;
+	padding:85px 140px 10px;
+}
+
+#quiz02 .content {
+	text-align:center;
+	padding:85px 70px 10px;
+}

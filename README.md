@@ -106,3 +106,13 @@ Feb. 15
 -- user email link tag can now be replaced with span tags to remove link without losing menu styling
 -- if user email is a link, background and text color will not change on hover, and cursor won't change to pointer
 - My Account drop down menu is viewable in the files build-list02_adding-editing.html and myaccount-dropdown.html
+
+Mar. 8
+- Added screens for Quiz step 1 and step 2 (quiz01.html and quiz02x.html)
+- Note: change inline "display" style to control quiz sub-menu visibility
+
+Mar. 10
+- Added screen for Quiz step 3 (quiz03.html)
+- Notes: 
+-- Adding class "q-selected" when user clicks a choice would control visibility of the checkmark overlays.
+-- "Next" button should only be given color emphasis (via addition of "bt-color" class) after user makes a selection.

@@ -4,7 +4,7 @@
 .vertical-offset { /* determines vertical positioning */
 	float: left;
 	height: 50%;
-	margin-bottom: -200px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
+	margin-bottom: -270px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
 }
 .quiz-box {
 	font-family: 'Open Sans', sans-serif;
@@ -21,6 +21,10 @@
 	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
 	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
 }
+	.oldie .quiz-box {
+		top:75px;
+	border: 1px solid #c9c9c9;
+	}
 
 /* modal box typography, colors and spacing */
 .quiz-box .content {
@@ -95,10 +99,12 @@
 	top: -.7em;
 }
 
-/* quiz choice elements*/
+/* quiz choice elements --------- */
 .q-question {
 	margin-bottom:1em;
 }
+
+/* dropdown menus */
 div.choicedrop {
 	display:inline-block;
 	text-align:left;
@@ -106,6 +112,10 @@ div.choicedrop {
 	position:relative;
 	z-index:6000;
 }
+	.ie7 div.choicedrop {
+		display:inline;
+		zoom:1;
+	}
 .choicedrop a {
 	color:#000;
 	padding:0 3px;
@@ -149,6 +159,72 @@ div.choicedrop {
 	color:#5baa5d;
 }
 
+/* multiple choice thumbs */
+.q-multi {
+	list-style-type:none;
+	margin:25px 0 0;
+	padding:0;
+}
+.q-multi li {
+	display:inline-block;
+	position:relative;
+	width:220px;
+	margin-left:13px;
+	background:#F3F3F3;
+}
+	.ie7 .q-multi li {
+		display:inline;
+		zoom:1;
+	}
+.q-multi li:first-child {
+	margin-left:0;
+}
+.q-multi a {
+	display:block;
+	height:220px;
+}
+.q-multi a:hover {
+	text-decoration:none;
+}
+.q-multi strong { /* item label (hidden until hover) */
+	display: block;
+	padding: .35em 0 0.4em;
+	font-size: .667em;
+	font-weight: 300;
+	text-transform: lowercase;
+	text-align: center;
+	color: #FFF;
+	background: #444;
+	opacity: .85;
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=85)"; /*IE8*/
+}
+.q-multi a:hover strong { /* show item label on hover */
+	bottom:0;
+	left:0;
+	width:100%;
+	height:auto;
+}
+div.checked { /* checkbox overlay for selected item */
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(../images/quiz/q_checked.png) no-repeat 0 0;
+	background-size:220px 221px;
+	width:100%;
+	height:100%;
+	display:none;
+}
+.q-selected div.checked { /* adding class ".q-selected" to list item activates checkbox overlay */
+	display:block;
+}
+
+
 /* buttons */
 .quiz-box button, 
 .quiz-box .button {
@@ -183,6 +259,28 @@ a.bt-close {
 }
 #bt-prev {
 	padding-right: 32px;
+}
+.quiz-box .button-row p {
+	font-size:1.077em;
+	color:#808080;
+	position:absolute;
+	left:50%;
+	width:50%;
+	margin-left:-185px;
+	padding:5px 0 0;
+	text-align:center;
+}
+.quiz-box .button-row p a {
+	color:#696969;
+}
+.quiz-box .button-row p a:hover {
+	color:#000;
+}
+.skip {
+	background:url(../images/quiz/icon_skip.png) no-repeat 0 0;
+	background-size:18px 18px;
+	margin-left:2px;
+	padding-left:20px;
 }
 
 
@@ -235,4 +333,16 @@ a.bt-close {
 #quiz02 .content {
 	text-align:center;
 	padding:85px 70px 10px;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),  
+only screen and (-moz-min-device-pixel-ratio: 1.5),  
+only screen and (-o-min-device-pixel-ratio: 3/2),  
+only screen and (min-device-pixel-ratio: 1.5) {
+  .skip {
+	  background-image:url(../images/quiz/icon_skip@2x.png);
+  }
+  div.checked { /* checkbox overlay for selected item */
+	  background-image:url(../images/quiz/q_checked@2x.png);
+  }
 }

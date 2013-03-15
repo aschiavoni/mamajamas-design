@@ -130,4 +130,4 @@ Mar. 15
 - --    Note: clicking outside of an expanded dropdpwn menu should close the menu
 - Question 3 files:
 - --    quiz03a.html : default state. "Next" button is not highlighted until a choice has been made.
-- --    quiz-3b.html : "Pump" has been selected. The "next" button gains color highlight through the "bt-color" class. Clicking again on "Pump" will deselect it.
+- --    quiz03b.html : "Pump" has been selected. The "next" button gains color highlight through the "bt-color" class. Clicking again on "Pump" will deselect it.

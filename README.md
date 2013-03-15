@@ -121,13 +121,13 @@ Mar. 15
 - Fixes for issues DES-56 (dropdown z-index under-lap) and DES-57 (multiple choice un-selectable checkmark)
 - Links in dropdown menus now fill the width of the menu.
 - Question 2 files:
---    quiz02.html : default state. "Next" button is not highlighted (no "bt-color" class).
---    quiz02a.html : boxed text has been clicked, expanding dropdown menu
---    quiz02b.html : selection has been made, revealing second question
---    quiz02c.html : second question's boxed text has been clicked, expanding dropdown menu
---    quiz02d.html : selection has been made in second dropdown menu, collapsing the dropdown. "Next" button gains highlight color.
---    quiz02e.html : user has clicked on first question's boxed text, expanding the dropdown menu again an
---    Note: clicking outside of an expanded dropdpwn menu should close the menu
+- --    quiz02.html : default state. "Next" button is not highlighted (no "bt-color" class).
+- --    quiz02a.html : boxed text has been clicked, expanding dropdown menu
+- --    quiz02b.html : selection has been made, revealing second question
+- --    quiz02c.html : second question's boxed text has been clicked, expanding dropdown menu
+- --    quiz02d.html : selection has been made in second dropdown menu, collapsing the dropdown. "Next" button gains highlight color.
+- --    quiz02e.html : user has clicked on first question's boxed text, expanding the dropdown menu again an
+- --    Note: clicking outside of an expanded dropdpwn menu should close the menu
 - Question 3 files:
---    quiz03a.html : default state. "Next" button is not highlighted until a choice has been made.
---    quiz-3b.html : "Pump" has been selected. The "next" button gains color highlight through the "bt-color" class. Clicking again on "Pump" will deselect it.
+- --    quiz03a.html : default state. "Next" button is not highlighted until a choice has been made.
+- --    quiz-3b.html : "Pump" has been selected. The "next" button gains color highlight through the "bt-color" class. Clicking again on "Pump" will deselect it.

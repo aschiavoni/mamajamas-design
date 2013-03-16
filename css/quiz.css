@@ -173,7 +173,8 @@ div.choicedrop {
 	margin-left:13px;
 	background:#F3F3F3;
 }
-	.ie7 .q-multi li {
+	.ie7 .q-multi li,
+	.ie6 .q-multi li {
 		display:inline;
 		zoom:1;
 	}
@@ -217,15 +218,19 @@ div.checked { /* checkbox overlay for selected item */
 	top:0;
 	left:0;
 	z-index:2500;
-	background:url(../images/quiz/q_checked.png) no-repeat 0 0;
 	background-size:220px 221px;
-	width:100%;
-	height:100%;
-	display:none;
+	box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.08) inset; /* innershadow at box edges */
+	width:220px;
+	height:220px;
 }
-.q-selected div.checked { /* adding class ".q-selected" to list item activates checkbox overlay */
-	display:block;
+.q-selected div.checked { /* adding class ".q-selected" to list item makes checkbox overlay visible */
+	background:url(../images/quiz/q_checked.png) no-repeat 0 0;
 }
+	.oldie div.checked {
+		border:solid 1px #eee;
+		width:218px;
+		height:218px;
+	}
 
 
 /* buttons */
@@ -337,6 +342,12 @@ a.bt-close {
 	text-align:center;
 	padding:85px 70px 10px;
 }
+
+#quiz04 .content {
+	padding-right:140px;
+	padding-left:140px;
+}
+
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),  
 only screen and (-moz-min-device-pixel-ratio: 1.5),  

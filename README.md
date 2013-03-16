@@ -131,3 +131,7 @@ Mar. 15
 - Question 3 files:
 - --    quiz03a.html : default state. "Next" button is not highlighted until a choice has been made.
 - --    quiz03b.html : "Pump" has been selected. The "next" button gains color highlight through the "bt-color" class. Clicking again on "Pump" will deselect it.
+
+Mar. 17
+- Added mark-up for Quiz screen 4
+- Adjusted quiz CSS to darken image edges (for better definition) and change how checkmark visibility works.

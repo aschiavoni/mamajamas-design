@@ -160,13 +160,15 @@ div.choicedrop {
 	color:#5baa5d;
 }
 
-/* multiple choice thumbs */
-.q-multi {
+/* multiple choice, slider thumbs */
+.q-multi,
+.q-slider {
 	list-style-type:none;
 	margin:25px 0 0;
 	padding:0;
 }
-.q-multi li {
+.q-multi li,
+.q-slider li {
 	display:inline-block;
 	position:relative;
 	width:220px;
@@ -174,21 +176,27 @@ div.choicedrop {
 	background:#F3F3F3;
 }
 	.ie7 .q-multi li,
-	.ie6 .q-multi li {
+	.ie6 .q-multi li,
+	.ie7 .q-slider li,
+	.ie6 .q-slider li {
 		display:inline;
 		zoom:1;
 	}
-.q-multi li:first-child {
+.q-multi li:first-child,
+.q-slider li:first-child {
 	margin-left:0;
 }
-.q-multi a {
+.q-multi li a,
+.q-slider li a {
 	display:block;
 	height:220px;
 }
-.q-multi a:hover {
+.q-multi a:hover,
+.q-slider a:hover {
 	text-decoration:none;
 }
-.q-multi strong { /* item label (hidden until hover) */
+.q-multi strong,
+.q-slider strong { /* item label (hidden until hover) */
 	display: block;
 	padding: .35em 0 0.4em;
 	font-size: .667em;
@@ -207,7 +215,8 @@ div.choicedrop {
 	overflow: hidden;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=85)"; /*IE8*/
 }
-.q-multi a:hover strong { /* show item label on hover */
+.q-multi a:hover strong,
+.q-slider a:hover strong { /* show item label on hover */
 	bottom:0;
 	left:0;
 	width:100%;
@@ -231,6 +240,45 @@ div.checked { /* checkbox overlay for selected item */
 		width:218px;
 		height:218px;
 	}
+
+/* slider items */
+.q-slider li:first-child {
+	margin-right:125px;
+	margin-left:0;
+}
+.q-slider li {
+	margin-left:125px;
+}
+#q-sliderscale {
+	width:254px;
+	height:30px;
+	background:url(../images/quiz/slider-scale.png) no-repeat 0 50%;
+	background-size:254px 30px;
+	position:relative;
+	top:-120px;
+	left:50%;
+	margin-left:-127px;
+}
+#q-sliderarrow {
+	width:44px;
+	height:40px;
+	position:absolute;
+	top:-21px;
+	left:105px; /* middle position: half of container width minus half of arrow width */
+	/* left:-21px; far left */
+	/* left:41px; left 1 tick */
+	/* left:166px; right 1 tick */
+	/* left:229px;  far right */
+	background:url(../images/quiz/sliderarrow.png) no-repeat;
+	background-size:88px 50px;
+	cursor:pointer;
+}
+#q-sliderarrow.default {
+	background-position:0 0;
+}
+#q-sliderarrow.active {
+	background-position:-44px 0;
+}
 
 
 /* buttons */
@@ -344,19 +392,27 @@ a.bt-close {
 }
 
 #quiz04 .content {
-	padding-right:140px;
-	padding-left:140px;
+	text-align:center;
 }
 
+#quiz06 .content {
+	text-align:center;
+}
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),  
 only screen and (-moz-min-device-pixel-ratio: 1.5),  
 only screen and (-o-min-device-pixel-ratio: 3/2),  
 only screen and (min-device-pixel-ratio: 1.5) {
-  .skip {
-	  background-image:url(../images/quiz/icon_skip@2x.png);
-  }
-  div.checked { /* checkbox overlay for selected item */
-	  background-image:url(../images/quiz/q_checked@2x.png);
-  }
+	.skip {
+		background-image:url(../images/quiz/icon_skip@2x.png);
+	}
+	div.checked { /* checkbox overlay for selected item */
+		background-image:url(../images/quiz/q_checked@2x.png);
+	}
+	#q-sliderscale {
+		background-image:url(../images/quiz/slider-scale@2x.png);
+	}
+	#q-sliderarrow {
+		background-image:url(../images/quiz/sliderarrow@2x.png);
+ 	}
 }

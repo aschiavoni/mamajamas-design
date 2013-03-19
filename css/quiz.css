@@ -227,13 +227,16 @@ div.checked { /* checkbox overlay for selected item */
 	top:0;
 	left:0;
 	z-index:2500;
-	background-size:220px 221px;
+	background-image:none;
 	box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.08) inset; /* innershadow at box edges */
 	width:220px;
 	height:220px;
 }
 .q-selected div.checked { /* adding class ".q-selected" to list item makes checkbox overlay visible */
-	background:url(../images/quiz/q_checked.png) no-repeat 0 0;
+	background-image:url(../images/quiz/q_checked.png);
+	background-repeat:no-repeat;
+	background-position:0 0;
+	background-size:220px 221px;
 }
 	.oldie div.checked {
 		border:solid 1px #eee;

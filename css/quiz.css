@@ -409,7 +409,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	.skip {
 		background-image:url(../images/quiz/icon_skip@2x.png);
 	}
-	div.checked { /* checkbox overlay for selected item */
+	div.checked { 
+		background-image:none;
+	}
+	.q-selected div.checked { 
 		background-image:url(../images/quiz/q_checked@2x.png);
 	}
 	#q-sliderscale {

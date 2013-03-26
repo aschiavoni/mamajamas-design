@@ -139,3 +139,8 @@ Mar. 17
 Mar. 18
 - Added mark-up and images for Quiz screen 6 (slider): quiz06.html
 - quiz06b.html shows slider arrow positioned one tick to the left
+
+Mar. 25
+- Added mark-up for Quiz screen 8 (zip code input): quiz08.html
+- Added cropped and resized images for Quiz 7 (in images/quiz)
+

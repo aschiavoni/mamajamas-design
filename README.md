@@ -144,3 +144,5 @@ Mar. 25
 - Added mark-up for Quiz screen 8 (zip code input): quiz08.html
 - Added cropped and resized images for Quiz 7 (in images/quiz)
 
+April 2
+- Added a generic form page (form.html)

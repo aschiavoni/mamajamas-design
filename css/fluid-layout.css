@@ -196,6 +196,27 @@ img, object, embed, video {
 	margin-left:20px;
 }
 
+/* layout adjustments for create my profile */
+.form-page #subhed {
+	width:47.92%;
+	margin-left:24%;
+	padding-left:20px;
+	float:none;
+}
+.form-page #title .instruction {
+	margin-left:26%;
+}
+.form-page #primary {
+	width:24%;
+}
+.form-page #secondary {
+	width:47.92%;
+	margin-left:20px;
+}
+.form-page #tertiary {
+	width:24%;
+}
+
 /* Large screen layout */
 
 @media only screen and (min-width: 1000px) {

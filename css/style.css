@@ -1846,6 +1846,86 @@ div.baby-bdate {
 	box-shadow:0 0 1px #000;
 }
 
+/* form page */
+.form-page form {
+	font-size:1.077em;
+}
+.form-page #progress {
+	display:none;
+}
+.form-page #title h2 {
+	padding-left:0;
+}
+.form-page h3 {
+	font-size: 1.33em;
+	font-weight: 300;
+	color: #407c40;
+	margin: 2em 0 1em;
+	border-bottom: 1px solid #8cb58c;
+}
+.form-page h3:first-child {
+	margin-top:.75em;
+}
+.form-page #title .instruction {
+	font-size: .923em;
+	color: #999;
+}
+.form-page #title strong {
+	color: #4d4d4d;
+}
+.form-page dl {
+	width: 99.9%;
+}
+.form-page dt, 
+.form-page dd {
+	float: left;
+	margin-left: 1.9%;
+}
+.form-page dt {
+	color: #808080;
+	clear: left;
+	width: 15%;
+	padding: .3em 0;
+	text-align: right;
+}
+.form-page dd {
+	width: 81%;
+}
+.form-page dd.half {
+	width: 38.5%;
+}
+.form-page fieldset.half {
+	width: 52%;
+}
+.form-page dd p {
+	padding-left: .5em;
+}
+.form-page dd em {
+	font-style: normal;
+}
+.form-page dd p input, .form-page dd p textarea {
+	margin-left: -.5em;
+}
+.form-page dd.pad {
+	padding: .3em 0;
+}
+.form-page input[type="email"], 
+.form-page input[type="text"], 
+.form-page input[type="password"], 
+.form-page textarea {
+	width: 96%;
+    padding: 0.4em 0.5em;
+}
+.form-page form.label-infield fieldset p label {
+    margin: 0.5em;
+}
+.form-page form .instruction {
+	font-size: .857em;
+	color: #999;
+}
+.form-page form p.instruction {
+	margin-bottom:1em;
+}
 
 /* support for high-res devices */
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),  only screen and (-moz-min-device-pixel-ratio: 1.5),  only screen and (-o-min-device-pixel-ratio: 3/2),  only screen and (min-device-pixel-ratio: 1.5) {

@@ -1,0 +1,181 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas</title>
+<meta name="description" content="">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body class="form-page">
+<!-- header area ***** -->
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding">
+        <h1>Mamajamas</h1>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+      <div id="progress">
+        <ol class="prog1"><!-- comments between list items prevent whitespace insertion when displayed inline -->
+        	<li class="prog1"><strong>1</strong> Take the quiz</li><!--
+          --><li class="prog2"><strong>2</strong> Make your list and get advice</li><!--
+          --><li class="prog3"><strong>3</strong> Share your list</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+ <div id="title">
+    <div id="subhed">
+      <h2>Header</h2>
+    </div>
+    <p class="instruction"><strong>Instructions, with emphasis.</strong> Instructions, secondary/unemphasized.</p>
+  </div>
+  <div id="primary">
+    <div class="content">&nbsp;</div>
+  </div>
+  <div id="secondary">
+    <div class="content">
+    	<form class="label-infield">
+          <h3>Form section title</h3>
+          <dl class="clearfix">
+            <fieldset>
+              <!-- row -->
+              <dt>Field title<strong class="required">*</strong></dt>
+              <dd>
+                <p>
+                  <label for="field-"><strong>in-field text</strong></label>
+                  <br />
+                  <input name="field-" type="text" id="field-" value="">
+                </p>
+              </dd>
+              <!-- row -->
+              <dt>Title<strong class="required">*</strong></dt>
+              <dd class="pad">
+                <p>non-field text <em class="light">(parenthetical text)</em></p>
+              </dd>
+              <!-- row -->
+              <dt>Field title</dt>
+              <dd>
+                <p>
+                  <label for="field-2"><strong>in-field text</strong> (light in-field text)</label>
+                  <br />
+                  <input name="field-2" type="text" id="field-2" value="">
+                </p>
+              </dd>
+            </fieldset>
+          </dl>
+           <h3>Form section title</h3>
+          <dl class="clearfix">
+            <fieldset>
+              <!-- row -->
+              <dt>Field title<strong class="required">*</strong></dt>
+              <dd>
+                <p>
+                  <label for="field-3"> light in-field text</label>
+                  <br />
+                  <input name="field-3" type="text" id="field-" value=""><br><span class="instruction">More instructions, tips.</span> 
+                </p>
+              </dd>
+              <!-- row -->
+            <dt>Title</dt>
+            <dd class="half">
+              <p>
+                <label for="field-4">Label</label>
+                <br />
+                <input name="field-4" type="text" id="field-4" value="">
+              </p>
+            </dd>
+            <dd class="half">
+              <p>
+                <label for="field-5">Another Label</label>
+                <br />
+                <input name="field-5" type="text" id="field-5" value="">
+              </p>
+            </dd>
+            </fieldset>
+          </dl>
+           <h3>Form section title</h3>
+          <p class="instruction">Instructions</p>
+        <fieldset>
+          <p>
+            <label for="field-6">In-field label</label>
+            <br />
+            <input name="field-6" type="text" id="field-6" value="">
+          </p>
+          <p>
+            <label for="field-7">password</label>
+            <br />
+            <input name="field-7" type="password" id="field-7" value="">
+          </p>
+        </fieldset>
+        <p class="helper"><a href="#">Helper link</a></p>
+          <h3>Form section title</h3>
+          <p class="instruction">Half-width</p>
+        <fieldset class="half">
+          <p>
+            <label for="field-8">In-field label</label>
+            <br />
+            <input name="field-8" type="text" id="field-6" value="">
+          </p>
+          <p>
+            <label for="field-9">password</label>
+            <br />
+            <input name="field-9" type="password" id="field-7" value="">
+          </p>
+        </fieldset>
+        <p class="helper"><a href="#">Helper link</a></p>
+      	
+        
+         <div class="button-row">
+          <button type="submit" class="button" id="bt-cancel">Cancel</button>
+          <button type="submit" class="button bt-color" id="bt-name">Main Button</button>
+        </div>
+        
+        
+        </form>
+    </div>
+  </div>
+  <div id="tertiary">
+  </div>
+  <div id="footer">
+    <div class="content">&nbsp;</div>
+  </div>
+</div>
+<!-- end body area --> 
+
+<!-- Google Analytics -->
+</body>
+</html>

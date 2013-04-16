@@ -196,7 +196,7 @@ img, object, embed, video {
 	margin-left:20px;
 }
 
-/* layout adjustments for create my profile */
+/* layout adjustments for form page */
 .form-page #subhed {
 	width:47.92%;
 	margin-left:24%;
@@ -215,6 +215,31 @@ img, object, embed, video {
 }
 .form-page #tertiary {
 	width:24%;
+}
+
+/* layout for home page */
+.home #primary {
+	float:none;
+	height:315px;
+	width:100%;
+	position:relative;
+}
+.home #primary .content {
+	padding:0 0 0 9.375%;
+}
+.home #secondary {
+	width: 57.29%;
+	position:relative;
+}
+.home #secondary .content {
+	min-height:0;
+	padding:75px 0 65px 16.36%;
+}
+.home #tertiary {
+	width: 40.625%;
+}
+.home #tertiary .content {
+	padding:75px 23.08% 65px 2.56%;
 }
 
 /* Large screen layout */

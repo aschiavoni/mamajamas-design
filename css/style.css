@@ -275,11 +275,24 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 /* footer ------ */
 #footer {
 	text-align: center;
 	color: #999;
 }
+#footer ul {
+	list-style-type:none;
+	margin:0;
+}
+#footer ul li {
+	display:inline;
+	margin:0 10px
+}
+#footer a {
+	color:#8c8c8c;
+}
+
 /* general ------ */
 p {
 	margin: 0 0 1em;
@@ -1925,6 +1938,102 @@ div.baby-bdate {
 }
 .form-page form p.instruction {
 	margin-bottom:1em;
+}
+
+/* home page */
+.home #progress {
+	display:none;
+}
+.home #primary {
+	background:#f1f1ed url(../images/nest.jpg) no-repeat 50% 0;
+}
+.home h2 {
+	font-weight:normal;
+	font-family: "Reenie Beanie", sans-serif;
+	font-size:52px;
+	line-height:48px;
+	color:#542e56;	
+	margin:0;
+	padding:35px 0 0 0;
+	width:240px;
+}
+.home h3 {
+	font-size:1em;
+	font-weight:400;
+	letter-spacing:.15em;
+	line-height:1.3846;
+	margin:0;
+	width:15.625%;
+	position:absolute;
+	top:216px;
+	right:0;
+}
+.home h3 a {
+	display:block;
+	padding: 10px;
+	color:#FFF;
+	background: #874789;
+	text-align:center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+	border-radius:4px 0 0 4px;
+}
+.home h3 a:hover {
+	background:#555;
+	text-decoration:none;
+}
+.home h3 strong {
+	display:block;
+	padding:0;
+	font-weight:400;
+	text-transform:uppercase;
+}
+	.oldie .home h3 {
+		letter-spacing:.1em;
+		width:14%;
+	}
+.home h3,
+.home #secondary,
+.home #tertiary {
+	font-family: 'Open Sans', sans-serif;
+}
+.home #secondary {
+	font-size:1.231em;
+	line-height:1.625;
+	color:#474747;
+}
+.home #tertiary {
+	font-size:1.3846em;
+	font-weight:300;
+	line-height:1.22;
+	color:#656565;
+}
+.home #tertiary ul {
+	margin-top:3px;
+}
+.home #tertiary li {
+	margin-bottom:1em;
+}
+.home ul.screenshots {
+	position:absolute;
+	width:735px;
+	top:-100px;
+	left:16.36%;
+}
+ul.screenshots,
+ul.screenshots li {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+ul.screenshots li {
+	display:inline;
+	margin-right:20px;
+}
+ul.screenshots img {
+	box-shadow:1px 2px 2px rgba(0,0,0,.25);
+}
+.oldie ul.screenshots img {
+	border:solid 1px #ddd;
 }
 
 /* support for high-res devices */

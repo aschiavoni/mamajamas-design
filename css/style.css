@@ -2055,12 +2055,13 @@ ul.screenshots img {
 }
 
 /* standalone forms */
-#user-signup .divider {
+
+#user-login .divider, #user-signup .divider {
 	border-top: 1px solid #d3d3d3;
 	text-align: center;
 	margin-top: 2em;
 }
-#user-signup .divider strong {
+#user-login .divider, #user-signup .divider strong {
 	background: #fff;
 	padding: 0 5px;
 	position: relative;

@@ -2061,7 +2061,7 @@ ul.screenshots img {
 	text-align: center;
 	margin-top: 2em;
 }
-#user-login .divider, #user-signup .divider strong {
+#user-login .divider strong, #user-signup .divider strong {
 	background: #fff;
 	padding: 0 5px;
 	position: relative;

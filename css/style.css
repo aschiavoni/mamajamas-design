@@ -2053,6 +2053,7 @@ ul.screenshots img {
  .baby-gender input[type='radio'] + label {
  background-image: url(../images/icons_gender@2x.png); /* baby gender radio buttons */
 }
+}
 
 /* standalone forms */
 

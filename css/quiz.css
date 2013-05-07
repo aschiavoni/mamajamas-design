@@ -457,6 +457,9 @@ a.bt-close {
 	left: 50%;
     margin-left:-175px;
 }
+#quiz08 .q-question {
+	margin-bottom:.75em;
+}
 
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),  

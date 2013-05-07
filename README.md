@@ -146,3 +146,8 @@ Mar. 25
 
 April 2
 - Added a generic form page (form.html)
+
+May 7
+- Added product-search.html, showing tab 1 of new search modal, with pop-up info ballons
+- New rating images sprites, arrow for info balloon. Carousel arrows for future use. Dummy product images for search modal mockup (in images/search/).
+- Including Ryan's adjustments to quiz.css and standalone form CSS in style.css

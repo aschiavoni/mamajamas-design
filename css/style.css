@@ -2314,8 +2314,6 @@ ul.screenshots img {
   background-image:url(../images/pop-arrow-r@2x.png); /* product carousel detail arrow */
   }
 }
-<<<<<<< HEAD
-}
 
 /* standalone forms */
 
@@ -2329,20 +2327,5 @@ ul.screenshots img {
 	padding: 0 5px;
 	position: relative;
 	top: -.7em;
-  color: #8c8c8c;
-=======
-
-/* standalone forms */
-#user-signup .divider {
- border-top: 1px solid #d3d3d3;
- text-align: center;
- margin-top: 2em;
-}
-#user-signup .divider strong {
- background: #fff;
- padding: 0 5px;
- position: relative;
- top: -.7em;
- color: #8c8c8c;
->>>>>>> Product Search modal (1st tab)
+  	color: #8c8c8c;
 }

@@ -151,3 +151,8 @@ May 7
 - Added product-search.html, showing tab 1 of new search modal, with pop-up info ballons
 - New rating images sprites, arrow for info balloon. Carousel arrows for future use. Dummy product images for search modal mockup (in images/search/).
 - Including Ryan's adjustments to quiz.css and standalone form CSS in style.css
+
+May 22
+- Formatting changes to Product Search modal (product-search.html), including removal of "carousel" class and change to product detail pop-ups.
+- New page type for Terms of Service page (terms.html)
+- Build List adjustments: removed "Get Recommendations" buttons and changed "Share" button to "Publish"

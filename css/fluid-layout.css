@@ -217,6 +217,24 @@ img, object, embed, video {
 	width:24%;
 }
 
+/* layout adjustments for text pages */
+.text-page #subhed {
+	width:47.92%;
+	margin-left:24%;
+	padding-left:20px;
+	float:none;
+}
+.text-page #primary {
+	width:24%;
+}
+.text-page #secondary {
+	width:47.92%;
+	margin-left:20px;
+}
+.text-page #tertiary {
+	width:24%;
+}
+
 /* layout for home page */
 .home #primary {
 	float:none;

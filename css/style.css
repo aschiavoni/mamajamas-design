@@ -514,27 +514,27 @@ button:hover, button:focus, button:active, a.button:hover, a.button:focus, a.but
 	border-color: #996aa0;
 }
 .bt-buy {
-	color:#222;
+	color: #222;
 	border-color: #e6a400;
 	background: #ffd875;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.75);
-	text-align:center;
+	text-align: center;
 	padding: 4px 12px .2em;
 	line-height: 1em;
 }
 .bt-buy em {
-	display:inline-block;
-	vertical-align:middle;
-	text-indent:-9999px;
-	overflow:hidden;
-	width:53px;
-	height:16px;
-	background:url(../images/logo_amazon-s.png) no-repeat 0 0;
+	display: inline-block;
+	vertical-align: middle;
+	text-indent: -9999px;
+	overflow: hidden;
+	width: 53px;
+	height: 16px;
+	background: url(../images/logo_amazon-s.png) no-repeat 0 0;
 }
 a.bt-buy:hover {
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.35);
-	background-color:#e6a400 !important;
-	border-color:#e6a400 !important;
+	background-color: #e6a400 !important;
+	border-color: #e6a400 !important;
 }
 .button .ss-icon {
 	position: relative;
@@ -885,18 +885,18 @@ a.more-friends:hover, a.more-friends:focus {
 	top: -.7em;
 }
 .modal-box #closewindow {
-	display:block;
-	position:absolute;
-	width:24px;
-	height:24px;
-	text-align:center;
-	right:7px;
-	top:7px;
-	color:#bbb;
+	display: block;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	right: 7px;
+	top: 7px;
+	color: #bbb;
 }
 .modal-box #closewindow span {
 	line-height: 1.35em;
-    margin: 0;
+	margin: 0;
 }
 
 /* specific modal windows */
@@ -1042,8 +1042,8 @@ ul.prod-search-list {
 }
 .prod-detail-pop .detail-price em {
 	font-size: .7857em;
-	font-style:normal;
-	color:#999;	
+	font-style: normal;
+	color: #999;
 }
 .prod-detail-pop .detail-rating-mj, .prod-detail-pop .detail-rating-am {
 	color: #bbb;
@@ -1068,7 +1068,7 @@ ul.prod-search-list {
 }
 .prod-detail-pop .prod-links .button {
 	width: 83%;
-	margin:7px 0 0;
+	margin: 7px 0 0;
 	text-align: center;
 }
 .prod-detail-pop span.arrow {
@@ -1583,7 +1583,7 @@ div.priority-low {
 }
 
 /* -- product edit menu active state */
-.prod-filled:hover .prod-edit-menu, .prod-filled:focus .prod-edit-menu, .menu-on .prod-edit-menu {
+.prod:hover .prod-edit-menu, .prod:focus .prod-edit-menu, .menu-on .prod-edit-menu {
 	height: 2em;
 	background: #999;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.25);
@@ -2259,14 +2259,14 @@ div.baby-bdate {
 	padding-left: 0;
 }
 .text-page #secondary .content {
-	padding:2em 0;
-	line-height:1.46;
+	padding: 2em 0;
+	line-height: 1.46;
 }
 .text-page #secondary h3 {
-    margin: 2em 0 1em;
+	margin: 2em 0 1em;
 }
 .text-page #secondary li h4 {
-    margin: 0;
+	margin: 0;
 }
 
 /* home page */
@@ -2383,7 +2383,7 @@ ul.screenshots img {
    background-image: url(../images/carousel-arrows@2x.png); /* product carousel arrows */
   }
    .prod-detail-pop span.arrow {
-  background-image:url(../images/pop-arrow-r@2x.png); /* product carousel detail arrow */
+   background-image:url(../images/pop-arrow-r@2x.png); /* product carousel detail arrow */
   }
 }
 

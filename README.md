@@ -156,3 +156,7 @@ May 22
 - Formatting changes to Product Search modal (product-search.html), including removal of "carousel" class and change to product detail pop-ups.
 - New page type for Terms of Service page (terms.html)
 - Build List adjustments: removed "Get Recommendations" buttons and changed "Share" button to "Publish"
+
+May 23
+- CSS edit to allow "Delete" hover submenu to appear on un-filled listings on the Build List screen.
+- Edited Build List mockups to include "Delete" button on un-filled product listings.

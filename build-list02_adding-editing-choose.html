@@ -40,8 +40,18 @@
       </div>
       <div id="login">
         <ul>
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Login</a></li>
+          <!-- my account link -->
+          <li id="myaccount"><a href="#"><img src="images/picture.jpg">My Account<span class="ss-dropdown"></span></a>
+            <!-- drop dpwn menu -->
+            <ul class="nav-drop">
+              <li class="user-email"><span>aschiavoni@gmail.com</span></li>
+              <li><a href="#">My List</a></li>
+              <li><a href="#">My Profile</a></li>
+              <li class="last"><a href="#">Logout</a></li>
+            </ul>
+            <!-- / drop dpwn menu -->
+          </li>
+          <!-- / my account link -->
         </ul>
       </div>
       <div id="progress">
@@ -130,31 +140,62 @@
                 >
                 </div></td>
               <td class="rating">&nbsp;</td>
-              <td class="when"><div class="when-txt">Pre-birth</div></td>
+              <td class="when">Pre-birth</td>
               <td class="priority"><div class="priority-high">high</div></td>
             </tr>
             <!-- / Item 1 ****** --> 
-            <!-- Item 2 ****** -->
-            <tr class="prod prod-filled menu-off">
-              <td class="own"><input id="own05" type="checkbox" title="Do you own this item?">
-                <label for="own05">I own this item.</label></td>
-              <td class="item"><div class="prod-thumb"><img src="images/products/thumb_nursing-pump@2x.jpg" alt="bottle"></div>
+            <!-- Item 2 (in editing mode) ****** -->
+            <tr class="prod edit-mode choose-bt">
+              <td class="own"><input type="checkbox" disabled id="own04" title="Do you own this item?">
+                <label for="own04">I own this item.</label></td>
+              <td class="item"><div class="prod-thumb"><img src="images/products/nursing-pump@2x.png" alt="bottle"></div>
                 <div class="prod-desc">
                   <div class="prod-category">Breast Pump</div>
-                  <h3><a href="#">Philips AVENT BPA-free Manual Breast Pump</a></h3>
-                  <!-- note -->
-                  <div class="prod-note closed">
-                  	<div class="note-content">Nunc aliquet adipiscing neque vel convallis. Sed mattis lacinia lacus a gravida. Morbi erat sem, luctus at porttitor ac, cursus luctus mauris. Sed eget orci orci. Sed eu ipsum velit, id elementum metus. Integer interdum sapien bibendum est iaculis quis adipiscing turpis cursus.</div></div>
-                  <!-- / end note -->
-                  <!-- drop-down editing menu -->
-                  <div class="prod-edit-menu">
-                    <ul class="clearfix">
-                      <li><a href="#" class="ss-write"><span>Edit</span></a></li>
-                      <li><a href="#" class="ss-cart"><span>Buy</span></a></li>
-                      <li><a href="#" class="ss-delete"><span>Delete</span></a></li>
+                  <h3>Philips AVENT BPA-free Manual Breast Pump</h3>
+                  <div class="prod-note">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id pulvinar mi. Nulla porttitor libero eu nibh...</div>
+                  <fieldset>
+                    <legend><span>Product Info</span></legend>
+                    <p>
+                      <label for="field-prodname">Product name / brand</label>
+                      <br />
+                      <input type="text" name="field-prodname" value="" id="field-prodname" class="field-prodname">
+                      <a href="#" class="button bt-narrow"><span class="ss-search"></span>Choose</a>
+                    </p>
+                    <fieldset>
+                      <legend><span>Need vs. Own</span></legend>
+                      <ul class="inline">
+                        <li>
+                          <input type="radio" id="radio-need" name="need-own">
+                          <label for="radio-need">Need</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="radio-own" checked name="need-own">
+                          <label for="radio-own">Own</label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                    <p>
+                      <label for="field-buylink">Link to buy</label>
+                      <br />
+                      <input type="text" name="field-buylink" value="" id="field-buylink">
+                    </p>
+                    <p>
+                      <label for="field-notes">Notes</label>
+                      <br />
+                      <textarea name="field-notes" value="" id="field-notes"></textarea>
+                    </p>
+                    <p class="label-norm">
+                      <input type="checkbox" id="chk-fb-share" checked>
+                      <label for="chk-fb-share" class="small">Share on Facebook</label>
+                    </p>
+                  </fieldset>
+                  <a class="button bt-light bt-thumb-upload"><span class="ss-upload"></span>Upload</a>
+                  <div class="prod-links">
+                    <ul>
+                      <li><a href="#" class="button bt-light">Cancel</a></li>
+                      <li><a href="#" class="button bt-color">Save</a></li>
                     </ul>
                   </div>
-                  <!-- / drop-down editing menu --> 
                 </div></td>
               <td class="rating"><div class="eggs">
                   <div class="egg egg-full"></div>
@@ -163,40 +204,10 @@
                   <div class="egg egg-full"></div>
                   <div class="egg"></div>
                 </div></td>
-              <td class="when"><div class="when-txt">Pre-birth</div>
-              <!-- drop-down menu: when -->
-              <div class="prod-drop visuallyhidden">
-              	<div class="prod-drop-arrow"><span class="ss-icon">dropdown</span></div>
-                <ul>
-                    <li class="hed">When to Buy:</li>
-                    <li><a href="#">Pre-birth</a></li>
-                    <li><a href="#">0-3 mo</a></li>
-                    <li><a href="#">4-6 mo</a></li>
-                    <li><a href="#">7-12 mo</a></li>
-                    <li><a href="#">13-18 mo</a></li>
-                    <li><a href="#">19-24 mo</a></li>
-                    <li><a href="#">2 y</a></li>
-                    <li><a href="#">3 y</a></li>
-                    <li><a href="#">4 y</a></li>
-                    <li><a href="#">5 y+</a></li>
-                </ul>
-              </div>
-               <!-- / end drop-down menu --></td>
-              <td class="priority"><div class="priority-med">medium</div>
-              <!-- drop-down menu: priority -->
-              <div class="prod-drop">
-              	<div class="prod-drop-arrow"><span class="ss-icon">dropdown</span></div>
-                <ul>
-                    <li class="hed">Priority:</li>
-                    <li class="priority-high"><a href="#"><strong>!!</strong> Get it</a></li>
-					<li class="priority-med"><a href="#"><strong>!</strong> Consider it</a></li>
-					<li class="priority-low"><a href="#"><strong>x</strong> Don't bother</a></li>
-                </ul>
-              </div>
-               <!-- / end drop-down menu -->
-              </td>
+              <td class="when">Pre-birth</td>
+              <td class="priority"><div class="priority-med">medium</div></td>
             </tr>
-            <!-- / Item 2 ****** -->
+            <!-- / Item 2 ****** --> 
           </tbody>
         </table>
         <!-- end baby gear table ******* -->

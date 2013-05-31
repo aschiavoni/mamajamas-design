@@ -20,6 +20,18 @@
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+<!-- collapsible panel -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		speed:200
+    });
+  });
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -95,7 +107,7 @@
         <form class="label-infield" id="frm-prod-search">
           <fieldset>
             <p>
-              <label for="field-search">Search for Bath Seats</label>
+              <label for="field-search">Search for bath seats on Amazon</label>
               <br />
               <input name="field-search" type="text" id="field-search" value="">
             </p>
@@ -221,6 +233,21 @@
         </ul>
       </div>
       <!-- end results list --> 
+      <!-- collapsible panel -->
+     <p class="collapsible" id="collapsible1"><strong>Or, add your own.</strong></p>
+       <div class="collapsible-content">
+       <form class="label-infield" id="frm-addown">
+        <fieldset>
+         <p>
+          <label for="field-prodname">Enter a product name or brand</label>
+          <br />
+          <input type="text" name="field-prodname" value="" id="field-prodname" class="field-prodname">
+          <a href="#" class="button bt-color"><span class="ss-plus"></span>Add</a>
+        </p>
+        </fieldset>
+        </form>
+      </div>
+      <!-- end collapsible panel -->
     </div>
     <!-- end modal window content --> 
   </div>

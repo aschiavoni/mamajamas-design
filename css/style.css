@@ -364,7 +364,7 @@ input[type=email], input[type=text], input[type=password], textarea {
 	outline: none;
 	line-height: 1;
 	padding: .25em .5em;
-	border: solid 1px #d9d9d9;
+	border: solid 1px #d3d3d3;
 	border-radius: 5px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -413,9 +413,10 @@ form.label-infield fieldset p {
 }
 form.label-infield label {
 	color: #AAA;
+	font-weight:300;
 }
 form.label-infield label strong {
-	font-weight: normal;
+	font-weight:300;
 	color: #222;
 }
 form.label-infield p label {
@@ -431,7 +432,7 @@ form.label-infield fieldset p input, form.label-infield fieldset p textarea {
 }
 form.label-infield fieldset p label {
 	display: block;
-	margin: .3em .5em;
+	margin: .35em .5em;
 }
 
 /* override in-field input labels */
@@ -492,6 +493,9 @@ button:hover, button:focus, button:active, a.button:hover, a.button:focus, a.but
 	background: #555 !important;
 	text-decoration: none;
 }
+input[type=text] + .button {
+	margin-top:-.27em;
+}
 .bt-color {
 	border-color: #5daf5d;
 	background: #6BB36E;
@@ -508,6 +512,9 @@ button:hover, button:focus, button:active, a.button:hover, a.button:focus, a.but
 .bt-light:hover, .bt-light:focus, .bt-light:active {
 	color: #eee;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
+}
+.bt-narrow {
+	padding: 3px 6px .125em;
 }
 #bt-share {
 	background-color: #996aa0;
@@ -552,14 +559,14 @@ a.bt-buy:hover {
 .oldie .button-row button, .oldie .button-row .button {
 	margin: 0 2px;
 }
-.ss-plus, .ss-check, .ss-action, .ss-upload {
+.ss-action, .ss-check, .ss-plus, .ss-search, .ss-upload {
 	line-height: 1;
 	margin-right: 4px;
 }
 .ss-plus {
 	font-size: 0.75em;
 }
-.ss-check, .ss-action {
+ .ss-action, .ss-check, .ss-search {
 	position: relative;
 	top: .125em;
 }
@@ -831,7 +838,7 @@ a.more-friends:hover, a.more-friends:focus {
 	color: #333;
 	margin: 0;
 	padding: 5px 20px 3px;
-	border-bottom: 1px solid #c3c3c3;
+	border-bottom: 1px solid #d3d3d3;
 }
 .modal-box h3 {
 	font-size: 1.33em;
@@ -947,36 +954,35 @@ a.more-friends:hover, a.more-friends:focus {
 	margin-left: -280px;
 }
 #search-modal .content {
-	padding: 20px 0;
+	padding: 20px 0 0;
 }
 #frm-prod-search {
 	margin-bottom: 0;
 }
 #frm-prod-search p {
-	padding-left: 124px;
+	padding-left: 30px;
 }
 #search-modal input[type="text"]#field-search {
 	width: 276px;
-	padding: .28em .5em .22em 24px;
+	padding-left: 24px;
 	background: #fff url("../images/icon_search.png") no-repeat 5px 50%;
 	background-size: 18px 18px;
 }
 #search-modal form.label-infield p label {
-	left: 146px;
+	left: 52px;
 	width: 280px;
 }
 #search-modal h2 {
 	font-size: 1.5em;
 	font-family: sans-serif;
-	font-weight: normal;
+	font-weight: 300;
 	line-height: 1em;
 	color: #222;
 	margin: 0;
-	padding: 11px 20px 8px 20px;
-	border-bottom: 1px solid #c3c3c3;
+	padding: 12px 20px 7px;
 }
 #prod-search-results {
-	padding: 15px 20px 0;
+	padding: 10px 20px;
 }
 #search-modal h3 {
 	font-size: 1em;
@@ -1081,6 +1087,35 @@ ul.prod-search-list {
 	background-size: 14px 26px;
 }
 
+/* search modal "add your own" */
+#search-modal #field-prodname {
+	display:inline;
+	width:52%;
+}
+#search-modal .collapsible {
+    margin: 5px 0 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+	border-top: 1px solid #d3d3d3;
+}
+#search-modal .collapsible-content {
+	padding: 0 0 10px;
+}
+#search-modal .collapsible strong {
+	color: #337BA3;
+	font-weight:normal;
+}
+#search-modal .ss-dropdown,
+#search-modal .ss-dropdown strong {
+	color: #ACACAC;
+}
+#search-modal .collapsible-content p {
+	padding-left:30px;
+}
+#search-modal form#frm-addown p label {
+    left: 32px;
+    width: 280px;
+}
 
 /* thumbnails carousel ----- */
 .carousel {
@@ -1691,8 +1726,11 @@ div.priority-low {
 }
 
 /* product edit mode, new item mode ---- */
+.edit-mode, .new-mode {
+	box-shadow:0 0 4px rgba(0,0,0,.20);
+}
 .edit-mode, .edit-mode:hover, .new-mode, .new-mode:hover {
-	background: #fcf8e6;
+	background: #f5f5f5;
 }
 
 /* edit mode hidden elements hidden */
@@ -1703,6 +1741,10 @@ div.priority-low {
 /* edit mode, new mode form elements */
 .edit-mode input[type=text], .edit-mode textarea, .new-mode input[type=text], .new-mode textarea {
 	width: 95%;
+}
+.choose-bt input[type=text].field-prodname {
+	width: 70%;
+	display:inline;
 }
 
 /* edit mode alignment */
@@ -2090,7 +2132,7 @@ div.baby-bdate {
 	text-decoration: underline;
 }
 .collapsible strong {
-	padding-left: 5px;
+	padding-left: 3px;
 }
 .ie7 .collapsible-content {
 	zoom: 1;

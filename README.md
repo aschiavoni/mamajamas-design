@@ -160,3 +160,8 @@ May 22
 May 23
 - CSS edit to allow "Delete" hover submenu to appear on un-filled listings on the Build List screen.
 - Edited Build List mockups to include "Delete" button on un-filled product listings.
+
+May 31
+- In product-search.html: New "Add your own" field in collapsible panel, layout, font and other styling adjustments.
+- In build-list02_adding-editing-choose.html: New "choose-bt" class, added to TR after "edit-mode" class, allows placement of "Choose" button after product name field.
+  Compare to no-Choose-button version in "build-list02_adding-editing.html"

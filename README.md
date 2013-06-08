@@ -165,3 +165,14 @@ May 31
 - In product-search.html: New "Add your own" field in collapsible panel, layout, font and other styling adjustments.
 - In build-list02_adding-editing-choose.html: New "choose-bt" class, added to TR after "edit-mode" class, allows placement of "Choose" button after product name field.
   Compare to no-Choose-button version in "build-list02_adding-editing.html"
+
+June 8
+- Added Build List Intro screen: build-list_intro.html
+- Deleted Reenie Beanie web font on all but home.html and build-list_intro.html
+- Added 600 font weight to Open Sans web font link in HEAD
+- Added DIV to progress bar for placement of border graphic
+- Added "All" link to Build List category list
+- Changed "Publish" button to "Share"
+- Added standard-resolution versions of some graphics that were previously only high-res
+- Restored sample thumbnail images for "thumbnails.html" example file
+- Added footer links

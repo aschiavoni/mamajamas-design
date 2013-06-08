@@ -6,8 +6,7 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mamajamas : Quiz, Step 8</title>
@@ -47,11 +46,13 @@
         </ul>
       </div>
       <div id="progress">
-        <ol class="prog1"><!-- comments between list items prevent whitespace insertion when displayed inline -->
-        	<li class="prog1"><strong>1</strong> Take the quiz</li><!--
+        <ol class="prog1">
+          <!-- comments between list items prevent whitespace insertion when displayed inline -->
+          <li class="prog1"><strong>1</strong> Take the quiz</li><!--
           --><li class="prog2"><strong>2</strong> Make your list and get advice</li><!--
           --><li class="prog3"><strong>3</strong> Share your list</li>
         </ol>
+        <div class="progborder"></div>
       </div>
     </div>
   </div>
@@ -63,11 +64,9 @@
     <div class="content"></div>
   </div>
   <div id="secondary">
-    <div class="content">
-    </div>
+    <div class="content"> </div>
   </div>
-  <div id="tertiary">
-  </div>
+  <div id="tertiary"> </div>
   <div id="footer">
     <div class="content"></div>
   </div>
@@ -79,43 +78,299 @@
   <div class="modal-overlay"> &nbsp; </div>
   <div class="vertical-offset"></div>
   <!-- modal window box -->
-  <div class="quiz-box large" id="quiz08">
-  	  <!-- modal window close button -->
-      <a href="#" class="bt-close ss-icon">Close</a>
+  <div id="quiz">
+    <div class="quiz-box large" id="quiz08"><!-- modal window close button --> 
+      <a class="bt-close ss-icon" href="#">Close</a> 
       <!-- modal window content -->
       <div class="content">
-        
-        <!-- question q08-01 ***** -->
-        <div id="q08-01" class="q-question">
-        	My zip code is: 
-			<form class="label-infield" id="frm-zip">
-        		<fieldset>
-          		<p>
-            		<label for="field-zip">Enter zip code</label>
-            		<br />
-            		<input name="field-zip" type="text" id="field-zip" value="">    
-           		</p>
-           		</fieldset>
-                <a href="#" class="button" id="bt-build">Build My List</a>
-          	</form>      
+        <form id="frm-zip" class="label-infield">
+          <!-- question q08-01 ***** -->
+          <div class="q-question" id="q08-01"> My zip code is:
+            <fieldset>
+              <p>
+                <label for="zip_code" style="opacity: 0; display: none;">Enter zip code</label>
+                <br>
+                <input type="text" value="" id="zip_code" name="zip_code">
+              </p>
+            </fieldset>
           </div>
-        <!-- / question q08-01 ***** -->
-              
+          <!-- / question q08-01 ***** --> 
+          <!-- question q02-02 ***** -->
+          <div class="q-question" id="q08-02">
+            <input type="hidden" value="US" id="country" name="country">
+            Country: 
+            <!-- drop-down menu -->
+            <div class="choicedrop"> <a id="country-select" href="#"> <span id="country-select-desc"> United States </span> <span class="ss-dropdown"></span> </a>
+              <ol style="width: 10em; max-height: 6.5em; overflow: auto; display: block;">
+                <li> <a href="#" data-country-code="AF" class="country-name"> Afghanistan </a> </li>
+                <li> <a href="#" data-country-code="AL" class="country-name"> Albania </a> </li>
+                <li> <a href="#" data-country-code="DZ" class="country-name"> Algeria </a> </li>
+                <li> <a href="#" data-country-code="AS" class="country-name"> American Samoa </a> </li>
+                <li> <a href="#" data-country-code="AD" class="country-name"> Andorra </a> </li>
+                <li> <a href="#" data-country-code="AO" class="country-name"> Angola </a> </li>
+                <li> <a href="#" data-country-code="AI" class="country-name"> Anguilla </a> </li>
+                <li> <a href="#" data-country-code="AQ" class="country-name"> Antarctica </a> </li>
+                <li> <a href="#" data-country-code="AG" class="country-name"> Antigua and Barbuda </a> </li>
+                <li> <a href="#" data-country-code="AR" class="country-name"> Argentina </a> </li>
+                <li> <a href="#" data-country-code="AM" class="country-name"> Armenia </a> </li>
+                <li> <a href="#" data-country-code="AW" class="country-name"> Aruba </a> </li>
+                <li> <a href="#" data-country-code="AU" class="country-name"> Australia </a> </li>
+                <li> <a href="#" data-country-code="AT" class="country-name"> Austria </a> </li>
+                <li> <a href="#" data-country-code="AZ" class="country-name"> Azerbaijan </a> </li>
+                <li> <a href="#" data-country-code="BS" class="country-name"> Bahamas </a> </li>
+                <li> <a href="#" data-country-code="BH" class="country-name"> Bahrain </a> </li>
+                <li> <a href="#" data-country-code="BD" class="country-name"> Bangladesh </a> </li>
+                <li> <a href="#" data-country-code="BB" class="country-name"> Barbados </a> </li>
+                <li> <a href="#" data-country-code="BY" class="country-name"> Belarus </a> </li>
+                <li> <a href="#" data-country-code="BE" class="country-name"> Belgium </a> </li>
+                <li> <a href="#" data-country-code="BZ" class="country-name"> Belize </a> </li>
+                <li> <a href="#" data-country-code="BJ" class="country-name"> Benin </a> </li>
+                <li> <a href="#" data-country-code="BM" class="country-name"> Bermuda </a> </li>
+                <li> <a href="#" data-country-code="BT" class="country-name"> Bhutan </a> </li>
+                <li> <a href="#" data-country-code="BO" class="country-name"> Bolivia </a> </li>
+                <li> <a href="#" data-country-code="BA" class="country-name"> Bosnia and Herzegovina </a> </li>
+                <li> <a href="#" data-country-code="BW" class="country-name"> Botswana </a> </li>
+                <li> <a href="#" data-country-code="BV" class="country-name"> Bouvet Island </a> </li>
+                <li> <a href="#" data-country-code="BR" class="country-name"> Brazil </a> </li>
+                <li> <a href="#" data-country-code="IO" class="country-name"> British Indian Ocean Territory </a> </li>
+                <li> <a href="#" data-country-code="BN" class="country-name"> Brunei Darussalam </a> </li>
+                <li> <a href="#" data-country-code="BG" class="country-name"> Bulgaria </a> </li>
+                <li> <a href="#" data-country-code="BF" class="country-name"> Burkina Faso </a> </li>
+                <li> <a href="#" data-country-code="BI" class="country-name"> Burundi </a> </li>
+                <li> <a href="#" data-country-code="KH" class="country-name"> Cambodia </a> </li>
+                <li> <a href="#" data-country-code="CM" class="country-name"> Cameroon </a> </li>
+                <li> <a href="#" data-country-code="CA" class="country-name"> Canada </a> </li>
+                <li> <a href="#" data-country-code="CV" class="country-name"> Cape Verde </a> </li>
+                <li> <a href="#" data-country-code="KY" class="country-name"> Cayman Islands </a> </li>
+                <li> <a href="#" data-country-code="CF" class="country-name"> Central African Republic </a> </li>
+                <li> <a href="#" data-country-code="TD" class="country-name"> Chad </a> </li>
+                <li> <a href="#" data-country-code="CL" class="country-name"> Chile </a> </li>
+                <li> <a href="#" data-country-code="CN" class="country-name"> China </a> </li>
+                <li> <a href="#" data-country-code="CX" class="country-name"> Christmas Island </a> </li>
+                <li> <a href="#" data-country-code="CC" class="country-name"> Cocos (Keeling) Islands </a> </li>
+                <li> <a href="#" data-country-code="CO" class="country-name"> Colombia </a> </li>
+                <li> <a href="#" data-country-code="KM" class="country-name"> Comoros </a> </li>
+                <li> <a href="#" data-country-code="CG" class="country-name"> Congo </a> </li>
+                <li> <a href="#" data-country-code="CD" class="country-name"> Congo, The Democratic Republic Of The </a> </li>
+                <li> <a href="#" data-country-code="CK" class="country-name"> Cook Islands </a> </li>
+                <li> <a href="#" data-country-code="CR" class="country-name"> Costa Rica </a> </li>
+                <li> <a href="#" data-country-code="HR" class="country-name"> Croatia </a> </li>
+                <li> <a href="#" data-country-code="CU" class="country-name"> Cuba </a> </li>
+                <li> <a href="#" data-country-code="CY" class="country-name"> Cyprus </a> </li>
+                <li> <a href="#" data-country-code="CZ" class="country-name"> Czech Republic </a> </li>
+                <li> <a href="#" data-country-code="CI" class="country-name"> Côte D'Ivoire </a> </li>
+                <li> <a href="#" data-country-code="DK" class="country-name"> Denmark </a> </li>
+                <li> <a href="#" data-country-code="DJ" class="country-name"> Djibouti </a> </li>
+                <li> <a href="#" data-country-code="DM" class="country-name"> Dominica </a> </li>
+                <li> <a href="#" data-country-code="DO" class="country-name"> Dominican Republic </a> </li>
+                <li> <a href="#" data-country-code="EC" class="country-name"> Ecuador </a> </li>
+                <li> <a href="#" data-country-code="EG" class="country-name"> Egypt </a> </li>
+                <li> <a href="#" data-country-code="SV" class="country-name"> El Salvador </a> </li>
+                <li> <a href="#" data-country-code="GQ" class="country-name"> Equatorial Guinea </a> </li>
+                <li> <a href="#" data-country-code="ER" class="country-name"> Eritrea </a> </li>
+                <li> <a href="#" data-country-code="EE" class="country-name"> Estonia </a> </li>
+                <li> <a href="#" data-country-code="ET" class="country-name"> Ethiopia </a> </li>
+                <li> <a href="#" data-country-code="FK" class="country-name"> Falkland Islands (Malvinas) </a> </li>
+                <li> <a href="#" data-country-code="FO" class="country-name"> Faroe Islands </a> </li>
+                <li> <a href="#" data-country-code="FJ" class="country-name"> Fiji </a> </li>
+                <li> <a href="#" data-country-code="FI" class="country-name"> Finland </a> </li>
+                <li> <a href="#" data-country-code="FR" class="country-name"> France </a> </li>
+                <li> <a href="#" data-country-code="GF" class="country-name"> French Guiana </a> </li>
+                <li> <a href="#" data-country-code="PF" class="country-name"> French Polynesia </a> </li>
+                <li> <a href="#" data-country-code="TF" class="country-name"> French Southern Territories </a> </li>
+                <li> <a href="#" data-country-code="GA" class="country-name"> Gabon </a> </li>
+                <li> <a href="#" data-country-code="GM" class="country-name"> Gambia </a> </li>
+                <li> <a href="#" data-country-code="GE" class="country-name"> Georgia </a> </li>
+                <li> <a href="#" data-country-code="DE" class="country-name"> Germany </a> </li>
+                <li> <a href="#" data-country-code="GH" class="country-name"> Ghana </a> </li>
+                <li> <a href="#" data-country-code="GI" class="country-name"> Gibraltar </a> </li>
+                <li> <a href="#" data-country-code="GR" class="country-name"> Greece </a> </li>
+                <li> <a href="#" data-country-code="GL" class="country-name"> Greenland </a> </li>
+                <li> <a href="#" data-country-code="GD" class="country-name"> Grenada </a> </li>
+                <li> <a href="#" data-country-code="GP" class="country-name"> Guadeloupe </a> </li>
+                <li> <a href="#" data-country-code="GU" class="country-name"> Guam </a> </li>
+                <li> <a href="#" data-country-code="GT" class="country-name"> Guatemala </a> </li>
+                <li> <a href="#" data-country-code="GG" class="country-name"> Guernsey </a> </li>
+                <li> <a href="#" data-country-code="GN" class="country-name"> Guinea </a> </li>
+                <li> <a href="#" data-country-code="GW" class="country-name"> Guinea-Bissau </a> </li>
+                <li> <a href="#" data-country-code="GY" class="country-name"> Guyana </a> </li>
+                <li> <a href="#" data-country-code="HT" class="country-name"> Haiti </a> </li>
+                <li> <a href="#" data-country-code="HM" class="country-name"> Heard and McDonald Islands </a> </li>
+                <li> <a href="#" data-country-code="VA" class="country-name"> Holy See (Vatican City State) </a> </li>
+                <li> <a href="#" data-country-code="HN" class="country-name"> Honduras </a> </li>
+                <li> <a href="#" data-country-code="HK" class="country-name"> Hong Kong </a> </li>
+                <li> <a href="#" data-country-code="HU" class="country-name"> Hungary </a> </li>
+                <li> <a href="#" data-country-code="IS" class="country-name"> Iceland </a> </li>
+                <li> <a href="#" data-country-code="IN" class="country-name"> India </a> </li>
+                <li> <a href="#" data-country-code="ID" class="country-name"> Indonesia </a> </li>
+                <li> <a href="#" data-country-code="IR" class="country-name"> Iran, Islamic Republic Of </a> </li>
+                <li> <a href="#" data-country-code="IQ" class="country-name"> Iraq </a> </li>
+                <li> <a href="#" data-country-code="IE" class="country-name"> Ireland </a> </li>
+                <li> <a href="#" data-country-code="IM" class="country-name"> Isle of Man </a> </li>
+                <li> <a href="#" data-country-code="IL" class="country-name"> Israel </a> </li>
+                <li> <a href="#" data-country-code="IT" class="country-name"> Italy </a> </li>
+                <li> <a href="#" data-country-code="JM" class="country-name"> Jamaica </a> </li>
+                <li> <a href="#" data-country-code="JP" class="country-name"> Japan </a> </li>
+                <li> <a href="#" data-country-code="JE" class="country-name"> Jersey </a> </li>
+                <li> <a href="#" data-country-code="JO" class="country-name"> Jordan </a> </li>
+                <li> <a href="#" data-country-code="KZ" class="country-name"> Kazakhstan </a> </li>
+                <li> <a href="#" data-country-code="KE" class="country-name"> Kenya </a> </li>
+                <li> <a href="#" data-country-code="KI" class="country-name"> Kiribati </a> </li>
+                <li> <a href="#" data-country-code="KP" class="country-name"> Korea, Democratic People's Republic Of </a> </li>
+                <li> <a href="#" data-country-code="KR" class="country-name"> Korea, Republic of </a> </li>
+                <li> <a href="#" data-country-code="KW" class="country-name"> Kuwait </a> </li>
+                <li> <a href="#" data-country-code="KG" class="country-name"> Kyrgyzstan </a> </li>
+                <li> <a href="#" data-country-code="LA" class="country-name"> Lao People's Democratic Republic </a> </li>
+                <li> <a href="#" data-country-code="LV" class="country-name"> Latvia </a> </li>
+                <li> <a href="#" data-country-code="LB" class="country-name"> Lebanon </a> </li>
+                <li> <a href="#" data-country-code="LS" class="country-name"> Lesotho </a> </li>
+                <li> <a href="#" data-country-code="LR" class="country-name"> Liberia </a> </li>
+                <li> <a href="#" data-country-code="LY" class="country-name"> Libya </a> </li>
+                <li> <a href="#" data-country-code="LI" class="country-name"> Liechtenstein </a> </li>
+                <li> <a href="#" data-country-code="LT" class="country-name"> Lithuania </a> </li>
+                <li> <a href="#" data-country-code="LU" class="country-name"> Luxembourg </a> </li>
+                <li> <a href="#" data-country-code="MO" class="country-name"> Macao </a> </li>
+                <li> <a href="#" data-country-code="MK" class="country-name"> Macedonia, the Former Yugoslav Republic Of </a> </li>
+                <li> <a href="#" data-country-code="MG" class="country-name"> Madagascar </a> </li>
+                <li> <a href="#" data-country-code="MW" class="country-name"> Malawi </a> </li>
+                <li> <a href="#" data-country-code="MY" class="country-name"> Malaysia </a> </li>
+                <li> <a href="#" data-country-code="MV" class="country-name"> Maldives </a> </li>
+                <li> <a href="#" data-country-code="ML" class="country-name"> Mali </a> </li>
+                <li> <a href="#" data-country-code="MT" class="country-name"> Malta </a> </li>
+                <li> <a href="#" data-country-code="MH" class="country-name"> Marshall Islands </a> </li>
+                <li> <a href="#" data-country-code="MQ" class="country-name"> Martinique </a> </li>
+                <li> <a href="#" data-country-code="MR" class="country-name"> Mauritania </a> </li>
+                <li> <a href="#" data-country-code="MU" class="country-name"> Mauritius </a> </li>
+                <li> <a href="#" data-country-code="YT" class="country-name"> Mayotte </a> </li>
+                <li> <a href="#" data-country-code="MX" class="country-name"> Mexico </a> </li>
+                <li> <a href="#" data-country-code="FM" class="country-name"> Micronesia, Federated States Of </a> </li>
+                <li> <a href="#" data-country-code="MD" class="country-name"> Moldova, Republic of </a> </li>
+                <li> <a href="#" data-country-code="MC" class="country-name"> Monaco </a> </li>
+                <li> <a href="#" data-country-code="MN" class="country-name"> Mongolia </a> </li>
+                <li> <a href="#" data-country-code="ME" class="country-name"> Montenegro </a> </li>
+                <li> <a href="#" data-country-code="MS" class="country-name"> Montserrat </a> </li>
+                <li> <a href="#" data-country-code="MA" class="country-name"> Morocco </a> </li>
+                <li> <a href="#" data-country-code="MZ" class="country-name"> Mozambique </a> </li>
+                <li> <a href="#" data-country-code="MM" class="country-name"> Myanmar </a> </li>
+                <li> <a href="#" data-country-code="NA" class="country-name"> Namibia </a> </li>
+                <li> <a href="#" data-country-code="NR" class="country-name"> Nauru </a> </li>
+                <li> <a href="#" data-country-code="NP" class="country-name"> Nepal </a> </li>
+                <li> <a href="#" data-country-code="NL" class="country-name"> Netherlands </a> </li>
+                <li> <a href="#" data-country-code="AN" class="country-name"> Netherlands Antilles </a> </li>
+                <li> <a href="#" data-country-code="NC" class="country-name"> New Caledonia </a> </li>
+                <li> <a href="#" data-country-code="NZ" class="country-name"> New Zealand </a> </li>
+                <li> <a href="#" data-country-code="NI" class="country-name"> Nicaragua </a> </li>
+                <li> <a href="#" data-country-code="NE" class="country-name"> Niger </a> </li>
+                <li> <a href="#" data-country-code="NG" class="country-name"> Nigeria </a> </li>
+                <li> <a href="#" data-country-code="NU" class="country-name"> Niue </a> </li>
+                <li> <a href="#" data-country-code="NF" class="country-name"> Norfolk Island </a> </li>
+                <li> <a href="#" data-country-code="MP" class="country-name"> Northern Mariana Islands </a> </li>
+                <li> <a href="#" data-country-code="NO" class="country-name"> Norway </a> </li>
+                <li> <a href="#" data-country-code="OM" class="country-name"> Oman </a> </li>
+                <li> <a href="#" data-country-code="PK" class="country-name"> Pakistan </a> </li>
+                <li> <a href="#" data-country-code="PW" class="country-name"> Palau </a> </li>
+                <li> <a href="#" data-country-code="PS" class="country-name"> Palestinian Territory, Occupied </a> </li>
+                <li> <a href="#" data-country-code="PA" class="country-name"> Panama </a> </li>
+                <li> <a href="#" data-country-code="PG" class="country-name"> Papua New Guinea </a> </li>
+                <li> <a href="#" data-country-code="PY" class="country-name"> Paraguay </a> </li>
+                <li> <a href="#" data-country-code="PE" class="country-name"> Peru </a> </li>
+                <li> <a href="#" data-country-code="PH" class="country-name"> Philippines </a> </li>
+                <li> <a href="#" data-country-code="PN" class="country-name"> Pitcairn </a> </li>
+                <li> <a href="#" data-country-code="PL" class="country-name"> Poland </a> </li>
+                <li> <a href="#" data-country-code="PT" class="country-name"> Portugal </a> </li>
+                <li> <a href="#" data-country-code="PR" class="country-name"> Puerto Rico </a> </li>
+                <li> <a href="#" data-country-code="QA" class="country-name"> Qatar </a> </li>
+                <li> <a href="#" data-country-code="RO" class="country-name"> Romania </a> </li>
+                <li> <a href="#" data-country-code="RU" class="country-name"> Russian Federation </a> </li>
+                <li> <a href="#" data-country-code="RW" class="country-name"> Rwanda </a> </li>
+                <li> <a href="#" data-country-code="RE" class="country-name"> Réunion </a> </li>
+                <li> <a href="#" data-country-code="BL" class="country-name"> Saint Barthélemy </a> </li>
+                <li> <a href="#" data-country-code="SH" class="country-name"> Saint Helena </a> </li>
+                <li> <a href="#" data-country-code="KN" class="country-name"> Saint Kitts And Nevis </a> </li>
+                <li> <a href="#" data-country-code="LC" class="country-name"> Saint Lucia </a> </li>
+                <li> <a href="#" data-country-code="MF" class="country-name"> Saint Martin </a> </li>
+                <li> <a href="#" data-country-code="PM" class="country-name"> Saint Pierre And Miquelon </a> </li>
+                <li> <a href="#" data-country-code="VC" class="country-name"> Saint Vincent And The Grenedines </a> </li>
+                <li> <a href="#" data-country-code="WS" class="country-name"> Samoa </a> </li>
+                <li> <a href="#" data-country-code="SM" class="country-name"> San Marino </a> </li>
+                <li> <a href="#" data-country-code="ST" class="country-name"> Sao Tome and Principe </a> </li>
+                <li> <a href="#" data-country-code="SA" class="country-name"> Saudi Arabia </a> </li>
+                <li> <a href="#" data-country-code="SN" class="country-name"> Senegal </a> </li>
+                <li> <a href="#" data-country-code="RS" class="country-name"> Serbia </a> </li>
+                <li> <a href="#" data-country-code="SC" class="country-name"> Seychelles </a> </li>
+                <li> <a href="#" data-country-code="SL" class="country-name"> Sierra Leone </a> </li>
+                <li> <a href="#" data-country-code="SG" class="country-name"> Singapore </a> </li>
+                <li> <a href="#" data-country-code="SK" class="country-name"> Slovakia </a> </li>
+                <li> <a href="#" data-country-code="SI" class="country-name"> Slovenia </a> </li>
+                <li> <a href="#" data-country-code="SB" class="country-name"> Solomon Islands </a> </li>
+                <li> <a href="#" data-country-code="SO" class="country-name"> Somalia </a> </li>
+                <li> <a href="#" data-country-code="ZA" class="country-name"> South Africa </a> </li>
+                <li> <a href="#" data-country-code="GS" class="country-name"> South Georgia and the South Sandwich Islands </a> </li>
+                <li> <a href="#" data-country-code="SS" class="country-name"> South Sudan </a> </li>
+                <li> <a href="#" data-country-code="ES" class="country-name"> Spain </a> </li>
+                <li> <a href="#" data-country-code="LK" class="country-name"> Sri Lanka </a> </li>
+                <li> <a href="#" data-country-code="SD" class="country-name"> Sudan </a> </li>
+                <li> <a href="#" data-country-code="SR" class="country-name"> Suriname </a> </li>
+                <li> <a href="#" data-country-code="SJ" class="country-name"> Svalbard And Jan Mayen </a> </li>
+                <li> <a href="#" data-country-code="SZ" class="country-name"> Swaziland </a> </li>
+                <li> <a href="#" data-country-code="SE" class="country-name"> Sweden </a> </li>
+                <li> <a href="#" data-country-code="CH" class="country-name"> Switzerland </a> </li>
+                <li> <a href="#" data-country-code="SY" class="country-name"> Syrian Arab Republic </a> </li>
+                <li> <a href="#" data-country-code="TW" class="country-name"> Taiwan, Republic Of China </a> </li>
+                <li> <a href="#" data-country-code="TJ" class="country-name"> Tajikistan </a> </li>
+                <li> <a href="#" data-country-code="TZ" class="country-name"> Tanzania, United Republic of </a> </li>
+                <li> <a href="#" data-country-code="TH" class="country-name"> Thailand </a> </li>
+                <li> <a href="#" data-country-code="TL" class="country-name"> Timor-Leste </a> </li>
+                <li> <a href="#" data-country-code="TG" class="country-name"> Togo </a> </li>
+                <li> <a href="#" data-country-code="TK" class="country-name"> Tokelau </a> </li>
+                <li> <a href="#" data-country-code="TO" class="country-name"> Tonga </a> </li>
+                <li> <a href="#" data-country-code="TT" class="country-name"> Trinidad and Tobago </a> </li>
+                <li> <a href="#" data-country-code="TN" class="country-name"> Tunisia </a> </li>
+                <li> <a href="#" data-country-code="TR" class="country-name"> Turkey </a> </li>
+                <li> <a href="#" data-country-code="TM" class="country-name"> Turkmenistan </a> </li>
+                <li> <a href="#" data-country-code="TC" class="country-name"> Turks and Caicos Islands </a> </li>
+                <li> <a href="#" data-country-code="TV" class="country-name"> Tuvalu </a> </li>
+                <li> <a href="#" data-country-code="UG" class="country-name"> Uganda </a> </li>
+                <li> <a href="#" data-country-code="UA" class="country-name"> Ukraine </a> </li>
+                <li> <a href="#" data-country-code="AE" class="country-name"> United Arab Emirates </a> </li>
+                <li> <a href="#" data-country-code="GB" class="country-name"> United Kingdom </a> </li>
+                <li> <a href="#" data-country-code="US" class="country-name"> United States </a> </li>
+                <li> <a href="#" data-country-code="UM" class="country-name"> United States Minor Outlying Islands </a> </li>
+                <li> <a href="#" data-country-code="UY" class="country-name"> Uruguay </a> </li>
+                <li> <a href="#" data-country-code="UZ" class="country-name"> Uzbekistan </a> </li>
+                <li> <a href="#" data-country-code="VU" class="country-name"> Vanuatu </a> </li>
+                <li> <a href="#" data-country-code="VE" class="country-name"> Venezuela, Bolivarian Republic of </a> </li>
+                <li> <a href="#" data-country-code="VN" class="country-name"> Viet Nam </a> </li>
+                <li> <a href="#" data-country-code="VG" class="country-name"> Virgin Islands, British </a> </li>
+                <li> <a href="#" data-country-code="VI" class="country-name"> Virgin Islands, U.S. </a> </li>
+                <li> <a href="#" data-country-code="WF" class="country-name"> Wallis and Futuna </a> </li>
+                <li> <a href="#" data-country-code="EH" class="country-name"> Western Sahara </a> </li>
+                <li> <a href="#" data-country-code="YE" class="country-name"> Yemen </a> </li>
+                <li> <a href="#" data-country-code="ZM" class="country-name"> Zambia </a> </li>
+                <li> <a href="#" data-country-code="ZW" class="country-name"> Zimbabwe </a> </li>
+                <li> <a href="#" data-country-code="AX" class="country-name"> Åland Islands </a> </li>
+              </ol>
+            </div>
+            <!-- end drop-down menu --> 
+          </div>
+          <div style="font-size: 24px; margin-top: -28px;" class="q08-error error">Sorry, but that does not appear to be a valid zip code.</div>
+          <a id="bt-build" class="button" href="#">Build My List</a> 
+          <!-- / question q02-02 ***** -->
+        </form>
       </div>
-      <!-- end modal window content --> 
-      <div class="button-row clearfix">
-      	<!-- instructions -->
-      	<p><a href="#" class="skip">Skip this</a> and build my list.</p>
+      <!-- end modal window content -->
+      <div class="button-row clearfix"> 
+        <!-- instructions -->
+        <p><a class="skip" href="#">Skip this</a> and build my list.</p>
         <!-- previous and next buttons -->
-      	<div class="col50 float-l left">
-      	<a href="#" class="button" id="bt-prev"><span class="ss-navigateleft"></span>Previous</a>
-        </div>
+        <div class="col50 float-l left"> <a id="bt-prev" class="button" href="#"><span class="ss-navigateleft"></span>Previous</a> </div>
       </div>
-    <!-- quiz progress bar -->
-      <div id="q-progress" title="Step 1 of 8">
-      	<div class="bar"></div>
+      <!-- quiz progress bar -->
+      <div title="Step 8 of 8" id="q-progress">
+        <div class="bar"></div>
       </div>
-      <!-- end quiz progress bar -->
+      <!-- end quiz progress bar --> 
+    </div>
   </div>
   <!-- end modal window box --> 
 </div>

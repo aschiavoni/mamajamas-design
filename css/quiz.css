@@ -326,12 +326,6 @@ span.ss-navigateright {
 	top:1px;
 	opacity:0.7;
 }
-a.bt-close {
-	position:absolute;
-	top:10px;
-	right:10px;
-	color:#c9c9c9;
-}
 #bt-start {
 	margin-top:30px;
 }

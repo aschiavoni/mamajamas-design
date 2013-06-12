@@ -176,3 +176,6 @@ June 8
 - Added standard-resolution versions of some graphics that were previously only high-res
 - Restored sample thumbnail images for "thumbnails.html" example file
 - Added footer links
+
+June 12
+- Added new About Mamajamas page: about.html and supporting images.

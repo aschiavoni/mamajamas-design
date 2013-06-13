@@ -315,6 +315,12 @@ p {
 .float-r {
 	float: right;
 }
+img.float-l {
+	margin:4px 10px 0 0;
+}
+img.float-r {
+	margin:4px 0 0 10px;
+}
 .center {
 	text-align: center;
 }
@@ -2008,6 +2014,9 @@ div.priority-low {
 /* published list ------ */
 
 /* page background colors ---- */
+#publist {
+	background:#ecf1f4;
+}
 #publist #secondary {
 	background: #fff;
 	border-left: 1px solid #d1d1d1;
@@ -2483,7 +2492,7 @@ div.baby-bdate {
 	padding-left: 0;
 }
 .text-page #secondary .content {
-	padding: 2em 0;
+	padding: 2em 0 4em;
 	line-height: 1.46;
 }
 .text-page #secondary h3 {

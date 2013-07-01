@@ -1016,14 +1016,14 @@ a.bt-close {
 	padding-left: 20px;
 }
 #search-modal input[type="text"]#field-search {
-	width: 276px;
+	width: 462px;
 	padding-left: 24px;
 	background: #fff url("../images/icon_search.png") no-repeat 5px 50%;
 	background-size: 18px 18px;
 }
 #search-modal form.label-infield p label {
 	left: 42px; /* #frm-prod-search p + 22px */
-	width: 280px;
+	width: 450px;
 }
 #search-modal h2 {
 }
@@ -2003,7 +2003,7 @@ div.priority-low {
 	float: left;
 	position: relative;
 	background: url(../images/icon_rating-eggs.png) no-repeat 0 0;
-	background-size: 11px 30px;
+	background-size: 11px 45px;
 	cursor: pointer;
 }
 .star {
@@ -2012,8 +2012,11 @@ div.priority-low {
 	float: left;
 	position: relative;
 	background: url(../images/icon_rating-stars.png) no-repeat 0 0;
-	background-size: 12px 30px;
+	background-size: 12px 45px;
 	cursor: pointer;
+}
+.egg-half, .star-half {
+	background-position: 0 -15px;
 }
 .egg-full, .star-full {
 	background-position: 0 bottom;

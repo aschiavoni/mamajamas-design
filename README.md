@@ -179,3 +179,7 @@ June 8
 
 June 12
 - Added new About Mamajamas page: about.html and supporting images.
+
+July 1
+- Added CSS for disabled "Share" button on Build List. Please see "build-list02_adding-editing.html"
+- Added CSS and new images for half-stars and half-eggs. Use .egg-half and .star-half to display half- egg and star graphics.

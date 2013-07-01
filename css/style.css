@@ -513,17 +513,26 @@ button:hover, button:focus, button:active, a.button:hover, a.button:focus, a.but
 input[type=text] + .button {
 	margin-top:-.27em;
 }
-#title-links button, #title-links .button {
-	color:#222;
-	background:#fff;
-	border-color:#fff;
-	opacity:.8;
+#title-links .button {
+	color: #222;
+	background: #fff;
+	border-color: #fff;
+	opacity: .8;
 	text-shadow: none;
 }
-#title-links button:hover, #title-links button:focus, #title-links button:active,
 #title-links a.button:hover, #title-links a.button:focus, #title-links a.button:active {
-	color:#fff !important;
-	opacity:1 !important;
+	color: #fff !important;
+	opacity: 1 !important;
+}
+#title-links .button.disabled,
+#title-links a.button.disabled:hover, 
+#title-links a.button.disabled:focus, 
+#title-links a.button.disabled:active { /* disabled state */
+	color: #444 !important;
+	background: #fff !important;
+	border-color: #fff !important;
+	opacity: .4 !important;
+	cursor: default;
 }
 .bt-color {
 	border-color: #5daf5d;
@@ -591,14 +600,13 @@ a.bt-buy:hover {
 .ss-plus {
 	font-size: 0.75em;
 }
- .ss-action, .ss-check, .ss-search {
+.ss-action, .ss-check, .ss-search {
 	position: relative;
 	top: .125em;
 }
 .ie7 .ss-plus, .ie7 .ss-check, .ie .ss-action {
 	margin-right: 0;
 }
-
 
 /* create account buttons */
 #bt-account-email {
@@ -828,7 +836,7 @@ a.more-friends:hover, a.more-friends:focus {
 	margin-bottom: -220px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
 }
 .modal-scaling {
-	position:relative;
+	position: relative;
 }
 .modal-box {
 	clear: both;
@@ -844,10 +852,10 @@ a.more-friends:hover, a.more-friends:focus {
 	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
 }
 a.bt-close {
-	position:absolute;
-	top:10px;
-	right:10px;
-	color:#c9c9c9;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #c9c9c9;
 }
 
 /* modal box typography, colors and spacing */
@@ -860,11 +868,11 @@ a.bt-close {
 	font-weight: normal;
 	line-height: 1em;
 	color: #333;
-	text-transform:uppercase;
-	letter-spacing:0.15em;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
 	margin: 0 0 5px;
 	padding: 10px 20px;
-	background:#ede9e6;
+	background: #ede9e6;
 }
 .modal-box h3 {
 	font-size: 1.33em;
@@ -905,7 +913,7 @@ a.bt-close {
 	padding: 10px 20px;
 	text-align: center;
 	border-top: none;
-	background:#F6F4F2;
+	background: #F6F4F2;
 }
 .modal-box .divider {
 	border-top: 1px solid #d3d3d3;
@@ -933,19 +941,19 @@ a.bt-close {
 	margin: 0;
 }
 .modal-dark {
-	background:#000;
-	border-color:#000;
-	color:#aaa;
-	box-shadow:1px 1px 4px rgba(0, 0, 0, 0.45);
+	background: #000;
+	border-color: #000;
+	color: #aaa;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.45);
 }
 .modal-dark strong {
-	color:#e6e6e6;
+	color: #e6e6e6;
 }
 .modal-dark a.bt-close {
-	color:#7c7c7c;
+	color: #7c7c7c;
 }
 .modal-dark .button-row {
-	background:#313130;
+	background: #313130;
 }
 
 /* specific modal windows */
@@ -964,7 +972,7 @@ a.bt-close {
 	margin: 0 0 2em .7em;
 }
 #login-window .button-row {
-	background:#fff;
+	background: #fff;
 }
 #get-updates h2 {
 	font-size: 3.5em;
@@ -1025,8 +1033,8 @@ a.bt-close {
 #search-modal h3 {
 	clear: left;
 	color: #407C40;
-    font-size: 1.33em;
-    font-weight: 300;
+	font-size: 1.33em;
+	font-weight: 300;
 	margin: .75em 0 .5em 10px;
 	border-bottom: none;
 }
@@ -1127,13 +1135,13 @@ ul.prod-search-list {
 
 /* search modal "add your own" */
 #search-modal #field-prodname {
-	display:inline;
-	width:52%;
+	display: inline;
+	width: 52%;
 }
 #search-modal .collapsible {
-    margin: 5px 0 10px;
-    padding-top: 10px;
-    padding-left: 20px;
+	margin: 5px 0 10px;
+	padding-top: 10px;
+	padding-left: 20px;
 	border-top: 1px solid #d3d3d3;
 }
 #search-modal .collapsible-content {
@@ -1141,55 +1149,55 @@ ul.prod-search-list {
 }
 #search-modal .collapsible strong {
 	color: #337BA3;
-	font-weight:normal;
+	font-weight: normal;
 }
 #search-modal .ss-dropdown,
 #search-modal .ss-dropdown strong {
 	color: #ACACAC;
 }
 #search-modal .collapsible-content p {
-	padding-left:20px;
+	padding-left: 20px;
 }
 #search-modal form#frm-addown p label {
-    left: 22px; /* #search-modal .collapsible-content p + 2px */
-    width: 280px;
+	left: 22px; /* #search-modal .collapsible-content p + 2px */
+	width: 280px;
 }
 
 /* build list intro ----- */
 #listintro.modal-box {
-	font-size:1em;
-	line-height:1.38em;
-	width:370px;
-    top: 165px;
+	font-size: 1em;
+	line-height: 1.38em;
+	width: 370px;
+	top: 165px;
 	left: 100%;
-    margin-left: -400px;
+	margin-left: -400px;
 }
 #listintro.modal-box h2 {
 	font-size: 1.692em;
 	font-weight: 300;
 	line-height: 1em;
 	color: #fff;
-	text-transform:none;
-	letter-spacing:0;
+	text-transform: none;
+	letter-spacing: 0;
 	margin: 6px -20px 10px;
 	padding: 10px 20px 10px 49px;
-	background:transparent url(../images/arrow-l-sketch.png) no-repeat 6px 4px;
-	background-size:39px 37px;
+	background: transparent url(../images/arrow-l-sketch.png) no-repeat 6px 4px;
+	background-size: 39px 37px;
 }
 #listintro ul {
-	margin:0;
-	padding:0;
-	list-style-type:none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 #listintro ul li {
-	margin:0 0 1em;
+	margin: 0 0 1em;
 }
 #listintro ul ul li {
-	margin:0;
+	margin: 0;
 }
 #listintro .ss-navigateright {
-	color:#fad45d;
-	font-size:.6923em;
+	color: #fad45d;
+	font-size: .6923em;
 }
 #listintro button,
 #listintro .button {
@@ -1399,8 +1407,8 @@ ul.info-balloons {
 
 /* animated fade out */
 .notification {
-	/* CSS needed for animation
-	---------------------------------------------------- */
+/* CSS needed for animation
+---------------------------------------------------- */
 	opacity:1;
 	-webkit-animation:fadeOut ease-in 1;
 	-moz-animation:fadeOut ease-in 1;

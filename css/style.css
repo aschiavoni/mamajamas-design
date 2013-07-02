@@ -1616,10 +1616,10 @@ ul.info-balloons {
 	width: 13%;
 }
 #babygear td.when {
-	font-size: .923em;
+	font-size: 0.923em;
 	color: #999;
 	padding-top: 2.6em;
-	padding-left: 12px;
+	padding-left: 8px;
 }
 .when .ss-icon {
 	position: relative;
@@ -1996,6 +1996,14 @@ div.priority-low {
 .rating .eggs, .rating .stars {
 	overflow: auto;
 	width: 60px;
+}
+.not-rated {
+	overflow: visible;
+	width: 60px;
+	font-size:0.923em;
+	color:#999;
+	margin-top:-0.1em;
+	white-space:nowrap;
 }
 .egg {
 	width: 12px;

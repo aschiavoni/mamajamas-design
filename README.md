@@ -183,3 +183,4 @@ June 12
 July 1
 - Added CSS for disabled "Share" button on Build List. Please see "build-list02_adding-editing.html"
 - Added CSS and new images for half-stars and half-eggs. Use .egg-half and .star-half to display half- egg and star graphics.
+- Added CSS for "No ratings" text on Build List, to replace eggs when no ratings are available. See: build-list04_when-priority1.html

@@ -11,6 +11,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mamajamas: Published List Preview</title>
 <meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
 <!-- jquery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <!-- in-field form labels (jquery plugin from doug neiner) -->
@@ -52,13 +60,13 @@
 <div class="gridContainer clearfix" id="publist">
   <div id="title">
     <div id="subhed">
+      <p class="prehed">My Shared List</p>
       <h2>Margaret’s baby gear essentials</h2>
     </div>
     <p class="pubdate">Created Aug. 30, 2012<br>
  		Updated Sept. 12, 2012</p>
     <div id="title-links">
       <ul>
-        <li id="bt-follow"><a href="#" class="button">Follow</a></li>
         <li id="print"><a href="#" class="ss-icon" title="Print"><span>Print</span></a></li>
         <li id="pinterest"><a href="#" class="social" title="Pinterest">Pinterest</a></li>
         <li id="twitter"><a href="#" class="social" title="Twitter">Twitter</a></li>
@@ -171,6 +179,7 @@
   <div id="tertiary">
     <div id="module-profile">
       <div class="content">
+      	 <p>Shared by</p>
         <img src="images/profile_photo-default-l.png" alt="Profile photo">
         <h3>Margaret Anderson</h3>
         <h4>Eco Mom</h4>
@@ -179,20 +188,21 @@
         Mom to Xander, 18 mos.<br>
         Value shopper<br>
         <em><span class="ss-tag"></span> Tags:</em> <a href="#">Urban</a></p>
-        <p class="right"><a href="#">Full profile</a></p>
+        <p><a href="#">Full profile</a></p>
+        <p id="bt-follow"><a href="#" class="button">Follow</a></p>
       </div>
     </div>
     <div id="module-friends">
       <div class="content">
         <h3>Margaret’s Friends</h3>
         <ul class="clearfix">
-        	<li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Christina</span> Anderson</a></div></li>
-            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Andrea</span> Bhosle-Morimoto</a></div></li>
-            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Kathleen</span> Bowers</a></div></li>
-            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Sally</span> Duarte</a></div></li>
-            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Kim</span> Edwards</a></div></li>
+        	<li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Christina</span> Anderson</div></a></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Andrea</span> Bhosle-Morimoto</div></a></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Kathleen</span> Bowers</div></a></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Sally</span> Duarte</div></a></li>
+            <li><a href="#"><img src="images/follow-mom.jpg" alt="profile image"><div><span class="firstname">Kim</span> Edwards</div></a></li>
         </ul>
-        <p class="right"><a href="#">See all</a></p>
+        <p><a href="#">See all</a></p>
       </div>
     </div>
   </div>

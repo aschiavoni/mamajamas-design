@@ -184,3 +184,11 @@ July 1
 - Added CSS for disabled "Share" button on Build List. Please see "build-list02_adding-editing.html"
 - Added CSS and new images for half-stars and half-eggs. Use .egg-half and .star-half to display half- egg and star graphics.
 - Added CSS for "No ratings" text on Build List, to replace eggs when no ratings are available. See: build-list04_when-priority1.html
+
+July 11
+- On Build List and Shared List pages, addition of a "pre-header" to title bar: "Editing My Master List," "My Shared List," "Shared Lists"
+- Addition of stripes to top of Build List title bar.
+- Layout changes to Shared List page and Shared List Preview title bar and overlay
+- On all interior pages, decrease in main header size
+- Layout changes to right column of Shared List pages
+- Revised favicons (adding transparency and various sizes)

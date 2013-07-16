@@ -265,6 +265,11 @@ img, object, embed, video {
 	padding:75px 23.08% 65px 2.56%;
 }
 
+/* list intro position */
+#listintro.modal-box {
+	left: 56.5%;
+}
+
 /* Large screen layout */
 
 @media only screen and (min-width: 1000px) {
@@ -276,6 +281,15 @@ img, object, embed, video {
 	padding-left: 0;
 	padding-right: 0;
 	margin: auto;
+}
+
+}
+
+@media only screen and (min-width: 1245px) {
+
+/* list intro position */
+#listintro.modal-box {
+	left: 55%;
 }
 
 }

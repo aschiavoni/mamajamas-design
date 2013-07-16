@@ -192,3 +192,12 @@ July 11
 - On all interior pages, decrease in main header size
 - Layout changes to right column of Shared List pages
 - Revised favicons (adding transparency and various sizes)
+
+July 16
+- DES-92: New "loading" or "progress" animated graphic for use when Quiz data is processing or any time we want to
+  prevent user input. Example files: quiz02-progress.html, build-list_progress.html
+- DES-90: Re-aligned the "Welcome to your list" window (build-list_intro.html), including adjustment for larger screens.
+  (changes in style.css and fluid-layout.css)
+- Adjusted list item spacing on the Follow Friends page to improve appearance of multi-row lists. (changes in style.css)
+- Adjusted font size and width of definition list headers on Create my profile (create-my-profile.html) to prevent
+  wrapping on narrow screens (changes in style.css)

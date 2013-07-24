@@ -1,0 +1,352 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas : Product Search</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- collapsible panel -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		speed:200
+    });
+  });
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding">
+        <h1>Mamajamas</h1>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+      <div id="progress">
+        <ol>
+          <li><strong>1</strong> Take the quiz</li>
+          <li><strong>2</strong> Make your list and get advice</li>
+          <li><strong>3</strong> Share your list</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+  <div id="title">
+    <div id="subhed">
+      <p class="prehed">Editing My Master List</p>
+      <h2>Margaret’s baby gear essentials</h2>
+    </div>
+    <div id="title-links">[buttons]</div>
+  </div>
+  <div id="primary">
+    <div class="content">[nav]</div>
+  </div>
+  <div id="secondary">
+    <div class="content">[main content] </div>
+  </div>
+  <div id="tertiary">[tertiary]
+    <div id="module-name">
+      <div class="content">module content</div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="content">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="/terms-of-service">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end body area --> 
+
+<!-- modal window ************ -->
+<div class="modal-wrap" style="display:block;">
+  <div class="modal-overlay"> &nbsp; </div>
+  <div class="vertical-offset"></div>
+  <!-- modal window box -->
+  <div class="modal-box" id="search-modal"> 
+    <!-- modal window header -->
+    <h2>Choose a <strong>Bath Seat</strong></h2>
+   	<!-- modal window close button -->
+    <a href="#" class="bt-close ss-icon">Close</a>
+    <!-- modal window content -->
+    <div class="content">
+      <div id="prod-search-results">
+        <h3>Suggested Bath Seats</h3>
+        <!-- results list -->
+        <ul class="prod-search-list clearfix">
+          <li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+             <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="detail-rating-mj rating">
+                  <div class="eggs">
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-half"></div>
+                    <div class="egg"></div>
+                  </div>
+                Mamajamas rating</div>
+                <div class="detail-rating-am rating">
+                  <div class="stars">
+                    <div class="star star-full"></div>
+                    <div class="star star-full"></div>
+                    <div class="star star-half"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                Amazon rating</div>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up --> 
+          </li>
+          <li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+            <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="detail-rating-mj rating">
+                  <div class="eggs">
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-half"></div>
+                    <div class="egg"></div>
+                  </div>
+                Mamajamas rating</div>
+                <div class="detail-rating-am rating">
+                  <div class="stars">
+                    <div class="star star-full"></div>
+                    <div class="star star-full"></div>
+                    <div class="star star-half"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                Amazon rating</div>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up --> 
+          </li>
+          <li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+            <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="detail-rating-mj rating">
+                  <div class="eggs">
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-half"></div>
+                    <div class="egg"></div>
+                  </div>
+                Mamajamas rating</div>
+                <div class="detail-rating-am rating">
+                  <div class="stars">
+                    <div class="star star-full"></div>
+                    <div class="star star-full"></div>
+                    <div class="star star-half"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                Amazon rating</div>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up -->  
+          </li>
+          <li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+            <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="detail-rating-mj rating">
+                  <div class="eggs">
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-full"></div>
+                    <div class="egg egg-half"></div>
+                    <div class="egg"></div>
+                  </div>
+                Mamajamas rating</div>
+                <div class="detail-rating-am rating">
+                  <div class="stars">
+                    <div class="star star-full"></div>
+                    <div class="star star-full"></div>
+                    <div class="star star-half"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                Amazon rating</div>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up -->  
+          </li>
+          <li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+            <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up -->  
+          </li>
+          <li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+            <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up -->  
+          </li>
+          <li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+            <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up -->  
+          </li>
+          <li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+            <!-- product detail pop-up -->
+              <div class="prod-detail-pop">
+                <h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+              <p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+                <div class="prod-links">
+                <ul>
+                  <li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+                  <li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+                </ul>
+              </div>
+                <span class="arrow"></span> </div>
+              <!-- end product detail pop-up -->  
+          </li>
+        </ul>
+      </div>
+      <!-- end results list --> 
+      <!-- search field -->
+      <div id="prod-search">
+        <h3>Find More Choices</h3>
+        <form class="label-infield" id="frm-prod-search">
+          <fieldset>
+            <p>
+              <label for="field-search">Search for bath seats on Amazon</label>
+              <br />
+              <input name="field-search" type="text" id="field-search" value="">
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <!-- end search field -->
+      <!-- collapsible panel -->
+     <p class="collapsible" id="collapsible1"><strong>Or, add your own manually.</strong></p>
+       <div class="collapsible-content">
+       <form class="label-infield" id="frm-addown">
+        <fieldset>
+         <p>
+          <label for="field-prodname">Enter a product name or brand</label>
+          <br />
+          <input type="text" name="field-prodname" value="" id="field-prodname" class="field-prodname">
+          <a href="#" class="button bt-color"><span class="ss-plus"></span>Add</a>
+        </p>
+        </fieldset>
+        </form>
+      </div>
+      <!-- end collapsible panel -->
+    </div>
+    <!-- end modal window content --> 
+  </div>
+  <!-- end modal window box --> 
+</div>
+<!-- /end modal window ************ --> 
+
+<!-- Google Analytics -->
+</body>
+</html>

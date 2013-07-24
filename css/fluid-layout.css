@@ -156,7 +156,6 @@ img, object, embed, video {
 }
 #buildlist #title-links {
 	width: 25%;
-    border-right: 1px solid #D9D9D9;
 }
 #buildlist #secondary .content {
 	padding:1px 1px 20px 3px;

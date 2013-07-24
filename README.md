@@ -201,3 +201,10 @@ July 16
 - Adjusted list item spacing on the Follow Friends page to improve appearance of multi-row lists. (changes in style.css)
 - Adjusted font size and width of definition list headers on Create my profile (create-my-profile.html) to prevent
   wrapping on narrow screens (changes in style.css)
+
+July 24
+- DES-95: Added "Find more parents" button to "Lists I'm following" sidebar. Removed text blurb and link.
+  See: build-list02_adding-editing-choose.html
+- DES-100: Changed layout in Search modal window. See: product-searchB.html
+- CSS changes are in style.css and fluid-layout.css
+- Also, in "build-list.html," added the "Editing My Master List" pre-header for consistency.

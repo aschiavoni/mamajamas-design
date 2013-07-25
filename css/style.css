@@ -1039,7 +1039,7 @@ a.bt-close {
 	left: 34px; /* #frm-prod-search p + 23px */
 	width: 450px;
 }
-#prod-search-results {
+#prod-search-results, #prod-suggestions-results {
 	padding: 10px 10px 0;
 }
 #search-modal h3 {

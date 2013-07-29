@@ -348,6 +348,13 @@ img.float-r {
 	font-style: normal;
 	color: #999999;
 }
+.intro {
+	color:#474747;
+}
+.larger {
+	font-size:1.33em;
+	line-height:1.625em;
+}
 .light {
 	color: #a6a6a6;
 }
@@ -452,8 +459,8 @@ form.label-infield p label {
 	top: 0;
 	left: 0;
 }
-form.label-infield p br {
-	display: none;
+form.label-infield fieldset p br {
+	display: none; /* cancel BRs inside fieldsets with in-field labels (preserves list formatting) */
 }
 form.label-infield fieldset p input, form.label-infield fieldset p textarea {
 	display: block;
@@ -621,48 +628,30 @@ a.bt-buy:hover {
 
 /* create account buttons */
 #bt-account-email {
-	line-height: 1.3;
-	padding: .75em 15px;
-	color: #1e477f;
-	font-weight: 600;
-	text-shadow: 0 1px 0 #fff;
-	border-color: #d4d4d4;
-	background: #f1f1f1;
-	background: -moz-linear-gradient(top, #ffffff 2%, #f6f6f6 4%, #efefef 96%, #e7e7e7 98%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #ffffff), color-stop(4%, #f6f6f6), color-stop(96%, #efefef), color-stop(98%, #e7e7e7)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ffffff 2%, #f6f6f6 4%, #efefef 96%, #e7e7e7 98%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ffffff 2%, #f6f6f6 4%, #efefef 96%, #e7e7e7 98%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ffffff 2%, #f6f6f6 4%, #efefef 96%, #e7e7e7 98%); /* IE10+ */
-	background: linear-gradient(to bottom, #ffffff 2%, #f6f6f6 4%, #efefef 96%, #e7e7e7 98%); /* W3C */
-	white-space: normal;
-}
-.oldie #bt-account-email {
-	width: 196px;
-}
-.oldie #bt-account-email span {
-	width: 166px;
-	display: block;
 }
 #bt-fb-connect {
-	/*font-size: 1.25em;*/
 	font-size: 15px;
 	font-weight: 600;
 	line-height: 1.57em;
 	text-align: center;
-	background: #5f78ab url(../images/icon_fb.png) no-repeat 10px 50%;
-	padding: .643em 15px;
+	background: #5f78ab url(../images/icon_fb.png) no-repeat 25px 50%;
+	margin-bottom:0.5em;
+	padding: 1em 15px;
 	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
 	border-color: #1e477f;
 }
 a#bt-fb-connect { /* fb login in A tag*/
-	width: 184px;
+	width: 204px;
+}
+#create-account a#bt-fb-connect { /* override button size for create account window */
+	width: 204px;
 }
 #bt-fb-connect span {
 	display: block;
 	padding: 6px 0 3px 17px;
 }
 #bt-fb-connect:hover, #bt-fb-connect:focus, #bt-fb-connect:active {
-	background: #555 url(../images/icon_fb.png) no-repeat 10px 50% !important;
+	background: #555 url(../images/icon_fb.png) no-repeat 25px 50% !important;
 }
 #bt-fb-connect:hover, #bt-account-email:hover {
 	color: #fff;
@@ -843,7 +832,8 @@ a.more-friends:hover, a.more-friends:focus {
 }
 .vertical-offset { /* determines vertical positioning */
 	float: left;
-	height: 50%;
+	/*height: 50%;*/
+	height: 270px;
 	margin-bottom: -220px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
 }
 .modal-scaling {
@@ -975,15 +965,32 @@ a.bt-close {
 #create-account .col5 {
 	padding-top: 1.5em;
 }
-#login-window.modal-box {
-	width: 410px;
-	margin-left: -205px;
-}
 #login-window .helper {
 	margin: 0 0 2em .7em;
 }
+#signup-modal .tip,
+#signup-modal .privacy {
+	font-size:1.083em;
+	width:70%;
+	margin: 0 auto .5em;
+}
+#signup-modal .privacy {
+	margin-top:1.5em;
+	color:#474747;
+}
+#login-window #collapsible1,
+#signup-modal #collapsible1 {
+	margin-top:2.5em;
+}
+#signup-modal .collapsible-content {
+	padding-top:10px;
+}
+#login-window .button-row,
+#signup-modal .button-row {
+	margin: 10px -20px -10px; /* cancel inset created by nesting */
+}
 #login-window .button-row {
-	background: #fff;
+	/*background: #fff;*/
 }
 #get-updates h2 {
 	font-size: 3.5em;
@@ -1266,6 +1273,33 @@ ul.info-balloons {
 }
 .oldie .info-balloons li span {
 	background-image:url(../images/info-balloon-arrow-d2.png);
+}
+
+
+/* tooltips ----- */
+.tip {
+	display:block;
+	margin: 0 auto .5em;
+	padding:10px;
+	text-align:center;
+	font-size:1em;
+	font-weight:600;
+	line-height:1.33;
+	color:#4b3f1c;
+	box-shadow:1px 2px 3px rgba(0,0,0,0.35);
+	background:#fce59e;
+	position:relative;
+	top:-5px;
+}
+.tip span {
+	border:solid 15px transparent;
+	position:absolute;
+}
+.tip-dwn span {
+	border-bottom-color:#fce59e;
+	top:-29px;
+	left:30%;
+	margin-left:-15px;
 }
 
 /* thumbnails carousel ----- */
@@ -2447,7 +2481,12 @@ div.baby-bdate {
 /* collapsible panels */
 .collapsible.ss-directright, .collapsible.ss-dropdown, .collapsible strong {
 	cursor: pointer;
+	color: #337ba3;
+	font-weight: normal;
 }
+.collapsible.ss-directright, .collapsible.ss-dropdown {
+	color:#bbb;
+}	
 .collapsible strong:hover, .collapsible strong:active, .collapsible strong:focus {
 	color: #337BA3;
 	text-decoration: underline;

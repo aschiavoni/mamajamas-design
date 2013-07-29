@@ -208,3 +208,9 @@ July 24
 - DES-100: Changed layout in Search modal window. See: product-searchB.html
 - CSS changes are in style.css and fluid-layout.css
 - Also, in "build-list.html," added the "Editing My Master List" pre-header for consistency.
+
+July 29
+- DES-99: text and layout adjustments to Sign Up modal and Log in modal (sign-up.html, log-in.html, style.css)
+- Sign Up example: http://soybox.com/mamajamas/sign-up.html
+- Log In example: http://soybox.com/mamajamas/log-in.html
+- (Included Ryan's new ID selector for product search)

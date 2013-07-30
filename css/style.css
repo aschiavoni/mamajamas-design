@@ -2006,6 +2006,35 @@ div.priority-low {
 	background-position: 0 -76px;
 }
 
+/* "add another" button ---- */
+a.bt-addanother {
+	color:#407C40;
+	line-height:1em;
+	padding:0 5px;
+	border-radius:4px;
+	position:relative;
+	top:-1px;
+}
+a.bt-addanother strong {
+	font-size:14px;
+	line-height:1em;
+}
+a.bt-addanother span {
+	display:none;
+	font-size:11px;
+	line-height:1em;
+	font-weight:400;
+	padding:0 2px;
+}
+a.bt-addanother:hover {
+	text-decoration:none;
+	color:#fff;
+	background:#6BB36E;
+}
+a.bt-addanother:hover span {
+	display:inline-block;
+}
+
 /* product edit mode, new item mode ---- */
 .edit-mode, .new-mode {
 	box-shadow:0 0 4px rgba(0,0,0,.20);
@@ -2162,6 +2191,8 @@ div.priority-low {
 .bt-add .ss-plus {
 	font-size: 91.7%;
 	margin-right: 0;
+	position: relative;
+    top: -.15em;
 }
 .bt-add strong {
 	font-weight: normal;

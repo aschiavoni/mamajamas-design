@@ -968,19 +968,12 @@ a.bt-close {
 #login-window .helper {
 	margin: 0 0 2em .7em;
 }
-#signup-modal .tip,
-#signup-modal .privacy {
-	font-size:1.083em;
+#signup-modal .tip {
 	width:70%;
-	margin: 0 auto .5em;
-}
-#signup-modal .privacy {
-	margin-top:1.5em;
-	color:#474747;
 }
 #login-window #collapsible1,
 #signup-modal #collapsible1 {
-	margin-top:2.5em;
+	margin-top:3em;
 }
 #signup-modal .collapsible-content {
 	padding-top:10px;
@@ -1407,9 +1400,13 @@ ul.info-balloons {
 }
 #buildlist #notifications {
 }
+.home #notifications {
+    left: 85%;
+    top: -330px;
+}
 .notification {
 	clear: both;
-	font-size: .846em;
+	font-size: 11px;
 	width: 460px;
 	margin: 0.5em auto;
 	padding: 0.3em 10px 0.5em;

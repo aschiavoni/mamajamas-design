@@ -214,3 +214,7 @@ July 29
 - Sign Up example: http://soybox.com/mamajamas/sign-up.html
 - Log In example: http://soybox.com/mamajamas/log-in.html
 - (Included Ryan's new ID selector for product search)
+
+Jul 30
+- DES-93: New "+ Add Another" buttons on Build List. Please see: build-list_add-another.html
+- Also, a CSS change affecting the alignment of + marks on "Add to My List" buttons of the public list page.

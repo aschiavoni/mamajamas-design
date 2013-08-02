@@ -218,3 +218,8 @@ July 29
 Jul 30
 - DES-93: New "+ Add Another" buttons on Build List. Please see: build-list_add-another.html
 - Also, a CSS change affecting the alignment of + marks on "Add to My List" buttons of the public list page.
+
+Aug 1
+- Revised language on Build List Intro page: build-list_intro.html
+
+

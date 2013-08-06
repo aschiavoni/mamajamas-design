@@ -154,6 +154,9 @@ img, object, embed, video {
 #buildlist #subhed {
 	width:74.5%;
 }
+#buildlist #title > #subhed {
+	padding-top:2.153em; /* for no prehed */
+}
 #buildlist #title-links {
 	width: 25%;
 }
@@ -171,6 +174,9 @@ img, object, embed, video {
 }
 #publist #subhed {
 	width:74.5%;
+}
+#publist #title > #subhed {
+	padding-top:2.153em; /* for no prehed */
 }
 #publist #title-links {
 	width: 24.5%;

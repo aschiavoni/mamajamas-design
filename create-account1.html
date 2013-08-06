@@ -9,16 +9,35 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mamajamas : Sign up</title>
+<title>Mamajamas</title>
 <meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
 <script src="js/modernizr-dev.js"></script>
 </head>
 <body>
 <!-- header area ***** -->
-<div id="hed-wrap">
+<div id="hed-wrap" class="progressbar">
   <div class="gridContainer clearfix">
     <div id="header">
       <div id="branding">
@@ -34,36 +53,149 @@
         </ul>
       </div>
       <div id="progress">
-        <ol>
-          <li><strong>1</strong> Take the quiz</li>
-          <li><strong>2</strong> Make your list and get advice</li>
-          <li><strong>3</strong> Share your list</li>
+        <ol class="prog2"><!-- comments between list items prevent whitespace insertion when displayed inline -->
+        	<li class="prog1"><strong>1</strong> Take the quiz</li><!--
+          --><li class="prog2"><strong>2</strong> Make your list and get advice</li><!--
+          --><li class="prog3"><strong>3</strong> Share your list</li>
         </ol>
+        <div class="progborder"></div>
       </div>
     </div>
   </div>
 </div>
 <!-- end header area --> 
 <!-- body area ***** -->
-<div class="gridContainer clearfix">
+<div class="gridContainer clearfix" id="buildlist">
   <div id="title">
     <div id="subhed">
-      <p class="prehed">Editing My Master List</p>
+      
       <h2>Margaret’s baby gear essentials</h2>
     </div>
-    <div id="title-links">[buttons]</div>
-  </div>
-  <div id="primary">
-    <div class="content">[nav]</div>
-  </div>
-  <div id="secondary">
-    <div class="content">[main content]
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nibh libero, fermentum eget luctus consequat, mollis in libero. Donec tincidunt posuere sem. Etiam aliquam est sed mi accumsan porttitor. Pellentesque ac mattis tellus. Vivamus libero enim, sollicitudin vitae aliquam a, tempus eu arcu. Phasellus ante justo, bibendum sed vehicula a, aliquet at tortor. Nullam lacinia, ligula quis suscipit pharetra, risus mauris tincidunt lectus, quis congue diam sem eget arcu. Morbi nec tellus sodales purus pharetra iaculis. Proin convallis, odio nec auctor tristique, mauris odio tristique magna, tincidunt fermentum dui dolor ac nunc. Nulla tincidunt dapibus lorem hendrerit viverra. Cras porttitor nunc in mi ultricies viverra sagittis nunc pharetra. Duis lorem est, sollicitudin quis eleifend in, pharetra ut elit. Fusce vestibulum, mi ut blandit commodo, augue lorem ullamcorper risus, accumsan facilisis diam nulla sit amet dui. </p>
+    <div id="title-links">
+      <ul>
+        <li><a href="#" class="button"><span class="ss-plus"></span>New Item</a></li>
+        <li><a href="#" class="button" id="bt-share"><span class="ss-action"></span>Share</a></li>
+        <li id="print"><a href="#" class="ss-icon" title="Print"><span>Print</span></a></li>
+      </ul>
     </div>
   </div>
-  <div id="tertiary">[tertiary]
-    <div id="module-name">
-      <div class="content">module content</div>
+  <div id="primary">
+    <div class="content"> 
+      <!-- Catagories nav -->
+      <nav id="categories">
+        <ul>
+          <li><a href="#">All</a></li>
+          <li><a href="#">Bathing</a></li>
+          <li><a href="#">Birthing/ Pregnancy</a></li>
+          <li><a href="#">Changing</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Decorating</a></li>
+          <li><a href="#">Feeding</a></li>
+          <li><a href="#">Getting Around</a></li>
+          <li><a href="#">Playing</a></li>
+          <li class="cat-selected"><a href="#">Nursing</a></li>
+          <li><a href="#">PottyTraining</a></li>
+          <li><a href="#">Reading</a></li>
+          <li><a href="#">Traveling</a></li>
+          <li><a href="#">Sleeping</a></li>
+          <li><a href="#">Staying Healthy</a></li>
+        </ul>
+      </nav>
+      <!-- /end Catagories nav --> 
+    </div>
+  </div>
+  <div id="secondary">
+    <div class="content">
+      <form class="label-infield">
+        <!-- baby gear table ******* -->
+        <table width="100%" cellspacing="0" id="babygear">
+          <thead>
+            <tr>
+              <th scope="col" class="own">Own</th>
+              <th scope="col" class="item">Item</th>
+              <th scope="col" class="rating">Rating</th>
+              <th scope="col" class="when">When to Buy</th>
+              <th scope="col" class="priority sorting">Priority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Item 1 ****** -->
+            <tr class="prod">
+              <td class="own"><input id="own01" type="checkbox" title="Do you own this item?">
+                <label for="own01">I own this item.</label></td>
+              <td class="item"><div class="prod-thumb"><img src="images/products/nursing-bottle.png" alt="bottle"></div>
+                <div class="prod-desc">
+                  <div class="prod-category">Bottle</div>
+                  <div class="prod-edit-menu">
+                    <ul class="clearfix">
+                      <li>
+                      <a class="ss-delete" href="#"><span>Delete</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prod-links">
+                    <ul>
+                      <li><a href="#" class="button bt-color"><span class="ss-search"></span>Choose</a></li>
+                    </ul>
+                  </div
+                >
+                </div></td>
+              <td class="rating">&nbsp;</td>
+              <td class="when">Pre-birth</td>
+              <td class="priority"><div class="priority-high">high</div></td>
+            </tr>
+            <!-- / Item 1 ****** --> 
+            <!-- Item 2 ****** -->
+            <tr class="prod prod-filled">
+              <td class="own"><input id="own05" type="checkbox" title="Do you own this item?">
+                <label for="own05">I own this item.</label></td>
+              <td class="item"><div class="prod-thumb"><img src="images/products/thumb_nursing-pump@2x.jpg" alt="bottle"></div>
+                <div class="prod-desc">
+                  <div class="prod-category">Breast Pump</div>
+                  <h3><a href="#">Philips AVENT BPA-free Manual Breast Pump</a></h3>
+                   <!-- note -->
+                  <div class="prod-note closed">
+                  	<div class="note-content">Nunc aliquet adipiscing neque vel convallis. Sed mattis lacinia lacus a gravida. Morbi erat sem, luctus at porttitor ac, cursus luctus mauris. Sed eget orci orci. Sed eu ipsum velit, id elementum metus. Integer interdum sapien bibendum est iaculis quis adipiscing turpis cursus.</div></div>
+                  <!-- / end note -->
+                  <!-- drop-down editing menu -->
+                  <div class="prod-edit-menu">
+                    <ul class="clearfix">
+                      <li><a href="#" class="ss-write"><span>Edit</span></a></li>
+                      <li><a href="#" class="ss-cart"><span>Buy</span></a></li>
+                      <li><a href="#" class="ss-delete"><span>Delete</span></a></li>
+                    </ul>
+                  </div>
+                  <!-- / drop-down editing menu --> 
+                </div></td>
+              <td class="rating"><div class="eggs">
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg egg-full"></div>
+                  <div class="egg"></div>
+                </div></td>
+              <td class="when">Pre-birth</td>
+              <td class="priority"><div class="priority-med">medium</div></td>
+            </tr>
+            <!-- / Item 2 ****** -->
+          </tbody>
+        </table>
+        <!-- end baby gear table ******* -->
+      </form>
+    </div>
+  </div>
+  <div id="tertiary">
+    <div id="module-follow">
+      <div class="content">
+        <h3>Follow Mom Friends</h3>
+        <p>Log in to find your friends and see what they’ve got. Not a member? Sign up</p>
+      </div>
+    </div>
+    <div id="module-msg">
+      <div class="content">
+        <h3>Reach Out</h3>
+        <p>Send a message to ask for advice, or to share it.</p>
+      </div>
     </div>
   </div>
   <div id="footer">
@@ -100,20 +232,13 @@
           <option>Low | Everyone knows I’m pregnant. / My baby is already here!</option>
         </select>
         <h3>Account Registration</h3>
-        <div class="grid clearfix">
-          <div class="col50 float-l">
-            <a class="button" id="bt-fb-connect"><span>Login with Facebook</span></a>
-            <p class="note">We will never post or email your friends without your express approval.</p>
-            <p class="note light">By clicking Connect with Facebook, you accept the <a href="#">Terms of Service</a>. </p>
-          </div>
-          <div class="col5 float-l">
-            <p class="center">or</p>
-          </div>
-          <div class="col45 float-r">
-            <button type="submit" class="button" id="bt-account-email"><span>Create an account with your email address</span></button>
-            <p class="note">But getting recommendations from your friends may be harder if you sign in this way. </p>
-          </div>
-        </div>
+            <p class="center"><a class="button" id="bt-fb-connect"><span>Login with Facebook</span></a></p>
+            <p class="instructions center">We will never post or email your friends without your express approval.<br>
+<span class="light">By clicking Connect with Facebook, you accept the <a href="#">Terms of Service</a>.</span></p>
+           
+            <p class="instructions center"><a href="#">Or, create an account with your email address</a><br>
+            But getting recommendations from your friends may be harder if you sign in this way. </p>
+          
       </div>
       <!-- end modal window content --> 
       <!-- window bottom buttons -->

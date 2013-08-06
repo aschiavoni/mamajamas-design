@@ -2204,36 +2204,91 @@ a.bt-addanother:hover span {
 	position: relative;
 	top: -1px;
 }
-#publist #tertiary a {
+#publist #tertiary p a,
+#publist #tertiary span a {
 	color:#93b9ce;
 }
-#publist #tertiary a.button { /* follow button */
-	padding-left: 27px;
-	padding-right: 27px;
-	color:#555;
-	background:#fff;
-	border:none;
-	opacity:0.7;
-	text-shadow:none;
-}
-#publist #tertiary a.button:hover { /* follow button hover */
-	background:#fff !important;
-	opacity:1;
+
+/* public list follow button ------- */
+#publist #bt-follow { 
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+	margin-bottom: 5px;
+	margin-top: 4px;
+	min-width:76px;
 }
 
-/* profile module */
+/* override default button hover colors */
+#publist a#bt-follow:hover {
+	background:#111 !important;
+	border-color:#111 !important;
+}
+
+/* hide "bt-text1" on hover and "bt-text2" by default */
+#publist a#bt-follow:hover .bt-text1,
+#publist a#bt-follow .bt-text2 {
+	display:none;
+}
+
+/* show bt-text2 on hover */
+#publist a#bt-follow:hover .bt-text2 {
+	display:inline;
+	color:#ddd !important;
+}
+
+/* dim checkmark by default  */
+#bt-follow .ss-check {
+	opacity:0.5;
+	filter: alpha(opacity=50);
+}
+
+/* in active state, grey button, darker text */
+#bt-follow.bt-active  {
+	background:#A6A6A6;
+	border-color:#A6A6A6;
+	color:#e6e6e6;
+}
+
+/* in active state, make checkmark brighter*/
+#bt-follow.bt-active .ss-check {
+	opacity:1.0;
+	filter: alpha(opacity=100);
+	color:#fff;
+}
+
+/* adjust position of "X" */
+#bt-follow .ss-delete {
+	line-height: 1;
+	margin-right: 4px;
+	position: relative;
+	top: .125em;
+}
+
+/* profile module ------ */
 #module-profile {
 	font-size: 11px;
 	color: #D9D9D9;
 }
 #module-profile .content {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 10px 0;
+}
+#sharedby {
+	position:relative;
+	padding-left:2px;
+	color:#AAA;
+}
+#sharedby span {
+	border:solid 10px transparent;
+	border-left: solid 10px #E87B31;
+	display: block;
+    width: 1px;
+    height: 1px;
+	top: -2px;
+    left: -12px;
+    position: absolute;
 }
 #module-profile h3 {
 	font-weight: 600;
 	font-size: 15px;
-	margin: 10px 0 2px;
 	color: #fff;
 }
 #module-profile h4 {
@@ -2242,7 +2297,7 @@ a.bt-addanother:hover span {
 	font-weight:600;
 }
 #module-profile p {
-	margin-bottom: .5em;
+	margin-bottom: .75em;
 }
 #module-profile .ss-tag {
 	position: relative;
@@ -2252,8 +2307,14 @@ a.bt-addanother:hover span {
 	font-style: normal;
 	color: #aaa;
 }
-#bt-follow {
+#module-profile p#bt-follow {
 	text-align: center;
+	position:relative;
+	top:-10px;
+	margin-bottom: 0;
+}
+#bt-follow a.disabled {
+	
 }
 
 /* friends sidebar module  ------ */
@@ -2266,7 +2327,7 @@ a.bt-addanother:hover span {
 	margin-bottom: .26em;
 }
 #module-friends .content {
-	padding-top: 10px;
+	padding: 10px 0;
 }
 #module-friends ul {
 	padding-top:4px;

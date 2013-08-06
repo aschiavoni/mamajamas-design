@@ -28,6 +28,9 @@
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+<!-- expanding text -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options.js"></script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -81,7 +84,6 @@
 <div class="gridContainer clearfix" id="publist">
   <div id="title">
     <div id="subhed">
-      <p class="prehed">My Shared List</p>
       <h2>Margaret’s baby gear essentials</h2>
     </div>
     <p class="pubdate">Created Aug. 30, 2012<br>
@@ -198,19 +200,26 @@
     </div>
   </div>
   <div id="tertiary">
+  	<div class="content">
     <div id="module-profile">
       <div class="content">
-      	 <p>Shared by</p>
-        <img src="images/profile_photo-default-l.png" alt="Profile photo">
+          <p id="sharedby"><span></span>Shared by</p>
         <h3>Margaret Anderson</h3>
-        <h4>Eco Mom</h4>
+        <img src="images/profile_photo-default-l.png" alt="Profile photo">
+		 <!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  --><div class="center">
+            <a href="#" id="bt-follow" class="button bt-color"><span class="ss-check"></span>Follow</a>
+          </div>
+       <h4>Eco Mom</h4>
         <p>
         Age 40<br>
         Mom to Xander, 18 mos.<br>
         Value shopper<br>
         <em><span class="ss-tag"></span> Tags:</em> <a href="#">Urban</a></p>
-        <p><a href="#">Full profile</a></p>
-        <p id="bt-follow"><a href="#" class="button">Follow</a></p>
+        <!-- expandable profile text -->
+          <div class="expandable">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi facilisis ullamcorper ipsum id hendrerit. Nullam aliquam consectetur tortor quis viverra. Nam elit diam, pulvinar vitae leo vel, convallis porta nisl. Vivamus tempor lobortis erat ut volutpat. Integer adipiscing mauris at vestibulum ullamcorper. Nunc id condimentum nisl. Proin mollis, mi nec viverra sodales, enim orci pharetra lectus, vitae hendrerit tellus magna nec ante.</p>
+          </div>
+          <!-- end expandable profile text --> 
       </div>
     </div>
     <div id="module-friends">
@@ -225,6 +234,7 @@
         </ul>
         <p><a href="#">See all</a></p>
       </div>
+    </div>
     </div>
   </div>
   <div id="footer">

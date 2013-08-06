@@ -222,4 +222,12 @@ Jul 30
 Aug 1
 - Revised language on Build List Intro page: build-list_intro.html
 
+Aug 6
+- DES-105: "Following" state for public list "Follow" button. Please see: published-list-follow.html and published-list-following.html
+- New placement of Follow button and profile name
+- "Shared by" header and arrow in third column
+- Expandable profile text (uses jquery.expander.min.js and expander-options.js)
+- Removal of title pre-header from Build List and Public List title header
+
+
 

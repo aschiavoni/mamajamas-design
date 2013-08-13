@@ -229,5 +229,12 @@ Aug 6
 - Expandable profile text (uses jquery.expander.min.js and expander-options.js)
 - Removal of title pre-header from Build List and Public List title header
 
+Aug 13
+- DES-114: Added "Start Your List" button to main header of public list, adjusted position of other header elements
+- DES-94: Updated homepage thumbnail images and linked them to a modal "gallery" window. Uses SimpleModal jQuery plugin.
+- DES-89: Added bullets and color to right column list on home page.
+- New "X" icon image to fix problems with web font close button not appearing in IE9 (in home page gallery)
+- Added conditional comment to HEAD to allow targeting of IE9
+
 
 

@@ -51,6 +51,7 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 100%;
 	display: block;
+	position:relative;
 }
 #branding {
 	clear: both;
@@ -65,12 +66,12 @@ img, object, embed, video {
 	margin-left: 1.6949%;
 	width: 23.7288%;
 	display: block;
+	text-align:right;
 }
 #login {
 	clear: none;
 	float: left;
-	margin-left: 1.6949%;
-	width: 15.2542%;
+	width: 16.9491%;
 	display: block;
 }
 #progress {
@@ -120,7 +121,7 @@ img, object, embed, video {
 	width: 70.625%;
 	display: block;
 }
-#secondary .content {
+#secondary > .content {
 	padding:4px 0;
 	min-height:450px;
 	position:relative;
@@ -153,14 +154,12 @@ img, object, embed, video {
 }
 #buildlist #subhed {
 	width:74.5%;
-}
-#buildlist #title > #subhed {
 	padding-top:2.153em; /* for no prehed */
 }
 #buildlist #title-links {
 	width: 25%;
 }
-#buildlist #secondary .content {
+#buildlist #secondary > .content {
 	padding:1px 1px 20px 3px;
 	min-height:455px;
 }
@@ -174,14 +173,12 @@ img, object, embed, video {
 }
 #publist #subhed {
 	width:74.5%;
-}
-#publist #title > #subhed {
 	padding-top:2.153em; /* for no prehed */
 }
 #publist #title-links {
 	width: 24.5%;
 }
-#publist #secondary .content {
+#publist #secondary > .content {
 	padding:1px 1px 20px 3px;
 	min-height:500px;
 }
@@ -198,7 +195,7 @@ img, object, embed, video {
 #create-profile #primary {
 	width:28%;
 }
-#create-profile #primary .content {
+#create-profile #primary > .content {
 	padding-top:20px;
 	padding-left:48%;
 }
@@ -252,21 +249,21 @@ img, object, embed, video {
 	width:100%;
 	position:relative;
 }
-.home #primary .content {
+.home #primary > .content {
 	padding:0 0 0 9.375%;
 }
 .home #secondary {
 	width: 57.29%;
 	position:relative;
 }
-.home #secondary .content {
+.home #secondary > .content {
 	min-height:0;
 	padding:75px 0 65px 16.36%;
 }
 .home #tertiary {
 	width: 40.625%;
 }
-.home #tertiary .content {
+.home #tertiary > .content {
 	padding:75px 23.08% 65px 2.56%;
 }
 

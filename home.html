@@ -2,7 +2,7 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
 <html class="no-js">
 <!--<![endif]-->
 <head>
@@ -21,7 +21,10 @@
 <!-- for iPhone: -->
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
 <!-- jquery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- gallery -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script src="js/gallery.js"></script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -68,14 +71,18 @@
   </div>
   <div id="secondary">
     <div class="content">
+    <!-- notification ***** -->
+      <div id="notifications">
+        <p class="notification"><strong class="ss-icon">Info</strong>Signed out successfully.</p>
+      </div>
       <p>With so much on your mind right now, who has time to figure out exactly what you will need for the new baby? Mamajamas offers a super-easy way for you to build a personalized, prioritized list of baby gear. 
       </p>
       <p>No more spreadsheets or sifting through epic emails from mom friends! Let us help you figure out exactly what items you need, then customize your list with help from other moms you trust.
       </p>    
-	<ul class="screenshots">
-      	<li><img src="images/home-screenshot1.jpg" alt="preview: quiz" /></li>
-        <li><img src="images/home-screenshot2.jpg" alt="preview: gear list" /></li>
-        <li><img src="images/home-screenshot3.jpg" alt="preview: search" /></li>
+	<ul class="screenshots gallery">
+      	<li><a href="images/home-screenshot1_quiz.jpg"><img src="images/home-screenshot1_quiz_s.jpg" alt="Mamajamas preview: Quiz" title="Mamajamas preview: Quiz" /></a></li>
+        <li><a href="images/home-screenshot2_build-list.jpg"><img src="images/home-screenshot2_build-list_s.jpg" alt="Mamajamas preview: Baby gear list" title="Mamajamas preview: Baby gear list" /></a></li>
+        <li><a href="images/home-screenshot3_shared-list.jpg"><img src="images/home-screenshot3_shared-list_s.jpg" alt="Mamajamas preview: Public shared list" title="Mamajamas preview: Public shared list" /></a></li>
       </ul>
 	</div>
   </div>
@@ -94,7 +101,7 @@
        		<li><a href="#">Home</a></li>
         	<li><a href="#">About Us</a></li>
         	<li><a href="#">Help</a></li>
-        	<li><a href="#">Terms</a></li>
+        	<li><a href="#">Privacy &amp; Terms</a></li>
         </ul>
     </div>
   </div>

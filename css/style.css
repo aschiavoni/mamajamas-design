@@ -1041,21 +1041,54 @@ a.bt-close {
 #prod-search {
 	padding: 10px 10px 0
 }
+#prod-search p {
+	margin-bottom:.5em;
+	padding: 0 11px;
+}
+#search-modal #prod-search h3 {
+	margin:0.5em 0 0.25em 10px;
+	padding-top:.25em;
+	padding-bottom:.25em;
+	background: url(../images/logo_amazon-s.png) no-repeat 96% 9px;
+}
 #frm-prod-search {
 	margin-bottom: 0;
 }
 #frm-prod-search p {
+	margin-bottom:1em;
 	padding: 0 11px;
 }
-#search-modal input[type="text"]#field-search {
+#prod-search input[type="text"]#field-search {
 	width: 460px;
 	padding-left: 24px;
-	background: #fff url("../images/icon_search.png") no-repeat 5px 50%;
+	border-color:#97CA99;
+	background: #fff url("../images/icon_search.png") no-repeat 6px 53%;
 	background-size: 18px 18px;
 }
-#search-modal form.label-infield p label {
+#prod-search form.label-infield p label {
 	left: 34px; /* #frm-prod-search p + 23px */
 	width: 450px;
+}
+#bt-prod-search {
+    margin: 0;
+    padding: 8px 10px 7px;
+    position: absolute;
+    right: 18px;
+    top: 0;
+	border:none;
+    border-radius: 0 4px 4px 0;
+}
+button#bt-prod-search,
+button#bt-prod-search:hover,
+button#bt-prod-search:focus {
+	background: transparent !important;
+}
+#bt-prod-search span {
+	display:block;
+	width:18px;
+	height:18px;
+	background: transparent url("../images/icon_search-w.png") no-repeat 0 0;
+	background-size: 18px 18px;
 }
 #prod-search-results, #prod-suggestions-results {
 	padding: 10px 10px 0;
@@ -1177,7 +1210,7 @@ ul.prod-search-list {
 	padding: 0;
 }
 #search-modal .collapsible strong {
-	color: #337BA3;
+	color: #999;
 	font-weight: normal;
 }
 #search-modal .ss-dropdown,
@@ -2594,7 +2627,7 @@ div.baby-bdate {
 	font-weight: normal;
 }
 .collapsible.ss-directright, .collapsible.ss-dropdown {
-	color:#bbb;
+	color:#CCC;
 }	
 .collapsible strong:hover, .collapsible strong:active, .collapsible strong:focus {
 	color: #337BA3;
@@ -2854,7 +2887,6 @@ div.baby-bdate {
 }
 .home #tertiary ul {
 	margin-top: 4px;
-	color:#5daf5d;
 }
 .home #tertiary li {
 	margin-bottom: 1em;
@@ -3082,4 +3114,111 @@ ul.screenshots img {
 	display:block;
 	font-size:11px;
 	line-height:14px;
+}
+
+/* Tabs (based on work by Dirk Ginader (ginader.de) and Dirk Jesse (http://www.yaml.de) ---------------- */
+.js .sidemenu {
+	position:relative;
+}
+.js .sidemenu ul.tabs-list {
+    position: absolute;
+	width:140px;
+	top:0;
+	left:-180px;
+}
+.js .sidemenu ul.tabs-list li {
+    display: block;
+    float: none;
+    margin: 0 0 .5em;
+}
+.js .sidemenu ul.tabs-list li a:focus,
+.js .sidemenu ul.tabs-list li a:hover,
+.js .sidemenu ul.tabs-list li a:active {
+	background:transparent;
+}
+.js .sidemenu ul.tabs-list li a {
+	float:none;
+	margin:0;
+	padding:0;
+	border:none;
+	color:#337BA3;
+}
+.js .sidemenu ul.tabs-list li.current a,
+.js .sidemenu ul.tabs-list li.current a:focus,
+.js .sidemenu ul.tabs-list li.current a:hover,
+.js .sidemenu ul.tabs-list li.current a:active {
+	padding:0;
+	border:none;
+	color:#000;
+	font-weight:600;
+}
+.js .tabs.sidemenu .content {
+	padding:0;
+	border-top:none;
+}
+.js ul.tabs-list {
+	margin:0;
+	padding:0;
+	display: table;
+    list-style-type: none;
+    position: relative;
+    z-index: 500;
+}
+.js ul.tabs-list li {
+    display: inline;
+    float: left;
+    margin: 0 4px 0 0;
+    padding: 0;
+}
+.js ul.tabs-list li a {
+	display:block;
+	float:left;
+	margin:0;
+	padding:9px 9px 8px;
+	border:1px #fff solid;
+	border-bottom:0 none;
+	font-size:1em;
+	line-height: 1.5em;
+	background: transparent;
+	color:#777;
+}
+.js ul.tabs-list li a:focus,
+.js ul.tabs-list li a:hover,
+.js ul.tabs-list li a:active {
+	background:#f3f3f3;
+	color:#000;
+	font-weight:normal;
+	outline: 0 none;
+	text-decoration:none;
+}
+.js ul.tabs-list li.current a,
+.js ul.tabs-list li.current a:focus,
+.js ul.tabs-list li.current a:hover,
+.js ul.tabs-list li.current a:active {
+	padding:9px 9px 9px;
+	background:#fff;
+	border:1px #ccc solid;
+	border-bottom:0 none;
+	color:#000;
+	font-weight:400;
+	text-decoration:none;
+}
+.js .tabs .current-info,
+.js .tabs .accessibletabsanchor,
+.js .tabs .tabhead {
+    position:absolute;
+    left:-999em;
+}
+.js .tabs .content {
+    border-top: 1px solid #CCCCCC;
+    clear: both;
+    margin-bottom: -1px;
+    padding: 2em 0 0;
+    position: relative;
+    top: -1px;
+}
+.js #secondary .tabbody > h2,
+.js #secondary .tabbody > h3,
+.js #secondary .tabbody > h4 {
+	margin-top:0;
 }

@@ -231,6 +231,9 @@ img, object, embed, video {
 	padding-left:20px;
 	float:none;
 }
+.text-page #title-links {
+	padding:0;
+}
 .text-page #primary {
 	width:24%;
 }

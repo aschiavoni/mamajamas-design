@@ -236,5 +236,9 @@ Aug 13
 - New "X" icon image to fix problems with web font close button not appearing in IE9 (in home page gallery)
 - Added conditional comment to HEAD to allow targeting of IE9
 
-
-
+Aug 14
+- DES-100: Adjusted product search modal window language and styling.
+- DES-102: Added numbers to ratings in product search pop-up info balloons.
+- DES-108: Added Privacy Policy to Terms of Service, to be linked from footer as "Privacy & Terms"
+- Please note addition of jquery.tabs.js plugin, used on the Privacy & terms page, privacy-policy_terms-of-service.html
+- DES-89: Adjusted styling of home page list.

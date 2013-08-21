@@ -242,3 +242,7 @@ Aug 14
 - DES-108: Added Privacy Policy to Terms of Service, to be linked from footer as "Privacy & Terms"
 - Please note addition of jquery.tabs.js plugin, used on the Privacy & terms page, privacy-policy_terms-of-service.html
 - DES-89: Adjusted styling of home page list.
+
+Aug 21
+- DES-122: Made quiz image labels visible, with slight opacity change on hover
+- DES-124: Removed pointer from co-sleeping quiz image

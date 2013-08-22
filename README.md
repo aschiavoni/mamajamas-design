@@ -246,3 +246,10 @@ Aug 14
 Aug 21
 - DES-122: Made quiz image labels visible, with slight opacity change on hover
 - DES-124: Removed pointer from co-sleeping quiz image
+
+Aug 22
+- DES-112: SimpleModal window triggered by "Follow" button on public list. (published-list-follow_modal.html)
+- Please note updated jquery.simplemodal.min.js (changed default opacity)
+- Please note updated icon_close.png graphic (changed transparency and adjusted image)
+- Updated gallery.js (used for home page thumbnails gallery)
+- Added jquery.cookie.js (for remembering navigation state in privacy-policy_terms-of-service.html)

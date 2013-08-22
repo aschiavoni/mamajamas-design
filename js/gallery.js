@@ -20,10 +20,7 @@ jQuery(function ($) {
 				G.current_idx = G.images.index(this);
 				$(G.create()).modal({
 					closeHTML: '',
-					overlayId: 'gallery-overlay',
-					containerId: 'gallery-container',
 					containerCss: {left:0, width:'100%'},
-					opacity: 85,
 					position: ['10%', null],
 					autoResize: true,
 					onOpen: G.open,

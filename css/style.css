@@ -263,6 +263,12 @@ b, strong { font-weight: 600; }
 	background-position: 100% -167px; /* active background on #3 when #3 is active */
 	padding-right: 23px !important;
 }
+#progress li > a {
+  color: #333;
+}
+#progress .prog1 li.prog1 > a, #progress .prog2 li.prog2 > a, #progress .prog3 li.prog3 > a {
+	color: #fff;
+}
 
 /* sub-headers ------ */
 #title p.prehed {

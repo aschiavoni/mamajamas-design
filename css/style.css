@@ -1220,7 +1220,7 @@ ul.prod-search-list {
 	font-size: 1.167em;
 	color: #222;
 }
-.prod-detail-pop .detail-price {
+.prod-detail-pop .detail-price, .prod-detail-pop .detail-price a {
 	font-size: 1.167em;
 	color: #777;
 }

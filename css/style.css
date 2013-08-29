@@ -3294,3 +3294,11 @@ ul.screenshots img {
 .js #secondary .tabbody > h4 {
 	margin-top:0;
 }
+
+.readonly .egg, .readonly .when, .readonly .priority-display {
+	cursor: default;
+}
+
+.readonly .own input[type='checkbox'] + label {
+	cursor: default;
+}

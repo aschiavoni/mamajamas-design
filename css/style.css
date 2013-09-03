@@ -2,21 +2,12 @@
 /* CSS Document */
 
 /* general backgrounds, borders, colors ------ */
-html {
-	background: #efefef;
+html, body {
+	background: #fff;
+	height:100%;
 }
 body, button, input, select, textarea {
 	font-family: 'Open Sans', sans-serif;
-}
-body {
-	background: #f7f7f7; /* Old browsers */
-	background: -moz-linear-gradient(top, #f7f7f7 20%, #efefef 80%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #f7f7f7), color-stop(80%, #efefef)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #f7f7f7 20%, #efefef 80%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #f7f7f7 20%, #efefef 80%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #f7f7f7 20%, #efefef 80%); /* IE10+ */
-	background: linear-gradient(to bottom, #f7f7f7 20%, #efefef 80%); /* W3C */
- 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efefef', GradientType=0 ); /* IE6-9 */
 }
 b, strong { font-weight: 600; }
 #hed-wrap {
@@ -27,13 +18,10 @@ b, strong { font-weight: 600; }
 }
 .boxshadow #hed-wrap {
 	border: none;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 .gridContainer {
 	background: #fff;
-	border-right: 1px solid #d9d9d9;
-	border-bottom: 1px solid #d9d9d9;
-	border-left: 1px solid #d9d9d9;
 }
 .progressbar {
 	background: #fff !important;
@@ -46,7 +34,6 @@ b, strong { font-weight: 600; }
 	background: #fff;
 	border-bottom: 1px solid #d9d9d9;
 }
-
 #footer {
 	background: #fff;
 	border-top: 1px solid #d9d9d9;
@@ -71,7 +58,7 @@ b, strong { font-weight: 600; }
 }
 #search input[type=text] {
 	font-size:12px;
-	width: 161px;
+	width: 109px;
 	padding: 4px 4px 3px 25px;
 	color: #b3b3b3;
 	background: url(../images/icon_search.png) no-repeat 5px 50%;
@@ -79,6 +66,7 @@ b, strong { font-weight: 600; }
 }
 #search input[type=text]:focus {
 	color: #000;
+	width: 189px;
 }
 
 /* login links */
@@ -483,7 +471,7 @@ form.label-infield p label {
 form.label-infield fieldset p br {
 	display: none; /* cancel BRs inside fieldsets with in-field labels (preserves list formatting) */
 }
-form.label-infield fieldset p input, form.label-infield fieldset p textarea {
+form.label-infield fieldset p input, form.label-infield fieldset p textarea, form.label-infield fieldset p.normal br {
 	display: block;
 }
 form.label-infield fieldset p label {
@@ -537,6 +525,9 @@ button, .button {
 	cursor: pointer;
 	background-color: #a6a6a6;
 }
+button em, .button em {
+	font-style:normal;
+}
 .ie7 .button, .ie7 button {
 	padding: 2px 15px 3px;
 }
@@ -589,6 +580,9 @@ input[type=text] + .button {
 .bt-light:hover, .bt-light:focus, .bt-light:active {
 	color: #eee;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
+}
+.bt-light .ss-icon {
+	color: #aaa;
 }
 .bt-narrow {
 	padding: 3px 6px .125em;
@@ -772,17 +766,6 @@ ul.follow-moms {
 	position: absolute;
 	top: -23px;
 	left: 65px;
-	font-size: 1.167em;
-	line-height: 1;
-	color: #FFFFFF;
-	background: #68C16B;
-	padding: 0.45em 0.35em 0.12em;
-	border-radius: 11px;
-	-moz-border-radius: 11px;
-	-webkit-border-radius: 11px;
-}
-.following img, .follow-moms li img:hover, .follow-moms lie img:focus {
-	border: solid 1px #5EB564;
 }
 a.more-friends {
 	display: block;
@@ -812,6 +795,19 @@ a.more-friends:hover, a.more-friends:focus {
 	color: #337BA3;
 }
 
+/* check ------ */
+.check {
+	font-size: 14px;
+	font-weight:normal;
+	line-height: 1;
+	color: #FFFFFF;
+	background: #68C16B;
+	padding: 7px 4px 1px;
+	border-radius: 11px;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+}
+
 /* follow sidebar ------ */
 #module-follow {
 	margin-bottom: 7px;
@@ -839,6 +835,114 @@ a.more-friends:hover, a.more-friends:focus {
 }
 #module-follow ul a:hover {
 	color: #000;
+}
+
+/* my friends' lists (My Friends and Find Friends ------ */
+ul.friends-list {
+	margin: 0;
+	padding: 0 10px 0 0;
+	list-style-type: none;
+	overflow:auto;
+}
+.friends-list li {	
+	position: relative;
+	float:left;
+	width:100%;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	border-top:solid 1px #dedede;
+}
+.friends-list li:first-child {
+	padding-top: 0;
+	border-top:none;
+}
+.friends-list img {
+	width: 84px;
+	margin:0 20px 0 0;
+	border: solid 1px #BEBEBE;
+	cursor: pointer;
+	float:left;
+}
+.friends-list li p {
+	font-size:16px;
+	font-weight:600;
+	float:left;
+	padding-top:28px;
+}
+.friends-list .bt-follow {
+	min-width:98px; /* also see .bt-follow button styles, grouped with #bt-follow styles */
+	float:right;
+	margin-top:28px;
+	margin-right:10px;
+}
+.friends-list .check {
+	position: absolute;
+	top: 67px;
+	left: 67px;
+}
+.friends-list::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.friends-list::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+.friends-list::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+.friends-list::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .3);
+}
+#findfriends .content {
+	padding:0;
+}
+#findfriends .form-page {
+	padding:20px 0 0;
+}
+.findfriends-lists li:first-child {
+	margin-top:20px;
+}
+
+/* Find friends menu and button images ------ */
+#findfriends .menu a {
+	padding-left:45px;
+	background-image:url(../images/icons_find-friends.png);
+	background-repeat:no-repeat;
+	background-size:375px 96px;
+}
+#accessibletabsnavigation0-1 a {
+	background-position:-120px 0;
+}
+#accessibletabsnavigation0-2 a {
+	background-position:-240px 0;
+}
+#accessibletabsnavigation0-0 a:hover,
+#accessibletabsnavigation0-0.current a {
+	background-position:0 -48px;
+}
+#accessibletabsnavigation0-1 a:hover,
+#accessibletabsnavigation0-1.current a {
+	background-position:-120px -48px;
+}
+#accessibletabsnavigation0-2 a:hover,
+#accessibletabsnavigation0-2.current a {
+	background-position:-240px -48px;
+}
+
+/* Find friends prompt ------ */
+#findfriends-prompt {
+	background:url(../images/icon_find-friends.png) no-repeat 0 3px;
+	background-size:75px 55px;
+	padding:0 40px 0 80px;
+}
+#findfriends-prompt h3 {
+	margin-bottom:0;
+}
+
+/* following thumbnail styles ------ */
+.following img, .follow-moms li img:hover, .follow-moms lie img:focus {
+	border: solid 1px #5EB564;
 }
 
 /* modal windows ------ */
@@ -2351,45 +2455,53 @@ a.bt-addanother:hover span {
 }
 
 /* override default button hover colors */
-#publist a#bt-follow:hover {
+#publist a#bt-follow:hover,
+.bt-follow:hover {
 	background:#111 !important;
 	border-color:#111 !important;
 }
 
 /* hide "bt-text1" on hover and "bt-text2" by default */
 #publist a#bt-follow:hover .bt-text1,
-#publist a#bt-follow .bt-text2 {
+#publist a#bt-follow .bt-text2,
+.bt-follow:hover .bt-text1,
+.bt-follow .bt-text2 {
 	display:none;
 }
 
 /* show bt-text2 on hover */
-#publist a#bt-follow:hover .bt-text2 {
+#publist a#bt-follow:hover .bt-text2,
+.bt-follow:hover .bt-text2 {
 	display:inline;
 	color:#ddd !important;
 }
 
 /* dim checkmark by default  */
-#bt-follow .ss-check {
+#bt-follow .ss-check,
+.bt-follow .ss-check {
 	opacity:0.5;
 	filter: alpha(opacity=50);
 }
 
 /* in active state, grey button, darker text */
-#bt-follow.bt-active  {
+#bt-follow.bt-active,
+.bt-follow.bt-active  {
 	background:#A6A6A6;
 	border-color:#A6A6A6;
 	color:#e6e6e6;
 }
 
 /* in active state, make checkmark brighter*/
-#bt-follow.bt-active .ss-check {
+#bt-follow.bt-active .ss-check,
+.bt-follow.bt-active .ss-check {
 	opacity:1.0;
 	filter: alpha(opacity=100);
 	color:#fff;
 }
 
 /* adjust position of "X" */
-#bt-follow .ss-delete {
+#bt-follow .ss-delete,
+.bt-follow .ss-delete {
 	line-height: 1;
 	margin-right: 4px;
 	position: relative;
@@ -2873,21 +2985,31 @@ div.baby-bdate {
 	margin-bottom: 1em;
 }
 
-/* text pages */
-.text-page #progress {
+/* text pages, layout_2-7-3, layout_3-6-3 */
+.text-page #progress,
+.layout_2-7-3 #progress,
+.layout_3-6-3 #progress {
 	display: none;
 }
-.text-page #title h2 {
+.text-page #title h2,
+.layout_2-7-3 #title h2,
+.layout_3-6-3 #title h2 {
 	padding-left: 0;
 }
-.text-page #secondary > .content {
-	padding: 2em 0 4em;
+.text-page #secondary > .content,
+.layout_2-7-3 #secondary > .content,
+.layout_3-6-3 #secondary > .content {
+	padding: 2em 0 3em;
 	line-height: 1.46;
 }
-.text-page #secondary h3 {
+.text-page #secondary h3,
+.layout_2-7-3 #secondary h3,
+.layout_3-5-3 #secondary h3 {
 	margin: 2em 0 1em;
 }
-.text-page #secondary li h4 {
+.text-page #secondary li h4,
+.layout_2-7-3 #secondary li h4,
+.layout_3-6-3 #secondary li h4 {
 	margin: 0;
 }
 
@@ -3032,6 +3154,12 @@ ul.screenshots img {
   #publist #title p.prehed {
 	background-image: url(../images/icons_list-title@2x.png);
   }
+  #findfriends-prompt {
+	background-image:url(../images/icon_find-friends@2x.png);
+  }
+  #findfriends .menu a {
+	background-image:url(../images/icons_find-friends@2x.png);
+  }
 }
 
 /* standalone forms */
@@ -3063,11 +3191,10 @@ ul.screenshots img {
 	background:#fff url(../img/gallery/loading.gif) center 100px no-repeat;
 	color:#999;
 	display:none;
-	height:200px;
 	margin:0 auto;
 	padding:0 0 85px 0;
 	position:relative;
-	width:300px;
+	width:900px;
 	border: 1px solid #d9d9d9;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
 	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
@@ -3189,45 +3316,6 @@ ul.screenshots img {
 }
 
 /* Tabs (based on work by Dirk Ginader (ginader.de) and Dirk Jesse (http://www.yaml.de) ---------------- */
-.js .sidemenu {
-	position:relative;
-}
-.js .sidemenu ul.tabs-list {
-    position: absolute;
-	width:140px;
-	top:0;
-	left:-180px;
-}
-.js .sidemenu ul.tabs-list li {
-    display: block;
-    float: none;
-    margin: 0 0 .5em;
-}
-.js .sidemenu ul.tabs-list li a:focus,
-.js .sidemenu ul.tabs-list li a:hover,
-.js .sidemenu ul.tabs-list li a:active {
-	background:transparent;
-}
-.js .sidemenu ul.tabs-list li a {
-	float:none;
-	margin:0;
-	padding:0;
-	border:none;
-	color:#337BA3;
-}
-.js .sidemenu ul.tabs-list li.current a,
-.js .sidemenu ul.tabs-list li.current a:focus,
-.js .sidemenu ul.tabs-list li.current a:hover,
-.js .sidemenu ul.tabs-list li.current a:active {
-	padding:0;
-	border:none;
-	color:#000;
-	font-weight:600;
-}
-.js .tabs.sidemenu .content {
-	padding:0;
-	border-top:none;
-}
 .js ul.tabs-list {
 	margin:0;
 	padding:0;
@@ -3289,12 +3377,166 @@ ul.screenshots img {
     position: relative;
     top: -1px;
 }
+.js .sidemenu { /* tabs in sidemenu */
+	position:relative;
+}
+.js .sidemenu ul.tabs-list {
+    position: absolute;
+	width:140px;
+	top:0;
+	left:-160px;
+}
+.js .text-page .sidemenu ul.tabs-list,
+.js .layout_3-6-3 .sidemenu ul.tabs-list { /* position adjustment for these page types */
+	width:140px;
+	left:-180px;
+}
+.js .sidemenu ul.tabs-list li {
+    display: block;
+    float: none;
+    margin: 0 0 .5em;
+}
+.js .sidemenu ul.tabs-list li a {
+	float:none;
+	margin:0;
+	padding:0;
+	border:none;
+	font-size:1.231em;
+	font-weight:300;
+}
+.js .sidemenu ul.tabs-list li a:focus,
+.js .sidemenu ul.tabs-list li a:hover,
+.js .sidemenu ul.tabs-list li a:active {
+	background:transparent;
+}
+.js .sidemenu ul.tabs-list li.current a,
+.js .sidemenu ul.tabs-list li.current a:focus,
+.js .sidemenu ul.tabs-list li.current a:hover,
+.js .sidemenu ul.tabs-list li.current a:active {
+	padding:0;
+	border:none;
+	color:#000;
+	font-weight:400;
+}
+.js .tabs.sidemenu .content {
+	padding:0;
+	border-top:none;
+}
 .js #secondary .tabbody > h2,
 .js #secondary .tabbody > h3,
 .js #secondary .tabbody > h4 {
 	margin-top:0;
 }
 
+/* Side menu (vertical local navigation) ------ */
+/* should match sidemenu tab styles above */
+ul.sidemenu {
+	margin:0;
+	padding:0;
+    list-style-type: none;
+    z-index: 500;
+}
+ul.sidemenu li {
+    margin: 0 0 .5em;
+}
+ul.sidemenu li a {
+	display:block;
+	margin:0;
+	padding:0;
+	font-size:1.231em;
+	font-weight:300;
+	line-height: 1.5em;
+	color:#777;
+}
+ul.sidemenu li a:focus,
+ul.sidemenu li a:hover,
+ul.sidemenu li a:active {
+	color:#000;
+	font-weight:300;
+	outline: 0 none;
+	text-decoration:none;
+}
+ul.sidemenu li.current a,
+ul.sidemenu li.current a:focus,
+ul.sidemenu li.current a:hover,
+ul.sidemenu li.current a:active {
+	padding:0;
+	border:none;
+	color:#000;
+	font-weight:400;
+}
+.layout_2-7-3 ul.sidemenu,
+.layout_3-6-3 ul.sidemenu {
+	padding-top: 2em;
+}
+.layout_2-7-3 ul.sidemenu {
+	margin-left: 10px;
+}
+.layout_3-6-3 ul.sidemenu {
+	margin-left: 135px;
+}
+
+/* Horizontal list menu ------ */
+ul.menu,
+ul.menu li {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+ul.menu {
+	margin-bottom:20px;
+	padding-bottom:21px;
+	border-bottom:solid 1px #ccc;
+}
+.tabs ul.menu {
+	margin-bottom:0;
+	border-bottom:none;
+}
+ul.menu li {
+	display:inline;
+	margin-right:15px;
+}
+ul.menu li a {
+	padding:15px 9px 12px;
+	color:#777;
+	background:#fff;
+	border-radius:5px;
+}
+ul.menu li a:hover,
+ul.menu li.current a {
+	text-decoration:none;
+	color:#fff;
+	background:#a6a6a6;
+}
+
+/* forms in tabs ------ */
+.tabs .form-page dt, 
+.tabs .form-page dd {
+	float: left;
+}
+.tabs .form-page dt {
+	color: #808080;
+	clear: left;
+	width: 11.1%;
+	margin-left: 0;
+	padding: .3em 0;
+	text-align: right;
+}
+.tabs .form-page dd {
+	width: 85%;	
+	margin-left: 3.7%;
+}	
+.tabs .form-page dt + dd.half { 
+	width: 39.75%;
+	margin-left: 3.7%;
+}
+.tabs .form-page dd.half {
+	width: 41.45%;
+	margin-left: 2%;
+}
+.tabs .form-page fieldset.half {
+	width: 52%;
+}
 .readonly .egg, .readonly .when, .readonly .priority-display {
 	cursor: default;
 }

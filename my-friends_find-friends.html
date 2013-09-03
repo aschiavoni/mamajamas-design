@@ -1,0 +1,318 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: My Friends’ Lists: Find Friends</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- allow saving state of tabs -->
+<script src="js/jquery.cookie.js"></script>
+<!-- tabs -->
+<script src="js/jquery.tabs.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".tabs").accessibleTabs({
+            tabhead:'h2',
+            fx:"fadeIn",
+			 tabsListClass:'menu',
+			 autoAnchor:true,
+			 saveState:true
+        });
+    });
+</script>
+<!-- scrolling column with "full"-window height -->
+<script>
+// set height of a column based on window height, minus height of header and other lements
+  var padHeight = "49"; /* extra space to subtract, may vary with page */
+  var targetElement = ".friends-list"; 
+   
+   //Initial load of page
+  $(document).ready(sizeContent);
+  
+  //Every resize of window
+  $(window).resize(sizeContent);
+  
+  //Dynamically assign height (set up for Friends' Lists pages)
+  function sizeContent() {
+	  var newHeight = $(window).height() - $("#hed-wrap").height() - $("#title").height() - $(".menu").height() - $("#footer").height() - padHeight + "px";
+	  $(targetElement).css("height", newHeight);
+  }
+</script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<!-- in-field labels -->
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body class="layout_2-7-3">
+<!-- header area ***** -->
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding">
+        <h1>Mamajamas</h1>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+      <div id="progress">
+        <ol class="prog1">
+          <!-- comments between list items prevent whitespace insertion when displayed inline --><li class="prog1"><strong>1</strong> Take the quiz</li><!--
+          --><li class="prog2"><strong>2</strong> Make your list and get advice</li><!--
+          --><li class="prog3"><strong>3</strong> Share your list</li>
+        </ol>
+        <div class="progborder"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+  <div id="title">
+    <div id="subhed">
+      <h2>My Friends’ Lists</h2>
+    </div>
+  </div>
+  <div id="primary">
+    <div class="content">
+    	<!-- left nav -->
+        <ul class="sidemenu">
+            <li><a href="my-friends.html">My Friends</a></li>
+           <li class="current"><a href="#">Find Friends</a></li>
+        </ul>
+      	<!-- end left nav -->
+    </div>
+  </div>
+  <div id="secondary">
+    <div class="content"> 
+        <h2 class="visuallyhidden">Find Friends</h2>
+        <!-- tabs -->
+
+            <div id="findfriends" class="tabs">
+            	<!-- tab: Facebook -->
+              <h2 id="facebookfriends">Facebook</h2>
+              <div class="tabbody">
+                <!-- Friends list (Facebook) -->
+                <ul class="clearfix friends-list findfriends-lists">
+                    <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Martha Arbuckle</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Holly McGee"></a>  
+                        <p>
+                      <strong class="mom">Kris Cooper</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Qin Lee</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Holly McGee"></a>  
+                        <p>
+                      <strong class="mom">Remy Lawrence</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Lauren Mallard</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+ 					<li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Sarita Patel</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>    
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Winnie Sung</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>              
+                </ul>
+              </div>
+              <!-- end tab: Facebook -->      
+              <!-- begin tab: Gmail -->            
+              <h2 id="gmailfriends">Gmail</h2>
+              <div class="tabbody">
+                <!-- Friends list (Gmail) -->
+                <ul class="clearfix friends-list findfriends-lists">
+                    <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Maggie Harman</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Holly McGee"></a>  
+                        <p>
+                      <strong class="mom">Holly McGee</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Maggie Harman</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Holly McGee"></a>  
+                        <p>
+                      <strong class="mom">Holly McGee</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Maggie Harman</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>
+ 					<li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Shirley Bromdingnaghy</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>    
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Maggie Harman"></a>  
+                        <p>
+                      <strong class="mom">Maggie Harman</strong>
+                        </p>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-check"></span>Follow</button>
+                  </li>              
+                </ul>
+          		</div>
+          <!-- end tab: Gmail --> 
+          <!-- begin tab: Invite a Friend -->            
+             <h2 id="invitefriend">Invite a Friend</h2>
+             <div class="tabbody form-page">
+              <form class="label-infield">
+                  <dl class="clearfix">
+                    <fieldset>
+                      <!-- row -->
+                      <dt>To<strong class="required">*</strong></dt>
+                      <dd class="half">
+                        <p>
+                          <label for="field-1">Friend’s email (required)</label>
+                          <br />
+                          <input name="field-1" type="text" id="field-1" value="">
+                        </p>
+                      </dd>
+                      <dd class="half">
+                      <p>
+                        <label for="field-2">Friend’s Name</label>
+                        <br />
+                        <input name="field-2" type="text" id="field-2" value="">
+                      </p>
+                    </dd>
+                      <!-- row -->
+                    <dt>From</dt>
+                    <dd>
+                      <p>
+                        <label for="field-2">Name</label>
+                        <br />
+                        <input name="field-2" type="text" id="field-2" value="">
+                      </p>
+                    </dd>
+                    </fieldset>
+                    <!-- row -->
+                    <fieldset>
+                    <dt>Subject</dt>
+                    <dd class="pad">
+                      <p>Rick has invited you to join Mamajamas</p>
+                    </dd>
+                    <!-- row -->
+                    <dt>Message</dt>
+                    <dd>
+                      <p>
+                        <label for="field-3">Personalized message</label>
+                        <br />
+                        <textarea rows="2" name="field-3" id="field-3"></textarea>
+                        </p>
+                      <p class="normal"><span class="instruction">Your message will include the following text:</span><br>
+                          Create your own baby gear list at Mamajamas:<br>
+                      <a href="http://www.mamajamas.com">http://www.mamajamas.com</a></p>
+                    </dd>
+                    </fieldset>
+                    </dl>
+                     <div class="button-row">
+                      <button type="submit" class="button bt-light" id="bt-cancel"><span class="ss-icon ss-delete"></span>Cancel</button>
+                      <button type="submit" class="button bt-color" id="bt-name"><span class="ss-icon ss-send"></span>Send</button>
+                    </div>
+              		</form>
+             	</div>
+             <!-- end tab: Invite a Friend -->            
+       		</div>
+       <!-- end tabs -->
+       
+    </div>
+  </div>
+  <div id="tertiary">&nbsp;</div>
+  <div id="footer">
+    <div class="content">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+        <li><a href="/terms-of-service">Privacy &amp; Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end body area --> 
+
+<!-- Google Analytics -->
+</body>
+</html>

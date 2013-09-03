@@ -57,21 +57,22 @@ img, object, embed, video {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 57.6271%;
+	width: 48.958%;
 	display: block;
 }
 #search {
 	clear: none;
 	float: left;
-	margin-left: 1.6949%;
-	width: 23.7288%;
+	margin-left: 2.083%;
+	width: 22.9167%;
 	display: block;
 	text-align:right;
 }
 #login {
 	clear: none;
 	float: left;
-	width: 16.9491%;
+	margin-left: 2.083%;
+	width: 23.9583%;
 	display: block;
 }
 #progress {
@@ -225,25 +226,51 @@ img, object, embed, video {
 	width:24%;
 }
 
-/* layout adjustments for text pages */
-.text-page #subhed {
+/* layout adjustments for text pages (3, 6, 3) */
+.text-page #subhed,
+.layout_3-6-3 #subhed {
 	margin-left:24%;
 	padding-left:20px;
 	float:none;
 }
-.text-page #title-links {
+.text-page #title-links,
+.layout_3-6-3 #title-links {
 	padding:0;
 }
-.text-page #primary {
+.text-page #primary,
+.layout_3-6-3 #primary {
 	width:24%;
 }
-.text-page #secondary {
+.text-page #secondary,
+.layout_3-6-3 #secondary {
 	width:47.92%;
 	margin-left:20px;
 }
-.text-page #tertiary {
+.text-page #tertiary,
+.layout_3-6-3 #tertiary {
 	width:24%;
 }
+
+/* layout 2, 7, 3 */
+.layout_2-7-3 #subhed {
+	margin-left:15.625%;
+	padding-left:20px;
+	float:none;
+}
+.layout_2-7-3 #title-links {
+	padding:0;
+}
+.layout_2-7-3 #primary {
+	width:15.625%; /* 150px/960px */
+}
+.layout_2-7-3 #secondary {
+	width:56.25%; /* 540px/960px */
+	margin-left:20px;
+}
+.layout_2-7-3 #tertiary {
+	width:23.958%; /* 230px/960px */
+}
+
 
 /* layout for home page */
 .home #primary {

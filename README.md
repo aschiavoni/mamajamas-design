@@ -253,3 +253,17 @@ Aug 22
 - Please note updated icon_close.png graphic (changed transparency and adjusted image)
 - Updated gallery.js (used for home page thumbnails gallery)
 - Added jquery.cookie.js (for remembering navigation state in privacy-policy_terms-of-service.html)
+
+Sept 3
+- DES-132: Friends Lists and Find Friends: "my-friends.html", "my-friends_find-friends.html",
+  "my-friends_find-friends_no-auth.html"
+- my-friends_find-friends.html uses js tabs for the "Facebook," "Gmail," "Invite a Friend" navigation
+- my-friends_find-friends_no-auth.html shows content for users who have not authorized their account to
+  access Facebook or Gmail
+- Friends lists on the above pages use javascript to dynamically set the height of the list column, allowing it to
+  scroll independently.
+- DES-126: modified the slider arrow graphic (in images/quiz) and CSS (quiz.css) to include a hover state (along
+  with the disabled and active states)
+- DES-125: CSS change (in quiz.css) to center text on the quiz questions
+- CSS changes (to style.css and fluid-layout.css) include layout adjustments to header (affecting placement and size of search box) and changes to
+  page background color and borders.

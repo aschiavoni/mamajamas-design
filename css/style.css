@@ -1168,8 +1168,8 @@ ul.friends-list {
 #signup-modal .tip {
 	width:70%;
 }
-#login-window #collapsible1,
-#signup-modal #collapsible1 {
+#login-window .collapsible,
+#signup-modal .collapsible {
 	margin-top:3em;
 }
 #signup-modal .collapsible-content {

@@ -626,18 +626,18 @@ a.bt-buy:hover {
 .oldie .button-row button, .oldie .button-row .button {
 	margin: 0 2px;
 }
-.ss-action, .ss-check, .ss-plus, .ss-search, .ss-upload {
+.ss-action, .ss-check, .ss-mail, .ss-plus, .ss-search, .ss-upload {
 	line-height: 1;
 	margin-right: 4px;
 }
 .ss-plus {
 	font-size: 0.75em;
 }
-.ss-action, .ss-check, .ss-search {
+.ss-action, .ss-check, .ss-mail, .ss-search {
 	position: relative;
 	top: .125em;
 }
-.ie7 .ss-plus, .ie7 .ss-check, .ie .ss-action {
+.ie7 .ss-plus, .ie7 .ss-check, .ie7 .ss-mail, .ie7 .ss-action {
 	margin-right: 0;
 }
 
@@ -901,7 +901,12 @@ ul.friends-list {
 	padding:20px 0 0;
 }
 .findfriends-lists li:first-child {
-	margin-top:20px;
+	margin-top: 20px;
+}
+/* invite button color */
+.fb-invite, .gmail-invite {
+	border-color: #80A3BA;
+	background: #80A3BA;
 }
 
 /* Find friends menu and button images ------ */
@@ -2477,9 +2482,9 @@ a.bt-addanother:hover span {
 }
 
 /* dim checkmark by default  */
-#bt-follow .ss-check,
-.bt-follow .ss-check {
-	opacity:0.5;
+#bt-follow .ss-check, .bt-follow .ss-check, 
+#bt-follow .ss-mail, .bt-follow .ss-mail {
+	opacity: 0.5;
 	filter: alpha(opacity=50);
 }
 
@@ -2492,9 +2497,11 @@ a.bt-addanother:hover span {
 }
 
 /* in active state, make checkmark brighter*/
-#bt-follow.bt-active .ss-check,
-.bt-follow.bt-active .ss-check {
-	opacity:1.0;
+#bt-follow.bt-active .ss-check, 
+.bt-follow.bt-active .ss-check, 
+#bt-follow.bt-active .ss-mail, 
+.bt-follow.bt-active .ss-mail {
+	opacity: 1.0;
 	filter: alpha(opacity=100);
 	color:#fff;
 }

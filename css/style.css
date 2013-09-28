@@ -912,28 +912,38 @@ ul.friends-list {
 
 /* Find friends menu and button images ------ */
 #findfriends .menu a {
-	padding-left:45px;
-	background-image:url(../images/icons_find-friends.png);
-	background-repeat:no-repeat;
-	background-size:375px 96px;
+	padding-left: 45px;
+	background-image: url(../images/icons_find-friends.png);
+	background-repeat: no-repeat;
+	background-size: 480px 96px;
+}
+#accessibletabsnavigation0-0 a {
+	background-position: 0 0;
 }
 #accessibletabsnavigation0-1 a {
-	background-position:-120px 0;
+	background-position: -126px 0;
 }
 #accessibletabsnavigation0-2 a {
-	background-position:-240px 0;
+	background-position: -252px 0;
+}
+#accessibletabsnavigation0-3 a {
+	background-position: -378px 0;
 }
 #accessibletabsnavigation0-0 a:hover,
 #accessibletabsnavigation0-0.current a {
-	background-position:0 -48px;
+	background-position: 0 -48px;
 }
 #accessibletabsnavigation0-1 a:hover,
 #accessibletabsnavigation0-1.current a {
-	background-position:-120px -48px;
+	background-position: -126px -48px;
 }
 #accessibletabsnavigation0-2 a:hover,
 #accessibletabsnavigation0-2.current a {
-	background-position:-240px -48px;
+	background-position: -252px -48px;
+}
+#accessibletabsnavigation0-3 a:hover,
+#accessibletabsnavigation0-3.current a {
+	background-position: -378px -48px;
 }
 
 /* Find friends prompt ------ */
@@ -3168,7 +3178,7 @@ ul.screenshots img {
 	background-image:url(../images/icon_find-friends@2x.png);
   }
   #findfriends .menu a {
-	background-image:url(../images/icons_find-friends@2x.png);
+	background-image:url(../images/icons_find-friends@2x.png); /* find friends company logos*/
   }
 }
 

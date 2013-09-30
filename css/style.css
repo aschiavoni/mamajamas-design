@@ -904,6 +904,11 @@ ul.friends-list {
 	margin-top:20px;
 }
 
+.friends-progress {
+  margin-top: 20px;
+  text-align: center;
+}
+
 /* invite button color */
 .fb-invite, .gmail-invite {
 	border-color: #80A3BA;

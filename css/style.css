@@ -910,7 +910,7 @@ ul.friends-list {
 }
 
 /* invite button color */
-.fb-invite, .gmail-invite {
+.fb-invite, .gmail-invite, .google-invite {
 	border-color: #80A3BA;
 	background: #80A3BA;
 }

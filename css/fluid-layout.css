@@ -41,8 +41,6 @@ img, object, embed, video {
 .gridContainer,
 .modal-scaling {
 	width: 960px;
-	padding-left: 0;
-	padding-right: 0;
 	margin: auto;
 }
 #header {
@@ -57,22 +55,27 @@ img, object, embed, video {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 48.958%;
+	width: 16.667%;
+	display: block;
+}
+#mainnav {
+	clear: none;
+	float: left;
+	width: 40.625%;
 	display: block;
 }
 #search {
 	clear: none;
 	float: left;
-	margin-left: 2.083%;
-	width: 22.9167%;
-	display: block;
-	text-align:right;
+	width: 16.667%;
+	display: none;
+	position:relative;
 }
 #login {
 	clear: none;
-	float: left;
-	margin-left: 2.083%;
-	width: 23.9583%;
+	float: right;
+	margin-left: 2%;
+	width: 12.0625%;
 	display: block;
 }
 #progress {
@@ -86,33 +89,36 @@ img, object, embed, video {
 #title {
 	clear: both;
 	float: left;
-	margin-left: 0;
+	padding: 10px 0 11px;
 	width: 100%;
 	display: block;
-	position:relative;
+}
+#title.fixed {
+	top: 0;
+	margin: auto;
+    max-width: 1232px;
+    width: 96%;
 }
 #subhed {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	padding:7px 0;
-	/*width: 49.1525%;*/
-	width:65.6%;
+	width: 71.875%;
 	display: block;
 }
 #title-links {
 	clear: none;
 	float: right;
 	margin-left: 0;
-	padding:7px 0;
-	width: 32.2033%;
+	padding: 0;
+	width: 26.042%;
 	display: block;
 }
 #primary {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 12.5%;
+	width: 16.667%;
 	display: block;
 	border:none;
 }
@@ -123,9 +129,8 @@ img, object, embed, video {
 	display: block;
 }
 #secondary > .content {
-	padding:4px 0;
-	min-height:450px;
-	position:relative;
+	min-height: 450px;
+	position: relative;
 }
 #tertiary {
 	clear: none;
@@ -135,58 +140,44 @@ img, object, embed, video {
 	border:none;
 }
 #footer {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
+    position: fixed;
+	bottom: 0;
+    width: 96%;
+	max-width: 1232px;
 }
 #footer .content {
-	padding:8px 1.05%;
+   position: relative;
+   padding: 15px 0 10px 3px;
+   left: 7px;
+	width: 40px;
 }
 
 /* layout adjustments for build list */
-#buildlist #title {
-	width:83.333%;
+#buildlist #secondary {
+	width:83.1%;
 }
 #buildlist #tertiary {
-	padding-top:3.5em;
-	margin-top:-6.25em;
-}
-#buildlist #subhed {
-	width:74.5%;
-	padding-top:2.153em; /* for no prehed */
-}
-#buildlist #title-links {
-	width: 25%;
+	display:none;
 }
 #buildlist #secondary > .content {
-	padding:1px 1px 20px 3px;
 	min-height:455px;
 }
 
 /* layout adjustments for published list */
 #publist #title {
-	width:83.333%;
+	width: 83.1%;
+}
+#publist #secondary {
+	width: 66.4333%;
+	min-height: 800px;
 }
 #publist #tertiary {
-	margin-top:-6.583em;
-}
-#publist #subhed {
-	width:74.5%;
-	padding-top:2.153em; /* for no prehed */
-}
-#publist #title-links {
-	width: 24.5%;
-}
-#publist #secondary > .content {
-	padding:1px 1px 20px 3px;
-	min-height:500px;
+	margin-top:-7.3em; /* shift up to title area */
 }
 #title .pubdate {
-	float:left;
-	width: 24.5%;
-	padding-top:11px;
+	float: right;
+	margin-right: 10px;
+	width: 26.042%;
 }
 
 /* layout adjustments for create my profile */
@@ -296,6 +287,9 @@ img, object, embed, video {
 .home #tertiary > .content {
 	padding:75px 23.08% 65px 2.56%;
 }
+.home #footer {
+	min-height: 710px;
+}
 
 /* list intro position */
 #listintro.modal-box {
@@ -310,10 +304,8 @@ img, object, embed, video {
 .modal-scaling {
 	width:96%;
 	max-width: 1232px;
-	padding-left: 0;
-	padding-right: 0;
 	margin: auto;
-}
+	}
 
 }
 
@@ -322,6 +314,6 @@ img, object, embed, video {
 /* list intro position */
 #listintro.modal-box {
 	left: 55%;
-}
+	}
 
 }

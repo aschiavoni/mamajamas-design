@@ -2097,8 +2097,11 @@ a.bt-addanother:hover span {
 #buildlist .prod-when-own {
 	float: right;
 	width: 29.333%; /* 220/750 */
-	margin-top: -4.91em; /* distance/13 */
 	line-height: 1.6154em;
+	margin-top: -1.5em; /* move up to align with top */
+}
+#buildlist .prod-filled .prod-when-own {
+	margin-top: -4.91em; /* move up to align with top */
 }
 .when, .own {
 	color: #777;

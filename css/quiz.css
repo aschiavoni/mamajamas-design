@@ -137,7 +137,8 @@ div.choicedrop {
 .choicedrop:hover .ss-dropdown {
 	color:#000;
 }
-.choicedrop ol {
+.choicedrop ol,
+.choicedrop ul {
 	list-style-type:none;
 	margin:0;
 	padding:0;
@@ -151,6 +152,7 @@ div.choicedrop {
 	z-index:6000;
 	/*display:none;*/
 }
+.choicedrop ul li,
 .choicedrop ol li {
 	margin:0;
 	padding:0.17em 0 0.17em 20px;

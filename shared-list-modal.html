@@ -45,6 +45,23 @@
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+  jQuery(function ($) {
+	  // Load dialog on click
+	  $('#bt-follow').click(function (e) {
+		  $('#follow-modal').modal({
+			  overlayCss:'simplemodal-overlay',
+			  position: ["15%",null],
+			  zIndex: 5000,
+			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+			  overlayClose: true
+			  });
+		  return false;
+	  });
+  });
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-social-circle.css" rel="stylesheet" />
@@ -52,8 +69,7 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="css/quiz.css" rel="stylesheet">
 <script src="webfonts/ss-social.js"></script>
-<script src="webfonts/ss-standard.js"></script>
-<script src="js/modernizr-dev.js"></script>
+<script src="webfonts/ss-standard.js"></script><script src="js/modernizr-dev.js"></script>
 </head>
 <body>
 <!-- header area ***** -->
@@ -91,6 +107,7 @@
 	<!-- list pub dates -->
 	<p class="pubdate">Created Aug. 30, 2012<br>
       Updated Sept. 12, 2013</p>
+	 <!-- list pub info -->
     <!-- title links -->
 	<div id="title-links">
       <ul class="iconrow">
@@ -478,6 +495,52 @@
 </div>
 </div>
 <!-- end body area --> 
+
+<!-- modal window box -->
+  <div id="follow-modal">
+      <!-- modal window header -->
+      <h2>Follow</h2>
+      <!-- <a class="bt-close simplemodal-close ss-icon" href="#">Close</a> -->
+      
+      <!-- modal window content -->
+      <div class="content">
+      <form id="login-form" class="label-infield" method="post" action="/users/login" accept-charset="UTF-8">
+        <p class="intro center larger">To follow Angie Schiavoni, please:</p>
+        <p class="center"><a href="#" id="bt-createlist" class="button bt-color"><span class="ss-icon ss-list"></span>Create a list</a></p>
+        <p class="divider"><strong>or</strong></p>
+        <p class="center"><a id="bt-fb-connect" class="button"> <span>Login with Facebook</span> </a></p>
+        <p class="center instruction">We value your privacy, and we’ll<br>
+          never post anything without your express permission.</p>
+        <p id="collapsible1" class="collapsible center ss-directright"><strong>Or, log in with your Mamajamas username and password:</strong></p>
+        <div class="collapsible-content" style="display: none;">
+          <fieldset>
+            <p>
+              <label for="user_login">Email address</label>
+              <br>
+              <input id="user_login" type="text" size="30" name="user[login]">
+            </p>
+            <p>
+              <label for="user_login_password">Password</label>
+              <br>
+              <input id="user_login_password" type="password" size="30" name="user[password]">
+            </p>
+          </fieldset>
+          <p class="helper"> <a href="/users/password/new">Forgot your password?</a> </p>
+          
+          <!-- window bottom buttons -->
+          <div class="button-row">
+            <div class="progress-container">
+              <button id="bt-cancel" class="button" type="reset">Cancel</button>
+              <button id="bt-log-in" class="button" type="submit">Log in</button>
+              <img class="progress" style="display: none;" src="/assets/progress-bar-da578cc730973af12284b3ee87a398b8.gif" alt="Progress-bar"> </div>
+          </div>
+        </div>
+        </form>
+      </div>
+      <!-- end modal window content -->
+  </div>
+  <!-- end modal window box --> 
+
 <!-- Google Analytics -->
 
 </body>

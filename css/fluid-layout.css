@@ -142,8 +142,6 @@ img, object, embed, video {
 #footer {
     position: fixed;
 	bottom: 0;
-    width: 96%;
-	max-width: 1232px;
 }
 #footer .content {
    position: relative;
@@ -169,7 +167,7 @@ img, object, embed, video {
 }
 #publist #secondary {
 	width: 66.4333%;
-	min-height: 800px;
+	min-height: 820px;
 }
 #publist #tertiary {
 	margin-top:-7.3em; /* shift up to title area */
@@ -288,7 +286,18 @@ img, object, embed, video {
 	padding:75px 23.08% 65px 2.56%;
 }
 .home #footer {
-	min-height: 710px;
+	position: static;
+   clear: both;
+   display: block;
+   float: left;
+   margin-left: 0;
+   width: 100%;
+	max-width: 1232px;
+}
+.home #footer .content {
+	position: static;
+	padding: 8px 1.05%;
+	width: auto;
 }
 
 /* list intro position */
@@ -314,6 +323,6 @@ img, object, embed, video {
 /* list intro position */
 #listintro.modal-box {
 	left: 55%;
-	}
+}
 
 }

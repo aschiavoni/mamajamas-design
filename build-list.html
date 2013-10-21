@@ -166,7 +166,7 @@
 					<h4 id="priority-high-hed" class="priority priority-high collapsible"><strong>Must-Have</strong></h4>
 					<!-- "must-have" content ********* -->
 					<div class="priority-high collapsible-content"> 
-						
+												
 						<!-- product listing ***** -->
 						<div class="prod prod-filled clearfix" id=""> 
 							
@@ -691,7 +691,7 @@
 						<!-- end product listing ***** --> 
 						
 						<!-- product listing [EDIT MODE] ***** -->
-						<div class="prod prod-filled edit-mode choose-bt clearfix" id=""> 
+						<div class="prod prod-filled edit-mode clearfix" id=""> 
 							
 							<!-- product image -->
 							<div class="prod-thumb"> <img alt="" src="assets/products/amazon/41r6iRzjKQL._SL75_.jpg"> </div>
@@ -1025,14 +1025,16 @@
 							</div>
 						</div>
 						<!-- end product listing ***** --> 
-						
+					
 					</div>
 					<!-- end "don't bother" content ********* --> 
 					
 					<!-- add new ***** -->
+					<h4 id="priority-new-hed" class="priority"><strong>Add an Item</strong></h4>
+					
 					<div class="prod clearfix" id="add-new">
 						<div class="prod-thumb"> <img alt="" src="assets/products/icons/add_new@2x.png"> </div>
-						<div class="prod-category"> Looking for something that’s not here? </div>
+						<div class="prod-category"> Looking for something not listed above? Add it here.</div>
 						<div class="prod-links">
 							<ul>
 								<li><a class="new-item button bt-color" href="#"><span class="ss-plus"></span>Add new</a></li>
@@ -1041,6 +1043,110 @@
 					</div>
 					<!-- end add new ***** --> 
 					
+<!-- product listing [new item/new category] ***** -->
+					<div class="prod new-mode clearfix" id=""> 
+						
+						<!-- product image -->
+						<div class="prod-thumb"> <img src="images/products/blank-mamabird.png" alt="New Item"> </div>
+						
+						<!-- product description -->
+						<div class="prod-desc clearfix"> 
+							
+							<!-- product category, name, rating -->
+							<div class="prod-cat-name-rating">
+								<div class="prod-category"> 
+								  <fieldset>
+									<p>
+									  <label for="list_item_name2">
+									Enter the name of an item (i.e. Wipes Warmer, Stretch Mark Cream)</label>
+									  <br />
+									  <input type="text" id="list_item_name2" value="" name="list_item[name]" class="ui-autocomplete-input" autocomplete="off">
+									</p>
+									</fieldset>
+								</div>
+							</div>
+							
+							<!-- when to buy, need vs. have -->
+							<div class="prod-when-own">
+								<div class="priorityset"> Priority: 
+									<!-- drop-down menu: priority (only on "new item") -->
+									<div class="choicedrop"> <a href="#">Consider <span class="ss-dropdown"></span></a>
+										<ul style="display:none; width:7.5em;">
+											<li><a href="#">Must-Have</a></li>
+											<li><a href="#">Consider</a></li>
+											<li><a href="#">Don’t Bother</a></li>
+										</ul>
+									</div>
+									<!-- end menu: priority --> 
+								</div>
+								<div class="when"> Buy 
+									<!-- drop-down menu: when to buy -->
+									<div class="choicedrop"> <a href="#">pre-birth. <span class="ss-dropdown"></span></a>
+										<ul style="display:none; width:6em;">
+											<li><a href="#">pre-birth.</a></li>
+											<li><a href="#">0-3 mo.</a></li>
+											<li><a href="#">4-6 mo.</a></li>
+											<li><a href="#">7-12 mo.</a></li>
+											<li><a href="#">13-18 mo.</a></li>
+											<li><a href="#">19-24 mo.</a></li>
+											<li><a href="#">2y.</a></li>
+											<li><a href="#">3y.</a></li>
+											<li><a href="#">4y.</a></li>
+											<li><a href="#">5y+.</a></li>
+										</ul>
+									</div>
+									<!-- end menu: when to buy --> 
+								</div>
+								<div class="own"> I 
+									<!-- drop-down menu: need, have -->
+									<div class="choicedrop"> <a href="#">have <span class="ss-dropdown"></span></a>
+										<ul style="display:none; width:4.1em;">
+											<li><a href="#">need</a></li>
+											<li><a href="#">have</a></li>
+										</ul>
+									</div>
+									<!-- end menu: need, have --> 
+									<!-- drop-down menu: quantity -->
+									<div class="choicedrop"> <a href="#">1 <span class="ss-dropdown"></span></a>
+										<ul style="display:none; width:2.4em;">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+										</ul>
+									</div>
+									<!-- end drop-down menu: quantity --> 
+									of these. </div>
+							</div>
+							<!-- end when to buy, need vs. have --> 
+							
+							<!-- save-cancel buttons [shown in edit state] -->
+							<div class="prod-links">
+								<ul>
+									<li>
+										<button class="cancel-item button bt-light" value="Reset" type="reset">Cancel</button>
+									</li>
+									<li>
+										<a class="save-item button bt-color" href="#">Save</a>
+									</li>
+								</ul>
+							</div>
+							<!-- end save-cancel buttons --> 
+							
+							<!-- menu: delete, drag, edit -->
+							<div class="prod-edit-menu">
+								<ul>
+									<li><a href="#" class="delete tooltip"><span>Delete<em></em></span></a></li>
+									<li><a href="#" class="drag tooltip"><span>Drag to reorder<em></em></span></a></li>
+								</ul>
+							</div>
+							<!-- end menu: delete, drag, edit --> 
+							
+							<!-- end product description --> 
+						</div>
+					</div>
+					<!-- end product listing ***** --> 										
 				</div>
 				<!-- end baby gear list *************** -->
 			</form>

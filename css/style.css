@@ -591,6 +591,9 @@ button, .button {
 	cursor: pointer;
 	background-color: #a6a6a6;
 }
+a.button {
+	text-align: center;
+}
 button em, .button em {
 	font-style:normal;
 }
@@ -600,9 +603,9 @@ button em, .button em {
 .ie8 .button, .ie8 button {
 	padding: 3px 15px 3px 15px;
 }
-button:hover, button:focus, button:active, 
-.button:hover, .button:focus, .button:active,
-a.button:hover, a.button:focus, a.button:active, 
+button:hover, /*button:focus,*/ button:active, 
+.button:hover, /*.button:focus,*/ .button:active,
+a.button:hover, /*a.button:focus,*/ a.button:active, 
 .prod-drop a:hover, .prod-drop a:focus, .prod-drop a:active { /* applied event to custom-color buttons */
 	color: #fff;
 	border-color: #333 !important;
@@ -1078,7 +1081,7 @@ ul.friends-list {
 
 /* modal windows (via simple modal) ------ */
 .simplemodal-overlay {
-	background-color: #f5f5f5; /* overlay background. control opacity in js options (default 85). */
+	background-color: #f5f5f5; /* overlay background. control opacity in js options (default 75). */
 }
 .simplemodal-data {
 	width:480px; /* used as default simplemodal width. override via modal ID. */
@@ -1171,6 +1174,16 @@ ul.friends-list {
 	border-top: none;
 	background: #F6F4F2;
 }
+.modal-box .button-row button,
+.modal-box .button-row .button,
+.simplemodal-data .button-row button,
+.simplemodal-data .button-row .button {
+	font-size: 1.083em;
+}
+.modal-box .content .button-row,
+.simplemodal-data .content .button-row {
+	margin: 20px -20px -10px; /* cancel inset created by nesting */
+}
 .modal-box .divider,
 .simplemodal-data .divider {
 	border-top: 1px solid #d3d3d3;
@@ -1239,11 +1252,6 @@ ul.friends-list {
 #signup-modal .collapsible-content {
 	padding-top:10px;
 }
-#login-window .button-row,
-#signup-modal .button-row,
-#follow-modal .button-row {
-	margin: 10px -20px -10px; /* cancel inset created by nesting */
-}
 #get-updates h2 {
 	font-size: 3.5em;
 	padding-top: 20px;
@@ -1268,6 +1276,18 @@ ul.friends-list {
 }
 #get-updates .content {
 	padding-bottom: 30px;
+}
+
+/* alert modals */
+.m-alert {
+	color: #474747;
+	font-size: 1.083em;
+	line-height: 1.5385em;
+}
+.m-alert .ss-alert {
+	font-size: 32px;
+	color: #fad45d; 
+	margin: 13px 12px 0 0;
 }
 
 /* Search modal --- */
@@ -1578,6 +1598,32 @@ ul.info-balloons {
 	display:none;
 }
 
+/* tips (yellow hints) ----- */
+.tip {
+	display:block;
+	margin: 0 auto .5em;
+	padding:10px;
+	text-align:center;
+	font-size:1em;
+	font-weight:600;
+	line-height:1.33;
+	color:#4b3f1c;
+	box-shadow:1px 2px 3px rgba(0,0,0,0.35);
+	background:#fce59e;
+	position:relative;
+	top:-5px;
+}
+.tip span {
+	border:solid 15px transparent;
+	position:absolute;
+}
+.tip-dwn span {
+	border-bottom-color:#fce59e;
+	top:-29px;
+	left:30%;
+	margin-left:-15px;
+}
+
 /* tooltips ----- */
 .tooltip {
 	position:relative;
@@ -1824,6 +1870,9 @@ a.tooltip:hover span {
 
 
 /* edit list ------ */
+#my-list {
+	margin-bottom: 20px;
+}
 
 /* page colors ---- */
 #title  {
@@ -2011,13 +2060,16 @@ h4#priority-med-hed {
 h4#priority-low-hed {
 	border-bottom: solid 2px #F48E8E; 
 }
+h4#priority-new-hed {
+	padding-left: 24px;
+}
 h4.collapsible:hover,
 h4.collapsible:focus {
 	background-color: #f5f5f5;
 }
 #priority-low-hed.ss-directright,
 div.priority-low {
-	margin-bottom:10px;
+	/*margin-bottom:10px;*/
 }
 .priority-low .prod {
 	border-bottom: solid 1px #d9d9d9; 
@@ -2067,6 +2119,12 @@ div.priority-low {
 .prod-category {
 	margin-bottom: 1px;
 }
+.prod-category input {
+	width: 91.5%;
+}
+.prod-category fieldset p {
+	margin-bottom: 0;
+}
 a.bt-addanother {
 	display: inline-block;    
 	color: #FFFFFF;
@@ -2110,6 +2168,9 @@ a.bt-addanother:hover span {
 	line-height: 1.4em;
 	margin: 0 0 0 100px;
 }
+.oldie .prod-desc h3 {
+	margin-left: 0;
+}
 .prod-desc h3 a {
 	color: #000;
 }
@@ -2118,6 +2179,9 @@ a.bt-addanother:hover span {
 }
 .prod-desc .rating {
 	margin-left: 100px;
+}
+.oldie .prod-desc .rating {
+	margin-left: 0;
 }
 #buildlist .prod-when-own {
 	float: right;
@@ -2128,7 +2192,14 @@ a.bt-addanother:hover span {
 #buildlist .prod-filled .prod-when-own {
 	margin-top: -4.91em; /* move up to align with top */
 }
-.when, .own {
+#buildlist .edit-mode .prod-when-own {
+	position: relative;
+	top: -4.5em; /* move up to align with top */
+}
+#buildlist .new-mode .prod-when-own {
+	margin-top: -2em; /* move up to align with top */
+}
+.when, .own, .priorityset  {
 	color: #777;
 	padding-right: 20px;
 }
@@ -2154,6 +2225,9 @@ a.bt-addanother:hover span {
 	line-height: 1.4615em;
 	color: #777;
 	margin: 6px 40px 0 100px;
+}
+.oldie .prod-note {
+	margin-left: 0;
 }
 .prod-note p,
 .prod-note .summary p {
@@ -2413,7 +2487,8 @@ form.label-infield .prod-note .ss-chat {
 	margin-top: 0;
 	margin-left: 0;
 }
-.edit-mode .bt-light {
+.edit-mode .bt-light,
+.new-mode .bt-light {
 	border-color: #ccc;
 }
 input[type=text].field-prodname {
@@ -2436,22 +2511,22 @@ input[type=text].field-prodname {
 form.label-infield .edit-mode .prod-note label {
 	margin-left: 0.5em;
 }
-#my-list .edit-mode .choicedrop {
+#my-list .edit-mode .choicedrop,
+#my-list .new-mode .choicedrop {
 	border-color: #feebb1;
 }
 #my-list .edit-mode .choicedrop > a:hover,
-#my-list .edit-mode .choicedrop > a:hover .ss-dropdown {
+#my-list .edit-mode .choicedrop > a:hover .ss-dropdown,
+#my-list .new-mode .choicedrop > a:hover,
+#my-list .new-mode .choicedrop > a:hover .ss-dropdown {
 	background: #fff;
 }
 
 /* edit mode alignment */
-#buildlist .edit-mode .prod-when-own {
-	position: relative;
-	top: -4.5em;
-}
 .edit-mode .prod-links {
 	margin-top: .75em;
 }
+
 
 /* ratings ------ */
 .rating {
@@ -2988,7 +3063,7 @@ div.baby-bdate {
 	font-weight: normal;
 }
 .collapsible.ss-directright, .collapsible.ss-dropdown {
-	color:#CCC;
+	color:#a6a6a6;
 }	
 .collapsible.ss-directright:hover, .collapsible.ss-directright:focus,
 .collapsible.ss-dropdown:hover, .collapsible.ss-dropdown:focus {

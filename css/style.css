@@ -2499,7 +2499,7 @@ input[type=text].field-prodname {
     text-align: center;
     width: 16.5%;
 }
-.edit-mode #list_item_link {
+.edit-mode .list-item-link {
 	width: 91.5%;
 }
 .edit-mode .rating {

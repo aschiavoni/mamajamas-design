@@ -267,3 +267,18 @@ Sept 3
 - DES-125: CSS change (in quiz.css) to center text on the quiz questions
 - CSS changes (to style.css and fluid-layout.css) include layout adjustments to header (affecting placement and size of search box) and changes to
   page background color and borders.
+
+...
+
+Oct 22
+- DES-152
+- DES-154
+- DES-155
+
+Oct 28
+- DES-152: build-list.html — Please see new "add item" at bottom of list. Pressing "add new" would make yellow
+  new item row appear directly beneath. Note "priority" selection menu, which defaults to "Consider."
+- DES-153: build-list_intro.html — Updated colors and overlay setup for build list intro. "Done" button should
+  close modal and hide tooltips. (Uses simplemodal framework)
+- DES-164: builst-list.html — Clicking "Choose" in the "Towel" row activates choose modal. Updated rating
+  graphics to use stars instead of eggs. Updated modal to use Simplemodal framework.

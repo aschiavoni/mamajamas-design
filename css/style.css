@@ -16,7 +16,7 @@ b, strong {
 	background: #fff;
 	border-bottom: 1px solid #d9d9d9;
 	position: relative;
-	z-index: 4000;
+	/*z-index: 2000;*/
 }
 .gridContainer {
 	background: #fff;
@@ -61,8 +61,6 @@ b, strong {
 #mainnav .active a,
 #mainnav a:hover {
 	color: #333;
-}
-#mainnav .active a {
 	background: #f5f5f5;
 }
 
@@ -1029,7 +1027,7 @@ ul.friends-list {
 	right: 0px;
 	bottom: 0px;
 	display: block;
-	background-color: #f5f5f5;
+	background-color: #e9e9e9;
 	opacity: .85;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
 	filter: alpha(opacity=85);
@@ -1081,7 +1079,7 @@ ul.friends-list {
 
 /* modal windows (via simple modal) ------ */
 .simplemodal-overlay {
-	background-color: #f5f5f5; /* overlay background. control opacity in js options (default 75). */
+	background-color: #e9e9e9; /* overlay background. control opacity in js options (default 75). */
 }
 .simplemodal-data {
 	width:480px; /* used as default simplemodal width. override via modal ID. */
@@ -1218,17 +1216,21 @@ ul.friends-list {
 .modal-dark {
 	background: #000;
 	border-color: #000;
-	color: #aaa;
+	color: #b6b6b6;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.45);
 }
 .modal-dark strong {
 	color: #e6e6e6;
 }
 .modal-dark a.bt-close {
-	color: #7c7c7c;
+	color: #666;
 }
 .modal-dark .button-row {
-	background: #313130;
+	background: #212120;
+}
+.modal-dark button,
+.modal-dark .button {
+	background: #969696;
 }
 
 /* specific modal windows */
@@ -1292,9 +1294,8 @@ ul.friends-list {
 
 /* Search modal --- */
 #search-modal {
+	display: none;
 	width: 540px;
-	z-index: 4003;
-	margin-left: -270px;
 }
 #search-modal .content {
 	padding: 0 0 20px;
@@ -1412,8 +1413,8 @@ ul.prod-search-list {
 	-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.35);
 }
 .prod-search-list li:hover .prod-detail-pop {
-	top: -45px;
-	left: -190px;
+	top: -75px;
+	left: -210px;
 }
 .prod-detail-pop h4 {
 	margin: 0 0 .75em;
@@ -1462,7 +1463,7 @@ ul.prod-search-list {
 }
 .prod-detail-pop span.arrow {
 	position: absolute;
-	bottom: 73px;
+	bottom: 43px;
 	right: -14px;
 	width: 14px;
 	height: 26px;
@@ -1499,22 +1500,23 @@ ul.prod-search-list {
 }
 
 /* build list intro ----- */
-#listintro.modal-box {
+#listintro-container {
+	top: 167px;
+}
+#listintro {
 	font-size: 1em;
 	line-height: 1.38em;
-	width: 370px;
-	top: 165px;
-	margin-left: 0;
+	width: 380px;
 }
-#listintro.modal-box h2 {
-	font-size: 1.692em;
-	font-weight: 300;
-	line-height: 1em;
+#listintro h2 {
+	font-size: 1.6923em;
+	font-weight: 400;
+	line-height: 1.18em;
 	color: #fff;
 	text-transform: none;
 	letter-spacing: 0;
-	margin: 6px -20px 10px;
-	padding: 10px 20px 10px 49px;
+	margin: 5px -20px 10px;
+	padding: 5px 20px 10px 52px;
 	background: transparent url(../images/arrow-l-sketch.png) no-repeat 6px 4px;
 	background-size: 39px 37px;
 }
@@ -1529,6 +1531,10 @@ ul.prod-search-list {
 #listintro ul ul li {
 	margin: 0;
 }
+#listintro .button-row {
+	background: none;
+	padding-top: 0;
+}
 #listintro .ss-navigateright {
 	color: #fad45d;
 	font-size: .6923em;
@@ -1538,59 +1544,78 @@ ul.prod-search-list {
 	text-transform:uppercase;
 	letter-spacing:.15em;
 }
+#listintro span.ss-navigateleft, 
+#listintro span.ss-navigateright {
+	opacity:1;
+	top:-1px;
+}
 
 /* info balloons ----- */
 ul.info-balloons {
 	margin:0;
 	padding:0;
 }
-.info-balloons li {
-	font-family: "Reenie Beanie", sans-serif;
-	font-size:24px;
-	line-height:.75em;
+.info-element {
+	position: relative;
+}
+.info-balloons li,
+.info-balloon {
+	font-size:13px;
+	font-weight:400;
+    text-rendering: optimizeLegibility;
+	line-height:1.2em;
 	display:block;
 	margin:0;
 	padding:10px;
-	width:180px;
+	width:160px;
 	text-align:center;
-	color:#4b3f1c;
-	background:#fad45d;
-	box-shadow:1px 2px 3px rgba(0,0,0,0.35);
+	color:#222;
+	background:#ED9E2B;
 	list-style-type:none;
 	position:absolute;
 	z-index:4100;
 }
-#info1 {
-    top: 150px;
-	left: -10px;
+.info-balloons li span,
+.info-balloon span {
+	display: block;
+    width: 1px;
+    height: 1px;
+    position: absolute;
 }
-#info2 {
-    top: 165px;
-    left: 27.08%;
+.info-right {
+	right: -185px;
+	top: 10px;
 }
-.oldie #info2 {
-    top: 165px;
-    left: 260px;
+.info-bottom {
+	left: 5px;
+    top: -57px;
 }
-#info3 {
-	top: 333px;
-	left: 12.3%;
+.info-bottom.info-short {
+	top: -35px;
 }
-.oldie #info3 {
-	top: 331px;
-	left: 115px;
+.info-bottom span {
+	border-top: solid 10px #ED9E2B;
+	border-bottom: solid 10px transparent;
+	border-left: solid 10px transparent;
+	border-right: solid 10px transparent;
+    bottom: -21px;
+    left: 65px;
 }
-.info-balloons li span {
-	display:block;
-	width:28px;
-	height:17px;
-	background:url(../images/info-balloon-arrow-d.png) no-repeat 0 0;
-	position:absolute;
-	left:20px;
-	bottom:-17px;
+.info-right span {
+	border-top: solid 10px transparent;
+	border-bottom: solid 10px transparent;
+	border-left: solid 10px transparent;
+	border-right: solid 10px #ED9E2B;
+    bottom: 15px;
+    left: -21px;
 }
-.oldie .info-balloons li span {
-	background-image:url(../images/info-balloon-arrow-d2.png);
+.info-right.info-short span {
+	bottom: 7px;
+}
+
+/* specific */
+#info01 {
+	top: -10px;
 }
 
 /* Follow modal (triggered from public list "follow" button) */
@@ -2119,11 +2144,17 @@ div.priority-low {
 .prod-category {
 	margin-bottom: 1px;
 }
+.prod-category label,
 .prod-category input {
 	width: 91.5%;
 }
 .prod-category fieldset p {
 	margin-bottom: 0;
+}
+.prod-category label {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 a.bt-addanother {
 	display: inline-block;    
@@ -2468,8 +2499,12 @@ form.label-infield .prod-note .ss-chat {
 
 /* product edit mode, new item mode ---- */
 .edit-mode, 
-.new-mode {
+.new-mode,
+.new-mode .prod-thumb {
 	background: #feebb1;
+}
+.new-mode .prod-thumb {
+	border-color: #feebb1; 
 }
 
 /* edit mode hidden elements */
@@ -3416,7 +3451,7 @@ ul.screenshots img {
 	background-image: url(../images/arrow-dwn-sketch@2x.png);
   }
   #listintro.modal-box h2 {
-	background-image: url(../images/arrow-l-sketch@2x.png); /* build list intro arrow */
+	background-image: url(../images/arrow-l-sketch-w@2x.png); /* build list intro arrow */
   }
   #findfriends-prompt {
 	background-image:url(../images/icon_find-friends@2x.png); 

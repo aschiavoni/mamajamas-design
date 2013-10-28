@@ -2,12 +2,11 @@
 <!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
 <html class="no-js">
 <!--<![endif]-->
 <head>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mamajamas</title>
@@ -21,7 +20,24 @@
 <!-- for iPhone: -->
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
 <!-- jquery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- collapsible panels -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		defaultOpen: 'priority-high-hed,priority-med-hed',
+		bind: 'click',
+		speed:200
+    });
+  });
+</script>
+<!-- expanding text (applied to elements with ".expandable." used for product notes.) -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options-editlist.js"></script>
 <!-- in-field form labels (jquery plugin from doug neiner) -->
 <script src="js/jquery.infieldlabel.min.js"></script>
 <script type="text/javascript">
@@ -29,213 +45,465 @@
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+</script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+  jQuery(function ($) {
+	  // Load modal on page load
+	   $(window).load(function(){
+		  $('#listintro').modal({
+			  containerId:'listintro-container',
+			  autoPosition:false,
+			  opacity:35,
+			  zIndex: 3000,
+			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+			  });
+		  return false;
+	  });
+  });
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
 <script src="webfonts/ss-standard.js"></script>
 <script src="js/modernizr-dev.js"></script>
 </head>
 <body>
 <!-- header area ***** -->
-<div id="hed-wrap" class="progressbar">
-  <div class="gridContainer clearfix">
-    <div id="header">
-      <div id="branding">
-        <h1>Mamajamas</h1>
-      </div>
-      <div id="search">
-        <input type="text" placeholder="Search">
-      </div>
-      <div id="login">
-        <ul>
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </div>
-      <div id="progress">
-        <ol class="prog2"><!-- comments between list items prevent whitespace insertion when displayed inline -->
-        	<li class="prog1"><strong>1</strong> Take the quiz</li><!--
-          --><li class="prog2"><strong>2</strong> Make your list and get advice</li><!--
-          --><li class="prog3"><strong>3</strong> Share your list</li>
-        </ol>
-        <div class="progborder"></div>
-      </div>
-    </div>
-  </div>
+
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding"> <a href="/list">
+				<h1>Mamajamas</h1>
+				</a> </div>
+			<nav id="mainnav">
+				<ul>
+					<li class="active"><a href="#">Edit List</a></li>
+					<li class="info-element"><a href="#">Friends’ Lists</a>
+					<div class="info-balloon info-right"><span></span>Check out other parents’ lists.</div></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<li id="myaccount"> <a href="/profile"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
+						<!-- username removed --> 
+						<span class="ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- progress bar removed --> 
+		</div>
+	</div>
 </div>
 <!-- end header area --> 
 <!-- body area ***** -->
 <div class="gridContainer clearfix" id="buildlist">
-  <div id="title">
-    <div id="subhed">
-      
-      <h2>Margaret’s baby gear essentials</h2>
-    </div>
-    <div id="title-links">
-      <ul>
-        <li><a href="#" class="button"><span class="ss-plus"></span>New Item</a></li>
-        <li><a href="#" class="button disabled" id="bt-share"><span class="ss-action"></span>Share</a></li>
-        <li id="print"><a href="#" class="ss-icon" title="Print"><span>Print</span></a></li>
-      </ul>
-    </div>
-  </div>
-  <div id="primary">
-    <div class="content"> 
-      <!-- Catagories nav -->
-      <nav id="categories">
-        <ul>
-          <li><a href="#">All</a></li>
-          <li><a href="#">Bathing</a></li>
-          <li><a href="#">Birthing/ Pregnancy</a></li>
-          <li><a href="#">Changing</a></li>
-          <li><a href="#">Clothing</a></li>
-          <li><a href="#">Decorating</a></li>
-          <li><a href="#">Feeding</a></li>
-          <li><a href="#">Getting Around</a></li>
-          <li><a href="#">Playing</a></li>
-          <li class="cat-selected"><a href="#">Nursing</a></li>
-          <li><a href="#">PottyTraining</a></li>
-          <li><a href="#">Reading</a></li>
-          <li><a href="#">Traveling</a></li>
-          <li><a href="#">Sleeping</a></li>
-          <li><a href="#">Staying Healthy</a></li>
-        </ul>
-      </nav>
-      <!-- /end Catagories nav --> 
-    </div>
-  </div>
-  <div id="secondary">
-    <div class="content">
-      <form class="label-infield">
-        <!-- baby gear table ******* -->
-        <table width="100%" cellspacing="0" id="babygear">
-          <thead>
-            <tr>
-              <th scope="col" class="own">Own</th>
-              <th scope="col" class="item">Item</th>
-              <th scope="col" class="rating">Rating</th>
-              <th scope="col" class="when">When to Buy</th>
-              <th scope="col" class="priority sorting">Priority</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Item 1 ****** -->
-            <tr class="prod">
-              <td class="own"><input id="own01" type="checkbox" title="Do you own this item?">
-                <label for="own01">I own this item.</label></td>
-              <td class="item"><div class="prod-thumb"><img src="images/products/nursing-bottle.png" alt="bottle"></div>
-                <div class="prod-desc">
-                  <div class="prod-category">Bottle</div>
-                  <div class="prod-edit-menu">
-                    <ul class="clearfix">
-                      <li>
-                      <a class="ss-delete" href="#"><span>Delete</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="prod-links">
-                    <ul>
-                      <li><a href="#" class="button bt-color"><span class="ss-search"></span>Choose</a></li>
-                    </ul>
-                  </div>
-                </div></td>
-              <td class="rating">&nbsp;</td>
-              <td class="when">Pre-birth</td>
-              <td class="priority"><div class="priority-high">high</div></td>
-            </tr>
-            <!-- / Item 1 ****** --> 
-            <!-- Item 2 ****** -->
-            <tr class="prod">
-              <td class="own"><input id="own02" type="checkbox" title="Do you own this item?">
-                <label for="own02">I own this item.</label></td>
-              <td class="item"><div class="prod-thumb"><img src="images/products/nursing-pump.png" alt="pump"></div>
-                <div class="prod-desc">
-                  <div class="prod-category">Breast Pump</div>
-                  <div class="prod-edit-menu">
-                    <ul class="clearfix">
-                      <li>
-                      <a class="ss-delete" href="#"><span>Delete</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="prod-links">
-                    <ul>
-                      <li><a href="#" class="button bt-color"><span class="ss-search"></span>Choose</a></li>
-                    </ul>
-                  </div>
-                </div></td>
-              <td class="rating">&nbsp;</td>
-              <td class="when">Pre-birth</td>
-              <td class="priority"><div class="priority-high">high</div></td>
-            </tr>
-            <!-- / Item 2 ****** --> 
-            <!-- Item 3 ****** -->
-            <tr class="prod">
-              <td class="own"><input id="own03" type="checkbox" title="Do you own this item?">
-                <label for="own03">I own this item.</label></td>
-              <td class="item"><div class="prod-thumb"><img src="images/products/nursing-pump.png" alt="pump"></div>
-                <div class="prod-desc">
-                  <div class="prod-category">Breast Pump</div>
-                  <div class="prod-edit-menu">
-                    <ul class="clearfix">
-                      <li>
-                      <a class="ss-delete" href="#"><span>Delete</span></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="prod-links">
-                    <ul>
-                      <li><a href="#" class="button bt-color"><span class="ss-search"></span>Choose</a></li>
-                    </ul>
-                  </div>
-                </div></td>
-              <td class="rating">&nbsp;</td>
-              <td class="when">Pre-birth</td>
-              <td class="priority"><div class="priority-high">high</div></td>
-            </tr>
-            <!-- / Item 3 ****** --> 
-          </tbody>
-        </table>
-        <!-- end baby gear table ******* -->
-      </form>
-    </div>
-  </div>
-  <div id="tertiary">
-    <div id="module-follow">
-      <div class="content">
-        <h3>Follow Mom Friends</h3>
-        <p>Log in to find your friends and see what they’ve got. Not a member? Sign up</p>
-      </div>
-    </div>
-    <div id="module-msg">
-      <div class="content">
-        <h3>Reach Out</h3>
-        <p>Send a message to ask for advice, or to share it.</p>
-      </div>
-    </div>
-  </div>
-  <div id="footer">
-    <div class="content">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="/terms-of-service">Terms</a></li>
-      </ul>
-    </div>
-  </div>
+	<div id="title">
+		<div id="subhed">
+			<h2>Your baby gear list</h2>
+		</div>
+		<div id="title-links">
+			<ul>
+				<li class="info-element"> <a id="bt-share" class="button bt-color" href="/profile">Save</a>
+					<div class="info-balloon info-bottom"><span></span>Save your list and share it with others.</div></li>
+				<li> <a id="bt-view" class="button disabled" href="#">View</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="primary">
+		<div class="content">
+			<nav id="categories" class="info-element">
+				<div class="info-balloon info-bottom info-short"><span></span>Select product categories.</div>
+				<h3>Categories</h3>
+				<ul>
+					<li class=""> <a href="/list/all">All</a> </li>
+					<li class="cat-selected"> <a href="/list/bathing">Bathing</a> </li>
+					<li class=""> <a href="/list/changing">Changing</a> </li>
+					<li class=""> <a href="/list/clothing">Clothing</a> </li>
+					<li class=""> <a href="/list/decorating">Decorating</a> </li>
+					<li class=""> <a href="/list/expecting">Expecting</a> </li>
+					<li class=""> <a href="/list/feeding">Feeding</a> </li>
+					<li class=""> <a href="/list/getting-around">Getting Around</a> </li>
+					<li class=""> <a href="/list/nursing">Nursing</a> </li>
+					<li class=""> <a href="/list/playing">Playing</a> </li>
+					<li class=""> <a href="/list/reading">Reading</a> </li>
+					<li class=""> <a href="/list/sleeping">Sleeping</a> </li>
+					<li class=""> <a href="/list/staying-healthy">Staying Healthy</a> </li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="secondary">
+		<div class="content"> 
+			<!-- notification ***** -->
+			<div id="notifications"> </div>
+			<form data-list-entries-loaded-at="" data-list-entries="" id="my-list" class="label-infield">
+				<div id="listcontrols" class="clearfix">
+					<div class="listhed">
+						<h3>Bathing</h3>
+					</div>
+					<div class="listsort">Sort by: 
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Priority <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Priority</a></li>
+								<li><a href="#">When to buy</a></li>
+								<li><a href="#">Need / Have</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+				</div>
+				<!-- baby gear list content *************** -->
+				<div class="clearfix">
+					<h4 id="priority-high-hed" class="priority priority-high collapsible"><strong>Must-Have</strong></h4>
+					<!-- "must-have" content ********* -->
+					<div class="priority-high collapsible-content"> 
+						
+						<!-- product listing ***** -->
+						<div class="prod clearfix" id=""> 
+							
+							<!-- product image -->
+							<div class="prod-thumb"> <img alt="" src="assets/products/icons/shampoo@2x.png"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Shampoo or Body Wash</div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 0–3 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have -->
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li class="info-element"> <a class="find-item button bt-color" href="#"><span class="ss-search"></span>Choose</a>
+										<div id="info01" class="info-balloon info-right info-short"><span></span>Get product suggestions.</div></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a href="#" class="delete tooltip"><span>Delete<em></em></span></a></li>
+										<li><a href="#" class="drag tooltip"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<!-- end product listing ***** --> 
+																		
+						<!-- product listing ***** -->
+						<div class="prod prod-filled clearfix" id=""> 
+							
+							<!-- product image -->
+							<div class="prod-thumb"> <img alt="" src="assets/products/amazon/41r6iRzjKQL._SL75_.jpg"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Tub <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">Fisher-Price Precious Planet Whale of a Tub</a></h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star star-full"></div>
+											<div data-rating="2" class="star star-full"></div>
+											<div data-rating="3" class="star star-full"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a target="_blank" href="#prodlink">Buy</a> pre-birth. </div>
+									<div class="own"> I 
+										<!-- drop-down menu: need, have -->
+										<div class="choicedrop"> <a href="#">have <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<!-- end menu: need, have --> 
+										<!-- drop-down menu: quantity -->
+										<div class="choicedrop"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">5</a></li>
+											</ul>
+										</div>
+										<!-- end drop-down menu: quantity --> 
+										of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- prod note -->
+								<div class="prod-note"> 
+									
+									<!-- note input link here -->
+									<!-- note input area here -->
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> Save yourself the time and energy looking for a baby bath tub and head straight for this one. I'm so happy with this tub that I find myself making more time for bath time with my baby!</p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- edit save/cancel button here -->
+								</div>
+								<!-- end prod note --> 
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a href="#" class="delete tooltip"><span>Delete<em></em></span></a></li>
+										<li><a href="#" class="drag tooltip"><span>Drag to reorder<em></em></span></a></li>
+										<li><a href="#" class="edit tooltip"><span>Edit<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<!-- end product listing ***** --> 
+						
+					</div>
+					<!-- end "must have" content ********* --> 
+					<!-- "consider" content ********* -->
+					<h4 id="priority-med-hed" class="priority collapsible"><strong>Consider</strong></h4>
+					<div class="priority-med collapsible-content"> 
+						<!-- product listing ***** -->
+						<div class="prod prod-filled clearfix" id=""> 
+							
+							<!-- product image -->
+							<div class="prod-thumb"> <img alt="" src="assets/products/amazon/41IMtfMJYeL._SL75_.jpg"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">Green Toys Submarine, Yellow</a></h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star star-full"></div>
+											<div data-rating="2" class="star star-full"></div>
+											<div data-rating="3" class="star star-half"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a target="_blank" href="#prodlink">Buy</a> at 4-6 mo. </div>
+									<div class="own"> I 
+										<!-- drop-down menu: need, have -->
+										<div class="choicedrop"> <a href="#">have <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<!-- end menu: need, have --> 
+										<!-- drop-down menu: quantity -->
+										<div class="choicedrop"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">5</a></li>
+											</ul>
+										</div>
+										<!-- end drop-down menu: quantity --> 
+										of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- prod note [filled] *** -->
+								<div class="prod-note"> 
+									
+									<!-- note input link -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input link --> 
+									
+									<!-- note input area [hidden when not editing] -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="field-notes04"><span class="ss-chat"></span> Review/comment</label>
+												<br />
+												<textarea name="field-notes" value="" id="field-notes04">My son recently received this as a gift for his first birthday, and it is one of his favorite presents! The Sub is very lightweight and easy to maneuver, but bulky and durable at the same time. When you fill it with water, the front acts as a spout and is a great "rinser". If you tip it to the side, the water flows out of the four portholes like a waterfall. My son also loves to spin the propeller on the back. Great toy for a 1 yr old, and up. Highly recommend! </textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area [shown when content exists and not editing] -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> My son recently received this as a gift for his first birthday, and it is one of his favorite presents! The Sub is very lightweight and easy to maneuver, but bulky and durable at the same time. When you fill it with water, the front acts as a spout and is a great "rinser". If you tip it to the side, the water flows out of the four portholes like a waterfall. My son also loves to spin the propeller on the back. Great toy for a 1 yr old, and up. Highly recommend!</p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- save-cancel buttons [hidden when note editing] -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button class="cancel-item button bt-light" value="Reset" type="reset">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" value="Save" name="commit" class="save-item button bt-color">
+											</li>
+										</ul>
+									</div>
+									<!-- end save-cancel buttons --> 
+									
+								</div>
+								<!-- end prod note *** --> 
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a href="#" class="delete tooltip"><span>Delete<em></em></span></a> </li>
+										<li><a href="#" class="drag tooltip"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a href="#" class="edit tooltip"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<!-- end product listing ***** --> 
+																		
+						<!-- product listing ***** -->
+						<div class="prod clearfix" id=""> 
+							
+							<!-- product image -->
+							<div class="prod-thumb"> <img alt="" src="assets/products/icons/washcloth@2x.png"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Washcloth </div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 0–3 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have -->
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li> <a class="find-item button bt-color" href="#"><span class="ss-search"></span>Choose</a></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a href="#" class="delete tooltip"><span>Delete<em></em></span></a></li>
+										<li><a href="#" class="drag tooltip"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<!-- end product listing ***** --> 
+						
+					</div>
+					<!-- end "consider" content ********* --> 
+					<!-- "don't bother" content ********* -->
+					<h4 id="priority-low-hed" class="priority collapsible ss-directright"><strong>Don’t Bother</strong></h4>
+					<div class="priority-low collapsible-content"> 
+											
+					</div>
+					<!-- end "don't bother" content ********* --> 
+					
+					<!-- add new ***** -->
+					<h4 id="priority-new-hed" class="priority"><strong>Add an Item</strong></h4>
+					
+					<div class="prod clearfix" id="add-new">
+						<div class="prod-thumb"> <img alt="" src="assets/products/icons/add_new@2x.png"> </div>
+						<div class="prod-category"> Looking for something not listed above? Add it here.</div>
+						<div class="prod-links">
+							<ul>
+								<li><a class="new-item button bt-color" href="#"><span class="ss-plus"></span>Add new</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- end add new ***** --> 
+									
+				</div>
+				<!-- end baby gear list *************** -->
+			</form>
+		</div>
+	</div>
+	<div id="tertiary">
+		<div class="content"> </div>
+	</div>
+	<div id="footer">
+		<div class="content nav-drop-trigger">
+			<a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
+		  <ul class="nav-drop">
+			<li><a href="/">Mamajamas Home</a></li>
+			<li><a href="/about">About Us</a></li>
+			<li><a href="/blog">Blog</a></li>
+			<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+			<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+		  </ul>
+		</div>
+  	</div>
+</div>
 </div>
 <!-- end body area --> 
 
 <!-- modal window ************ -->
-<div class="modal-wrap" style="display:block;">
-  <div class="modal-overlay overlay-light"> &nbsp; </div>
-  <div class="modal-scaling">
   <!-- modal window box -->
-  <div class="modal-box modal-dark" id="listintro">
-  	  <!-- modal window close button -->
-      <a href="#" class="bt-close ss-icon">Close</a>
+  <div id="listintro" class="modal-dark">
       <!-- modal window content -->
       <div class="content">
       <h2>Welcome to your personalized list of baby gear.</h2>
@@ -265,19 +533,10 @@
       </div>
   </div>
   <!-- end modal window box --> 
-  
-  <!-- info balloons -->
-	<ul class="info-balloons">
-		<li id="info1"><span></span>Product Categories</li>
-       <li id="info2"><span></span>Click here for product suggestions.</li>
-    	<li id="info3"><span></span>Once you own an item, check this box.</li>
-    </ul>
-  <!-- end info balloons -->
-  
-  </div><!-- end modal scaling -->
-</div>
+
 <!-- /end modal window ************ --> 
 
 <!-- Google Analytics -->
+
 </body>
 </html>

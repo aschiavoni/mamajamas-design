@@ -300,9 +300,9 @@ img, object, embed, video {
 	width: auto;
 }
 
-/* list intro position */
-#listintro.modal-box {
-	left: 56.5%;
+/* list intro modal position */
+#listintro-container {
+	left: 59%;
 }
 
 /* Large screen layout */
@@ -320,9 +320,9 @@ img, object, embed, video {
 
 @media only screen and (min-width: 1245px) {
 
-/* list intro position */
-#listintro.modal-box {
-	left: 55%;
+/* list intro modal position */
+#listintro-container {
+	left: 64%;
 }
 
 }

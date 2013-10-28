@@ -60,6 +60,22 @@
         
     });
 </script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+  jQuery(function ($) {
+	  // Load dialog on click
+	  $('.find-item').click(function (e) {
+		  $('#search-modal').modal({
+			  position: ["15%",null],
+			  zIndex: 5000,
+			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+			  overlayClose: true
+			  });
+		  return false;
+	  });
+  });
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -166,7 +182,7 @@
 					<h4 id="priority-high-hed" class="priority priority-high collapsible"><strong>Must-Have</strong></h4>
 					<!-- "must-have" content ********* -->
 					<div class="priority-high collapsible-content"> 
-												
+						
 						<!-- product listing ***** -->
 						<div class="prod prod-filled clearfix" id=""> 
 							
@@ -237,14 +253,14 @@
 										</fieldset>
 									</div>
 									<!-- end note input area --> 
-																											
+									
 									<!-- note content area [shown only when content exists and not editing] -->
 									<div class="prod-note-content expandable">
 										<p><span class="ss-chat"></span> 
 											<!-- no note content --> 
 										</p>
 									</div>
-									<!-- end note content area --> 	
+									<!-- end note content area --> 
 									
 									<!-- save-cancel buttons [hidden when not editing] -->
 									<div class="prod-links">
@@ -258,10 +274,10 @@
 										</ul>
 									</div>
 									<!-- end save-cancel buttons --> 
-																	
+									
 								</div>
 								<!-- end prod note *** --> 
-																
+								
 								<!-- menu: delete, drag, edit -->
 								<div class="prod-edit-menu">
 									<ul>
@@ -347,14 +363,14 @@
 										</fieldset>
 									</div>
 									<!-- end note input area --> 
-																											
+									
 									<!-- note content area [hidden in edit state] -->
 									<div class="prod-note-content expandable">
 										<p><span class="ss-chat"></span> 
 											<!-- no note content --> 
 										</p>
 									</div>
-									<!-- end note content area --> 		
+									<!-- end note content area --> 
 									
 									<!-- save-cancel buttons [shown in edit state] -->
 									<div class="prod-links">
@@ -368,7 +384,7 @@
 										</ul>
 									</div>
 									<!-- end save-cancel buttons --> 
-																
+									
 								</div>
 								<!-- end prod note *** --> 
 								
@@ -457,12 +473,12 @@
 										</fieldset>
 									</div>
 									<!-- end note input area --> 
-																											
+									
 									<!-- note content area [hidden when editing note] -->
 									<div class="prod-note-content expandable">
 										<p><span class="ss-chat"></span> My son recently received this as a gift for his first birthday, and it is one of his favorite presents! The Sub is very lightweight and easy to maneuver, but bulky and durable at the same time. When you fill it with water, the front acts as a spout and is a great "rinser". If you tip it to the side, the water flows out of the four portholes like a waterfall. My son also loves to spin the propeller on the back. Great toy for a 1 yr old, and up. Highly recommend!</p>
 									</div>
-									<!-- end note content area --> 		
+									<!-- end note content area --> 
 									
 									<!-- save-cancel buttons [shown when editing] -->
 									<div class="prod-links">
@@ -475,8 +491,8 @@
 											</li>
 										</ul>
 									</div>
-									<!-- end save-cancel buttons --> 		
-																							
+									<!-- end save-cancel buttons --> 
+									
 								</div>
 								<!-- end prod note *** --> 
 								
@@ -662,8 +678,8 @@
 								<!-- prod note -->
 								<div class="prod-note"> 
 									
-									<!-- note input link here -->
-									<!-- note input area here -->
+									<!-- note input link here --> 
+									<!-- note input area here --> 
 									
 									<!-- note content area -->
 									<div class="prod-note-content expandable">
@@ -671,7 +687,7 @@
 									</div>
 									<!-- end note content area --> 
 									
-									<!-- edit save/cancel button here -->
+									<!-- edit save/cancel button here --> 
 								</div>
 								<!-- end prod note --> 
 								
@@ -712,7 +728,7 @@
 											<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span> <a class="button find-item" href="#"><span class="ss-search"></span>Choose</a> </p>
 										<p>
 											<label for="list_item_link" style="display: none;">Link to buy</label>
-											<input type="text" value="http://www.amazon.com/Fisher-Price-Precious-Planet-Whale-Tub/dp/B0018Z8CN8%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0018Z8CN8" size="30" name="list_item[link]" id="list_item_link">
+											<input name="list_item[link]" type="text" class="list-item-link" id="list_item_link" value="http://www.amazon.com/Fisher-Price-Precious-Planet-Whale-Tub/dp/B0018Z8CN8%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0018Z8CN8" size="30">
 										</p>
 									</fieldset>
 									<div class="rating"> <em>My rating:</em>
@@ -789,7 +805,7 @@
 										</fieldset>
 									</div>
 									<!-- end note input area --> 
-																		
+									
 									<!-- note content area -->
 									<div class="prod-note-content expandable">
 										<p><span class="ss-chat"></span> Save yourself the time and energy looking for a baby bath tub and head straight for this one. I'm so happy with this tub that I find myself making more time for bath time with my baby! First of all, it's just so darn cute. But seriously, here are my top reasons for loving this tub:</p>
@@ -810,11 +826,11 @@
 									<!-- end save-cancel buttons --> 
 									
 								</div>
-								<!-- end prod note *** -->
+								<!-- end prod note *** --> 
 								
 								<!-- photo upload -->
 								<div class="progress-container"> <a class="button bt-light bt-thumb-upload"><span class="ss-upload"></span>Photo</a> <img style="display: none;" src="//mamajamas-staging.s3.amazonaws.com/assets/progress-bar.gif" class="progress bt-thumb-upload" alt="Progress-bar"> </div>
-								<!-- end photo upload -->
+								<!-- end photo upload --> 
 								
 								<!-- menu: delete, drag, edit -->
 								<div class="prod-edit-menu">
@@ -886,8 +902,8 @@
 								<!-- prod note -->
 								<div class="prod-note"> 
 									
-									<!-- note input link here -->
-									<!-- note input area here -->
+									<!-- note input link here --> 
+									<!-- note input area here --> 
 									
 									<!-- note content area -->
 									<div class="prod-note-content expandable">
@@ -895,8 +911,8 @@
 									</div>
 									<!-- end note content area --> 
 									
-									<!-- save-cancel buttons here -->
-
+									<!-- save-cancel buttons here --> 
+									
 								</div>
 								<!-- end prod note --> 
 								
@@ -934,7 +950,7 @@
 									<div class="when"> Buy at 0–3 mo. </div>
 									<div class="own"> I need 1 of these. </div>
 								</div>
-								<!-- end when to buy, need vs. have -->
+								<!-- end when to buy, need vs. have --> 
 								
 								<!-- choose button -->
 								<div class="prod-links">
@@ -998,8 +1014,8 @@
 								<!-- prod note -->
 								<div class="prod-note"> 
 									
-									<!-- note input link here -->
-									<!-- note input area here -->
+									<!-- note input link here --> 
+									<!-- note input area here --> 
 									
 									<!-- note content area -->
 									<div class="prod-note-content expandable">
@@ -1007,7 +1023,7 @@
 									</div>
 									<!-- end note content area --> 
 									
-									<!-- save-cancel buttons here -->
+									<!-- save-cancel buttons here --> 
 								</div>
 								<!-- end prod note --> 
 								
@@ -1025,13 +1041,12 @@
 							</div>
 						</div>
 						<!-- end product listing ***** --> 
-					
+						
 					</div>
 					<!-- end "don't bother" content ********* --> 
 					
 					<!-- add new ***** -->
 					<h4 id="priority-new-hed" class="priority"><strong>Add an Item</strong></h4>
-					
 					<div class="prod clearfix" id="add-new">
 						<div class="prod-thumb"> <img alt="" src="assets/products/icons/add_new@2x.png"> </div>
 						<div class="prod-category"> Looking for something not listed above? Add it here.</div>
@@ -1043,7 +1058,7 @@
 					</div>
 					<!-- end add new ***** --> 
 					
-<!-- product listing [new item/new category] ***** -->
+					<!-- product listing [new item/new category] ***** -->
 					<div class="prod new-mode clearfix" id=""> 
 						
 						<!-- product image -->
@@ -1054,14 +1069,13 @@
 							
 							<!-- product category, name, rating -->
 							<div class="prod-cat-name-rating">
-								<div class="prod-category"> 
-								  <fieldset>
-									<p>
-									  <label for="list_item_name2">
-									Enter the name of an item (i.e. Wipes Warmer, Stretch Mark Cream)</label>
-									  <br />
-									  <input type="text" id="list_item_name2" value="" name="list_item[name]" class="ui-autocomplete-input" autocomplete="off">
-									</p>
+								<div class="prod-category">
+									<fieldset>
+										<p>
+											<label for="list_item_name2"> Enter the name of an item (i.e. Wipes Warmer, Stretch Mark Cream)</label>
+											<br />
+											<input type="text" id="list_item_name2" value="" name="list_item[name]" class="ui-autocomplete-input" autocomplete="off">
+										</p>
 									</fieldset>
 								</div>
 							</div>
@@ -1127,9 +1141,7 @@
 									<li>
 										<button class="cancel-item button bt-light" value="Reset" type="reset">Cancel</button>
 									</li>
-									<li>
-										<a class="save-item button bt-color" href="#">Save</a>
-									</li>
+									<li> <a class="save-item button bt-color" href="#">Save</a> </li>
 								</ul>
 							</div>
 							<!-- end save-cancel buttons --> 
@@ -1146,7 +1158,7 @@
 							<!-- end product description --> 
 						</div>
 					</div>
-					<!-- end product listing ***** --> 										
+					<!-- end product listing ***** --> 
 				</div>
 				<!-- end baby gear list *************** -->
 			</form>
@@ -1156,20 +1168,214 @@
 		<div class="content"> </div>
 	</div>
 	<div id="footer">
-		<div class="content nav-drop-trigger">
-			<a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
-		  <ul class="nav-drop">
-			<li><a href="/">Mamajamas Home</a></li>
-			<li><a href="/about">About Us</a></li>
-			<li><a href="/blog">Blog</a></li>
-			<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
-			<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
-		  </ul>
+		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
+			<ul class="nav-drop">
+				<li><a href="/">Mamajamas Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+			</ul>
 		</div>
-  	</div>
+	</div>
 </div>
 </div>
 <!-- end body area --> 
+
+<!-- modal window box -->
+<div id="search-modal"> 
+	<!-- modal window header -->
+	<h2>Choose a <strong>Bath Seat</strong></h2>
+	<!-- modal window content -->
+	<div class="content">
+		<div id="prod-search-results">
+			<h3>Suggested Bath Seats</h3>
+			<!-- results list -->
+			<ul class="prod-search-list clearfix">
+				<li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="detail-rating-mj rating">
+							<div class="eggs">
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-half"></div>
+								<div class="egg"></div>
+							</div>
+							<span>(12)</span> Mamajamas rating</div>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+				<li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="detail-rating-mj rating">
+							<div class="eggs">
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-half"></div>
+								<div class="egg"></div>
+							</div>
+							<span>(12)</span> Mamajamas rating</div>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+				<li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="detail-rating-mj rating">
+							<div class="eggs">
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-half"></div>
+								<div class="egg"></div>
+							</div>
+							<span>(12)</span> Mamajamas rating</div>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+				<li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="detail-rating-mj rating">
+							<div class="eggs">
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-full"></div>
+								<div class="egg egg-half"></div>
+								<div class="egg"></div>
+							</div>
+							<span>(12)</span> Mamajamas rating</div>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+				<li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+				<li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+				<li><a href="#"><img src="images/search/51kDT4vZNCL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+				<li><a href="#"><img src="images/search/41rAtd-pLKL._SL105_.jpg" alt="" /></a> 
+					<!-- product detail pop-up -->
+					<div class="prod-detail-pop">
+						<h4>Safety 1st Swivel Bath Seat Dark Blue</h4>
+						<p class="detail-price">$29.99 <em>on Amazon.com</em> </p>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a></li>
+								<li><a href="#" class="button bt-buy">Buy on <em>Amazon</em></a></li>
+							</ul>
+						</div>
+						<span class="arrow"></span> </div>
+					<!-- end product detail pop-up --> 
+				</li>
+			</ul>
+		</div>
+		<!-- end results list --> 
+		<!-- search field -->
+		<div id="prod-search">
+			<h3>Find More Choices on Amazon</h3>
+			<form class="label-infield" id="frm-prod-search">
+				<fieldset>
+					<p>
+						<label for="field-search">Enter keywords to live search for bath seats</label>
+						<br />
+						<input type="text" value="" id="field-search" name="field-search">
+					</p>
+				</fieldset>
+			</form>
+		</div>
+		<!-- end search field --> 
+		<!-- collapsible panel -->
+		<p class="collapsible" id="collapsible1"><strong>Or, add your own manually.</strong></p>
+		<div class="collapsible-content">
+			<form class="label-infield" id="frm-addown">
+				<fieldset>
+					<p>
+						<label for="field-prodname">Enter a product name or brand</label>
+						<br />
+						<input type="text" name="field-prodname" value="" id="field-prodname" class="field-prodname">
+						<a href="#" class="button bt-color"><span class="ss-plus"></span>Add</a> </p>
+				</fieldset>
+			</form>
+		</div>
+		<!-- end collapsible panel --> 
+	</div>
+	<!-- end modal window content --> 
+</div>
+<!-- end modal window box --> 
+
 <!-- Google Analytics -->
 
 </body>

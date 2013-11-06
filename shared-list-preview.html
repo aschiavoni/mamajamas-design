@@ -1,0 +1,529 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Shared List</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- collapsible panels -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		defaultOpen: 'priority-high-hed,priority-med-hed',
+		bind: 'click',
+		speed:200
+    });
+  });
+</script>
+<!-- expanding text (applied to elements with ".expandable." used for product notes.) -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options-editlist.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-social-circle.css" rel="stylesheet" />
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-social.js"></script>
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- message overlay -->
+<div class="msg-overlay preview-msg">
+  <div class="gridContainer clearfix">
+ 	<form>
+    <div class="col1">
+      <h1>List Preview</h1>
+      <p>This is what your saved list will look like to other users.</p>
+	  <p id="listprivacy-hed" class="collapsible ss-directright"><strong>Privacy Setting: </strong> 
+	  	<em class="privacy-status" style="display:inline;"><span class="icon-globe"></span> Anyone can see your list.</em>
+		<em class="privacy-status" style="display:none;"><span class="icon-bird"></span> Mamajamas users can see your list.</em>
+		<em class="privacy-status" style="display:none;"><span class="icon-gift"></span> Registry: anyone can see items you need.</em>
+		<span class="helper">(click to edit)</span>
+	  </p>
+        <div id="listprivacy-select" class="collapsible-content" style="display: none;">
+			<p>Who would you like to see your list?</p>
+			<fieldset>
+			<ul>
+				<li>
+						<label>
+							<input type="radio" name="listprivacy-radio" value="radio" id="listprivacy-radio_0" checked>
+							Anyone</label> — Everyone who visits Mamajamas. 
+				</li>
+				<li>
+						<label>
+							<input type="radio" name="listprivacy-radio" value="radio" id="listprivacy-radio_1">
+							Mamajamas users</label> — Only logged-in Mamajamas users.
+				</li>
+				<li>
+						<label>
+							<input type="radio" name="listprivacy-radio" value="radio" id="listprivacy-radio_2">
+							Registry option</label> — Everyone can see only items you need.
+				</li>
+			</ul>
+			</fieldset>
+		</div>
+    </div>
+    <div class="col2">
+		<p>
+		<button type="submit" class="button" id="bt-cancel">Cancel</button>
+        <button type="submit" class="button bt-color" id="bt-publish">Save</button>
+		</p>
+    </div>
+	</form>
+  </div>
+</div>
+<!-- / end message overlay -->
+<!-- header area ***** -->
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding"> <a href="/list">
+        <h1>Mamajamas</h1>
+        </a> </div>
+      <nav id="mainnav">
+		 &nbsp;<!-- main nav links removed -->
+		</nav>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+          <li id="startlist"><a href="#" class="button bt-color">Start Your List</a></li>
+        </ul>
+      </div>
+      <!-- progress bar removed --> 
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix" id="publist">
+  <div id="title">
+    <div id="subhed">
+      <h2>Angie Schiavoni's List</h2>
+    </div>
+	<!-- list pub dates -->
+	<p class="pubdate">Created Aug. 30, 2012<br>
+      Updated Sept. 12, 2013</p>
+    <!-- title links -->
+	<div id="title-links">
+      <ul class="iconrow">
+        <li><a href="#" class="ss-icon print" title="Print">Print</a></li>
+		 <li id="social-links" class="nav-drop-trigger">
+			<a href="#" class="nav-drop-link"><span class="ss-action"></span><em>Share</em></a>
+			<ul class="nav-drop">
+				<li class="hed">Share:</li>
+				<li><a href="#" class="ss-icon ss-social-circle" title="Pinterest">Pinterest</a></li>
+				<li><a href="#" class="ss-icon ss-social-circle" title="Twitter">Twitter</a></li>
+				<li><a href="#" class="ss-icon ss-social-circle" title="Facebook">Facebook</a></li>
+			</ul>
+	  	</li>
+      </ul>
+	 </div>
+  </div>
+  <div id="primary">
+    <div class="content">
+      <nav id="categories">
+        <h3>Categories</h3>
+        <ul>
+          <li class=""> <a href="/list/all">All</a> </li>
+          <li class="cat-selected"> <a href="/list/bathing">Bathing</a> </li>
+          <li class=""> <a href="/list/changing">Changing</a> </li>
+          <li class=""> <a href="/list/clothing">Clothing</a> </li>
+          <li class=""> <a href="/list/decorating">Decorating</a> </li>
+          <li class=""> <a href="/list/expecting">Expecting</a> </li>
+          <li class=""> <a href="/list/feeding">Feeding</a> </li>
+          <li class=""> <a href="/list/getting-around">Getting Around</a> </li>
+          <li class=""> <a href="/list/nursing">Nursing</a> </li>
+          <li class=""> <a href="/list/playing">Playing</a> </li>
+          <li class=""> <a href="/list/reading">Reading</a> </li>
+          <li class=""> <a href="/list/sleeping">Sleeping</a> </li>
+          <li class=""> <a href="/list/staying-healthy">Staying Healthy</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div id="secondary">
+    <div class="content"> 
+      <!-- notification ***** -->
+      <div id="notifications"> </div>
+      <form data-list-entries-loaded-at="" data-list-entries="" id="my-list" class="label-infield">
+        <div id="listcontrols" class="clearfix">
+          <div class="listhed">
+            <h3>Bathing</h3>
+          </div>
+          <div class="listsort">Sort by: 
+            <!-- drop-down menu -->
+            <div class="choicedrop"> <a href="#">Priority <span class="ss-dropdown"></span></a>
+              <ol style="display:none; width:7.5em;">
+                <li><a href="#">Priority</a></li>
+                <li><a href="#">When to buy</a></li>
+                <li><a href="#">Need / Have</a></li>
+              </ol>
+            </div>
+            <!-- /drop-down menu --> 
+          </div>
+        </div>
+        <!-- baby gear list content *************** -->
+        <div class="clearfix">
+          <h4 id="priority-high-hed" class="priority priority-high collapsible"><strong>Must-Have</strong></h4>
+          <!-- "must-have" content ********* -->
+          <div class="priority-high collapsible-content"> 
+                  
+<!-- product listing ***** -->
+            <div class="prod prod-filled clearfix" id=""> 
+              
+              <!-- product image -->
+              <div class="prod-thumb"> <img alt="" src="assets/products/amazon/41IMtfMJYeL._SL75_.jpg"> </div>
+              
+              <!-- product description -->
+              <div class="prod-desc clearfix"> 
+                
+                <!-- product category, name, rating -->
+                <div class="prod-category"> Bath Toy  </div>
+                <h3><a target="_blank" href="#prodlink">#4: Filled, expandable note</a></h3>
+				<!-- add to my list button --> 
+				<a href="#" class="button bt-color bt-add" title="Add to my list"><span class="ss-plus"></span><strong>Add</strong></a> 
+				<!-- / end add to my list button -->
+                <div class="rating"> <em>My rating:</em>
+                  <div class="stars">
+                    <div data-rating="1" class="star star-full"></div>
+                    <div data-rating="2" class="star star-full"></div>
+                    <div data-rating="3" class="star star-half"></div>
+                    <div data-rating="4" class="star"></div>
+                    <div data-rating="5" class="star"></div>
+                  </div>
+                </div>
+                <!-- end product category, name, rating --> 
+                
+                <!-- when to buy, need vs. have -->
+                <div class="prod-when-own">
+                  <div class="when"> <a target="_blank" href="#prodlink">Buy</a> at 4-6 months </div>
+                  <div class="own"> Needs 1 of these </div>
+				  	<div class="gift"><a class="bt-gift" href="#"><span>Gift this to Angie</span></a></div>
+                </div>
+                <!-- end when to buy, need vs. have --> 
+                
+                <!-- prod note [filled] *** -->
+                <div class="prod-note"> 
+                  
+                  <!-- note input trigger -->
+					<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+                  <!-- end note input trigger -->
+                  
+                  <!-- note input area -->
+                  <div class="prod-note-input">
+                    <fieldset>
+                      <p>
+                       <label for="field-notes04"><span class="ss-chat"></span> Review/comment</label>
+                        <br />
+                        <textarea name="field-notes" value="" id="field-notes04">My son recently received this as a gift for his first birthday, and it is one of his favorite presents! The Sub is very lightweight and easy to maneuver, but bulky and durable at the same time. When you fill it with water, the front acts as a spout and is a great "rinser". If you tip it to the side, the water flows out of the four portholes like a waterfall. My son also loves to spin the propeller on the back. Great toy for a 1 yr old, and up. Highly recommend! </textarea>
+                      </p>
+                    </fieldset>
+                   </div>
+                    <!-- end note input area -->
+                    
+                    <!-- note content area -->
+                   <div class="prod-note-content expandable">
+                    <p><span class="ss-chat"></span> My son recently received this as a gift for his first birthday, and it is one of his favorite presents! The Sub is very lightweight and easy to maneuver, but bulky and durable at the same time. When you fill it with water, the front acts as a spout and is a great "rinser". If you tip it to the side, the water flows out of the four portholes like a waterfall. My son also loves to spin the propeller on the back. Great toy for a 1 yr old, and up. Highly recommend!</p>
+                    </div>     
+                   <!-- end note content area -->
+                                     
+                   <!-- note save-cancel buttons -->
+                    <div class="prod-links">
+                      <ul>
+                        <li>
+                          <button class="cancel-item button bt-light" value="Reset" type="reset">Cancel</button>
+                        </li>
+                        <li>
+                          <input type="submit" value="Save" name="commit" class="save-item button bt-color">
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- end note save-cancel buttons -->
+                    
+                </div>
+                <!-- end prod note *** --> 
+                
+                <!-- end product description --> 
+              </div>
+            </div>
+            <!-- end product listing ***** -->   
+          </div>
+          <!-- end "must have" content ********* --> 
+          <!-- "consider" content ********* -->
+          <h4 id="priority-med-hed" class="priority collapsible"><strong>Consider</strong></h4>
+          <div class="priority-med collapsible-content"> 
+            <!-- product listing ***** -->
+            <div class="prod prod-filled clearfix" id=""> 
+              
+              <!-- product image -->
+              <div class="prod-thumb"> <img alt="" src="assets/products/amazon/41r6iRzjKQL._SL75_.jpg"> </div>
+              
+              <!-- product description -->
+              <div class="prod-desc clearfix"> 
+                
+                <!-- product category, name, rating -->
+                <div class="prod-category"> Bath Tub  </div>
+                <h3><a target="_blank" href="#prodlink">Fisher-Price Precious Planet Whale of a Tub</a></h3>
+				<!-- add to my list button --> 
+				<a href="#" class="button bt-color bt-add" title="Add to my list"><span class="ss-plus"></span><strong>Add</strong></a> 
+				<!-- / end add to my list button -->
+                <div class="rating"> <em>My rating:</em>
+                  <div class="stars">
+                    <div data-rating="1" class="star star-full"></div>
+                    <div data-rating="2" class="star star-full"></div>
+                    <div data-rating="3" class="star star-full"></div>
+                    <div data-rating="4" class="star"></div>
+                    <div data-rating="5" class="star"></div>
+                  </div>
+                </div>
+                <!-- end product category, name, rating --> 
+                
+                <!-- when to buy, need vs. have -->
+                <div class="prod-when-own">
+                  <div class="when"> <a target="_blank" href="#prodlink">Buy</a> pre-birth </div>
+                  <div class="own"> Has 1 of these </div>
+                </div>
+                <!-- end when to buy, need vs. have --> 
+                
+                <!-- prod note -->
+                <div class="prod-note">
+                
+                	<!-- note content area -->
+                   <div class="prod-note-content expandable">
+                    <p><span class="ss-chat"></span> Save yourself the time and energy looking for a baby bath tub and head straight for this one. I'm so happy with this tub that I find myself making more time for bath time with my baby!</p>
+                    </div>     
+                   <!-- end note content area -->
+                  
+                </div>
+                <!-- end prod note --> 
+                
+                <!-- end product description --> 
+              </div>
+            </div>
+            <!-- end product listing ***** --> 
+            
+            <!-- product listing ***** -->
+            <div class="prod prod-filled clearfix" id=""> 
+              
+              <!-- product image -->
+              <div class="prod-thumb"> <img alt="" src="assets/products/amazon/31AhKonzveL._SL75_.jpg"> </div>
+              
+              <!-- product description -->
+              <div class="prod-desc clearfix"> 
+                
+                <!-- product category, name, rating -->
+                <div class="prod-category"> Shampoo or Body Wash  </div>
+                <h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a></h3>
+				<!-- add to my list button --> 
+				<a href="#" class="button bt-color bt-add" title="Add to my list"><span class="ss-plus"></span><strong>Add</strong></a> 
+				<!-- / end add to my list button -->
+                <div class="rating"> <em>My rating:</em>
+                  <div class="stars">
+                    <div data-rating="1" class="star star-full"></div>
+                    <div data-rating="2" class="star star-full"></div>
+                    <div data-rating="3" class="star star-full"></div>
+                    <div data-rating="4" class="star"></div>
+                    <div data-rating="5" class="star"></div>
+                  </div>
+                </div>
+                <!-- end product category, name, rating --> 
+                
+                <!-- when to buy, need vs. have -->
+                <div class="prod-when-own">
+                  <div class="when"> <a target="_blank" href="#prodlink">Buy</a> at 0–3 months </div>
+                  <div class="own"> Needs 1 of these </div>
+				  	<div class="gift"><a class="bt-gift" href="#"><span>Gift this to Angie</span></a></div>
+                </div>
+                <!-- end when to buy, need vs. have --> 
+                
+                 <!-- prod note -->
+                <div class="prod-note">
+                
+                	<!-- note content area -->
+                   <div class="prod-note-content expandable">
+                  <p><span class="ss-chat"></span> A lot of Aveeno products are great for the sensitive skin aspect. This one is iffy. It's a good product but if your baby is extra sensitive, it could make them break out. I've avoided that with my baby because I use a very, VERY small amount each time. If I don't, he does get a little red and I've got to be very cautious with him. But the right amount and that problem is eliminated.</p>
+                  </div>
+                   <!-- end note content area -->
+                   
+                </div>
+                <!-- end prod note --> 
+                
+                <!-- end product description --> 
+              </div>
+            </div>
+            <!-- end product listing ***** --> 
+            
+          </div>
+          <!-- end "consider" content ********* --> 
+          <!-- "don't bother" content ********* -->
+          <h4 id="priority-low-hed" class="priority collapsible ss-directright"><strong>Don’t Bother</strong></h4>
+          <div class="priority-low collapsible-content">
+          
+<!-- product listing ***** -->
+            <div class="prod prod-filled clearfix" id=""> 
+              
+              <!-- product image -->
+              <div class="prod-thumb"> <img alt="" src="assets/products/amazon/dont-bother.jpg"> </div>
+              
+              <!-- product description -->
+              <div class="prod-desc clearfix"> 
+                				
+				<!-- product category, name, rating -->
+                <div class="prod-category"> Bath Life Ring </div>
+                <h3><a target="_blank" href="#prodlink">LifeSafer Inflatable Neck Ring</a></h3>
+                <div class="rating"> <em>My rating:</em>
+                  <div class="stars">
+                    <div data-rating="1" class="star star-full"></div>
+                    <div data-rating="2" class="star"></div>
+                    <div data-rating="3" class="star"></div>
+                    <div data-rating="4" class="star"></div>
+                    <div data-rating="5" class="star"></div>
+                  </div>
+                </div>
+                <!-- end product category, name, rating --> 
+                
+                <!-- when to buy, need vs. have -->
+                <div class="prod-when-own">
+                  <div class="when"> Don’t buy at 0–3 mo. </div>
+                  <div class="own"> I have one of these. </div>
+                </div>
+                <!-- end when to buy, need vs. have --> 
+                
+                 <!-- prod note -->
+                <div class="prod-note">
+                
+                	<!-- note content area -->
+                   <div class="prod-note-content expandable">
+                  <p><span class="ss-chat"></span> Received as a gift from someone who obviously does not have kids. The safety of the design needs a re-think.</p>
+                  </div>
+                   <!-- end note content area -->
+                   
+                </div>
+                <!-- end prod note --> 
+                
+                <!-- menu: delete, drag, edit -->
+                <div class="prod-edit-menu">
+                  <ul>
+                    <li><a href="#" class="delete tooltip"><span>Delete<em></em></span></a></li>
+                    <li><a href="#" class="drag tooltip"><span>Drag to reorder<em></em></span></a></li>
+                    <li><a href="#" class="edit tooltip"><span>Edit<em></em></span></a></li>
+                  </ul>
+                </div>
+                <!-- end menu: delete, drag, edit --> 
+                
+                <!-- end product description --> 
+              </div>
+            </div>
+            <!-- end product listing ***** -->   
+			         
+          </div>
+          <!-- end "don't bother" content ********* --> 
+                    
+        </div>
+        <!-- end baby gear list *************** -->
+      </form>
+    </div>
+  </div>
+  <div id="tertiary" class="light">
+    <div class="content">
+	
+	<div id="module-profile">
+        <div class="content">
+          <p id="sharedby"><span></span>Shared by</p>
+          <h3>Angie Schiavoni</h3>
+          <img src="images/public_list_Kamvar-Schiavoni-42.jpg" alt="Profile photo">
+          <div class="center">
+            <!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+            <a href="shared-list-following.html" id="bt-follow" class="button bt-color"><span class="ss-check"></span>Follow</a>
+          </div>
+          <h4>Eco Mom</h4>
+          <p> Age 33<br>
+            Mom to Xander, 18 mos.<br>
+            Value shopper<br>
+            <em><span class="ss-tag"></span> Tags:</em> <a href="#">Urban</a></p>
+          <!-- expandable profile text -->
+          <div class="expandable">
+            <p> Has a 2 1/2 year old son. I gravitate towards organic and wholesome parenting type products. I am willing to spend a little more for quality, but have a hard time spending a lot unless I'm really excited about something. I am also a huge fan of finding great baby gear at consignment or thrift stores (especially clothes!) and love a good bargain. I also have a slight addiction to amazon.com. I order way too many items late night on my phone (do not get the amazon iphone app unless you are ready to impulse buy!).</p>
+          </div>
+          <!-- end expandable profile text --> 
+        </div>
+      </div>
+      <div id="module-friends">
+        <div class="content">
+          <h3>Angie’s Friends</h3>
+          <ul class="clearfix">
+            <li> <a href="/danyellecottrell"> <img alt="Danyelle Cottrell" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/47/friend_370966_1151430246_1911954603_n.jpg"> </a></li>
+            <li> <a href="/sturvoni"> <img alt="Jim Sturm" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/5/friend_275138_1823688459_118724039_n.jpg"> </a></li>
+            <li> <a href="/brimilestones"> <img alt="Brianna Adele" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/9/friend_369899_1109914953_788860434_n.jpg"> </a></li>
+            <li> <a href="/meganschiavoni"> <img alt="Megan Schiavoni" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/11/friend_369621_1615914550_1028746690_n.jpg"> </a></li>
+            <li> <a href="/margaretpotts"> <img alt="Margaret Potts" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/8/friend_photo__17_.JPG"> </a></li>
+            <li> <a href="/milestonesinthemaking"> <img alt="Lisa Schiavoni" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/10/friend_623872_1698791681_1286542848_n.jpg"> </a></li>
+            <li> <a href="/gsmom"> <img alt="Gsmom" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/18/friend_41476_787804174_9453_n.jpg"> </a></li>
+            <li> <a href="/lail38"> <img alt="Shannon Lail" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/22/friend_49223_541200808_2281203_n.jpg"> </a></li>
+            <li> <a href="/tacita"> <img alt="Tacita Morway" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/29/friend_370339_100000573514923_507572611_n.jpg"> </a></li>
+            <li> <a href="/hagarberlin"> <img alt="Hagar Berlin" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/28/friend_369222_1079540049_89866473_n.jpg"> </a></li>
+            <li> <a href="/tconlan7"> <img alt="Tara Conlan" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/40/friend_371292_1526073813_991146815_n.jpg"> </a></li>
+            <li> <a href="/amandateo"> <img alt="Amanda Teo" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/42/friend_372322_694256152_1545929288_n.jpg"> </a></li>
+            <li> <a href="/emilyrodgers"> <img alt="Emily Rodgers" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/14/friend_203344_763807237_781217538_n.jpg"> </a></li>
+            <li> <a href="/shivani"> <img alt="Shivani Varambally" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/55/friend_48579_1047087337_4013_n.jpg"> </a></li>
+            <li> <a href="/lizzymbarber"> <img alt="Elizabeth Barber" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/61/friend_187415_749727017_1403553154_n.jpg"> </a></li>
+            <li> <a href="/leahsugar"> <img alt="Leah Sugar" src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/74/friend_1076722_1589448930_620415428_n.jpg"> </a></li>
+          </ul>
+          <p><a href="#">See all</a></p>
+        </div>
+      </div>
+	
+	</div>
+  </div>
+  <div id="footer">
+    <div class="content nav-drop-trigger">
+    	<a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
+      <ul class="nav-drop">
+        <li><a href="/">Mamajamas Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+        <li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end body area --> 
+<!-- Google Analytics -->
+
+</body>
+</html>

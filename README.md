@@ -265,8 +265,8 @@ Sept 3
 - DES-126: modified the slider arrow graphic (in images/quiz) and CSS (quiz.css) to include a hover state (along
   with the disabled and active states)
 - DES-125: CSS change (in quiz.css) to center text on the quiz questions
-- CSS changes (to style.css and fluid-layout.css) include layout adjustments to header (affecting placement and size of search box) and changes to
-  page background color and borders.
+- CSS changes (to style.css and fluid-layout.css) include layout adjustments to header (affecting placement and
+  size of search box) and changes to page background color and borders.
 
 ...
 
@@ -282,3 +282,12 @@ Oct 28
   close modal and hide tooltips. (Uses simplemodal framework)
 - DES-164: builst-list.html — Clicking "Choose" in the "Towel" row activates choose modal. Updated rating
   graphics to use stars instead of eggs. Updated modal to use Simplemodal framework.
+
+Nov 6
+- DES-147: Added privacy settings status and collapsible panel to the Shared List Preview screen.
+  Icon and text should show current setting. When user clicks radio buttons to changes the setting, the change
+  should be reflected in the privacy setting status (icon and text) above. Settings saved when user clicks "Save"
+  Please see: shared-list-preview.html, shared-list-preview_mj.html, shared-list-preview_rg.html
+- DES-149: New "My Settings" page, accessible from the upper-right dropdown menu. Settings should work as described above. (Please note that the left-hand nav "Email" link follows Angie's mockup, but there is no setting for that page yet.) See: my-settings.html, my-settings_mj.html and my-settings_rg.html
+- DES-477: Item rating modal. On Build List, when user selects "have" from a "need/have" menu, a modal should appear asking if the user would like to rate the item. Please see: build-list-rate.html
+- CSS changes includes the above, as well code formatting changes and removal of references to the old 3-step progress bar.

@@ -1,0 +1,268 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Jane’s List</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- collapsible panels -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		defaultOpen: 'priority-high-hed,priority-med-hed',
+		bind: 'click',
+		speed:200
+    });
+  });
+</script>
+<!-- expanding text (applied to elements with ".expandable." used for product notes.) -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options-editlist.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($) {
+	// Load modal on page load
+		$(window).load(function(){
+			$('#private-modal').modal({
+				position: ['15%',null],
+				closeClass: 'modalClose',
+				closeHTML:''
+				});			 
+			return false;
+		});
+	});
+	jQuery(function ($) {
+	  jQuery('#signup').click(function () {
+		jQuery.modal.close();
+		window.setTimeout(function() {jQuery('#signup-modal').modal({
+			focus: false,
+			position: ['10%',null]
+			})}, 250);
+		return false;
+	  });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding"> <a href="/">
+        <h1>Mamajamas</h1>
+        </a> </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix" id="publist">
+  <div id="title">
+    <div id="subhed">
+      <h2>Jane's List</h2>
+    </div>
+	<!-- list pub dates -->
+    <!-- title links -->
+  </div>
+  <div id="primary">
+    <div class="content">
+      <nav id="categories">
+        <h3>Categories</h3>
+        <ul>
+          <li class=""> <a href="/list/all">All</a> </li>
+          <li class="cat-selected"> <a href="/list/bathing">Bathing</a> </li>
+          <li class=""> <a href="/list/changing">Changing</a> </li>
+          <li class=""> <a href="/list/clothing">Clothing</a> </li>
+          <li class=""> <a href="/list/decorating">Decorating</a> </li>
+          <li class=""> <a href="/list/expecting">Expecting</a> </li>
+          <li class=""> <a href="/list/feeding">Feeding</a> </li>
+          <li class=""> <a href="/list/getting-around">Getting Around</a> </li>
+          <li class=""> <a href="/list/nursing">Nursing</a> </li>
+          <li class=""> <a href="/list/playing">Playing</a> </li>
+          <li class=""> <a href="/list/reading">Reading</a> </li>
+          <li class=""> <a href="/list/sleeping">Sleeping</a> </li>
+          <li class=""> <a href="/list/staying-healthy">Staying Healthy</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div id="secondary">
+    <div class="content"> 
+      &nbsp;
+    </div>
+  </div>
+  <div id="tertiary" class="light">
+    <div class="content">
+      &nbsp;
+	</div>
+  </div>
+  <div id="footer">
+    <div class="content nav-drop-trigger">
+    	<a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
+      <ul class="nav-drop">
+        <li><a href="/">Mamajamas Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+        <li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end body area --> 
+
+<!-- modal window box -->
+  <div id="private-modal" class="modal-win">
+      <!-- modal window header -->
+      <h2>Private List</h2>
+      <form id="login-form" class="label-infield" method="post" action="/users/login" accept-charset="UTF-8">
+      <!-- modal window content -->
+      <div class="content">
+        
+		<p class="intro center larger">You must be logged-in to Mamajamas to see Jane’s list.</p>        
+      <div style="margin:0;padding:0;display:inline">
+        <input type="hidden" value="✓" name="utf8">
+        <input type="hidden" value="+/OoOfAJVdfcn1P9UIYO6GYJgbEALnRSulaQJTmYbtM=" name="authenticity_token">
+      </div>
+      <input id="user_remember_me" type="hidden" value="true" name="user[remember_me]">
+     
+        <p class="center"><a id="bt-fb-connect" class="button"> <span>Login with Facebook</span> </a></p>
+        <p class="collapsible center ss-directright"><strong>Or, enter your Mamajamas username and password below:</strong>
+		</p>
+        <div class="collapsible-content" style="display: none;">
+          <fieldset>
+            <p>
+              <label for="user_login">Email address</label>
+              <br>
+              <input id="user_login" type="text" size="30" name="user[login]">
+            </p>
+            <p>
+              <label for="user_login_password">Password</label>
+              <br>
+              <input id="user_login_password" type="password" size="30" name="user[password]">
+            </p>
+          </fieldset>
+          <p class="helper"> <a href="/users/password/new">Forgot your password?</a></p>
+          
+          <!-- window bottom buttons -->
+          <div class="button-row">
+            <div class="progress-container">
+              <button id="bt-cancel" class="button" type="reset">Cancel</button>
+              <button id="bt-log-in" class="button" type="submit">Continue</button>
+              <img class="progress" style="display: none;" src="/assets/progress-bar-da578cc730973af12284b3ee87a398b8.gif" alt="Progress-bar"> 
+			  </div>
+          </div>
+        </div><!-- end collapsible content -->	
+		<p class="center footnote">Not signed up yet? <a href="#" id="signup" class="modalClose">Sign up here</a></p>
+      </div>
+      <!-- end modal window content -->
+    </form>
+  </div>
+  <!-- end modal window box --> 
+  
+  <!-- modal window box -->
+  <div id="signup-modal" class="modal-win">
+      <!-- modal window header -->
+      <h2>Sign Up</h2>
+      <form id="login-form" class="label-infield" method="post" action="/users/login" accept-charset="UTF-8">
+      <!-- modal window content -->
+      <div class="content">
+        
+		<p class="intro center larger">Sign up to view private lists and<br>
+
+          get started keeping track of your baby gear.</p>
+        <div class="progress-container fb-progress-container progress-disabled">
+          <p class="center"><a id="bt-fb-connect" class="button"><span>Login with Facebook</span></a></p>
+          <p class="tip tip-dwn">Signing in through Facebook allows you to find friends who already have Mamajamas lists.<span></span></p>
+          <p class="center instruction privacy">We value your privacy, and we’ll<br>
+            never post anything without your express permission.</p>
+          <img style="display: none;" src="/assets/progress-bar-da578cc730973af12284b3ee87a398b8.gif" class="progress" alt="Progress-bar">
+        </div>
+        <p id="collapsible1" class="collapsible center ss-directright"><strong>Or, create an account using your email address.</strong></p>
+        <div class="collapsible-content" style="display: none;">
+          <fieldset>
+            <p>
+              <label for="user_realname">First and last name</label>
+              <br />
+              <input type="text" value="" size="30" name="user[realname]" id="user_realname">
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="user_email">Email address</label>
+              <br />
+              <input type="email" value="" size="30" name="user[email]" id="user_email">
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="user_password">Password</label>
+              <br />
+              <input type="password" size="30" name="user[password]" id="user_password">
+              <strong class="status-msg pw-weak" id="password-strength"></strong> </p>
+            <p>
+              <label for="user_password_confirmation">Confirm password</label>
+              <br />
+              <input type="password" size="30" name="user[password_confirmation]" id="user_password_confirmation">
+            </p>
+            </p>
+          </fieldset>
+          
+          <!-- button row -->
+          <div class="button-row">
+            <div class="progress-container">
+              <!-- <button id="bt-cancel" class="button" type="reset">Cancel</button> -->
+			   <a href="home.html" class="button">Cancel</a>
+              <button id="bt-create-account" class="button" type="submit">Create Account</button>
+              <img class="progress" style="display: none;" src="/assets/progress-bar-da578cc730973af12284b3ee87a398b8.gif" alt="Progress-bar">
+            </div>
+          </div>
+		  </div>
+		  
+      </div>
+      <!-- end modal window content -->
+    </form>
+  </div>
+  <!-- end modal window box --> 
+
+<!-- Google Analytics -->
+
+</body>
+</html>

@@ -757,6 +757,9 @@ ul.follow-moms {
 .follow-moms .mom {
 	font-weight: 600;
 }
+a > .mom {
+	color: #222;
+}
 .follow-moms .tags {
 	font-size: .916em;
 	color: #5BAA5D;

@@ -291,3 +291,10 @@ Nov 6
 - DES-149: New "My Settings" page, accessible from the upper-right dropdown menu. Settings should work as described above. (Please note that the left-hand nav "Email" link follows Angie's mockup, but there is no setting for that page yet.) See: my-settings.html, my-settings_mj.html and my-settings_rg.html
 - DES-477: Item rating modal. On Build List, when user selects "have" from a "need/have" menu, a modal should appear asking if the user would like to rate the item. Please see: build-list-rate.html
 - CSS changes includes the above, as well code formatting changes and removal of references to the old 3-step progress bar.
+
+Nov 11
+- DES-112: modal for non-logged-in users clicking "follow" on shared list. See: shared-list-modal.html [click "Follow"]
+- DES-113: modal for non-logged-in users clicking "add" on shared list. See: shared-list-modal.html [click "Add"]
+- DES-156: modal prompting users to follow friends. See: shared-list-followfriends.html
+- DES-169: adjustments to shared list layout. Tighter spacing, smaller fonts, bold "has" and "needs." 
+- In fluid-layout.css, removed old comments

@@ -12,21 +12,6 @@ img, object, embed, video {
 	width:100%;
 }
 
-/*
-	Dreamweaver Fluid Grid Properties
-	----------------------------------
-	dw-num-cols-mobile:		5;
-	dw-num-cols-tablet:		8;
-	dw-num-cols-desktop:	12;
-	dw-gutter-percentage:	25;
-	
-	Inspiration from "Responsive Web Design" by Ethan Marcotte 
-	http://www.alistapart.com/articles/responsive-web-design
-	
-	and Golden Grid System by Joni Korpi
-	http://goldengridsystem.com/
-*/
-
 /* Mobile Layout: 480px and below. */
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. 

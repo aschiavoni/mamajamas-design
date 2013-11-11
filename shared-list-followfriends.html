@@ -49,18 +49,9 @@
 <script src="js/jquery.simplemodal.min.js"></script>
 <script type="text/javascript">
   jQuery(function ($) {
-	  // Load dialog on click
-	  $('#bt-follow').click(function (e) {
-		  $('#follow-modal').modal({
-			  position: ["15%",null],
-			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
-			  overlayClose: true
-			  });
-		  return false;
-	  });
-	  // Load dialog on click
-	  $('.bt-add').click(function (e) {
-		  $('#add-modal').modal({
+	  // Load modal on page load
+	  $(window).load(function(){
+		  $('#friends-modal').modal({
 			  position: ["15%",null],
 			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
 			  overlayClose: true
@@ -504,88 +495,20 @@
 <!-- end body area --> 
 
 <!-- modal window box -->
-  <div id="follow-modal" class="modal-win">
+  <div id="friends-modal" class="modal-win">
       <!-- modal window header -->
-      <h2>Follow</h2>
-      <form id="login-form" class="label-infield" method="post" action="/users/login" accept-charset="UTF-8">
-      <!-- modal window content -->
-      <div class="content">
-        <p class="intro center larger">To follow Angie Schiavoni, please:</p>
-        <p class="center"><a href="#" id="bt-createlist" class="button bt-color"><span class="ss-icon ss-list"></span>Create a list</a></p>
-        <p class="divider"><strong>or</strong></p>
-        <p class="center"><a id="bt-fb-connect" class="button"> <span>Login with Facebook</span> </a></p>
-        <p class="center instruction">We value your privacy, and we’ll<br>
-          never post anything without your express permission.</p>
-        <p id="collapsible1" class="collapsible center ss-directright"><strong>Or, log in with your Mamajamas username and password:</strong></p>
-        <div class="collapsible-content" style="display: none;">
-          <fieldset>
-            <p>
-              <label for="user_login">Email address</label>
-              <br>
-              <input id="user_login" type="text" size="30" name="user[login]">
-            </p>
-            <p>
-              <label for="user_login_password">Password</label>
-              <br>
-              <input id="user_login_password" type="password" size="30" name="user[password]">
-            </p>
-          </fieldset>
-          <p class="helper"> <a href="/users/password/new">Forgot your password?</a> </p>
-          
-          <!-- window bottom buttons -->
-          <div class="button-row">
-            <div class="progress-container">
-              <button id="bt-cancel" class="button" type="reset">Cancel</button>
-              <button id="bt-log-in" class="button" type="submit">Log in</button>
-              <img class="progress" style="display: none;" src="/assets/progress-bar-da578cc730973af12284b3ee87a398b8.gif" alt="Progress-bar"> </div>
-          </div>
-        </div>
-      </div>
-      <!-- end modal window content --> 
-	  </form>
-  </div>
-  <!-- end modal window box --> 
+      <h2>Saved</h2>
 
-<!-- modal window box -->
-  <div id="add-modal" class="modal-win">
-      <!-- modal window header -->
-      <h2>Add Product</h2>
-      <form id="login-form" class="label-infield" method="post" action="/users/login" accept-charset="UTF-8">
       <!-- modal window content -->
       <div class="content">
-        <p class="intro center larger">To add this product to your list, please:</p>
-        <p class="center"><a href="#" id="bt-createlist" class="button bt-color"><span class="ss-icon ss-list"></span>Create a list</a></p>
-        <p class="divider"><strong>or</strong></p>
-        <p class="center"><a id="bt-fb-connect" class="button"> <span>Login with Facebook</span> </a></p>
-        <p class="center instruction">We value your privacy, and we’ll<br>
-          never post anything without your express permission.</p>
-        <p id="collapsible1" class="collapsible center ss-directright"><strong>Or, log in with your Mamajamas username and password:</strong></p>
-        <div class="collapsible-content" style="display: none;">
-          <fieldset>
-            <p>
-              <label for="user_login">Email address</label>
-              <br>
-              <input id="user_login" type="text" size="30" name="user[login]">
-            </p>
-            <p>
-              <label for="user_login_password">Password</label>
-              <br>
-              <input id="user_login_password" type="password" size="30" name="user[password]">
-            </p>
-          </fieldset>
-          <p class="helper"> <a href="/users/password/new">Forgot your password?</a> </p>
-          
-          <!-- window bottom buttons -->
-          <div class="button-row">
-            <div class="progress-container">
-              <button id="bt-cancel" class="button" type="reset">Cancel</button>
-              <button id="bt-log-in" class="button" type="submit">Log in</button>
-              <img class="progress" style="display: none;" src="/assets/progress-bar-da578cc730973af12284b3ee87a398b8.gif" alt="Progress-bar"> </div>
-          </div>
-        </div>
+        <p class="intro center larger">Your list has been saved</p>
+		 <p class="center">Next up, follow your friends &rsquo; lists!</p>
+		 
+        <p class="center"><a href="#" id="bt-createlist" class="button bt-color"><span class="ss-icon ss-users"></span>Find &amp; follow friends</a></p>
+       
       </div>
       <!-- end modal window content --> 
-	  </form>
+
   </div>
   <!-- end modal window box --> 
 

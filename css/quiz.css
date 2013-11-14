@@ -34,6 +34,9 @@
 	padding: 25px 20px;
 	text-align:center;
 }
+.quiz-box .content label {
+	color: #000;
+}
 .quiz-box.large .content {
 	font-size: 261.5%;
 	line-height:1.323;
@@ -103,6 +106,23 @@
 /* quiz choice elements --------- */
 .q-question {
 	margin-bottom:1em;
+}
+
+/* lists */
+.q-question fieldset ul {
+    margin: 0 0 0.75em;
+    padding: 0 2em 0 3em;
+	text-align: left;
+	list-style-type: none;
+}
+.q-question fieldset li {
+	list-style-type: none;
+	text-indent: -1em;
+    margin: 0 0 1em;
+}
+.q-question li input {
+	vertical-align: middle;
+	margin-right: 5px;
 }
 
 /* dropdown menus */
@@ -459,7 +479,12 @@ span.ss-navigateright {
 #quiz08 .q-question {
 	margin-bottom:.75em;
 }
-
+#quiz09 .q-question {
+	padding-top:2em;
+}
+#quiz09 .q-question ul {
+	margin-bottom: 1.5em;
+}
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),  
 only screen and (-moz-min-device-pixel-ratio: 1.5),  

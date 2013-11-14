@@ -403,27 +403,30 @@ span.ss-navigateright {
 	height:10px;
 }
 #quiz01 .bar {
-	width:12.5%;
+	width:11.11%;
 }
 #quiz02 .bar {
-	width:25%;
+	width:22.22%;
 }
 #quiz03 .bar {
-	width:37.5%;
+	width:33.33%;
 }
 #quiz04 .bar {
-	width:50%;
+	width:44.44%;
 }
 #quiz05 .bar {
-	width:62.5%;
+	width:55.55%;
 }
 #quiz06 .bar {
-	width:75%;
+	width:66.66%;
 }
 #quiz07 .bar {
-	width:87.5%;
+	width:77.77%;
 }
 #quiz08 .bar {
+	width:88.88%;
+}
+#quiz09 .bar {
 	width:100%;
 }
 

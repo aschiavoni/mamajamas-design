@@ -2139,31 +2139,63 @@ div.priority-low {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-a.bt-addanother {
+a.bt-addanother,
+.prod-desc h3 a.bt-change {
 	display: inline-block;
 	color: #FFF;
 	background: #CCC;
-	font-size: 13px;
-	line-height: 1.1154em;
-	padding: 0 0.269em;
+	font-size: 11px;
+	line-height: 16px;
+	padding: 0 2px;
 	border-radius: 9px;
-}
-a.bt-addanother strong {
 }
 a.bt-addanother span {
 	display: none;
-	font-size: 11px;
 	font-weight: 400;
-	padding: 0 2px 0 4px;
+	padding: 0 4px 0 2px;
+}
+a.bt-addanother span.ss-plus {
+	display: inline-block;
+	font-size: 7px;
+	position: relative;
+	top: -0.10714286em;
+	margin: 0;
+	padding: 3px;
 }
 a.bt-addanother:hover {
 	text-decoration: none;
 	color: #FFF;
-	background: #777;
+	background: #6BB36E;
 }
 a.bt-addanother:hover span {
 	display: inline-block;
 }
+/* item change button */
+.prod-desc h3 a.bt-change {
+	background: #6BB36E;
+	display: none;
+}
+.prod-desc h3 a.bt-change span {
+	display: inline-block;
+	font-weight: 400;
+	padding: 0 4px 0 2px;
+}
+.prod-desc h3 a.bt-change span.ss-icon {
+	display: inline-block;
+	font-size: 11px;
+	line-height: 9px;
+	position: relative;
+	top: 1px;
+	margin: 0;
+	padding: 3px;
+}
+.prod-desc h3:hover a.bt-change {
+	display: inline-block;
+}
+.prod-desc h3 a.bt-change:hover {
+	color: #FFF;
+}
+
 .find-item,
 .new-item,
 .prod-links .button,
@@ -3431,7 +3463,6 @@ p.privacy-status {
 .home #footer {
 	color: #999999;
 	font-size: 0.923em;
-	text-align: center;
 	border-top: 1px solid #D9D9D9;
 }
 .home #footer .content {

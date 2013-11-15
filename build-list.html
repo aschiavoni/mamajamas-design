@@ -68,7 +68,6 @@
 	  $('.find-item').click(function (e) {
 		  $('#search-modal').modal({
 			  position: ["15%",null],
-			  zIndex: 5000,
 			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
 			  overlayClose: true
 			  });
@@ -111,6 +110,7 @@
 							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
 							<li><a href="/list">My List</a></li>
 							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
 							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
 						</ul>
 					</li>
@@ -194,8 +194,8 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
-									<h3><a target="_blank" href="#prodlink">#1: Empty note — label, field and buttons hidden</a></h3>
+									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">#1: Empty note — label, field and buttons hidden</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
 									<div class="rating"> <em>My rating:</em>
 										<div class="stars">
 											<div data-rating="1" class="star star-full"></div>
@@ -304,8 +304,8 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
-									<h3><a target="_blank" href="#prodlink">#2: Editing — textarea, in-field label, field and buttons shown</a></h3>
+									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">#2: Editing — textarea, in-field label, field and buttons shown</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
 									<div class="rating"> <em>My rating:</em>
 										<div class="stars">
 											<div data-rating="1" class="star star-full"></div>
@@ -414,8 +414,8 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
-									<h3><a target="_blank" href="#prodlink">#3: Editing — filled textarea, buttons shown, dropmenus expanded</a></h3>
+									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">#3: Editing — filled textarea, buttons shown, dropmenus expanded</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
 									<div class="rating"> <em>My rating:</em>
 										<div class="stars">
 											<div data-rating="1" class="star star-full"></div>
@@ -522,8 +522,8 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
-									<h3><a target="_blank" href="#prodlink">#4: Filled, expandable note</a></h3>
+									<div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">#4: Filled, expandable note</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
 									<div class="rating"> <em>My rating:</em>
 										<div class="stars">
 											<div data-rating="1" class="star star-full"></div>
@@ -634,8 +634,8 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Bath Tub <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
-									<h3><a target="_blank" href="#prodlink">Fisher-Price Precious Planet Whale of a Tub</a></h3>
+									<div class="prod-category"> Bath Tub <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">Fisher-Price Precious Planet Whale of a Tub</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
 									<div class="rating"> <em>My rating:</em>
 										<div class="stars">
 											<div data-rating="1" class="star star-full"></div>
@@ -717,7 +717,7 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Bath Tub <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
+									<div class="prod-category"> Bath Tub <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
 									<h3><a target="_blank" href="#prodlink">Fisher-Price Precious Planet Whale of a Tub</a></h3>
 									<fieldset>
 										<legend><span>Product Info</span></legend>
@@ -858,8 +858,8 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Shampoo or Body Wash <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
-									<h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a></h3>
+									<div class="prod-category"> Shampoo or Body Wash <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
 									<div class="rating"> <em>My rating:</em>
 										<div class="stars">
 											<div data-rating="1" class="star star-full"></div>
@@ -990,7 +990,7 @@
 								
 								<!-- product category, name, rating -->
 								<div class="prod-cat-name-rating">
-									<div class="prod-category"> Bath Life Ring <a class="bt-addanother" href="#"><strong>+</strong> <span>Add another</span></a> </div>
+									<div class="prod-category"> Bath Life Ring <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
 									<h3><a target="_blank" href="#prodlink">LifeSafer Inflatable Neck Ring</a></h3>
 									<div class="rating"> <em>My rating:</em>
 										<div class="stars">
@@ -1183,7 +1183,7 @@
 <!-- end body area --> 
 
 <!-- modal window box -->
-<div id="search-modal"> 
+<div id="search-modal" class="modal-win"> 
 	<!-- modal window header -->
 	<h2>Choose a <strong>Bath Seat</strong></h2>
 	<!-- modal window content -->

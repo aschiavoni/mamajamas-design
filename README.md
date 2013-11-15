@@ -298,3 +298,10 @@ Nov 11
 - DES-156: modal prompting users to follow friends. See: shared-list-followfriends.html
 - DES-169: adjustments to shared list layout. Tighter spacing, smaller fonts, bold "has" and "needs." 
 - In fluid-layout.css, removed old comments
+
+Nov 13
+- DES-167: Added new quiz question allowing user to get product suggestions or build list from scratch: quiz09.html
+- Changed quiz progress bar CSS to account for additional question
+
+Nov 15
+- DES-168: Added "Change" button that appears when product name in Edit List is hovered.

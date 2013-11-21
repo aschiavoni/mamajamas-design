@@ -348,6 +348,9 @@ img.float-r {
 .fixed {
 	position: fixed;
 }
+.address {
+	margin-left: 1.5em;
+}
 /* links ------ */
 a {
 	color: #337ba3;

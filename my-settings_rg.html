@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: My Settings</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body class="layout_2-7-3 form-page">
+<!-- header area ***** -->
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding">
+				<h1>Mamajamas</h1>
+			</div>
+			<nav id="mainnav">
+				<ul>
+					<li><a href="#">Edit List</a></li>
+					<li><a href="#">Friends’ Lists</a></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<li id="myaccount"> <a href="/profile"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
+						<!-- username removed --> 
+						<span class="ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+	<div id="title">
+		<div id="subhed">
+			<h2>My Settings</h2>
+		</div>
+	</div>
+	<div id="primary">
+		<div class="content">
+			<ul class="sidemenu">
+            	<li class="current"><a href="#">List</a></li>
+               <li><a href="#">Email</a></li>
+        	</ul>
+		</div>
+	</div>
+	<div id="secondary">
+		<div class="content">
+			<form id="frm-list-settings">
+				<h3>List Privacy</h3>
+				<p class="privacy-status">
+		<em class="privacy-status" style="display:none;">Current setting: <span class="icon-globe"></span> <strong>Anyone can see your list.</strong></em>
+		<em class="privacy-status" style="display:none;">Current setting: <span class="icon-bird"></span> <strong>Mamajamas users can see your list.</strong></em>
+		<em class="privacy-status" style="display:inline;">Current setting: <span class="icon-gift"></span> <strong>Registry: anyone can see only items you need.</strong></em>
+	  			</p>
+				<div id="listprivacy-select">
+					<p>Who would you like to see your list?</p>
+					<fieldset>
+					<ul>
+						<li>
+								<label>
+									<input type="radio" name="listprivacy-radio" value="radio" id="listprivacy-radio_0" checked>
+									Anyone</label> — Everyone who visits Mamajamas. 
+						</li>
+						<li>
+								<label>
+									<input type="radio" name="listprivacy-radio" value="radio" id="listprivacy-radio_1">
+									Mamajamas users</label> — Only logged-in Mamajamas users.
+						</li>
+						<li>
+								<label>
+									<input type="radio" name="listprivacy-radio" value="radio" id="listprivacy-radio_2">
+									Registry option</label> — Everyone can see only items you need.
+						</li>
+					</ul>
+					</fieldset>
+				</div>
+				<div class="button-row">
+					<button type="submit" class="button bt-color" id="bt-save">Update</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="tertiary">&nbsp;</div>
+	<div id="footer">
+		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
+			<ul class="nav-drop">
+				<li><a href="/">Mamajamas Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end body area --> 
+<!-- Google Analytics -->
+</body>
+</html>

@@ -265,5 +265,43 @@ Sept 3
 - DES-126: modified the slider arrow graphic (in images/quiz) and CSS (quiz.css) to include a hover state (along
   with the disabled and active states)
 - DES-125: CSS change (in quiz.css) to center text on the quiz questions
-- CSS changes (to style.css and fluid-layout.css) include layout adjustments to header (affecting placement and size of search box) and changes to
-  page background color and borders.
+- CSS changes (to style.css and fluid-layout.css) include layout adjustments to header (affecting placement and
+  size of search box) and changes to page background color and borders.
+
+...
+
+Oct 22
+- DES-152
+- DES-154
+- DES-155
+
+Oct 28
+- DES-152: build-list.html — Please see new "add item" at bottom of list. Pressing "add new" would make yellow
+  new item row appear directly beneath. Note "priority" selection menu, which defaults to "Consider."
+- DES-153: build-list_intro.html — Updated colors and overlay setup for build list intro. "Done" button should
+  close modal and hide tooltips. (Uses simplemodal framework)
+- DES-164: builst-list.html — Clicking "Choose" in the "Towel" row activates choose modal. Updated rating
+  graphics to use stars instead of eggs. Updated modal to use Simplemodal framework.
+
+Nov 6
+- DES-147: Added privacy settings status and collapsible panel to the Shared List Preview screen.
+  Icon and text should show current setting. When user clicks radio buttons to changes the setting, the change
+  should be reflected in the privacy setting status (icon and text) above. Settings saved when user clicks "Save"
+  Please see: shared-list-preview.html, shared-list-preview_mj.html, shared-list-preview_rg.html
+- DES-149: New "My Settings" page, accessible from the upper-right dropdown menu. Settings should work as described above. (Please note that the left-hand nav "Email" link follows Angie's mockup, but there is no setting for that page yet.) See: my-settings.html, my-settings_mj.html and my-settings_rg.html
+- DES-477: Item rating modal. On Build List, when user selects "have" from a "need/have" menu, a modal should appear asking if the user would like to rate the item. Please see: build-list-rate.html
+- CSS changes includes the above, as well code formatting changes and removal of references to the old 3-step progress bar.
+
+Nov 11
+- DES-112: modal for non-logged-in users clicking "follow" on shared list. See: shared-list-modal.html [click "Follow"]
+- DES-113: modal for non-logged-in users clicking "add" on shared list. See: shared-list-modal.html [click "Add"]
+- DES-156: modal prompting users to follow friends. See: shared-list-followfriends.html
+- DES-169: adjustments to shared list layout. Tighter spacing, smaller fonts, bold "has" and "needs." 
+- In fluid-layout.css, removed old comments
+
+Nov 13
+- DES-167: Added new quiz question allowing user to get product suggestions or build list from scratch: quiz09.html
+- Changed quiz progress bar CSS to account for additional question
+
+Nov 15
+- DES-168: Added "Change" button that appears when product name in Edit List is hovered.

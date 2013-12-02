@@ -305,3 +305,16 @@ Nov 13
 
 Nov 15
 - DES-168: Added "Change" button that appears when product name in Edit List is hovered.
+
+Nov 21
+- DES-181. Updated Terms of Service and Privacy pages (terms-of-service.html, privacy-policy.html)
+
+Dec 2
+- DES-166: Change to appearance of Invite/Invited button on Browse Lists page
+- DES-188: Changes to Browse Lists pages, formerly Find Friends (browse-lists_discover.html)
+- DES-189: New buttons for non-authorized app pages (browse-lists_discover_no-auth_fb.html,  
+   browse-lists_discover_no-auth_gmail.html)
+- DES-193: CSS fix for broken Home page footer (changed home.html to show collapsed footer)
+- DES-191: Non-logged-in view of Browse Lists (browse-lists_discover_nologin.html)
+- DEV-432: Changed scrolling behavior on Browse Lists (please note addition of JS)
+

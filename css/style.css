@@ -846,12 +846,31 @@ a.more-friends:focus {
 #module-follow ul a:hover {
 	color: #000;
 }
-/* my friends' lists (My Friends and Find Friends ------ */
+/* browse lists (Discover and Following) ------ */
+#p-browse #title {
+	display: none;
+}
+#p-browse #primary .content {
+	padding-top: 22px;
+}	
+#p-browse.layout_2-7-3 #secondary > .content {
+	padding-top: 0;
+}
+.friends-sort {
+	position: fixed;
+	top: 151px;
+	padding: 4px 0;
+	color: #777;
+	z-index: 1100;
+}
 ul.friends-list {
-	margin: 0;
-	padding: 0 10px 0 0;
+	margin: 31px 0 0 0;
+	padding: 20px 0 0;
 	list-style-type: none;
-	overflow: auto;
+	background: #fff;
+}
+.tabbody ul.friends-list {
+	margin: 0;
 }
 .friends-list li {
 	position: relative;
@@ -859,7 +878,7 @@ ul.friends-list {
 	width: 100%;
 	margin-bottom: 20px;
 	padding-top: 20px;
-	border-top: solid 1px #dedede;
+	border-top: solid 1px #d9d9d9;
 }
 .friends-list li:first-child {
 	padding-top: 0;
@@ -872,11 +891,18 @@ ul.friends-list {
 	cursor: pointer;
 	float: left;
 }
-.friends-list li p {
+.friends-list .friend-info {
+	float: left;
+	padding-top: 0;
+	color: #a6a6a6;
+}
+.friends-list .friend-info strong.mom  {
 	font-size: 16px;
 	font-weight: 600;
-	float: left;
-	padding-top: 28px;
+	color: #000;
+}
+.friends-list .friend-info strong {
+	color: #555;
 }
 .friends-list .bt-follow {
 	min-width: 98px; /* also see .bt-follow button styles, grouped with #bt-follow styles */
@@ -886,22 +912,11 @@ ul.friends-list {
 }
 .friends-list .check {
 	position: absolute;
-	top: 67px;
+	top: 87px;
 	left: 67px;
 }
-.friends-list::-webkit-scrollbar {
- -webkit-appearance: none;
-}
-.friends-list::-webkit-scrollbar:vertical {
-    width: 11px;
-}
-.friends-list::-webkit-scrollbar:horizontal {
-    height: 11px;
-}
-.friends-list::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 2px solid white; /* should match background, can't be transparent */
-    background-color: rgba(0, 0, 0, .3);
+.friends-list li:first-child .check {
+	top: 67px;
 }
 #findfriends .content {
 	padding: 0;
@@ -909,17 +924,20 @@ ul.friends-list {
 #findfriends .form-page {
 	padding: 20px 0 0;
 }
-.findfriends-lists li:first-child {
-	margin-top: 20px;
-}
-/* invite button color */
+/* invite buttons */
 .fb-invite,
-.gmail-invite,
 .google-invite {
 	border-color: #80A3BA;
 	background: #80A3BA;
 }
-/* Find friends menu and button images ------ */
+.bt-send .ss-icon {
+	margin-right: 5px;
+}
+/* Discover menu and button images ------ */
+#findfriends .menu {
+	background:url(../images/bg_fade-w.png) repeat-x 0 bottom;
+	padding: 47px 0 58px;
+}
 #findfriends .menu a {
 	padding-left: 45px;
 	background-image: url(../images/icons_find-friends.png);
@@ -954,20 +972,33 @@ ul.friends-list {
 #accessibletabsnavigation0-3.current a {
 	background-position: -378px -48px;
 }
-/* Find friends prompt ------ */
+/* Discover prompt ------ */
 #findfriends-prompt {
 	background: url(../images/icon_find-friends.png) no-repeat 0 3px;
 	background-size: 75px 55px;
-	padding: 0 40px 0 80px;
+	padding: 0 40px 0 85px;
 }
 #findfriends-prompt h3 {
 	margin-bottom: 0;
+}
+#findfriends-prompt .button {
+	padding-top: .75em;
+	padding-bottom: .75em;
 }
 /* following thumbnail styles ------ */
 .following img,
 .follow-moms li img:hover,
 .follow-moms lie img:focus {
 	border: solid 1px #5EB564;
+}
+/* fb and google authorization ------ */
+.bt-authfb {
+	background: #5F78AB;
+	border-color: #5F78AB;
+}
+.bt-authgoogle {
+	background: #4D90FE;
+	border-color: #4D90FE;
 }
 /* modal windows ------ */
 .modal-wrap {
@@ -1886,6 +1917,9 @@ a.tooltip:hover span {
 #my-list {
 	margin-bottom: 20px;
 }
+#my-list .prod-desc h3 {
+	max-width: 570px;
+}
 /* page colors ---- */
 #title {
 	background: #fff;
@@ -2740,13 +2774,11 @@ a.bt-gift:hover {
 	display: block;
 }
 /* override default button hover colors */
-#publist a#bt-follow:hover,
-.bt-follow:hover {
+#publist a#bt-follow:hover {
 	background: #111 !important;
 	border-color: #111 !important;
 }
-#publist .light a#bt-follow:hover,
-.light .bt-follow:hover {
+#publist .light a#bt-follow:hover {
 	background: #333 !important;
 	border-color: #333 !important;
 }
@@ -2763,29 +2795,22 @@ a.bt-gift:hover {
 	display: inline;
 	color: #ddd !important;
 }
-/* dim checkmark by default  */
+/* follow button checkmark */
 #bt-follow .ss-check,
 .bt-follow .ss-check,
 #bt-follow .ss-mail,
 .bt-follow .ss-mail {
-	opacity: 0.5;
-	filter: alpha(opacity=50);
+	opacity: .85;
+	filter: alpha(opacity=85);
 }
-/* in active state, grey button, darker text */
-#bt-follow.bt-active,
-.bt-follow.bt-active {
-	background: #A6A6A6;
-	border-color: #A6A6A6;
-	color: #e6e6e6;
+/* follow and invite buttons active state */
+#bt-follow.bt-active, /* shared list */
+.bt-follow.bt-active { /* browse lists */
+	background: #a6a6a6;
+	color: #FFF;
+	border: solid 1px #a6a6a6;
 }
-/* in active state, make checkmark brighter*/
-#bt-follow.bt-active .ss-check,
-.bt-follow.bt-active .ss-check,
-#bt-follow.bt-active .ss-mail,
-.bt-follow.bt-active .ss-mail {
-	opacity: 1.0;
-	filter: alpha(opacity=100);
-	color: #fff;
+#bt-follow.bt-active { /* shared list */
 }
 /* adjust position of "X" */
 #bt-follow .ss-delete,
@@ -3467,6 +3492,7 @@ p.privacy-status {
 	color: #999999;
 	font-size: 0.923em;
 	border-top: 1px solid #D9D9D9;
+	text-align: left;
 }
 .home #footer .content {
 	background: transparent;
@@ -3474,10 +3500,6 @@ p.privacy-status {
 .home #footer ul {
 	list-style-type: none;
 	margin: 0;
-}
-.home #footer ul li {
-	display: inline;
-	margin: 0 10px;
 }
 .home #footer a {
 	color: #8C8C8C;
@@ -3766,7 +3788,7 @@ a.bt-gift {
 	left: -999em;
 }
 .js .tabs .content {
-	border-top: 1px solid #CCCCCC;
+	/*border-top: 1px solid #CCCCCC;*/
 	clear: both;
 	margin-bottom: -1px;
 	padding: 2em 0 0;
@@ -3878,6 +3900,7 @@ ul.menu li {
 	padding: 0;
 }
 ul.menu {
+	background: #FFF;
 	margin-bottom: 20px;
 	padding-bottom: 21px;
 	border-bottom: solid 1px #ccc;

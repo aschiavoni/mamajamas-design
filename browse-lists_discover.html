@@ -1,0 +1,420 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Browse Lists</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- allow saving state of tabs -->
+<script src="js/jquery.cookie.js"></script>
+<!-- tabs -->
+<script src="js/jquery.tabs.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".tabs").accessibleTabs({
+            tabhead:'h2',
+            fx:"fadeIn",
+			 tabsListClass:'menu',
+			 autoAnchor:true,
+			 saveState:true
+        });
+    });
+</script>
+
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<!-- in-field labels -->
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- switching elements from scrolling to fixed -->
+<script src="js/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+
+        // keep header, primary nav and list nav fixed and scroll the rest of the page
+
+        $('#hed-wrap').scrollToFixed();
+
+		$('#primary').scrollToFixed({ 
+		 	marginTop: $('#hed-wrap').outerHeight(true) 
+		});
+
+		$('.menu').scrollToFixed({ 
+		 	marginTop: $('#hed-wrap').outerHeight(true) 
+		});
+    });
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body id="p-browse" class="layout_2-7-3">
+<!-- header area ***** -->
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding">
+				<h1>Mamajamas</h1>
+			</div>
+			<nav id="mainnav">
+				<ul>
+					<li><a href="#">Edit List</a></li>
+					<li class="active"><a href="#">Browse Lists</a></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<li id="myaccount"> <a href="/profile"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
+						<!-- username removed --> 
+						<span class="ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+  <div id="title">
+    <div id="subhed">
+      <h2>Browse Lists</h2>
+    </div>
+  </div>
+  <div id="primary">
+    <div class="content">
+    	<!-- left nav -->
+        <ul class="sidemenu">
+            <li class="current"><a href="browse-lists_discover.html" >Discover</a></li>
+            <li><a href="browse-lists_following.html">Following</a></li>
+			<li><a href="browse-lists_followers.html">Followers</a></li>
+        </ul>
+      	<!-- end left nav -->
+    </div>
+  </div>
+  <div id="secondary">
+    <div class="content"> 
+        <h2 class="visuallyhidden">Find Friends</h2>
+        <!-- tabs -->
+            <div id="findfriends" class="tabs">
+            <!-- tab: Mamajamas -->
+              <h2 id="mamajamasfriends">Mamajamas</h2>
+              <div class="tabbody">
+					<div class="friends-sort">Sort by:
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Poularity</a></li>
+								<li><a href="#">Name</a></li>
+								<li><a href="#">Last updated</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+                <!-- Friends list (Mamajamas) -->
+                <ul class="clearfix friends-list findfriends-lists">
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Martha Arbuckle"></a>  
+						<div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Martha Arbuckle</strong></a>  
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Kris Cooper"></a>  
+                      <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Kris Cooper</strong></a>  
+							<div class="friend-followers"><strong>17</strong> followers</div>
+							<div class="friend-age"><strong>37</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>2 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Qin Lee"></a>  
+                      <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Qin Lee</strong></a>
+							<div class="friend-followers"><strong>12</strong> followers</div>
+							<div class="friend-age"><strong>28</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>6 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+                </ul>
+              </div>
+              <!-- end tab: Mamajamas -->  
+            	<!-- tab: Facebook -->
+              <h2 id="facebookfriends">Facebook</h2>
+              <div class="tabbody">
+			  		<div class="friends-sort">Sort by:
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Poularity</a></li>
+								<li><a href="#">Name</a></li>
+								<li><a href="#">Last updated</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+                <!-- Friends list (Facebook) -->
+                <ul class="clearfix friends-list findfriends-lists">
+                    <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                        <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Martha Arbuckle</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow fb-invite" type="submit"><span class="ss-mail"></span>Invite</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                        <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Kris Cooper</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                       <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Bobbi Modele</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow fb-invite bt-active" type="submit"><span class="ss-mail"></span>Invited</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                        <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Remy Lawrence</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow fb-invite" type="submit"><span class="ss-mail"></span>Invite</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                       <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Lauren Mallard</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+ 					<li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                       <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Sarita Patel</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>    
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                       <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Winnie Sung</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>              
+                </ul>
+              </div>
+              <!-- end tab: Facebook -->      
+              <!-- begin tab: Gmail -->            
+              <h2 id="gmailfriends">Gmail</h2>
+              <div class="tabbody">
+			  		<div class="friends-sort">Sort by:
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Poularity</a></li>
+								<li><a href="#">Name</a></li>
+								<li><a href="#">Last updated</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+                <!-- Friends list (Gmail) -->
+                <ul class="clearfix friends-list findfriends-lists">
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                        <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Remy Lawrence</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow fb-invite" type="submit"><span class="ss-mail"></span>Invite</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                       <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Lauren Mallard</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+				  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                        <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Martha Arbuckle</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow fb-invite" type="submit"><span class="ss-mail"></span>Invite</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                        <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Kris Cooper</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt=""></a>  
+                       <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Bobbi Modele</strong></a>
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow fb-invite bt-active" type="submit"><span class="ss-mail"></span>Invited</button>
+                  </li>
+                </ul>
+          		</div>
+          <!-- end tab: Gmail --> 
+          <!-- begin tab: Invite a Friend -->            
+             <h2 id="invitefriend">Invite a Friend</h2>
+             <div class="tabbody form-page">
+              <form class="label-infield">
+                  <dl class="clearfix">
+                    <fieldset>
+                      <!-- row -->
+                      <dt>To<strong class="required">*</strong></dt>
+                      <dd class="half">
+                        <p>
+                          <label for="field-1">Friend’s email (required)</label>
+                          <br />
+                          <input name="field-1" type="text" id="field-1" value="">
+                        </p>
+                      </dd>
+                      <dd class="half">
+                      <p>
+                        <label for="field-2">Friend’s Name</label>
+                        <br />
+                        <input name="field-2" type="text" id="field-2" value="">
+                      </p>
+                    </dd>
+                      <!-- row -->
+                    <dt>From</dt>
+                    <dd>
+                      <p>
+                        <label for="field-2">Name</label>
+                        <br />
+                        <input name="field-2" type="text" id="field-2" value="">
+                      </p>
+                    </dd>
+                    </fieldset>
+                    <!-- row -->
+                    <fieldset>
+                    <dt>Subject</dt>
+                    <dd class="pad">
+                      <p>Rick has invited you to join Mamajamas</p>
+                    </dd>
+                    <!-- row -->
+                    <dt>Message</dt>
+                    <dd>
+                      <p>
+                        <label for="field-3">Personalized message</label>
+                        <br />
+                        <textarea rows="2" name="field-3" id="field-3"></textarea>
+                        </p>
+                      <p class="normal"><span class="instruction">Your message will include the following text:</span><br>
+                          Create your own baby gear list at Mamajamas:<br>
+                      <a href="http://www.mamajamas.com">http://www.mamajamas.com</a></p>
+                    </dd>
+                    </fieldset>
+                    </dl>
+                     <div class="button-row">
+                      <button type="submit" class="button bt-light" id="bt-cancel"><span class="ss-icon ss-delete"></span>Cancel</button>
+                      <button type="submit" class="button bt-color bt-send" id="bt-name"><span class="ss-icon ss-send"></span>Send</button>
+                    </div>
+              		</form>
+             	</div>
+             <!-- end tab: Invite a Friend -->            
+       		</div>
+       <!-- end tabs -->
+	   
+    </div>
+  </div>
+  <div id="tertiary">&nbsp;</div>
+  <div id="footer">
+		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
+			<ul class="nav-drop">
+				<li><a href="/">Mamajamas Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end body area --> 
+<!-- Google Analytics -->
+</body>
+</html>

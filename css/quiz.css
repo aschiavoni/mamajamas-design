@@ -3,8 +3,8 @@
 
 .vertical-offset { /* determines vertical positioning */
 	float: left;
-	height: 50%;
-	margin-bottom: -270px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
+	height: 270px;
+    margin-bottom: -220px;
 }
 .quiz-box {
 	font-family: 'Open Sans', sans-serif;
@@ -63,10 +63,17 @@
 	float: right;
 	margin-top: .4em;
 }
-.quiz-box input[type=email], .quiz-box input[type=text], .quiz-box input[type=password], .quiz-box label {
-	font-size: 1.33em; /* equiv to 16px, based on 12px base for modal window */
+.quiz-box input[type=email], .quiz-box input[type=text], .quiz-box input[type=password] {
+	/*font-size: 1.33em;  equiv to 16px, based on 12px base for modal window 
 	width: 57%;
-	text-align: left;
+	text-align: left;*/
+}
+.quiz-box .label-infield input[type=text] {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+}
+.quiz-box input[type=checkbox] {
+	vertical-align: middle;
 }
 .quiz-box .status-msg {
 	width: 37%;
@@ -164,7 +171,7 @@ div.choicedrop {
 	padding:0;
 	border:solid 1px #D9D9D9;
 	background:#FFF;
-	box-shadow:0 1px 2px rgba(0,0,0,0.2);
+	box-shadow:0 1px 2px rgba(0,0,0,0.4);
 	position:absolute;
 	top:-1px;
 	left:-1px;
@@ -175,7 +182,7 @@ div.choicedrop {
 .choicedrop ul li,
 .choicedrop ol li {
 	margin:0;
-	padding:0.17em 0 0.17em 20px;
+	padding:0.17em 0 0.25em 20px;
 	text-indent:-20px;
 	line-height:1;
 }
@@ -313,7 +320,8 @@ div.checked { /* checkbox overlay for selected item */
 .quiz-box .label-infield input[type=text], 
 .quiz-box .label-infield input[type=password] {
 	font-size: 1em;
-	padding: .12em .5em;
+	/*padding: .12em .5em;*/
+	padding: 0 .5em;
 	border: solid 1px #d9d9d9;
 	border-radius: 0;
 	-moz-border-radius: 0;
@@ -438,8 +446,18 @@ span.ss-navigateright {
 }
 
 #quiz02 .content {
-	text-align:center;
-	padding:85px 70px 10px;
+	font-size: 2.3em;
+	text-align: left;
+	padding: 45px 70px 10px;
+}
+#quiz02 fieldset p {
+	margin: 0;
+}
+#quiz02 input[type=text] {
+	width: 200px;
+}
+.quiz-box form.label-infield #q02-02 label {
+	color: #000;
 }
 
 #quiz04 .content {
@@ -461,9 +479,6 @@ span.ss-navigateright {
 #quiz08 .label-infield input[type=text] {
 	width:360px;
 	text-align:center;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:300;
-	padding:0;
 }
 	.oldie #quiz08 .label-infield input[type=text] {
 		padding-top: .12em;

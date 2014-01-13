@@ -3641,7 +3641,7 @@ a#take-quiz:hover {
 .home #branding {
 	position: relative;
 }
-.home .beta {
+.beta {
 	font-size: 11px;
 	font-weight: bold;
 	color: #B76EB8;
@@ -3649,13 +3649,13 @@ a#take-quiz:hover {
     position: absolute;
     top: 23px;
 }
-.home a.beta:hover {
+a.beta:hover {
 	text-decoration: none;
 }
-.home .beta.tooltip-r {
+.beta.tooltip-r {
 	z-index: 500;
 }
-.home .beta.tooltip-r span {
+.beta.tooltip-r span {
 	width: 100px;
 	right: -126px;
 	font-weight: normal;

@@ -3469,7 +3469,7 @@ p.privacy-status {
 	height: 580px;
 	background: #fbf5dd url(../images/nest-y960.jpg) no-repeat 50% 0;
 }
-.home h2 {
+.home #primary .content h2 {
 	color: #58345B;
 	font-size: 3.3846em;
 	font-weight: 400;

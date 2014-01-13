@@ -6,7 +6,6 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +21,27 @@
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
 <!-- jquery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<!-- gallery -->
-<script src="js/jquery.simplemodal.min.js"></script>
-<script src="js/gallery.js"></script>
+<script>
+	/** scroll to element function (thanks to Danny Connell) **/
+	function scrollToElement(selector, time, verticalOffset) {
+		time = typeof(time) != 'undefined' ? time : 500;
+		verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+		element = $(selector);
+		offset = element.offset();
+		offsetTop = offset.top + verticalOffset;
+		$('html, body').animate({
+			scrollTop: offsetTop
+		}, time);			
+	}
+	
+	$(document).ready(function() {
+			$('#learn-more').click(function (e) {
+				e.preventDefault();
+				scrollToElement('#secondary');
+			});		
+	});
+	
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -35,61 +52,78 @@
 <body class="home">
 <!-- header area ***** -->
 <div id="hed-wrap">
-  <div class="gridContainer clearfix">
-    <div id="header">
-      <div id="branding">
-        <h1>Mamajamas</h1>
-      </div>
-      <div id="search">
-        <input type="text" placeholder="Search">
-      </div>
-      <div id="login">
-        <ul>
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding">
+				<h1>Mamajamas</h1>
+				<a href="#" class="beta tooltip-r">beta <span>&#8220;beta&#8221; means we&#8217;re still working out some of the kinks.<em></em></span></a> </div>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<li><a href="#">Sign Up</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- end header area --> 
 <!-- body area ***** -->
 <div class="gridContainer clearfix">
-  <div id="primary">
-    <div class="content">
-    <h2>Need help setting up your nursery?</h2>
-    <h3><a href="#"><strong>Take the quiz</strong> and get started!</a></h3>
-    </div>
-  </div>
-  <div id="secondary">
-    <div class="content">
-    <!-- notifications here ***** -->
-      
-      <p>With so much on your mind right now, who has time to figure out exactly what you will need for the new baby? Mamajamas offers a super-easy way for you to build a personalized, prioritized list of baby gear. 
-      </p>
-      <p>No more spreadsheets or sifting through epic emails from mom friends! Let us help you figure out exactly what items you need, then customize your list with help from other moms you trust.
-      </p>    
-	<ul class="screenshots gallery">
-      	<li><a href="images/home-screenshot1_quiz.jpg"><img src="images/home-screenshot1_quiz_s.jpg" alt="Mamajamas preview: Quiz" title="Mamajamas preview: Quiz" /></a></li>
-        <li><a href="images/home-screenshot2_build-list.jpg"><img src="images/home-screenshot2_build-list_s.jpg" alt="Mamajamas preview: Baby gear list" title="Mamajamas preview: Baby gear list" /></a></li>
-        <li><a href="images/home-screenshot3_shared-list.jpg"><img src="images/home-screenshot3_shared-list_s.jpg" alt="Mamajamas preview: Public shared list" title="Mamajamas preview: Public shared list" /></a></li>
-      </ul>
+	<div id="feature"> <a class="sq-button" href="#" id="learn-more"><span class="ss-icon ss-navigatedown"></span>Learn more</a> </div>
+	<div id="primary">
+		<div class="content">
+			<h2>Need help setting up your nursery?</h2>
+			<p>Mamajamas gives you a personalized list of baby gear to customize and share with other parents.</p>
+			<ul>
+				<li><a href="#">Browse Baby Gear Lists</a></li>
+				<li><a href="#">Get Started Building My List</a></li>
+			</ul>
+		</div>
 	</div>
-  </div>
-  <div id="tertiary">
-    <div class="content">
-      <ul>
-        <li>Get a personalized list of baby gear</li>
-        <li>Customize your list</li>
-        <li>Share it with friends (if you want) </li>
-      </ul>
-    </div>
-  </div>
-  <div id="footer">
+	<div id="secondary">
+		<div class="content"> <img src="images/about-mamajamas.jpg" alt="" width="196" height="294" class="float-l" />
+			<p>The idea for Mamajamas was born out of my own experience as an expecting mom three years ago.</p>
+			<p>I was overwhelmed by the process of figuring out what to get in  preparation. I spent hours researching products online and emailed mom  friends asking for advice.  They sent me long spreadsheets and emails.  After sifting through everything, I had to then create my own &ldquo;master&rdquo;  spreadsheet to keep myself organized.</p>
+			<p>I starting thinking there must be an easier way to get and organize  this kind of information. I wanted to get recommendations from my  friends without having to sift through their spreadsheets or post very  public comments on Facebook.</p>
+			<p>Meanwhile, I learned that many of my new mom friends were having the  same experience. I also learned that the long process of figuring out  what to get doesn&rsquo;t end when the baby is born. At each new phase of  their development you need new things. You also buy things you wish you  hadn&rsquo;t.</p>
+			<p>The goal of Mamajamas is to help new and expecting parents buy only  stuff they need — to help them spend less time thinking about  stuff and more time enjoying pregnancy and new parenthood.</p>
+			<p>I hope Mamajamas is helpful to you during this exciting time!</p>
+			<p class="ltr-closing"><img src="images/angie-schiavoni_sig.png" alt="" width="168" height="64" /><br>
+				Angie Schiavoni<br>
+				Founder</p>
+		</div>
+	</div>
+	<div id="tertiary">
+		<div class="content">
+			<ul class="clearfix">
+				<li><a href="#browselists">
+					<h4>Browse baby gear lists</h4>
+					<p>Get ideas from other parents&#8217; lists.<br>
+						Add products from their lists back to yours.</p>
+					</a> </li>
+				<li> <a href="#quiz">
+					<h4>Get a personalized list of baby gear</h4>
+					<p>Browse other parents&#8217; lists.<br>
+						Track your purchases.<br>
+						Rate the products you try.</p>
+					</a> </li>
+				<li class="last"> <a href="#quiz">
+					<h4>Customize your baby gear list</h4>
+					<p>Track your purchases.<br>
+						Rate the products you use.<br>
+						Share your list with others.</p>
+					</a> </li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
 		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
 			<ul class="nav-drop">
 				<li><a href="/">Mamajamas Home</a></li>
-				<li><a href="/about">About Us</a></li>
+				<li class="hidden"><a href="/about">About</a></li>
 				<li><a href="/blog">Blog</a></li>
 				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
 				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>

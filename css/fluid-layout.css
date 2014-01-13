@@ -247,28 +247,39 @@ img, object, embed, video {
 
 
 /* layout for home page */
+.home > .gridContainer {
+	width: 100%;
+	min-width: 960px;
+}
 .home #primary {
-	float:none;
-	height:315px;
-	width:100%;
-	position:relative;
+	float: none;
+	width: 100%;
+	position: absolute;
+	top: 0;
 }
 .home #primary > .content {
-	padding:0 0 0 9.375%;
+	width: 33.33%;
+	margin-left: 62.494%;
+	padding: 20px 2.0833%;
+}
+.home #learn-more {
+	position: absolute;
+	bottom: 10px;
+	z-index: 300;
 }
 .home #secondary {
-	width: 57.29%;
-	position:relative;
+	width: 100%;
 }
 .home #secondary > .content {
 	min-height:0;
-	padding:75px 0 65px 16.36%;
+	padding: 50px 9.375% 40px;
 }
 .home #tertiary {
-	width: 40.625%;
+	width: 100%;
+	position:relative;
 }
 .home #tertiary > .content {
-	padding:75px 23.08% 65px 2.56%;
+	padding: 0;
 }
 .home #footer {
 	position: static;
@@ -282,7 +293,6 @@ img, object, embed, video {
 .home #footer .content {
 	position: static;
 	padding: 8px 1.05%;
-	width: auto;
 }
 
 /* list intro modal position */
@@ -300,6 +310,9 @@ img, object, embed, video {
 	max-width: 1232px;
 	margin: auto;
 	}
+.home > .gridContainer {
+	width: 100%;
+}
 
 }
 
@@ -311,3 +324,17 @@ img, object, embed, video {
 }
 
 }
+
+/* position Learn More */
+@media only screen and (max-height: 630px) {
+	.home #learn-more {
+		bottom: 50px;
+	}
+}
+@media only screen and (max-height: 600px) {
+	.home #learn-more {
+		bottom: 65px;
+	}
+}
+
+

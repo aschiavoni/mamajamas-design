@@ -318,3 +318,11 @@ Dec 2
 - DES-191: Non-logged-in view of Browse Lists (browse-lists_discover_nologin.html)
 - DEV-432: Changed scrolling behavior on Browse Lists (please note addition of JS)
 
+Jan 11
+- corrected quiz.css for new quiz question
+
+Jan 13
+- DES-178: New home page (home.html, with new images and changes to fluid-layout.css and style.css).
+- DES-182: Color change for Build List Review/comment link.
+- DES-204: Shading on Build List priority headers
+- In Home page footer mennu, "About" link is now hidden

@@ -42,6 +42,7 @@ img, object, embed, video {
 	margin-left: 0;
 	width: 16.667%;
 	display: block;
+	position: relative;
 }
 #mainnav {
 	clear: none;
@@ -272,7 +273,7 @@ img, object, embed, video {
 }
 .home #secondary > .content {
 	min-height:0;
-	padding: 50px 9.375% 40px;
+	padding: 40px 9.375% 10px;
 }
 .home #tertiary {
 	width: 100%;

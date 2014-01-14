@@ -326,3 +326,8 @@ Jan 13
 - DES-182: Color change for Build List Review/comment link.
 - DES-204: Shading on Build List priority headers
 - In Home page footer mennu, "About" link is now hidden
+
+Jan 14
+- DES-176: Home page: text changes (in #secondary and #tertiary), alignment changes to three boxes content
+- DEV-553: Quiz formatting fix for 1st question margins (adjustment to quiz.css)
+- Included Ryan's fixes for beta on interior pages and modal headers on Home page

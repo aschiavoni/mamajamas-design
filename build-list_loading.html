@@ -1,0 +1,212 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Mamajamas</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- collapsible panels -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		defaultOpen: 'priority-high-hed,priority-med-hed',
+		bind: 'click',
+		speed:200
+    });
+  });
+</script>
+<!-- expanding text (applied to elements with ".expandable." used for product notes.) -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options-editlist.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- switching elements from scrolling to fixed -->
+<script src="js/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+
+        // Dock the header to the top of the window when scrolled past the banner.
+
+        $('#title').scrollToFixed();
+
+  		 $('#primary').scrollToFixed({ 
+		 	marginTop: $('#title').outerHeight(true)
+		});
+        
+    });
+</script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+  jQuery(function ($) {
+	  // Load dialog on click
+	  $('.find-item').click(function (e) {
+		  $('#search-modal').modal({
+			  position: ["15%",null],
+			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+			  overlayClose: true
+			  });
+		  return false;
+	  });
+  });
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding"> <a href="/list">
+				<h1>Mamajamas</h1>
+				</a> </div>
+			<nav id="mainnav">
+				<ul>
+					<li class="active"><a href="#">Edit List</a></li>
+					<li><a href="#">Friends’ Lists</a></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<li id="myaccount"> <a href="/profile"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
+						<!-- username removed --> 
+						<span class="ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- progress bar removed --> 
+		</div>
+	</div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix" id="buildlist">
+	<div id="title">
+		<div id="subhed">
+			<h2>Your baby gear list</h2>
+		</div>
+		<div id="title-links">
+			<ul>
+				<li> <a id="bt-share" class="button bt-color" href="/profile">Save</a></li>
+				<li> <a id="bt-view" class="button disabled" href="#">View</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="primary">
+		<div class="content">
+			<nav id="categories">
+				<h3>Categories</h3>
+				<ul>
+					<li class=""> <a href="/list/all">All</a> </li>
+					<li class="cat-selected"> <a href="/list/bathing">Bathing</a> </li>
+					<li class=""> <a href="/list/changing">Changing</a> </li>
+					<li class=""> <a href="/list/clothing">Clothing</a> </li>
+					<li class=""> <a href="/list/decorating">Decorating</a> </li>
+					<li class=""> <a href="/list/expecting">Expecting</a> </li>
+					<li class=""> <a href="/list/feeding">Feeding</a> </li>
+					<li class=""> <a href="/list/getting-around">Getting Around</a> </li>
+					<li class=""> <a href="/list/nursing">Nursing</a> </li>
+					<li class=""> <a href="/list/playing">Playing</a> </li>
+					<li class=""> <a href="/list/reading">Reading</a> </li>
+					<li class=""> <a href="/list/sleeping">Sleeping</a> </li>
+					<li class=""> <a href="/list/staying-healthy">Staying Healthy</a> </li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="secondary">
+		<div class="content"> 
+			<!-- notification ***** -->
+			<div id="notifications"> </div>
+			<div id="my-list" class="center">
+			<h1>Please wait while we create your list.</h1>
+			<p>
+			<img alt="Loader" src="images/loader36-f.gif" />
+			</p>
+			</div>
+		</div>
+	</div>
+	<div id="tertiary">
+		<div class="content"> </div>
+	</div>
+	<div id="footer">
+		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
+			<ul class="nav-drop">
+				<li><a href="/">Mamajamas Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<!-- end body area --> 
+
+<!-- modal window ************ -->
+<!-- /end modal window ************ -->
+<!-- loader graphic -->
+<div id="loader-wrap" class="modal-wrap" style="display:none;">
+  <div class="modal-overlay"> &nbsp; </div>
+  <div class="vertical-offset"></div>
+  <div id="loader">
+    <img alt="Please wait..." src="//mamajamas-staging.s3.amazonaws.com/assets/loader-340306f69474b5a77d9ea3d735cf3ef2.gif" />
+  </div>
+</div>
+<!-- /end loader ************ -->
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-2.newrelic.com","9a51e6774b","2060631","cwtYRUcKWFsGS0kID0MQRR5GDVtA",8,30,new Date().getTime(),"","","","",""]);</script></body>
+</html>

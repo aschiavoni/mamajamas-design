@@ -2318,20 +2318,18 @@ a.bt-addanother:hover span {
 	margin-left: 0;
 }
 #buildlist .prod-when-own {
-	float: right;
+	position: absolute;
 	width: 29.333%; /* 220/750 */
 	line-height: 1.6154em;
-	margin-top: -1.5em; /* move up to align with top */
+	top: 1.1em;
+	right: 15px;
 }
-#buildlist .prod-filled .prod-when-own {
-	margin-top: -4.91em; /* move up to align with top */
+.cat-select {
+	margin-top: .25em;
 }
-#buildlist .edit-mode .prod-when-own {
-	position: relative;
-	top: -4.5em; /* move up to align with top */
-}
-#buildlist .new-mode .prod-when-own {
-	margin-top: -2em; /* move up to align with top */
+.cat-select label {
+	font-weight: 400;
+	color: #777;
 }
 .when,
 .own,
@@ -2340,7 +2338,7 @@ a.bt-addanother:hover span {
 	padding-right: 20px;
 }
 .own {
-	margin-top: -1px;
+	/*margin-top: -1px;*/
 }
 .prod-links {
 	margin: 7px 0;
@@ -2558,10 +2556,10 @@ form.label-infield .prod-note .ss-chat {
 }
 /* gear list dropdown menus */
 #my-list .choicedrop {
-	border-color: #fff;
+	border-color: #d9d9d9;
 }
 #my-list .choicedrop:hover {
-	border-color: #d9d9d9;
+	border-color: #c3c3c3;
 }
 #my-list .choicedrop a {
 	line-height: 1.1em;
@@ -2575,7 +2573,7 @@ form.label-infield .prod-note .ss-chat {
 #my-list .choicedrop a:hover,
 #my-list .choicedrop a:hover .ss-dropdown {
 	color: #000;
-	background: #f5f5f5;
+	background: #ffffff;
 }
 #my-list .choicedrop ol,
 #my-list .choicedrop ul {
@@ -2603,6 +2601,9 @@ form.label-infield .prod-note .ss-chat {
 }
 .new-mode .prod-thumb {
 	border-color: #f3f3f3;
+}
+.new-mode input[type=text] {
+	margin-bottom: .25em;
 }
 /* edit mode hidden elements */
 .edit-mode h3,
@@ -2644,7 +2645,12 @@ form.label-infield .edit-mode .prod-note label {
 }
 #my-list .edit-mode .choicedrop,
 #my-list .new-mode .choicedrop {
-	border-color: #f3f3f3;
+	border-color: #d3d3d3;
+}
+#my-list .edit-mode .choicedrop.error,
+#my-list .new-mode .choicedrop.error {
+	border-color: #ea7526;
+	background: #FFF;
 }
 #my-list .edit-mode .choicedrop > a:hover,
 #my-list .edit-mode .choicedrop > a:hover .ss-dropdown,

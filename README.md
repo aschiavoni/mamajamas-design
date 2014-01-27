@@ -331,3 +331,9 @@ Jan 14
 - DES-176: Home page: text changes (in #secondary and #tertiary), alignment changes to three boxes content
 - DEV-553: Quiz formatting fix for 1st question margins (adjustment to quiz.css)
 - Included Ryan's fixes for beta on interior pages and modal headers on Home page
+
+Jan 24
+- DES-111: category dropdown menu for "Add New Item" in "All" category:
+- collapsed menu: https://github.com/aschiavoni/mamajamas-design/blob/master/build-list_all.html
+- expanded menu: https://github.com/aschiavoni/mamajamas-design/blob/master/build-list_all-open.html
+- with error message: https://github.com/aschiavoni/mamajamas-design/blob/master/build-list_all-error.html

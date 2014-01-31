@@ -1323,12 +1323,38 @@ ul.friends-list {
 #private-modal .collapsible.ss-dropdown em {
 	display: none;
 }
+#needhave-modal.simplemodal-data,
 #rate-modal.simplemodal-data {
 	width: 380px;
 }
+#needhave-modal.simplemodal-data h2 {
+	text-transform: none;
+	letter-spacing: 0;
+}
+#needhave-modal .content {
+	font-size: 1.33em;
+	padding: 20px 20px 10px;
+}
+#needhave-modal.simplemodal-data .button-row {
+	margin-top: 5px;
+}
+#needhave-modal .content .button-row .button {
+	font-size: 0.8125em;
+}
+#needhave-modal .own {
+    text-align: center;
+	margin-bottom: 15px;
+	padding-right: 0;
+}
+#needhave-modal .rating,
 #rate-modal .rating {
 	text-align: center;
 }
+#needhave-modal .rating em,
+#rate-modal .rating em {
+	color: #777;
+}
+#needhave-modal .star,
 #rate-modal .star {
 	width: 24px;
 	height: 28px;
@@ -1338,11 +1364,43 @@ ul.friends-list {
 	background-size: 24px 90px;
 	cursor: pointer;
 }
+#needhave-modal .star-half,
 #rate-modal .star-half {
 	background-position: 0 -32px;
 }
+#needhave-modal .star-full,
 #rate-modal .star-full {
 	background-position: 0 -64px;
+}
+#needhave-modal .prod-note {
+	font-size: 0.8125em;
+	margin: 20px 49px 5px;
+}
+#needhave-modal .prod-note label {
+	font-size: 1em; 
+	width: auto;
+	text-align: left;
+}
+#needhave-modal .prod-note textarea {
+    height: 5.5em;
+}
+#needhave-modal .prod-links ul {
+	text-align: center;
+}
+#needhave-modal .content form p.instruction,
+#rate-modal .content form p.instruction {
+	font-size: .75em;
+	color: #939393;
+	margin: 25px 0 15px;
+}
+#needhave-modal span.arrow {
+	position: absolute;
+	top: 40px;
+	left: -13px;
+	width: 14px;
+	height: 26px;
+	background: url(../images/pop-arrow.png) no-repeat 0 0;
+	background-size: 14px 26px;
 }
 /* alert modals */
 .m-alert {
@@ -2193,10 +2251,6 @@ h4.collapsible:hover,
 h4.collapsible:focus {
 	background-color: #f5f5f5;
 }
-#priority-low-hed.ss-directright,
-div.priority-low {
-/*margin-bottom:10px;*/
-}
 .priority-low .prod {
 	border-bottom: solid 1px #d9d9d9;
 }
@@ -2317,7 +2371,6 @@ a.bt-addanother:hover span {
 .prod-desc h3 a.bt-change:hover {
 	color: #FFF;
 }
-
 .find-item,
 .new-item,
 .prod-links .button,
@@ -2365,9 +2418,6 @@ a.bt-addanother:hover span {
 .priorityset {
 	color: #777;
 	padding-right: 20px;
-}
-.own {
-	/*margin-top: -1px;*/
 }
 .prod-links {
 	margin: 7px 0;
@@ -2745,6 +2795,23 @@ form.label-infield .edit-mode .prod-note label {
 	color: #888;
 	margin-right: 3px;
 }
+/* add item */
+#add-new {
+	margin-bottom: 240px;
+}
+@-webkit-keyframes yellow-fade {   
+   0% {background: #fff6d2;}
+   100% {background: #FFF;}
+}
+@keyframes yellow-fade {
+   0% {background: #fff6d2;}
+   100% {background: #FFF;}
+}
+.highlight {
+   -webkit-animation: yellow-fade 3s ease-in 1;   
+   animation: yellow-fade 3s ease-in 1;
+}
+
 /* published list ------ */
 
 /* page colors ---- */
@@ -3725,6 +3792,9 @@ input[type=text]#field-search {
 }
 .prod-detail-pop span.arrow {
 	background-image: url(../images/pop-arrow-r@2x.png); /* product carousel detail arrow */
+}
+#needhave-modal span.arrow {
+	background-image: url(../images/pop-arrow@2x.png); /* need/have modal arrow */
 }
 .preview-msg .col1 {
 	background-image: url(../images/arrow-dwn-sketch@2x.png);

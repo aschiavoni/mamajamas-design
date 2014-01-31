@@ -62,8 +62,18 @@
 			</div>
 			<div id="login">
 				<ul>
-					<li><a href="#" class="button">Login</a></li>
-					<li><a href="#" class="button">Sign Up</a></li>
+					<!-- <li><a href="#" class="button">Login</a></li>
+					<li><a href="#" class="button">Sign Up</a></li> -->
+					<li id="myaccount"><a href="/profile" class="nav-drop-link"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
+						<span class="ss-icon ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
 					<li id="sitelinks"> 
 					<a href="#" class="nav-drop-link"><span class="ss-icon ss-rows"></span><em>Mamajamas Menu</em></a>
 						<ul class="nav-drop">

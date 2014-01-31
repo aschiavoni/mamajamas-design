@@ -49,14 +49,14 @@ strong {
 }
 /* mainnav */
 #mainnav li {
-	font-size: 14px;
-	font-weight: 600;
+	font-size: 16px;
+	font-weight: 400;
 	line-height: 16px;
 	float: left;
 }
 #mainnav a {
 	display: block;
-	padding: 36px 10px 12px;
+	padding: 31px 10px 16px;
 }
 #mainnav .active a,
 #mainnav a:hover {
@@ -75,7 +75,7 @@ strong {
 	background: url(../images/icon_search.png) no-repeat 5px 50%;
 	background-size: 18px 18px;
 	position: absolute;
-	right: -115px;
+	right: 10px;
 }
 #search input[type=text]:focus {
 	color: #333;
@@ -90,14 +90,15 @@ strong {
 #login > ul {
 	text-align: right;
 	font-size: .923em;
-	margin-top: 28px;
+	margin-top: 23px;
+	margin-right: 13px;
 }
 #login > ul > li {
-	display: inline;
-	margin: 0 10px 0 0;
+	float: right;
+	margin: 0 0 0 10px;
 }
 #login a {
-	color: #ea7526;
+	color: #6BB36E;
 	text-decoration: none;
 }
 #login a:hover,
@@ -105,40 +106,44 @@ strong {
 #login a:active {
 	color: #000;
 }
+#login .button {
+	background: #FFF;
+	border-color: #97CA99;
+    padding: 3px 6px;
+}
+#login a.button:hover {
+	color: #fff;
+	/*background: #F5F5F5 !important;
+	border-color: #d9d9d9 !important;*/
+}
 /* "start your list" button */
 #login #startlist {
 	position: absolute;
-	top: 23px;
 	left: 181px;
 }
 #login #startlist a {
 	color: #fff;
 }
-/* my account link */
-#login li#myaccount {
+/* my account, sitelinks */
+#myaccount,
+#sitelinks {
 	display: block;
 	position: relative;
 	padding-bottom: 2px; /* keeps dropdown open when jumping the gap */
 	text-align: right;
-	top: -3px;
 }
 #myaccount img { /* small profile photo */
 	width: 24px;
 	height: auto;
-	margin-right: 1px;
 }
 #myaccount .ss-dropdown { /* style the down arrow */
 	font-size: .846em;
-	color: #777;
-	margin-left: 4px;
+	margin-left: 2px;
 }
-#myaccount:hover a { /* hover state (even when over dropdown menu) */
-	color: #000;
-	background: #fff;
-}
-#myaccount:hover .nav-drop { /* move dropdown into view */
+#myaccount:hover .nav-drop,
+#sitelinks:hover .nav-drop { /* move dropdown into view */
 	left: auto;
-	right: -1px;
+	right: -3px;
 }
 /* drop down menus */
 .nav-drop-trigger {
@@ -146,11 +151,14 @@ strong {
 	cursor: pointer;
 }
 a.nav-drop-link {
-	font-size: 18px;
-	color: #a6a6a6;
+	display: block;
+}
+.nav-drop-link .ss-icon {
+	color: #A6A6A6;    
 }
 .nav-drop-trigger:hover a.nav-drop-link,
-a.nav-drop-link:hover {
+a.nav-drop-link:hover,
+a.nav-drop-link:hover span {
 	text-decoration: none;
 	color: #000;
 }
@@ -211,7 +219,12 @@ ul.nav-drop {
 	border-right-color: #aaa;
 	border-bottom-color: #999;
 }
-/* specific to my account dropdown */
+/* specific to my account / sitelinks dropdowns */
+#myaccount:hover a,
+#myaccount:hover .nav-drop-link > .ss-icon { /* hover state (even when over dropdown menu) */
+	color: #000;
+	background: #fff;
+}
 #myaccount .nav-drop li:first-child + li a,
 #myaccount .nav-drop li:first-child + li span {
 	border-color: #ddd; /* darker border under first link */
@@ -235,6 +248,24 @@ ul.nav-drop {
 #login .nav-drop a:focus,
 #login .nav-drop a:active {  /*link hover colors */
 	background: #f5f5f5;
+}
+#login li#sitelinks {
+	margin-right: 2px;
+}
+li#myaccount + li#sitelinks {
+	margin-right: 5px;
+}
+#sitelinks .nav-drop a {
+	color: #333;  /* overrides link color of parent menu */
+}
+#sitelinks .nav-drop-link > .ss-icon {
+	font-size: 22px;
+    line-height: 1.045em;
+	position: relative;
+    top: 4px;
+}
+#sitelinks:hover .nav-drop-link > .ss-icon {
+	color: #000;
 }
 /* sub-headers ------ */
 #title p.prehed {
@@ -447,10 +478,10 @@ form.label-infield fieldset p {
 }
 form.label-infield label {
 	color: #AAA;
-	font-weight: 300;
+	/*font-weight: 300;*/
 }
 form.label-infield label strong {
-	font-weight: 300;
+	/*font-weight: 300;*/
 	color: #222;
 }
 form.label-infield p label {
@@ -553,7 +584,8 @@ a.button:active,
 input[type=text] + .button {
 	margin-top: -.27em;
 }
-.bt-color {
+.bt-color,
+#login .bt-color {
 	border-color: #5daf5d;
 	background: #6BB36E;
 }
@@ -2291,9 +2323,6 @@ a.bt-addanother:hover span {
 .prod-links .button,
 .prod-links button {
 	min-width: 64px;
-}
-.prod-desc {
-/* margin-left: 100px;  causes misalignment on left */
 }
 .prod-desc h3 {
 	font-size: 1.1539em;

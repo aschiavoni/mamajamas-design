@@ -2194,19 +2194,16 @@ a[title="Pinterest"]:hover {
 	border-bottom: solid 1px #D9D9D9;
 }
 .listhed {
-	width: 66.75%;
 	float: left;
 }
 .listhed h3 {
 	font-size: 1.0769em;
 	font-weight: 400;
-	color: #a6a6a6;
 	margin: 0;
 	padding: 9px 10px 7px;
-	color: #333;
 }
 .listsort {
-	width: 31.25%;
+	width: 31%;
 	margin-left: 2%;
 	padding: 8px 0 4px;
 	float: right;
@@ -2657,6 +2654,7 @@ form.label-infield .prod-note .ss-chat {
 #my-list .choicedrop ol,
 #my-list .choicedrop ul {
 	z-index: 900;
+	top: -2px;
 }
 #my-list .choicedrop ul li,
 #my-list .choicedrop ol li {
@@ -2666,7 +2664,7 @@ form.label-infield .prod-note .ss-chat {
 	text-indent: 0;
 }
 #my-list .choicedrop li a {
-	padding: 1px 2px 2px 4px;
+	padding: 2px 2px 3px 4px;
 }
 #my-list .choicedrop li a:hover {
 	color: #000;

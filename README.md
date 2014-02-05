@@ -337,3 +337,15 @@ Jan 24
 - collapsed menu: https://github.com/aschiavoni/mamajamas-design/blob/master/build-list_all.html
 - expanded menu: https://github.com/aschiavoni/mamajamas-design/blob/master/build-list_all-open.html
 - with error message: https://github.com/aschiavoni/mamajamas-design/blob/master/build-list_all-error.html
+
+Jan 31
+- DES-206: product details modal window. Example: http://www.soybox.com/mamajamas/build-list_need-have_modal.html
+- DES-215: move footer links to menu in head. Examples: http://soybox.com/mamajamas/build-list.html, http://soybox.com/mamajamas/build-list-loggedin.html
+
+Feb 4
+- DES-199: add "Filter by age" dropdown to build list and shared list
+- example: http://soybox.com/mamajamas/build-list.html
+- example: http://soybox.com/mamajamas/build-list_sortopen.html
+- example: http://soybox.com/mamajamas/shared-list.html
+- example: http://soybox.com/mamajamas/shared-list_sortopen.html
+

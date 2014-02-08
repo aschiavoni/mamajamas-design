@@ -1784,6 +1784,7 @@ ul.info-balloons {
 	padding: 4px 10px 3px;
 	text-align: center;
 	display: none;
+	z-index: 1000;
 }
 .tooltip span {
 	top: 0;
@@ -1794,8 +1795,8 @@ ul.info-balloons {
 	right: -106px;
 }
 .tooltip-t span {
-	top: 0;
 	top: -55px;
+	left: -50px;
 }
 .tooltip-b span {
 	left: -5px;
@@ -1804,8 +1805,13 @@ ul.info-balloons {
 a.tooltip:hover span,
 a.tooltip-r:hover span,
 a.tooltip-t:hover span,
-a.tooltip-b:hover span {
+a.tooltip-b:hover span,
+.tooltip:hover span,
+.tooltip-r:hover span,
+.tooltip-t:hover span,
+.tooltip-b:hover span {
 	display: block;
+	cursor: pointer;
 }
 .tooltip span em,
 .tooltip-r span em,
@@ -1932,15 +1938,12 @@ a.tooltip-b:hover span {
 #notifications {
 	left: 50%;
 	margin-left: -241px;
-	position: absolute;
-	top: -25px;
+	position: fixed;
+	top: 50px;
 	z-index: 4000;
 }
-#buildlist #notifications {
-}
-.home #notifications {
-	left: 85%;
-	top: -330px;
+.home #secondary #notifications {
+	line-height: 1.231;
 }
 .notification {
 	clear: both;
@@ -2203,11 +2206,35 @@ a[title="Pinterest"]:hover {
 	padding: 9px 10px 7px;
 }
 .listsort {
-	width: 31%;
+	width: 26%;
 	margin-left: 2%;
 	padding: 8px 0 4px;
 	float: right;
 	color: #777;
+}
+#listcontrols .menu-icon {
+	float: right;
+	margin: 8px 10px 0;
+}
+.menu-icon a {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-size: 16px 48px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.menu-icon a:hover {
+	background-position: 0 -32px;
+}
+#prod-rec.menu-icon {
+	margin-right: 20px;
+}
+#prod-rec a {
+	background-image: url(../images/icon_recommended@2x.png);
+}
+#prod-rec .tooltip span {
+	top: -5px;
 }
 .colscroll {
 	overflow: auto;
@@ -2342,6 +2369,18 @@ a.bt-addanother:hover {
 }
 a.bt-addanother:hover span {
 	display: inline-block;
+}
+.prod .tag {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+}
+.prod-rec .tag {
+	border: solid 5px transparent;
+	border-top-color: #b76eb8;
+	border-left-color: #b76eb8;
 }
 /* item change button */
 .prod-desc h3 a.bt-change {
@@ -2840,6 +2879,9 @@ form.label-infield .edit-mode .prod-note label {
 	margin-top: 0;
 }
 /* public list */
+#publist .listsort {
+	width: 31%;
+}
 #publist .prod { /* differs from edit list */
 	border-top: 1px solid #e6e6e6;
 	padding: 12px 30px 13px 20px;

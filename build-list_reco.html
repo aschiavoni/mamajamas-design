@@ -1,0 +1,1260 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Mamajamas</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- collapsible panels -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		defaultOpen: 'priority-high-hed,priority-med-hed',
+		bind: 'click',
+		speed:200
+    });
+  });
+</script>
+<!-- expanding text (applied to elements with ".expandable." used for product notes.) -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options-editlist.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- switching elements from scrolling to fixed -->
+<script src="js/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+
+        // Dock the header to the top of the window when scrolled past the banner.
+
+        $('#title').scrollToFixed();
+
+  		 $('#primary').scrollToFixed({ 
+		 	marginTop: $('#title').outerHeight(true)
+		});
+        
+    });
+</script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding"> <a href="/list">
+				<h1>Mamajamas</h1>
+				</a> <a href="#" class="beta tooltip-r">beta <span>&#8220;beta&#8221; means we&#8217;re still working out some of the kinks.<em></em></span></a> </div>
+			<nav id="mainnav">
+				<ul>
+					<li class="active"><a href="#">Edit List</a></li>
+					<li><a href="#">Friends’ Lists</a></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<!--<li id="myaccount"><a href="/profile" class="nav-drop-link"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
+						<span class="ss-icon ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>-->
+					<li><a href="#" class="button">Login</a></li>
+					<li><a href="#" class="button">Sign Up</a></li>
+					<li id="sitelinks"> <a href="#" class="nav-drop-link"><span class="ss-icon ss-rows"></span><em>Mamajamas Menu</em></a>
+						<ul class="nav-drop">
+							<li><a href="/">Mamajamas Home</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+							<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix" id="buildlist">
+	<div id="title">
+		<div id="subhed">
+			<h2>Your baby gear list</h2>
+		</div>
+		<div id="title-links">
+			<ul>
+				<li> <a id="bt-share" class="button bt-color" href="/profile">Save</a></li>
+				<li> <a id="bt-view" class="button disabled" href="#">View</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="primary">
+		<div class="content">
+			<nav id="categories">
+				<h3>Categories</h3>
+				<ul>
+					<li class=""> <a href="/list/all">All</a> </li>
+					<li class="cat-selected"> <a href="/list/bathing">Bathing</a> </li>
+					<li class=""> <a href="/list/changing">Changing</a> </li>
+					<li class=""> <a href="/list/clothing">Clothing</a> </li>
+					<li class=""> <a href="/list/decorating">Decorating</a> </li>
+					<li class=""> <a href="/list/expecting">Expecting</a> </li>
+					<li class=""> <a href="/list/feeding">Feeding</a> </li>
+					<li class=""> <a href="/list/getting-around">Getting Around</a> </li>
+					<li class=""> <a href="/list/nursing">Nursing</a> </li>
+					<li class=""> <a href="/list/playing">Playing</a> </li>
+					<li class=""> <a href="/list/reading">Reading</a> </li>
+					<li class=""> <a href="/list/sleeping">Sleeping</a> </li>
+					<li class=""> <a href="/list/staying-healthy">Staying Healthy</a> </li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="secondary">
+		<div class="content"> 
+			<!-- notification ***** -->
+			<div id="notifications"> </div>
+			<form data-list-entries-loaded-at="" data-list-entries="" id="my-list" class="label-infield">
+				<div id="listcontrols" class="clearfix">
+					<div class="listhed">
+						<h3>Bathing</h3>
+					</div>
+					<div id="prod-rec" class="menu-icon"><a href="#" class="tooltip"><span>Show/Hide Mamajamas-recommended items<em></em></span></a></div>
+					<div class="listsort">Sort by: 
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Priority <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Priority</a></li>
+								<li><a href="#">When to buy</a></li>
+								<li><a href="#">Need / Have</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+					<div class="listsort">Filter by Age: 
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">All ages <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">All ages</a></li>
+								<li><a href="#">0-3 mo</a></li>
+								<li><a href="#">4-6 mo</a></li>
+								<li><a href="#">7-12 mo</a></li>
+								<li><a href="#">13-18 mo</a></li>
+								<li><a href="#">19-24 mo</a></li>
+								<li><a href="#">2y</a></li>
+								<li><a href="#">3y</a></li>
+								<li><a href="#">4y</a></li>
+								<li><a href="#">5y+</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+				</div>
+				<!-- baby gear list content *************** -->
+				<div class="clearfix" id="list-items">
+					<h4 class="priority priority-high collapsible ss-dropdown" id="priority-high-hed"><strong>Must-Have</strong></h4>
+					<div style="min-height: 80px;" data-priority="1" class="priority-high collapsible-content ui-sortable">
+						<div class="prod prod-filled prod-rec clearfix" id="40616">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							
+							<div class="prod-thumb"> <a href="http://www.amazon.com/The-First-Years-Infant-Toddler/dp/B000067EH7%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000067EH7" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/31w07dhuw4L._SL160_.jpg" alt="Bath Tub"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Tub <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/The-First-Years-Infant-Toddler/dp/B000067EH7%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000067EH7" target="_blank">The First Years Infant to Toddler Tub</a> <a href="#" class="bt-change" style=""> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/The-First-Years-Infant-Toddler/dp/B000067EH7%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000067EH7" target="_blank">Buy</a> at 0-3 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40616"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40616" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod prod-filled prod-rec clearfix" id="40659">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <a href="http://www.amazon.com/green-sprouts-Stacking-Colors-vary/dp/B002KCNEDG%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002KCNEDG" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/41qQr2uv1xL._SL160_.jpg" alt="Bath Toy"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Toy <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/green-sprouts-Stacking-Colors-vary/dp/B002KCNEDG%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002KCNEDG" target="_blank">Green Sprouts Stacking Cups</a> <a href="#" class="bt-change"> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/green-sprouts-Stacking-Colors-vary/dp/B002KCNEDG%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002KCNEDG" target="_blank">Buy</a> at 4-6 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40659"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40659" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+					</div>
+					<h4 class="priority collapsible ss-dropdown" id="priority-med-hed"><strong>Consider</strong></h4>
+					<div style="min-height: 80px;" data-priority="2" class="priority-med collapsible-content ui-sortable">
+						<div class="prod prod-filled prod-rec clearfix" id="40760">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <a href="http://www.amazon.com/Avalon-Organics-Tear-Free-Baby-Shampoo/dp/B0045MA8S8%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0045MA8S8" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/41Cf%2BX8-wlL._SL160_.jpg" alt="Shampoo or Body Wash"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Shampoo or Body Wash <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/Avalon-Organics-Tear-Free-Baby-Shampoo/dp/B0045MA8S8%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0045MA8S8" target="_blank">Avalon Organics Baby Shampoo and Body Wash</a> <a href="#" class="bt-change"> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/Avalon-Organics-Tear-Free-Baby-Shampoo/dp/B0045MA8S8%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0045MA8S8" target="_blank">Buy</a> at 0-3 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40760"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40760" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod prod-filled prod-rec clearfix" id="40780">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <a href="http://www.amazon.com/aden-anais-Muslin-Hooded-Washcloth/dp/B002SXMMJE%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002SXMMJE" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/31Fkl0lSdEL._SL160_.jpg" alt="Towel"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Towel <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/aden-anais-Muslin-Hooded-Washcloth/dp/B002SXMMJE%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002SXMMJE" target="_blank">Aden + Anais Muslin Hooded Towel and Washcloth Set</a> <a href="#" class="bt-change"> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/aden-anais-Muslin-Hooded-Washcloth/dp/B002SXMMJE%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002SXMMJE" target="_blank">Buy</a> at 0-3 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40780"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40780" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod prod-filled prod-rec clearfix" id="40866">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <a href="http://www.amazon.com/Gerber-Woven-Washcloths-Cotton-Neutral/dp/B007L3FHLQ%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB007L3FHLQ" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/41YseY0N6WL._SL160_.jpg" alt="Washcloth"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Washcloth <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/Gerber-Woven-Washcloths-Cotton-Neutral/dp/B007L3FHLQ%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB007L3FHLQ" target="_blank">Gerber Woven Washcoths</a> <a href="#" class="bt-change"> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/Gerber-Woven-Washcloths-Cotton-Neutral/dp/B007L3FHLQ%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB007L3FHLQ" target="_blank">Buy</a> at 0-3 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40866"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40866" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod prod-filled prod-rec clearfix" id="40621">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <a href="http://www.amazon.com/Boon-Bug-Pod-Bath-Scoop/dp/B001IJ4N00%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB001IJ4N00" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/41L1qVH9InL._SL160_.jpg" alt="Bath Toy Storage"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Toy Storage <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/Boon-Bug-Pod-Bath-Scoop/dp/B001IJ4N00%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB001IJ4N00" target="_blank">Boon Pod Bath Toy Scoop</a> <a href="#" class="bt-change"> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/Boon-Bug-Pod-Bath-Scoop/dp/B001IJ4N00%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB001IJ4N00" target="_blank">Buy</a> at 4-6 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40621"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40621" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod prod-filled prod-rec clearfix" id="40754">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <a href="http://www.amazon.com/Tobey-Children-Washing-Waterproof-Sunshade/dp/B009QEP27W%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB009QEP27W" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/41sRTcLDyGL._SL160_.jpg" alt="Rinse Cup or Visor"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Rinse Cup or Visor <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/Tobey-Children-Washing-Waterproof-Sunshade/dp/B009QEP27W%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB009QEP27W" target="_blank">Hair Washing Shampoo Visor</a> <a href="#" class="bt-change"> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/Tobey-Children-Washing-Waterproof-Sunshade/dp/B009QEP27W%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB009QEP27W" target="_blank">Buy</a> at 4-6 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40754"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40754" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod prod-filled prod-rec clearfix" id="40661">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <a href="http://www.amazon.com/Jungle-Fun-Squirting-Little-Squirts/dp/0316065269%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0316065269" target="_blank"> <img src="http://ecx.images-amazon.com/images/I/51WLBWnv4sL._SL160_.jpg" alt="Bath Book"> </a> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Book <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a> </div>
+									<h3> <a href="http://www.amazon.com/Jungle-Fun-Squirting-Little-Squirts/dp/0316065269%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0316065269" target="_blank">Jungle Fun Bath Book &amp; Squirting Tub Toy</a> <a href="#" class="bt-change"> <span class="ss-icon ss-search"></span><span>Change</span> </a> </h3>
+									<div class="rating"> <em>My rating:</em>
+										<div class="stars">
+											<div data-rating="1" class="star"></div>
+											<div data-rating="2" class="star"></div>
+											<div data-rating="3" class="star"></div>
+											<div data-rating="4" class="star"></div>
+											<div data-rating="5" class="star"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end product category, name, rating --> 
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> <a href="http://www.amazon.com/Jungle-Fun-Squirting-Little-Squirts/dp/0316065269%3FSubscriptionId%3DAKIAIXAEIBVZBZEU56MQ%26tag%3Dmamajamas-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0316065269" target="_blank">Buy</a> at 7-12 mo </div>
+									<div class="own"> I
+										<div class="choicedrop have-need"> <a href="#">need <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:4.1em;">
+												<li><a href="#">need</a></li>
+												<li><a href="#">have</a></li>
+											</ul>
+										</div>
+										<div class="choicedrop quantity"> <a href="#">1 <span class="ss-dropdown"></span></a>
+											<ul style="display:none; width:2.4em;">
+												<li><a href="#1">1</a></li>
+												<li><a href="#2">2</a></li>
+												<li><a href="#3">3</a></li>
+												<li><a href="#4">4</a></li>
+												<li><a href="#5">5</a></li>
+												<li><a href="#6">6</a></li>
+												<li><a href="#7">7</a></li>
+												<li><a href="#8">8</a></li>
+												<li><a href="#9">9</a></li>
+												<li><a href="#10">10</a></li>
+											</ul>
+										</div>
+										of these. </div>
+								</div>
+								<div class="prod-note prod-note_empty"><!-- note input trigger -->
+									<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+									<!-- end note input trigger --> 
+									
+									<!-- note input area -->
+									<div class="prod-note-input">
+										<fieldset>
+											<p>
+												<label for="list_item_notes_40661"><span class="ss-chat"></span> Review/comment</label>
+												<br>
+												<textarea id="list_item_notes_40661" value="" name="list_item[notes]"></textarea>
+											</p>
+										</fieldset>
+									</div>
+									<!-- end note input area --> 
+									
+									<!-- note content area -->
+									<div class="prod-note-content expandable">
+										<p><span class="ss-chat"></span> </p>
+									</div>
+									<!-- end note content area --> 
+									
+									<!-- note save-cancel buttons -->
+									<div class="prod-links">
+										<ul>
+											<li>
+												<button type="reset" value="Reset" class="cancel-item button bt-light">Cancel</button>
+											</li>
+											<li>
+												<input type="submit" class="save-item button bt-color" name="commit" value="Save">
+											</li>
+										</ul>
+									</div>
+									<!-- end note save-cancel buttons --> 
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a> </li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a> </li>
+										<li><a class="edit tooltip" href="#"><span>Edit<em></em></span></a> </li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+					</div>
+					<h4 class="priority collapsible ss-directright" id="priority-low-hed"><strong>Don’t Bother</strong></h4>
+					<div style="min-height: 80px; display: none;" data-priority="3" class="priority-low collapsible-content ui-sortable">
+						<div class="prod clearfix" id="40768">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/products/icons/bath_rail@2x.png" alt="Bath Rail or Handle"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Rail or Handle </div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 0-3 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li> <a href="#" class="find-item button bt-color"><span class="ss-search"></span>Choose</a></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a></li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod clearfix" id="40767">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/products/icons/bath_thermometer@2x.png" alt="Bath Thermometer"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Thermometer </div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 0-3 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li> <a href="#" class="find-item button bt-color"><span class="ss-search"></span>Choose</a></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a></li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod clearfix" id="40651">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/products/icons/bath_mat@2x.png" alt="Bath Mat"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Mat </div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 4-6 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li> <a href="#" class="find-item button bt-color"><span class="ss-search"></span>Choose</a></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a></li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod clearfix" id="40614">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/products/icons/kneeler@2x.png" alt="Bath Stool or Kneeler"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Stool or Kneeler </div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 4-6 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li> <a href="#" class="find-item button bt-color"><span class="ss-search"></span>Choose</a></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a></li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod clearfix" id="40753">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/products/icons/bath_seat@2x.png" alt="Bath Seat"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Bath Seat </div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 7-12 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li> <a href="#" class="find-item button bt-color"><span class="ss-search"></span>Choose</a></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a></li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+						<div class="prod clearfix" id="40652">
+						<div class="tag tooltip-t"><span>Recommended by Mamajamas<em></em></span></div>
+						<!-- product image -->
+							<div class="prod-thumb"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/products/icons/faucet_cover@2x.png" alt="Faucet Cover"> </div>
+							
+							<!-- product description -->
+							<div class="prod-desc clearfix"> 
+								
+								<!-- product category, name, rating -->
+								<div class="prod-cat-name-rating">
+									<div class="prod-category"> Faucet Cover </div>
+								</div>
+								
+								<!-- when to buy, need vs. have -->
+								<div class="prod-when-own">
+									<div class="when"> Buy at 7-12 mo. </div>
+									<div class="own"> I need 1 of these. </div>
+								</div>
+								<!-- end when to buy, need vs. have --> 
+								
+								<!-- choose button -->
+								<div class="prod-links">
+									<ul>
+										<li> <a href="#" class="find-item button bt-color"><span class="ss-search"></span>Choose</a></li>
+									</ul>
+								</div>
+								
+								<!-- menu: delete, drag, edit -->
+								<div class="prod-edit-menu">
+									<ul>
+										<li><a class="delete tooltip" href="#"><span>Delete<em></em></span></a></li>
+										<li><a class="drag tooltip" href="#"><span>Drag to reorder<em></em></span></a></li>
+									</ul>
+								</div>
+								<!-- end menu: delete, drag, edit --> 
+								
+								<!-- end product description --> 
+							</div>
+						</div>
+					</div>
+					<h4 id="priority-new-hed" class="priority"><strong>Add an Item</strong></h4>
+					<div id="add-new" class="prod clearfix">
+						<div class="prod-thumb"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/products/icons/add_new@2x.png" alt=""> </div>
+						<div class="prod-category"> Looking for something not listed above? Add it here.</div>
+						<div class="prod-links">
+							<ul>
+								<li><a href="#" class="new-item button bt-color"><span class="ss-plus"></span>Add new</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- end baby gear list *************** -->
+			</form>
+		</div>
+	</div>
+	<div id="tertiary">
+		<div class="content"> </div>
+	</div>
+	<div id="footer">
+		<div class="content"> </div>
+	</div>
+</div>
+
+<!-- end body area --> 
+
+<!-- Google Analytics -->
+
+</body>
+</html>

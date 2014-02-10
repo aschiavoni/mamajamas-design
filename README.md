@@ -349,3 +349,15 @@ Feb 4
 - example: http://soybox.com/mamajamas/shared-list.html
 - example: http://soybox.com/mamajamas/shared-list_sortopen.html
 
+Feb 8
+- DES-217: show/hide recommendations button and recommended product tags. 
+- example: http://soybox.com/mamajamas/build-list_reco.html
+- example: http://soybox.com/mamajamas/build-list_reco2.html
+- Notifications CSS position change. 
+- example: http://soybox.com/mamajamas/home.html
+- example: http://soybox.com/mamajamas/build-list_notification.html
+
+Feb 9
+- DES-104: "copy list" button
+- Example: http://soybox.com/mamajamas/shared-list-loggedin.html
+- Includes width-dependent adjustment to title bar button text size

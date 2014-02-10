@@ -113,8 +113,6 @@ strong {
 }
 #login a.button:hover {
 	color: #fff;
-	/*background: #F5F5F5 !important;
-	border-color: #d9d9d9 !important;*/
 }
 /* "start your list" button */
 #login #startlist {
@@ -276,14 +274,25 @@ li#myaccount + li#sitelinks {
 	background-size: 23px 54px;
 }
 #title h2 {
+	float: left;
 	font-size: 2.692em;
 	font-weight: 300;
 	line-height: 1.286em;
 	margin: 0;
 	padding: 21px 0 0 10px;
 	white-space: nowrap;
+	max-width: 81%;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+#subhed .button {
+	color: #6BB36E;
+	background: #FFF;
+	border-color: #97CA99;
+	margin: 34px 10px 0 20px;
+}
+#subhed .button:hover {
+	color: #FFF;
 }
 #tertiary h3 {
 	font-size: 1.25em;
@@ -2071,7 +2080,7 @@ a.tooltip-b:hover span,
 /* title bar menu ---- */
 #title-links > ul {
 	list-style-type: none;
-	margin: 28px 10px 0 0;
+	margin: 28px 0 0 0;
 	padding: 0;
 }
 #title-links > ul > li {
@@ -2090,7 +2099,6 @@ a.tooltip-b:hover span,
 	padding-right: 10%;
 	width: 80%;
 	text-align: center;
-	font-size: 14px;
 }
 #title-links > ul.iconrow {
 	float: right;
@@ -2877,6 +2885,7 @@ form.label-infield .edit-mode .prod-note label {
 }
 #publist #title-links ul {
 	margin-top: 0;
+	margin-right: 0;
 }
 /* public list */
 #publist .listsort {

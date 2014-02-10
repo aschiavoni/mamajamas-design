@@ -95,9 +95,13 @@ img, object, embed, video {
 	clear: none;
 	float: right;
 	margin-left: 0;
+	margin-right: 10px;
 	padding: 0;
 	width: 26.042%;
 	display: block;
+}
+#title-links .button {
+	font-size: 12px;
 }
 #primary {
 	clear: both;
@@ -157,10 +161,16 @@ img, object, embed, video {
 #publist #tertiary {
 	margin-top:-7.3em; /* shift up to title area */
 }
+#publist #subhed {
+	width: 78.875%;
+}
+#publist #title-links,
+#title .pubdate {
+	width: 19%;
+}
 #title .pubdate {
 	float: right;
 	margin-right: 10px;
-	width: 26.042%;
 }
 
 /* layout adjustments for create my profile */
@@ -315,6 +325,15 @@ img, object, embed, video {
 }
 
 }
+
+@media only screen and (min-width: 1075px) {
+
+#title-links .button {
+	font-size: 14px;
+}
+
+}
+
 
 @media only screen and (min-width: 1245px) {
 

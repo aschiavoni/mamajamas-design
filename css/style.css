@@ -1441,7 +1441,11 @@ ul.friends-list {
 	margin: 0.5em 0 0.25em 10px;
 	padding-top: .25em;
 	padding-bottom: .25em;
-	background: url(../images/logo_amazon-s.png) no-repeat 96% 9px;
+}
+#search-modal #prod-search h3 a {
+        float: right;
+        margin-top: 3px;
+        margin-right: 20px;
 }
 #frm-prod-search {
 	margin-bottom: 0;

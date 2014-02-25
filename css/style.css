@@ -2395,12 +2395,8 @@ a.bt-addanother:hover span {
 	border-left-color: #b76eb8;
 }
 /* item change button */
-.prod-desc h3 a.bt-change {
-	background: #6BB36E;
-        display: none;
-}
 .prod-desc h3 a.bt-change span {
-	display: inline-block;
+	display: none;
 	font-weight: 400;
 	padding: 0 4px 0 2px;
 }
@@ -2413,9 +2409,14 @@ a.bt-addanother:hover span {
 	margin: 0;
 	padding: 3px;
 }
-.prod-desc h3:hover a.bt-change {
- 	display: inline-block;
+.prod-desc h3 a.bt-change:hover  {
+        text-decoration: none;
+        color: #FFF;
+        background: #6BB36E;
  }
+.prod-desc h3 a.bt-change:hover span {
+        display: inline-block;
+}
 .prod-desc h3 a.bt-change:hover {
 	color: #FFF;
 }

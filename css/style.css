@@ -2397,6 +2397,7 @@ a.bt-addanother:hover span {
 /* item change button */
 .prod-desc h3 a.bt-change {
 	background: #6BB36E;
+        display: none;
 }
 .prod-desc h3 a.bt-change span {
 	display: inline-block;
@@ -2412,6 +2413,9 @@ a.bt-addanother:hover span {
 	margin: 0;
 	padding: 3px;
 }
+.prod-desc h3:hover a.bt-change {
+ 	display: inline-block;
+ }
 .prod-desc h3 a.bt-change:hover {
 	color: #FFF;
 }

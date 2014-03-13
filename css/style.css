@@ -337,16 +337,22 @@ li#myaccount + li#sitelinks {
 p {
 	margin: 0 0 1em;
 }
-.inline li {
-	list-style-type: none;
-	display: inline;
-	margin: 0 1em 0 0;
+.address {
+	margin-left: 1.5em;
+}
+.fixed {
+	position: fixed;
 }
 .float-l {
 	float: left;
 }
 .float-r {
 	float: right;
+}
+.inline li {
+	list-style-type: none;
+	display: inline;
+	margin: 0 1em 0 0;
 }
 img.float-l {
 	margin: 4px 15px 0 0;
@@ -382,14 +388,14 @@ img.float-r {
 .light {
 	color: #a6a6a6;
 }
+.margintop0 {
+	margin-top: 0 !important;
+}
 .small {
 	font-size: .923em;
 }
-.fixed {
-	position: fixed;
-}
-.address {
-	margin-left: 1.5em;
+.thumb {
+	border: solid 1px #ddd;
 }
 /* links ------ */
 a {
@@ -659,6 +665,9 @@ a.button.disabled:active { /* disabled buttons */
 	padding: 20px;
 	text-align: center;
 	border-top: 1px solid #CCC;
+}
+.button-row.right {
+	text-align: right;
 }
 .oldie .button-row button,
 .oldie .button-row .button {
@@ -1043,7 +1052,7 @@ ul.friends-list {
 }
 /* modal windows ------ */
 .modal-wrap {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -1052,7 +1061,7 @@ ul.friends-list {
 	display: none;
 }
 .modal-overlay {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -3176,9 +3185,6 @@ a.bt-gift:hover {
 	padding-bottom: 4px;
 	border-bottom: 2px solid #8cb58c;
 }
-#create-profile h3:first-child {
-	margin-top: .75em;
-}
 #create-profile #title .instruction {
 	font-size: .923em;
 	margin-bottom: 1em;
@@ -3252,6 +3258,10 @@ a.bt-gift:hover {
 #create-profile #top-tags {
 	font-size: .857em;
 	color: #808080;
+}
+#create-profile .button-row {
+	border-top: none;
+	padding: 10px 20px 0  0;
 }
 /* create profile: custom checkboxes ---- */
 /* (based on work by Wufoo, Ryan Seddon and Lea Verou) */

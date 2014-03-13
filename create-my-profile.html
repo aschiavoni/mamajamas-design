@@ -40,13 +40,13 @@
 <div id="hed-wrap" class="progressbar">
 	<div class="gridContainer clearfix">
 		<div id="header">
-			<div id="branding">
+			<div id="branding"> <a href="/list">
 				<h1>Mamajamas</h1>
-			</div>
+				</a> <a class="beta tooltip-r" href="/list"> beta <span>“beta” means we’re still working out some of the kinks.<em></em></span> </a> </div>
 			<nav id="mainnav">
 				<ul>
-					<li><a href="#">Edit List</a></li>
-					<li><a href="#">Friends’ Lists</a></li>
+					<li class=""> <a href="/list">Edit List</a> </li>
+					<li class=""> <a class="find-moms" href="/friends/following">Browse Lists</a> </li>
 				</ul>
 			</nav>
 			<div id="search">
@@ -54,15 +54,22 @@
 			</div>
 			<div id="login">
 				<ul>
-					<li id="myaccount"> <a href="/profile"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
-						<!-- username removed --> 
-						<span class="ss-dropdown"></span> </a>
+					<li id="myaccount"> <a class="nav-drop-link" href="/profile"> <img src="https://mamajamas-staging.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> <span class="ss-icon ss-dropdown"></span> </a>
 						<ul class="nav-drop">
 							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
 							<li><a href="/list">My List</a></li>
 							<li><a href="/profile">My Profile</a></li>
-							<li><a href="/profile">My Settings</a></li>
+							<li><a href="/settings">My Settings</a></li>
 							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+					<li id="sitelinks"> <a class="nav-drop-link" href="#"><span class="ss-icon ss-rows"></span><em>Mamajamas Menu</em></a>
+						<ul class="nav-drop">
+							<li><a href="/home">Home</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a target="_blank" href="http://blog.mamajamas.com/">Blog</a></li>
+							<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+							<li><a href="/privacy-policy">Privacy &amp; Terms</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -75,46 +82,65 @@
 <div class="gridContainer clearfix" id="create-profile">
 	<div id="title">
 		<div id="subhed">
-			<h2>My Profile</h2>
+			<h2>Create my profile</h2>
 		</div>
-		<p class="instruction"><strong>Before you share your list, why not tell folks a little more about yourself?</strong><br>
-			Or, go <a href="#">back</a> to your list</p>
+		<p class="instruction"> <strong>Before you save your list, why not tell folks a little more about yourself?</strong><br>
+			Or, go <a href="/list">back</a> to your list. </p>
+		<div id="title-links"> </div>
 	</div>
 	<div id="primary">
 		<div class="content">
-			<div id="profile-photo"><img src="images/profile_photo-default-l.png" alt="Upload a profile photo"> <a class="button bt-light" id="bt-upload"><span class="ss-upload"></span>Photo</a> 
+			<div id="profile-photo"> <img src="https://mamajamas-staging.s3.amazonaws.com/uploads/user/profile_picture/36/profile_161338_708475661_843764735_n.jpg" alt="Profile_161338_708475661_843764735_n">
+				<div class="progress-container"> <a id="bt-upload" class="button bt-light"> <span class="ss-upload"></span>Photo </a> <img style="display: none;" src="//mamajamas-staging.s3.amazonaws.com/assets/progress-bar-ee02519a65718909005941e8c3044253.gif" class="progress" alt="Progress-bar"> </div>
 				<!-- instructions -->
 				<p class="instruction">Upload a photo, or drag one into the box.</p>
 			</div>
 		</div>
 	</div>
 	<div id="secondary">
-		<div class="content">
-			<form class="label-infield" id="frm-create-profile">
-				<h3>My Basics</h3>
+		<div class="content"> 
+			<!-- notification ***** -->
+			<div id="notifications"> </div>
+			<form method="post" id="frm-create-profile" enctype="multipart/form-data" class="label-infield" action="/profile" accept-charset="UTF-8">
+				<div style="margin:0;padding:0;display:inline">
+					<input type="hidden" value="✓" name="utf8">
+					<input type="hidden" value="put" name="_method">
+					<input type="hidden" value="mLZg8YL3rFrQQx0lEDngrvg9CesSGJ2szOAvRs0+5Fk=" name="authenticity_token">
+				</div>
+				<div class="button-row right">
+					<button id="bt-save" class="button bt-color" type="submit"><span class="ss-check"></span>Save and Preview</button>
+				</div>
+				<div style="display: none;" id="profile-photo-file">
+					<h3>Profile Picture</h3>
+					<fieldset>
+						<input type="file" name="profile[profile_picture]" id="profile_profile_picture">
+						<input type="hidden" name="profile[profile_picture_cache]" id="profile_profile_picture_cache">
+					</fieldset>
+				</div>
+				<h3 class="margintop0">My Basics</h3>
 				<dl class="clearfix">
 					<fieldset>
 						<!-- username -->
-						<dt>User name<strong class="required">*</strong></dt>
+						<dt>URL name<strong class="required">*</strong></dt>
 						<dd>
 							<p>
-								<label for="field-username"><strong>[default username]</strong></label>
-								<br />
-								<input name="field-username" type="text" id="field-username" value="">
+								<label for="profile_username" style="display: none;"> <strong>[default url]</strong> </label>
+								<br>
+								<input type="text" value="rickelizaga" size="30" name="profile[username]" id="profile_username">
 							</p>
 						</dd>
 						<!-- URL -->
 						<dt>URL<strong class="required">*</strong></dt>
 						<dd class="pad">
-							<p>mamamaggie.mamjamas.com <em class="light">(generated from your username)</em></p>
+							<p>www.mamajamas.com/<span class="list-url-suffix">rickelizaga</span> <em class="light">(generated from your URL name)</em></p>
 						</dd>
 						<!-- list title -->
 						<dt>List title<strong class="required">*</strong></dt>
 						<dd>
 							<p>
-								<label for="field-list-title"><strong>MamaMaggie's List</strong> (click to edit)</label>
-								<br />
-								<input name="field-list-title" type="text" id="field-list-title" value="">
+								<label for="profile_list_title" style="display: none;"> <strong>Rick’s List</strong> (click to edit) </label>
+								<br>
+								<input type="text" value="Rick’s List" size="30" name="profile[list_title]" id="profile_list_title">
 							</p>
 						</dd>
 					</fieldset>
@@ -126,28 +152,28 @@
 						<dt>Name</dt>
 						<dd class="half">
 							<p>
-								<label for="field-firstname">First</label>
-								<br />
-								<input name="field-firstname" type="text" id="field-firstname" value="">
+								<label for="profile_first_name" style="display: none;">First name</label>
+								<br>
+								<input type="text" value="Rick" size="30" name="profile[first_name]" id="profile_first_name">
 							</p>
 						</dd>
 						<dd class="half">
 							<p>
-								<label for="field-surname">Last</label>
-								<br />
-								<input name="field-surname" type="text" id="field-surname" value="">
+								<label for="profile_last_name" style="display: none;">Last name</label>
+								<br>
+								<input type="text" value="Elizaga" size="30" name="profile[last_name]" id="profile_last_name">
 							</p>
 						</dd>
 					</fieldset>
 					<fieldset>
 						<!-- birthday -->
-						<dt>Birthday</dt>
+						<dt>My Birthday</dt>
 						<dd class="half">
 							<p>
-								<label for="field-bdate">mm/dd/yy</label>
-								<br />
-								<input name="field-bdate" type="text" id="field-bdate" value="">
-								<img class="date-picker" src="images/icon_calendar@2x.png" alt="calendar"> </p>
+								<label for="field-bdate" style="display: none;">mm/dd/yy</label>
+								<br>
+								<input type="text" value="11/04/1971" size="30" name="profile[birthday]" id="field-bdate" class="hasDatepicker">
+								<img src="//mamajamas-staging.s3.amazonaws.com/assets/icon_calendar@2x-f39492b87fe2e130ea12b3ca4cc78ff6.png" class="date-picker" alt="calendar"> </p>
 						</dd>
 					</fieldset>
 					<fieldset>
@@ -155,82 +181,24 @@
 						<dt>More</dt>
 						<dd>
 							<p>
-								<label for="field-profile-notes">For example, what do you love about being a mom?</label>
-								<br />
-								<textarea name="field-profile-notes" value="" id="field-profile-notes" rows="5"></textarea>
+								<label for="profile_notes">For example, what do you love about being a mom?</label>
+								<br>
+								<textarea rows="5" name="profile[notes]" id="profile_notes" cols="40"></textarea>
 							</p>
 						</dd>
-						<!-- tags 
-						<dt><span class="ss-icon" title="tags">Tags</span></dt>
-						<dd>
-							<p>
-								<label for="field-profile-tags">Enter keywords that help describe you.</label>
-								<br />
-								<input name="field-profile-tags" type="text" id="field-profile-tags" value="">
-								<br>
-								<span id="top-tags">top tags: <a href="#">green</a>, <a href="#">working mom</a>, <a href="#">stay-at-home-mom</a>, <a href="#">artsy</a></span> </p>
-						</dd>-->
 					</fieldset>
 				</dl>
-				<!--<h3>My Kids</h3>
-				<dl id="mykids">
-					<dt>First Child</dt>
-					<dd>
-						<fieldset>
-							<div class="baby-gender clearfix">
-								<p>Gender:</p>
-								<fieldset>
-									<div>
-										<input name="babygender01" type="radio" class="gender-f" id="babygender01-f" value="female">
-										<label for="babygender01-f" title="girl">Girl</label>
-									</div>
-									<div>
-										<input name="babygender01" type="radio" class="gender-m" id="babygender01-m" value="male">
-										<label for="babygender01-m" title="boy">Boy</label>
-									</div>
-									<div>
-										<input name="babygender01" type="radio" class="gender-na" id="babygender01-na" value="not-sure" checked>
-										<label for="babygender01-na" title="not sure?">Not sure</label>
-									</div>
-								</fieldset>
-							</div>
-							<div class="baby-name">
-								<p>
-									<label for="field-baby01-name">Name</label>
-									<br />
-									<input name="field-baby01-name" type="text" id="field-baby01-name" value="">
-								</p>
-							</div>
-							<div class="baby-bdate">
-								<p>
-									<label for="field-baby01-bdate">Born / Due</label>
-									<br />
-									<input name="field-baby01-bdate" type="text" id="field-baby01-bdate" class="baby-bdate" value="">
-									<img class="date-picker" src="images/icon_calendar@2x.png" alt="calendar"> </p>
-							</div>
-						</fieldset>
-					</dd>-->
-					<!-- end first chid --> 
-					<!-- (more children here) -->
-					<!-- <div class="add-more"> <a href="#"><span class="ss-plus"></span>Add more</a> </div>
-				</dl> -->
-				<div class="button-row">
-					<button type="submit" class="button bt-color" id="bt-save"><span class="ss-check"></span>Save and Preview</button>
+				<div class="button-row right">
+					<button id="bt-save2" class="button bt-color" type="submit"><span class="ss-check"></span>Save and Preview</button>
 				</div>
 			</form>
 		</div>
 	</div>
-	<div id="tertiary">&nbsp;</div>
+	<div id="tertiary">
+		<div class="content"> &nbsp; </div>
+	</div>
 	<div id="footer">
-		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
-			<ul class="nav-drop">
-				<li><a href="/">Mamajamas Home</a></li>
-				<li><a href="/about">About Us</a></li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
-				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
-			</ul>
-		</div>
+		<div class="content"> </div>
 	</div>
 </div>
 <!-- end body area --> 

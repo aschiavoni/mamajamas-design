@@ -1,0 +1,212 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas : Quiz</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($) {
+	// Load modal on page load
+		$(window).load(function(){
+			$('#quiz-modal').modal({
+				closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>'
+				});			 
+			return false;
+		});
+	});
+	// open gallery modal A
+	jQuery(function ($) {
+	  jQuery('.gallery-a').click(function () {
+		jQuery.modal.close();
+		window.setTimeout(function() {jQuery('#gallery-modal-a').modal({
+			closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>'
+			})}, 250);
+		return false;
+	  });
+	});
+	// open gallery modal B
+	jQuery(function ($) {
+	  jQuery('.gallery-b').click(function () {
+		jQuery.modal.close();
+		window.setTimeout(function() {jQuery('#gallery-modal-b').modal({
+			closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>'
+			})}, 250);
+		return false;
+	  });
+	});
+	// open quiz question modal
+	jQuery(function ($) {
+	  jQuery('.quiz08').click(function () {
+		jQuery.modal.close();
+		window.setTimeout(function() {jQuery('#quiz-modal').modal({
+			closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>'
+			})}, 250);
+		return false;
+	  });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding">
+				<h1>Mamajamas</h1>
+			</div>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<li><a href="#">Sign Up</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+	<div id="primary">
+		<div class="content"></div>
+	</div>
+	<div id="secondary">
+		<div class="content"> </div>
+	</div>
+	<div id="tertiary"> </div>
+	<div id="footer">
+		<div class="content"></div>
+	</div>
+</div>
+<!-- end body area --> 
+
+<!-- modal window box -->
+  <div id="quiz-modal" class="modal-win">
+
+		<div class="quiz-box-s" id="quiz09">
+			<!-- modal window content -->
+			<div class="content">
+				<form id="frm-prodrecc">
+					<!-- question q09-01 ***** -->
+					<div class="q-question" id="q09-01">
+						<fieldset>
+							<ul>
+								<li>
+									<div>
+										<label>
+											<input type="radio" name="prodrecc-radio" value="radio" id="prodrecc-radio_0" checked>
+											Suggest products for me.</label>
+										<a href="#" class="float-r small gallery-a"><span class="ss-icon ss-view"></span> Preview</a> </div>
+									We’ll start your list pre-filled with products that Mamajamas recommends, but you’ll still be able to add your own and delete ours. 
+									<img src="images/list-preview_recommendations-t.png" class="thumb" alt="" width="229" height="217" /></li>
+								<li>
+									<div>
+										<label>
+											<input type="radio" name="prodrecc-radio" value="radio" id="prodrecc-radio_1">
+											Give me a blank slate.</label>
+										<a href="#" class="float-r small gallery-b"><span class="ss-icon ss-view"></span> Preview</a> </div>
+									We’ll give you an empty list of baby gear categories and let you fill in your own products. Choose this if you want to give advice or copy from other members’ lists. 
+									<img src="images/list-preview_blank-t.png" class="thumb" alt="" width="229" height="217" /></li>
+</li>
+							</ul>
+						</fieldset>
+						</div>
+					<!-- / question q09-01 ***** -->
+				</form>
+			</div>
+			<!-- end modal window content -->
+			<div class="button-row clearfix"> 
+				<!-- instructions -->
+				<p><a class="skip" href="#">Skip this</a> and build my list.</p>
+				<!-- previous and next buttons -->
+				<div class="col50 float-l left"> <a id="bt-prev" class="button" href="#"><span class="ss-navigateleft"></span>Previous</a> </div>
+				<div class="col50 float-r right">
+        <a href="#" class="button bt-color" id="bt-next">Next<span class="ss-navigateright"></span></a>
+        </div>
+			</div>
+			<!-- quiz progress bar -->
+			<div title="Step 9 of 9" id="q-progress">
+				<div class="bar"></div>
+			</div>
+			<!-- end quiz progress bar --> 
+		</div>
+
+</div>
+  <!-- end modal window box --> 
+
+	<!-- modal window box -->
+  <div id="gallery-modal-a" class="modal-win quiz-modal">
+
+		<div class="quiz-box-s gallery" id="quiz08a">
+			<!-- modal window content -->
+			<div class="content">
+				<h2><span class="ss-icon ss-view"></span> Recommended Products list option</h2>
+				<p>You’ll get an editable list pre-filled with baby gear products that Mamajamas recommends. <a class="gallery-b" href="#">See the other option</a></p>
+				<p><a class="quiz08" href="#">Return to quiz question</a></p>
+				<div class="gallery-img">
+				<img src="images/list-preview_recommendations.png" title="Baby gear list pre-filled with products recommended by Mamajamas" alt=""/>
+				</div>
+			</div>
+			<!-- end modal window content -->
+		</div>
+		
+  </div>
+  <!-- end modal window box --> 
+
+  <!-- modal window box -->
+  <div id="gallery-modal-b" class="modal-win quiz-modal">
+
+		<div class="quiz-box-s gallery" id="quiz08a">
+			<!-- modal window content -->
+			<div class="content">
+				<h2><span class="ss-icon ss-view"></span>“Blank slate” list option</h2>
+				<p>You’ll get a “blank” list of baby gear categories that you can fill in with specific products. <a class="gallery-a" href="#">See the other option</a></p>
+				<p><a class="quiz08" href="#">Return to quiz question</a></p>
+				<div class="gallery-img">
+				<img src="images/list-preview_blank.png" title="Baby gear list of item categories, to be filled with specific product listings" alt=""/>
+				</div>
+			</div>
+			<!-- end modal window content -->
+		</div>
+		
+  </div>
+  <!-- end modal window box --> 
+
+<!-- Google Analytics -->
+</body>
+</html>

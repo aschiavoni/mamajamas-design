@@ -28,6 +28,20 @@
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($) {
+	// Load modal on page load
+		$(window).load(function(){
+			$('#quiz-modal').modal({
+				closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+				focus: false
+				});			 
+			return false;
+		});
+	});
+	</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -76,13 +90,9 @@
 <!-- end body area --> 
 
 <!-- modal window ************ -->
-<div class="modal-wrap" style="display:block;">
-  <div class="modal-overlay"> &nbsp; </div>
-  <div class="vertical-offset"></div>
-  <!-- modal window box -->
-  <div class="quiz-box large" id="quiz02">
-  	  <!-- modal window close button -->
-      <a href="#" class="bt-close ss-icon">Close</a>
+  <div id="quiz-modal" class="modal-win">
+  
+	<div class="quiz-box-s large" id="quiz02">
       <!-- modal window content -->
       <div class="content">
        <form class="label-infield">
@@ -92,8 +102,8 @@
         	I
           <!-- drop-down menu -->
           <div class="choicedrop">
-              <a href="#">am expecting my first.<span class="ss-dropdown"></span></a>
-              <ol style="display:block; width:19.5em;">
+              <a href="#"><span id="mom-type-desc">am already a parent and expecting again. </span><span class="ss-dropdown"></span></a>
+              <ol style="display:none; width:19.5em;">
                   <li><a href="#">am expecting my first child.</a></li>
                   <li><a href="#">am already a parent.</a></li>
                   <li><a href="#">am already a parent and expecting again.</a></li>
@@ -149,7 +159,7 @@
       	<a href="#" class="button" id="bt-prev"><span class="ss-navigateleft"></span>Previous</a>
         </div>
         <div class="col50 float-r right">
-        <a href="#" class="button" id="bt-next">Next<span class="ss-navigateright"></span></a>
+        <a href="#" class="button bt-color" id="bt-next">Next<span class="ss-navigateright"></span></a>
         </div>
       </div>
     <!-- quiz progress bar -->
@@ -158,7 +168,6 @@
       </div>
       <!-- end quiz progress bar -->
   </div>
-  <!-- end modal window box --> 
 </div>
 <!-- /end modal window ************ --> 
 

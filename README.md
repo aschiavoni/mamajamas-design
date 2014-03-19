@@ -361,3 +361,23 @@ Feb 9
 - DES-104: "copy list" button
 - Example: http://soybox.com/mamajamas/shared-list-loggedin.html
 - Includes width-dependent adjustment to title bar button text size
+
+Mar 13
+- DES-220: Added profile button to top of "create profile" page and adjusted alignment
+
+Mar 19
+- DES-221: improvements to recommended products list option quiz question
+- changed quiz modals to use simplemodal
+- Please see: 
+  quiz01.html
+  quiz02-progress.html
+  quiz02.html
+  quiz02b.html
+  quiz03a.html
+  quiz03b.html
+  quiz04.html
+  quiz06.html
+  quiz06b.html
+  quiz_recommend.html
+  quiz_zipcode.html
+

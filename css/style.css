@@ -287,6 +287,7 @@ li#myaccount + li#sitelinks {
 	margin: 0;
 	padding: 21px 0 0 10px;
 	white-space: nowrap;
+	max-width: 81%;
 	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;

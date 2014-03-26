@@ -18,6 +18,12 @@ b,
 strong {
 	font-weight: 600;
 }
+dfn {
+	font-style: normal;
+}
+.no-touch dfn {
+	border-bottom: 1px dotted #888;
+}
 #hed-wrap {
 	background: #fff;
 	border-bottom: 1px solid #d9d9d9;
@@ -1966,9 +1972,6 @@ a.tooltip-b:hover span,
 	top: 50px;
 	z-index: 4000;
 }
-.home #secondary #notifications {
-	line-height: 1.231;
-}
 .notification {
 	clear: both;
 	font-size: 11px;
@@ -3622,6 +3625,22 @@ p.privacy-status {
 .layout_3-6-3 #secondary li h4 {
 	margin: 0;
 }
+.text-page #title {
+	border-color: #fff;
+}
+.text-page #secondary > .content {
+	color: #333333;
+    font-size: 1.2308em;
+    line-height: 1.5556em;
+	padding: 2em 0 4em;
+}
+.text-page h3 {
+	color: #000;
+}
+.text-page h4 {
+	color: #000;
+	margin-bottom: 0;
+}
 /* home page */
 .home #feature {
 	position: relative;
@@ -3629,7 +3648,7 @@ p.privacy-status {
 	background: #fbf5dd url(../images/nest-y960.jpg) no-repeat 50% 0;
 }
 .home #primary .content h2 {
-	color: #58345B;
+	color: #8B578E;
 	font-size: 3.3846em;
 	font-weight: 400;
 	line-height: 1.2em;
@@ -3639,7 +3658,6 @@ p.privacy-status {
 .home h3 {
 	font-size: 1em;
 	font-weight: 600;
-	color: #434060;
 }
 .home #primary p {
 	font-size: 1.2308em;
@@ -3662,13 +3680,13 @@ p.privacy-status {
 	display: block;
 	padding: 20px;
 	color: #FFF;
-	background: #723f75;
+	background: #8B578E;
 	text-align: center;
-	border: solid 1px #FFF;
 	box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 .home #primary li a:hover {
-	background: #333;
+	background: #fff;
+	color: #8B578E;
 	text-decoration: none;
 }
 .home .sq-button {
@@ -3700,7 +3718,7 @@ a.sq-button:focus {
 }
 a#learn-more:hover {
 	color: #FFF;
-	background: #723f75;
+	background: #8B578E;
 }
 .home #secondary {
 	font-size: 1.2308em;
@@ -3713,15 +3731,24 @@ a#learn-more:hover {
 	border-top: solid 1px #FFF;
 	border-bottom: solid 1px #FFF;
 }
-.ltr-closing {
-	width: 32%;
-	margin-top: -1.25em;	
-	margin-left: 68%;
+.home #secondary p {
+	margin-left: 214px;
+}
+.home #secondary img.float-l {
+	position: absolute;
+}
+.home #secondary #notifications {
+	line-height: 1.231;
+}
+.home #secondary #notifications p {
+	margin-left: 0;
 }
 .home #tertiary {
 	font-size: 1em;
-	color: #555;
-	background: #EBEBEB;
+	color: #fff;
+	background: #8B578E;
+	clear: both;
+	border-bottom: solid 1px #FFF;
 }
 .home #tertiary li {
 	list-style-type: none;
@@ -3734,21 +3761,20 @@ a#learn-more:hover {
 	border-right: none;
 }
 .home #tertiary li a {
-	color: #555;
+	color: #fff;
 	display: block;
 	padding: 20px;
 	min-height: 130px;
 	background: url(../images/icon_home-points2.png) no-repeat 20px -180px;
 }
 .home #tertiary li a:hover {
-	color: #723f75;
-	background-color: #fbf5dd;
+	color: #8B578E;
+	background-color: #fff;
 	text-decoration: none;
 }
 .home #tertiary h4 {
 	font-size: 1.4615em;
 	font-weight: 600;
-	color: #333;
 	line-height: 1.2em;
 	margin: 0;
 	padding: 0 0 0.5em 60px;
@@ -3760,11 +3786,6 @@ a#learn-more:hover {
 	background-position: 20px -380px;
 }
 .home #tertiary a:hover h4 {
-	color: #723f75;
-}
-.home #tertiary li:first-child h4 {
-}
-.home #tertiary li.last h4 {
 }
 .home #tertiary li p {
 	padding: 0 0 0 60px;
@@ -3821,6 +3842,34 @@ a.beta:hover {
 	font-weight: normal;
 }
 
+/* FAQ */
+.faq p {
+	color: #666;
+}
+.text-page #secondary .faq h3.small {
+	font-size: .8125em;
+	margin: 0;
+}
+ul.faq,
+ul.faq li {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+ul.faq {
+	margin-bottom: 1em;
+}
+.faq li .ss-icon {
+	color: #a6a6a6;
+	font-size: .75em;
+}
+.faq h4 {
+	margin-top: 2em;
+}
+.faq h4.bordertop {
+	padding-top: 2em;
+	border-top: solid 1px #ddd;
+}
 
 /* support for high-res devices */
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {

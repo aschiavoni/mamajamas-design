@@ -3515,13 +3515,26 @@ p.privacy-status {
 #frm-list-settings .privacy-status span.icon-gift {
 	background-position: -30px -50px;
 }
-#frm-list-settings ul li {
+#listprivacy-select ul li {
 	color: #777;
 }
-#frm-list-settings label {
+#listprivacy-select label {
 	color: #222;
 	font-weight: 600;
 }
+/* my settings: email */
+.settings-select input {
+	margin-right: 5px;
+}
+.settings-select label {
+	color: #222;
+}
+.settings-select ul li {
+	list-style-type: none;
+	margin-bottom: .5em;
+	padding-left: 20px;
+}
+
 /* form page */
 .form-page form {
 	font-size: 1.077em;

@@ -42,6 +42,21 @@
 	});
 	
 </script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($) {
+   // Load modal on click
+	  $('#playintro').click(function (e) {
+		  $('#introvid').modal({
+			  containerId:'introvid-container',
+			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+			  overlayClose: true
+			  });
+		  return false;
+		});
+	});
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -69,6 +84,7 @@
 						<ul class="nav-drop">
 							<li><a href="/">Home</a></li>
 							<li><a href="/blog">Blog</a></li>
+							<li><a href="/faq">FAQ</a></li>
 							<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
 							<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
 						</ul>
@@ -88,22 +104,21 @@
 			<p>Mamajamas gives you a personalized list of baby gear to customize and share with other parents.</p>
 			<ul>
 				<li><a href="#">Browse Baby Gear Lists</a></li>
-				<li><a href="#">Get Started Building My List</a></li>
+				<li><a href="#">Take Quiz & Get Started</a></li>
+				<li class="playbtn"><a href="#" id="playintro" title="Play an intro video">Play Intro Video</a></li>
 			</ul>
 		</div>
 	</div>
 	<div id="secondary">
 		<div class="content"> 
-		<div id="notifications">
-          <p class="notification"><strong class="ss-icon">Info</strong>Signed out successfully.</p>
-        </div>
-		<img src="images/about-mamajamas.jpg" alt="" width="196" height="294" class="float-l" />
+		<!-- notifications / -->
+			<img src="images/about-mamajamas.jpg" alt="" width="196" height="294" class="float-l" />
 			<p>The idea for Mamajamas was born out of my own experience as an expecting mom three years ago.</p>
-			<p>I was overwhelmed by the process of figuring out what to get in preparation. I spent hours researching products online and emailed mom friends asking for advice. They sent me long spreadsheets. After sifting through everything, I had to then create my own “master” spreadsheet to keep myself organized.</p>
-			<p>I starting thinking there must be an easier way to get this kind of information.</p>
-			<p>Meanwhile, I found out that many of my new mom friends were having the same experience. I also learned that the long process of figuring out what to get doesn’t end when the baby is born. At each new phase of their development you need new things.</p>
-			<p>The goal of Mamajamas is to help new and expecting parents buy only stuff they need — to help them spend less time thinking about stuff and more time enjoying pregnancy and new parenthood.</p>
-			<p>I hope Mamajamas is helpful to you during this exciting time!</p>
+<p>I was overwhelmed by the process of figuring out what to get in preparation. I spent hours researching products online and emailed mom friends asking for advice. They sent me long spreadsheets. After sifting through everything, I had to then create my own “master” spreadsheet to keep myself organized.</p>
+<p>I starting thinking there must be an easier way to get this kind of information. I wanted to get recommendations from my friends without having to sift through their spreadsheets.</p>
+<p>Meanwhile, I found out that many of my new mom friends were having the same experience. I also learned that the long process of figuring out what to get doesn’t end when the baby is born. At each new phase of their development you need new things.</p>
+<p>The goal of Mamajamas is to help new and expecting parents buy only stuff they need — to help them spend less time thinking about stuff and more time enjoying pregnancy and new parenthood.</p>
+<p>I hope Mamajamas is helpful to you during this exciting time!</p>
 			<p class="ltr-closing"><img src="images/angie-schiavoni_sig.png" alt="" width="168" height="64" /><br>
 				Angie Schiavoni<br>
 				Founder</p>
@@ -136,6 +151,19 @@
 	</div>
 </div>
 <!-- end body area --> 
+
+<!-- modal window ************ -->
+	<div id="introvid" class="modal-win">
+      <!-- modal window content -->
+      <div class="content">
+        <!-- video embed ***** -->
+        <iframe src="//player.vimeo.com/video/92141802?title=0&amp;byline=0&amp;portrait=0&amp;color=874789" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/92141802">Mamajamas</a> on <a href="https://vimeo.com">Vimeo</a>.
+        <!-- / video embed ***** -->
+      </div>
+      <!-- end modal window content --> 
+	</div>
+<!-- /end modal window ************ --> 
+
 <!-- Google Analytics -->
 </body>
 </html>

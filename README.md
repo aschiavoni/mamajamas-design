@@ -382,6 +382,16 @@ Mar 19
   quiz_zipcode.html
 
 Mar 26
-- FAQ page, faq.html, should be linked from the global upper-right dropdown menu. See also here: http://soybox.com/mamajamas/faq.html
+- DES-213: FAQ page, faq.html, should be linked from the global upper-right dropdown menu. See also here: http://soybox.com/mamajamas/faq.html
 - CSS changes affecting Home page colors and alignment. See: http://soybox.com/mamajamas/home.html
 - Added Ryan's title width adjustment. (Can not recall how I settled on the original narrower value, but I think it was for relatively narrow screens)
+
+Mar 30
+- DES-224: Added Email Settings tab to My Settings left nav
+
+Apr 18
+- DES-227: Added video to Home
+- Style changes to FAQ
+
+May 21
+- DES-226: Added "Expert list" icons and expandable user descriptions to Browse Lists.

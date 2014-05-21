@@ -1,0 +1,585 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Browse Lists</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- allow saving state of tabs -->
+<script src="js/jquery.cookie.js"></script>
+<!-- tabs -->
+<script src="js/jquery.tabs.js" ></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".tabs").accessibleTabs({
+            tabhead:'h2',
+            fx:"fadeIn",
+			 tabsListClass:'menu',
+			 autoAnchor:true,
+			 saveState:true
+        });
+    });
+</script>
+<!-- expanding text (applied to elements with ".expandable." used for product notes.) -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options-friendslist.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<!-- in-field labels -->
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- switching elements from scrolling to fixed -->
+<script src="js/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+
+        // keep header, primary nav and list nav fixed and scroll the rest of the page
+
+        $('#hed-wrap').scrollToFixed();
+
+		$('#primary').scrollToFixed({ 
+		 	marginTop: $('#hed-wrap').outerHeight(true) 
+		});
+
+		$('.menu').scrollToFixed({ 
+		 	marginTop: $('#hed-wrap').outerHeight(true) 
+		});
+    });
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body id="p-browse" class="layout_2-7-3">
+<!-- header area ***** -->
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding">
+				<h1>Mamajamas</h1>
+				<a href="#" class="beta tooltip-r">beta <span>&#8220;beta&#8221; means we&#8217;re still working out some of the kinks.<em></em></span></a> </div>
+			<nav id="mainnav">
+				<ul>
+					<li><a href="#">Edit List</a></li>
+					<li class="active"><a href="#">Browse Lists</a></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<!-- <li><a href="#" class="button">Login</a></li>
+					<li><a href="#" class="button">Sign Up</a></li> -->
+					<li id="myaccount"><a href="/profile" class="nav-drop-link"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> <span class="ss-icon ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+					<li id="sitelinks"> <a href="#" class="nav-drop-link"><span class="ss-icon ss-rows"></span><em>Mamajamas Menu</em></a>
+						<ul class="nav-drop">
+							<li><a href="/">Home</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+							<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+	<div id="title">
+		<div id="subhed">
+			<h2>Browse Lists</h2>
+		</div>
+	</div>
+	<div id="primary">
+		<div class="content"> 
+			<!-- left nav -->
+			<ul class="sidemenu">
+				<li><a href="browse-lists_following.html">Following</a></li>
+				<li><a href="browse-lists_followers.html">Followers</a></li>
+				<li class="current"><a href="browse-lists_discover.html" >Discover</a></li>
+			</ul>
+			<!-- end left nav --> 
+		</div>
+	</div>
+	<div id="secondary">
+		<div class="content">
+			<h2 class="visuallyhidden">Find Friends</h2>
+			<!-- tabs -->
+			<div id="findfriends" class="tabs"> 
+				<!-- tab: Mamajamas -->
+				<h2 id="mamajamasfriends">Mamajamas</h2>
+				<div class="tabbody">
+					<div class="friends-sort">Sort by: 
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Popularity</a></li>
+								<li><a href="#">Name</a></li>
+								<li><a href="#">Last updated</a></li>
+								<li><a href="#">Expert Lists</a></li>							
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+					<div class="friends-key"> <span class="ss-icon ss-target expert"></span> = Expert List </div>
+					<!-- Friends list (Mamajamas) -->
+					<ul class="clearfix friends-list findfriends-lists" style="height: 376px;">
+						<li data-relationship-id="" data-friend-id="119" id="friend_119" class=""> <a target="_blank" href="/johndoe2"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-6-l.png" alt="John Doe"> </a>
+							<div class="friend-info"> <a target="_blank" href="/johndoe2"> <strong class="mom">John Doe</strong> </a> <span class="ss-icon ss-target expert" title="Expert list"><em>Expert</em></span>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>1</strong> list item</div>
+									<div class="friend-updated">Updated list <strong>1 day ago</strong></div>
+								</div>
+								<!-- expandable profile text -->
+								<div class="profile expandable">
+									<p>Has a 2 1/2 year old son. I gravitate towards organic and wholesome parenting type products. I am willing to spend a little more for quality, but have a hard time spending a lot unless I'm really excited about something. I am also a huge fan of finding great baby gear at consignment or thrift stores (especially clothes!) and love a good bargain. I also have a slight addiction to amazon.com. I order way too many items late night on my phone (do not get the amazon iphone app unless you are ready to impulse buy!).</p>
+								</div>
+								<!-- end expandable profile text -->
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="184" id="friend_184" class=""> <a target="_blank" href="/angietest1"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-6-l.png" alt="angie test1"> </a>
+							<div class="friend-info"> <a target="_blank" href="/angietest1"> <strong class="mom">angie test1</strong> </a> <span class="ss-icon ss-target expert" title="Expert list"><em>Expert</em></span>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>140</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>7 days ago</strong></div>
+								</div>
+								<!-- expandable profile text -->
+								<div class="profile expandable">
+									<p>Has a 2 1/2 year old son. I gravitate towards organic and wholesome parenting type products. I am willing to spend a little more for quality, but have a hard time spending a lot unless I'm really excited about something. I am also a huge fan of finding great baby gear at consignment or thrift stores (especially clothes!) and love a good bargain. I also have a slight addiction to amazon.com. I order way too many items late night on my phone (do not get the amazon iphone app unless you are ready to impulse buy!).</p>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="203" id="friend_203" class=""> <a target="_blank" href="/test22"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-1-l.png" alt="angie test22"> </a>
+							<div class="friend-info"> <a target="_blank" href="/test22"> <strong class="mom">angie test22</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>147</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>about 20 hours ago</strong></div>
+								</div>
+								<!-- expandable profile text -->
+								<div class="profile expandable">
+									<p>Has a 2 1/2 year old son. I gravitate towards organic and wholesome parenting type products. I am willing to spend a little more for quality, but have a hard time spending a lot unless I'm really excited about something. I am also a huge fan of finding great baby gear at consignment or thrift stores (especially clothes!) and love a good bargain. I also have a slight addiction to amazon.com. I order way too many items late night on my phone (do not get the amazon iphone app unless you are ready to impulse buy!).</p>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="147" id="friend_147" class=""> <a target="_blank" href="/gooser"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-4-l.png" alt="angie testagain"> </a>
+							<div class="friend-info"> <a target="_blank" href="/gooser"> <strong class="mom">angie testagain</strong> </a> <span class="ss-icon ss-target expert" title="Expert list"><em>Expert</em></span>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>2</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>4 days ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="157" id="friend_157" class=""> <a target="_blank" href="/angieagain"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-5-l.png" alt="angie testagain"> </a>
+							<div class="friend-info"> <a target="_blank" href="/angieagain"> <strong class="mom">angie testagain</strong> </a> <span class="ss-icon ss-target expert" title="Expert list"><em>Expert</em></span>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>3</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>about 21 hours ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="145" id="friend_145" class=""> <a target="_blank" href="/edwardfaulkner"> <img src="https://mamajamas-staging.s3.amazonaws.com/uploads/user/profile_picture/145/friend_48587_628017709_6537_n.jpg" alt="Edward Faulkner"> </a>
+							<div class="friend-info"> <a target="_blank" href="/edwardfaulkner"> <strong class="mom">Edward Faulkner</strong> </a> <span class="ss-icon ss-target expert" title="Expert list"><em>Expert</em></span>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>5</strong> followers</div>
+									<div class="friend-listitems"><strong>8</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="1" id="friend_1" class=""> <a target="_blank" href="/jcase4"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-5-l.png" alt="jcase4"> </a>
+							<div class="friend-info"> <a target="_blank" href="/jcase4"> <strong class="mom">jcase4</strong> </a> <span class="ss-icon ss-target expert" title="Expert list"><em>Expert</em></span>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>4</strong> followers</div>
+									<div class="friend-listitems"><strong>13</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="122" id="friend_122" class=""> <a target="_blank" href="/testuser"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="Test User"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testuser"> <strong class="mom">Test User</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>1</strong> follower</div>
+									<div class="friend-listitems"><strong>1</strong> list item</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="134" id="friend_134" class=""> <a target="_blank" href="/lynneriquelme"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-4-l.png" alt="Lynne Riquelme"> </a>
+							<div class="friend-info"> <a target="_blank" href="/lynneriquelme"> <strong class="mom">Lynne Riquelme</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>1</strong> follower</div>
+									<div class="friend-listitems"><strong>3</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="155" id="friend_155" class=""> <a target="_blank" href="/angie_3"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-12-l.png" alt="angie testmaster"> </a>
+							<div class="friend-info"> <a target="_blank" href="/angie_3"> <strong class="mom">angie testmaster</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>1</strong> follower</div>
+									<div class="friend-listitems"><strong>3</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="207" id="friend_207" class=""> <a target="_blank" href="/testtest2"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-12-l.png" alt="test test2"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testtest2"> <strong class="mom">test test2</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>150</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>23 days ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="146" id="friend_146" class=""> <a target="_blank" href="/greta"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-13-l.png" alt="Greta Schmitt"> </a>
+							<div class="friend-info"> <a target="_blank" href="/greta"> <strong class="mom">Greta Schmitt</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>1</strong> list item</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="120" id="friend_120" class=""> <a target="_blank" href="/testuser29"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-13-l.png" alt="Test User"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testuser29"> <strong class="mom">Test User</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>1</strong> list item</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="151" id="friend_151" class=""> <a target="_blank" href="/testuser3"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-1-l.png" alt="test user"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testuser3"> <strong class="mom">test user</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>1</strong> list item</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="141" id="friend_141" class=""> <a target="_blank" href="/testsignup01"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-10-l.png" alt="Test Signup"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testsignup01"> <strong class="mom">Test Signup</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>2</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="18" id="friend_18" class=""> <a target="_blank" href="/taramconlan"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="Tara Conlan"> </a>
+							<div class="friend-info"> <a target="_blank" href="/taramconlan"> <strong class="mom">Tara Conlan</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>4</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="188" id="friend_188" class=""> <a target="_blank" href="/testagain"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-11-l.png" alt="angie testingagain"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testagain"> <strong class="mom">angie testingagain</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>118</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="159" id="friend_159" class=""> <a target="_blank" href="/testflow"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-13-l.png" alt="test flow"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testflow"> <strong class="mom">test flow</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>3</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>4 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="191" id="friend_191" class=""> <a target="_blank" href="/test1test1"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-3-l.png" alt="test1 test1"> </a>
+							<div class="friend-info"> <a target="_blank" href="/test1test1"> <strong class="mom">test1 test1</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>147</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="161" id="friend_161" class=""> <a target="_blank" href="/hello123"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="hello there"> </a>
+							<div class="friend-info"> <a target="_blank" href="/hello123"> <strong class="mom">hello there</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>3</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>4 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="192" id="friend_192" class=""> <a target="_blank" href="/test2test2"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-7-l.png" alt="test2 test2"> </a>
+							<div class="friend-info"> <a target="_blank" href="/test2test2"> <strong class="mom">test2 test2</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>147</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="194" id="friend_194" class=""> <a target="_blank" href="/test4test4"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-12-l.png" alt="test4 test4"> </a>
+							<div class="friend-info"> <a target="_blank" href="/test4test4"> <strong class="mom">test4 test4</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>130</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="193" id="friend_193" class=""> <a target="_blank" href="/test3test3"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-10-l.png" alt="test3 test3"> </a>
+							<div class="friend-info"> <a target="_blank" href="/test3test3"> <strong class="mom">test3 test3</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>128</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="173" id="friend_173" class=""> <a target="_blank" href="/testuser4"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-4-l.png" alt="Test User"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testuser4"> <strong class="mom">Test User</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>1</strong> list item</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="195" id="friend_195" class=""> <a target="_blank" href="/test5test5"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-9-l.png" alt="test5 test5"> </a>
+							<div class="friend-info"> <a target="_blank" href="/test5test5"> <strong class="mom">test5 test5</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>127</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="174" id="friend_174" class=""> <a target="_blank" href="/testingggg"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="angie testingggggg"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testingggg"> <strong class="mom">angie testingggggg</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>18</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="177" id="friend_177" class=""> <a target="_blank" href="/angie4"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-1-l.png" alt="angie4"> </a>
+							<div class="friend-info"> <a target="_blank" href="/angie4"> <strong class="mom">angie4</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>23</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>3 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="202" id="friend_202" class=""> <a target="_blank" href="/testuser6"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-15-l.png" alt="Test User"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testuser6"> <strong class="mom">Test User</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>3</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>about 1 month ago</strong></div>
+								</div>
+							</div>
+							<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+						</li>
+						<li data-relationship-id="" data-friend-id="156" id="friend_156" class=""> <a target="_blank" href="/angietest"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-9-l.png" alt="angie testtesttest"> </a>
+							<div class="friend-info"> <a target="_blank" href="/angietest"> <strong class="mom">angie testtesttest</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>4</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>5 months ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+						<li data-relationship-id="" data-friend-id="204" id="friend_204" class=""> <a target="_blank" href="/testtest"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-3-l.png" alt="test test"> </a>
+							<div class="friend-info"> <a target="_blank" href="/testtest"> <strong class="mom">test test</strong> </a>
+								<div class="friend-data">
+									<div class="friend-followers"><strong>0</strong> followers</div>
+									<div class="friend-listitems"><strong>134</strong> list items</div>
+									<div class="friend-updated">Updated list <strong>about 1 month ago</strong></div>
+								</div>
+								<button type="submit" class="button bt-color bt-follow follow"><span class="ss-plus"></span>Follow</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- end tab: Mamajamas --> 
+				<!-- tab: Facebook -->
+				<h2 id="facebookfriends">Facebook</h2>
+				<div class="tabbody">
+					<div class="friends-sort">Sort by: 
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Poularity</a></li>
+								<li><a href="#">Name</a></li>
+								<li><a href="#">Last updated</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+					<!-- Friends list (Facebook) --> 
+					
+				</div>
+				<!-- end tab: Facebook --> 
+				<!-- begin tab: Gmail -->
+				<h2 id="gmailfriends">Gmail</h2>
+				<div class="tabbody">
+					<div class="friends-sort">Sort by: 
+						<!-- drop-down menu -->
+						<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+							<ul style="display:none; width:7.5em;">
+								<li><a href="#">Poularity</a></li>
+								<li><a href="#">Name</a></li>
+								<li><a href="#">Last updated</a></li>
+							</ul>
+						</div>
+						<!-- /drop-down menu --> 
+					</div>
+					<!-- Friends list (Gmail) --> 
+					
+				</div>
+				<!-- end tab: Gmail --> 
+				<!-- begin tab: Invite a Friend -->
+				<h2 id="invitefriend">Invite a Friend</h2>
+				<div class="tabbody form-page">
+					<form class="label-infield">
+						<dl class="clearfix">
+							<fieldset>
+								<!-- row -->
+								<dt>To<strong class="required">*</strong></dt>
+								<dd class="half">
+									<p>
+										<label for="field-1">Friend’s email (required)</label>
+										<br />
+										<input name="field-1" type="text" id="field-1" value="">
+									</p>
+								</dd>
+								<dd class="half">
+									<p>
+										<label for="field-2">Friend’s Name</label>
+										<br />
+										<input name="field-2" type="text" id="field-2" value="">
+									</p>
+								</dd>
+								<!-- row -->
+								<dt>From</dt>
+								<dd>
+									<p>
+										<label for="field-2">Name</label>
+										<br />
+										<input name="field-2" type="text" id="field-2" value="">
+									</p>
+								</dd>
+							</fieldset>
+							<!-- row -->
+							<fieldset>
+								<dt>Subject</dt>
+								<dd class="pad">
+									<p>Rick has invited you to join Mamajamas</p>
+								</dd>
+								<!-- row -->
+								<dt>Message</dt>
+								<dd>
+									<p>
+										<label for="field-3">Personalized message</label>
+										<br />
+										<textarea rows="2" name="field-3" id="field-3"></textarea>
+									</p>
+									<p class="normal"><span class="instruction">Your message will include the following text:</span><br>
+										Create your own baby gear list at Mamajamas:<br>
+										<a href="http://www.mamajamas.com">http://www.mamajamas.com</a></p>
+								</dd>
+							</fieldset>
+						</dl>
+						<div class="button-row">
+							<button type="submit" class="button bt-light" id="bt-cancel"><span class="ss-icon ss-delete"></span>Cancel</button>
+							<button type="submit" class="button bt-color bt-send" id="bt-name"><span class="ss-icon ss-send"></span>Send</button>
+						</div>
+					</form>
+				</div>
+				<!-- end tab: Invite a Friend --> 
+			</div>
+			<!-- end tabs --> 
+			
+		</div>
+	</div>
+	<div id="tertiary">&nbsp;</div>
+	<div id="footer">
+		<div class="content"> </div>
+	</div>
+</div>
+<!-- end body area --> 
+<!-- Google Analytics -->
+</body>
+</html>

@@ -171,8 +171,11 @@ div.choicedrop {
 }
 .choicedrop .ss-dropdown {
 	font-size:58.8%;
-	color:#CCC;
+	color:#999;
 	margin:0 8px;
+}
+#quiz-modal .choicedrop .ss-dropdown {
+	color:#CCC;
 }
 .choicedrop a:hover {
 	color:#808080;

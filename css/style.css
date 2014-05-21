@@ -913,12 +913,16 @@ a.more-friends:focus {
 #p-browse.layout_2-7-3 #secondary > .content {
 	padding-top: 0;
 }
-.friends-sort {
+.friends-sort,
+.friends-key {
 	position: fixed;
 	top: 151px;
-	padding: 4px 0;
-	color: #777;
+	padding: 8px 0 0;
+	color: #a6a6a6;
 	z-index: 1100;
+}
+.friends-key {
+	margin: 1px 0 0 200px;
 }
 ul.friends-list {
 	margin: 31px 0 0 0;
@@ -942,29 +946,51 @@ ul.friends-list {
 	border-top: none;
 }
 .friends-list img {
+	float: left;
 	width: 84px;
 	margin: 0 20px 0 0;
 	border: solid 1px #BEBEBE;
 	cursor: pointer;
+}
+.friend-data {
 	float: left;
+	width: 100%;
+}
+.friend-followers,
+.friend-listitems,
+.friend-updated {
+	float: left;
+	width: 22%;
+	margin: 0.38em 2.9% 0.46em 0;
+}
+.friends-list .friend-followers {
+	clear: left;
+}
+.friend-updated {
+	width: 47%;
 }
 .friends-list .friend-info {
-	float: left;
+	margin-left: 106px;
 	padding-top: 0;
 	color: #a6a6a6;
 }
 .friends-list .friend-info strong.mom  {
 	font-size: 16px;
 	font-weight: 600;
+	line-height: 1.125em;
 	color: #000;
 }
 .friends-list .friend-info strong {
 	color: #555;
 }
+.friends-list .profile p {
+	color: #777;
+	margin-bottom: 0;
+}
 .friends-list .bt-follow {
+	display: block;
 	min-width: 98px; /* also see .bt-follow button styles, grouped with #bt-follow styles */
-	float: right;
-	margin-top: 28px;
+	margin-top: 1em;
 	margin-right: 10px;
 }
 .friends-list .check {
@@ -975,12 +1001,32 @@ ul.friends-list {
 .friends-list li:first-child .check {
 	top: 67px;
 }
+#findfriends .ss-icon {
+	position: relative;
+	top: 1px;
+	font-size: 1.08em;
+}
+.friends-list span.fa {
+	display: inline;
+}
+.friends-list .expert em {
+	display: block;
+    height: 1px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+.expert {
+	color: #f2b24c;
+	margin-left: 3px;
+	cursor: pointer;
+}
 #findfriends .content {
 	padding: 0;
 }
 #findfriends .form-page {
 	padding: 20px 0 0;
 }
+
 /* invite buttons */
 .fb-invite,
 .google-invite {
@@ -993,13 +1039,14 @@ ul.friends-list {
 /* Discover menu and button images ------ */
 #findfriends .menu {
 	background:url(../images/bg_fade-w.png) repeat-x 0 bottom;
-	padding: 47px 0 58px;
+	padding: 46px 0 57px;
 }
 #findfriends .menu a {
-	padding-left: 45px;
+	padding-left: 44px;
 	background-image: url(../images/icons_find-friends.png);
 	background-repeat: no-repeat;
 	background-size: 480px 96px;
+	border: 1px solid #EEEEEE;
 }
 #accessibletabsnavigation0-0 a {
 	background-position: 0 0;
@@ -1016,18 +1063,22 @@ ul.friends-list {
 #accessibletabsnavigation0-0 a:hover,
 #accessibletabsnavigation0-0.current a {
 	background-position: 0 -48px;
+	border-color: #FFF;
 }
 #accessibletabsnavigation0-1 a:hover,
 #accessibletabsnavigation0-1.current a {
 	background-position: -126px -48px;
+	border-color: #FFF;
 }
 #accessibletabsnavigation0-2 a:hover,
 #accessibletabsnavigation0-2.current a {
 	background-position: -252px -48px;
+	border-color: #FFF;
 }
 #accessibletabsnavigation0-3 a:hover,
 #accessibletabsnavigation0-3.current a {
 	background-position: -378px -48px;
+	border-color: #FFF;
 }
 /* Discover prompt ------ */
 #findfriends-prompt {
@@ -4306,7 +4357,7 @@ ul.menu {
 }
 ul.menu li {
 	display: inline;
-	margin-right: 15px;
+	margin-right: 10px;
 }
 ul.menu li a {
 	padding: 15px 9px 12px;

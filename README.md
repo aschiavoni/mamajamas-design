@@ -395,3 +395,4 @@ Apr 18
 
 May 21
 - DES-226: Added "Expert list" icons and expandable user descriptions to Browse Lists.
+- For DES-230: Modal windows (and images) for installation of Add to Mamajamas bookmark. See: install_add-to-mj_bookmark.html

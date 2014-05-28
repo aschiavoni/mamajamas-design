@@ -1,0 +1,150 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<title>Mamajamas</title>
+<meta name="description" content="">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- bxslider (for product image selector) -->
+<script src="js/jquery.bxslider.min.js"></script>
+<link href="css/jquery.bxslider.css" rel="stylesheet">
+<script>
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider({
+		 touchEnabled: true,
+		 pager: false
+		 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/addtowin-style.css" rel="stylesheet" type="text/css">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- mamajamas bookmark window -->
+<div id="addto-mamajamas" class="modal-box"> <a class="bt-close ss-icon" href="#">Close</a> 
+	<!-- window header -->
+	<h2>Add to <strong>Mamajamas List</strong></h2>
+	<!-- window content -->
+	<div class="content clearfix">
+		<div class="logo">&nbsp;</div>
+		<form>
+			<div class="col1">
+				<div class="prod-image-frame">
+					<ul class="bxslider">
+						<li><img src="assets/products/amazon/41IMtfMJYeL._SL75_.jpg" alt=""/></li>
+						<li><img src="assets/products/amazon/31AhKonzveL._SL75_.jpg" alt=""/></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col2"> 
+				<!-- item name and price ***** -->
+				<fieldset>
+					<div class="form-row">
+						<label for="additem-name">Item Name</label>
+						<br />
+						<textarea name="additem-name" value="" id="additem-name">Maclaren Quest Stroller Coffee/Burnt Orange</textarea>
+					</div>
+					<div class="form-row">
+						<label for="additem-field-price">Price</label>
+						<input name="additem-field-price" type="text" id="additem-field-price" value="">
+					</div>
+				</fieldset>
+				<!-- / item name and price ***** --> 
+				
+				<!-- category - type ***** -->
+				<fieldset>
+					<div class="form-row">
+						<label for="additem-field-cat">Category</label>
+						<!-- drop-down menu: item category -->
+						<select id="additem-field-cat">
+							<option>Uncategorized </option>
+							<option>Bathing </option>
+							<option>Changing </option>
+							<option>Clothing </option>
+							<option>Decorating </option>
+							<option>Expecting </option>
+							<option>Feeding </option>
+							<option selected> Getting Around </option>
+							<option>Nursing </option>
+							<option>Playing </option>
+							<option>Reading </option>
+							<option>Sleeping </option>
+							<option>Staying Healthy </option>
+						</select>
+						<!-- / drop-down menu: item category --> 
+					</div>
+					<div class="form-row">
+						<label for="additem-field-type">Type</label>
+						<!-- drop-down menu: item type -->
+						<select id="additem-field-type">
+							<option>Select an Item Type </option>
+							<option>Infant Car Seat</option>
+							<option>Convertible Car Seat </option>
+							<option>Stroller </option>
+							<option>Carrier or Wrap </option>
+						</select>
+						<!-- / drop-down menu: item type --> 
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="form-row">
+						<label for="additem-field-need">Need</label>
+						I 
+						<!-- drop-down menu:  -->
+						<select>
+							<option>Want</option>
+							<option>Have</option>
+						</select>
+						<!-- / drop-down menu: --> 
+						<!-- drop-down menu:  -->
+						<select>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+						<!-- / drop-down menu: --> 
+						of these. </div>
+				</fieldset>
+				<!-- / price - category - type ***** --> 
+				
+				<!-- rating - review-comment ***** -->
+				<fieldset>
+					<div class="rating" style="display:block;"><em>My rating:</em>
+						<div class="stars">
+							<div data-rating="1" class="star"></div>
+							<div data-rating="2" class="star"></div>
+							<div data-rating="3" class="star"></div>
+							<div data-rating="4" class="star"></div>
+							<div data-rating="5" class="star"></div>
+						</div>
+					</div>
+					<div class="prod-note-input">
+						<p>
+							<label for="list_item_notes_xxx"><span class="ss-chat"></span> Review/Comment</label>
+							<br />
+							<textarea name="list_item[notes]" value="" id="list_item_notes_xxx"></textarea>
+						</p>
+					</div>
+				</fieldset>
+				<!-- / rating - review-comment ***** --> 
+				
+				<a href="#" class="button bt-color"><span class="ss-plus"></span>Add to List</a> </div>
+		</form>
+	</div>
+	<!-- end window content --> 
+</div>
+<!-- end window -->
+</body>
+</html>

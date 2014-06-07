@@ -90,15 +90,25 @@
 			</div>
 			<div id="login">
 				<ul>
-					<li id="myaccount"> <a href="/profile"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
-						<!-- username removed --> 
-						<span class="ss-dropdown"></span> </a>
+					<!-- <li><a href="#" class="button">Login</a></li>
+					<li><a href="#" class="button">Sign Up</a></li> -->
+					<li id="myaccount"><a href="/profile" class="nav-drop-link"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
+						<span class="ss-icon ss-dropdown"></span> </a>
 						<ul class="nav-drop">
 							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
 							<li><a href="/list">My List</a></li>
 							<li><a href="/profile">My Profile</a></li>
 							<li><a href="/settings">My Settings</a></li>
 							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+					<li id="sitelinks"> 
+					<a href="#" class="nav-drop-link"><span class="ss-icon ss-rows"></span><em>Mamajamas Menu</em></a>
+						<ul class="nav-drop">
+							<li><a href="/">Home</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+							<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -118,9 +128,9 @@
     <div class="content">
     	<!-- left nav -->
         <ul class="sidemenu">
-            <li class="current"><a href="browse-lists_discover.html" >Discover</a></li>
-            <li><a href="browse-lists_following.html">Following</a></li>
+           <li><a href="browse-lists_following.html">Following</a></li>
 			<li><a href="browse-lists_followers.html">Followers</a></li>
+           <li class="current"><a href="browse-lists_discover.html" >Discover</a></li>
         </ul>
       	<!-- end left nav -->
     </div>
@@ -133,20 +143,52 @@
             <!-- tab: Mamajamas -->
               <h2 id="mamajamasfriends">Mamajamas</h2>
               <div class="tabbody">
-					<div class="friends-sort">Sort by:
+					<div class="friends-sort">Sort by: 
 						<!-- drop-down menu -->
 						<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
 							<ul style="display:none; width:7.5em;">
-								<li><a href="#">Poularity</a></li>
+								<li><a href="#">Popularity</a></li>
 								<li><a href="#">Name</a></li>
 								<li><a href="#">Last updated</a></li>
+								<li><a href="#">Expert Lists</a></li>
 							</ul>
 						</div>
 						<!-- /drop-down menu --> 
 					</div>
+					<div class="friends-key"> <span class="ss-icon ss-target expert"></span> = Expert List </div>
                 <!-- Friends list (Mamajamas) -->
                 <ul class="clearfix friends-list findfriends-lists">
                   <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Martha Arbuckle"></a>  
+						<div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Martha Arbuckle</strong></a>  
+							<div class="friend-followers"><strong>27</strong> followers</div>
+							<div class="friend-age"><strong>33</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Kris Cooper"></a>  
+                      <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Kris Cooper</strong></a>  
+							<div class="friend-followers"><strong>17</strong> followers</div>
+							<div class="friend-age"><strong>37</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>2 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+                  <li data-relationship-id="" data-friend-id="" id="" class="">
+                    <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Qin Lee"></a>  
+                      <div class="friend-info">
+							<a target="_blank" href="#"><strong class="mom">Qin Lee</strong></a>
+							<div class="friend-followers"><strong>12</strong> followers</div>
+							<div class="friend-age"><strong>28</strong> years old</div>
+							<div class="friend-updated">Updated list <strong>6 days ago</strong></div>
+						</div>
+                      <button class="button bt-color bt-follow" type="submit"><span class="ss-plus"></span>Follow</button>
+                  </li>
+				  <li data-relationship-id="" data-friend-id="" id="" class="">
                     <a target="_blank" href="#"><img src="images/profile_photo-default-l.png" alt="Martha Arbuckle"></a>  
 						<div class="friend-info">
 							<a target="_blank" href="#"><strong class="mom">Martha Arbuckle</strong></a>  
@@ -403,14 +445,7 @@
   </div>
   <div id="tertiary">&nbsp;</div>
   <div id="footer">
-		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
-			<ul class="nav-drop">
-				<li><a href="/">Mamajamas Home</a></li>
-				<li><a href="/about">About Us</a></li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
-				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
-			</ul>
+		<div class="content">
 		</div>
 	</div>
 </div>

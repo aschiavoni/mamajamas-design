@@ -66,9 +66,9 @@
 			</div>
 			<div id="login">
 				<ul>
-					<li id="myaccount"> <a href="/profile"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> 
-						<!-- username removed --> 
-						<span class="ss-dropdown"></span> </a>
+					<!-- <li><a href="#" class="button">Login</a></li>
+					<li><a href="#" class="button">Sign Up</a></li> -->
+					<li id="myaccount"><a href="/profile" class="nav-drop-link"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> <span class="ss-icon ss-dropdown"></span> </a>
 						<ul class="nav-drop">
 							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
 							<li><a href="/list">My List</a></li>
@@ -77,176 +77,143 @@
 							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
 						</ul>
 					</li>
+					<li id="sitelinks"> <a href="#" class="nav-drop-link"><span class="ss-icon ss-rows"></span><em>Mamajamas Menu</em></a>
+						<ul class="nav-drop">
+							<li><a href="/">Home</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+							<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 </div>
+
 <!-- end header area --> 
 <!-- body area ***** -->
 <div class="gridContainer clearfix">
-  <div id="title">
-    <div id="subhed">
-      <h2>Browse Lists</h2>
-    </div>
-  </div>
-  <div id="primary">
-    <div class="content">
+	<div id="title">
+		<div id="subhed">
+			<h2>Browse Lists</h2>
+		</div>
+	</div>
+	<div id="primary">
+		<div class="content">
 			<ul class="sidemenu">
-				<li><a href="browse-lists_discover.html">Discover</a></li>
-            	<li class="current"><a href="browse-lists_following.html">Following</a></li>
+				<li class="current"><a href="browse-lists_following.html">Following</a></li>
 				<li><a href="browse-lists_followers.html">Followers</a></li>
-        	</ul>
-    </div>
-  </div>
-  <div id="secondary">
-    <div class="content"> 
-      
-        <h2 class="visuallyhidden">Following</h2>
-        	<!-- friends list -->
-        	<ul id="friendslist" class="clearfix friends-list">
-        		<li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-					<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-                <li data-relationship-id="" data-friend-id="" id="" class="following">
-    				<a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>  
-    				<div class="friend-info">
-      					<a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a>
-        				<em class="ss-icon check">checked</em>
-						<div class="friend-followers"><strong>27</strong> followers</div>
-						<div class="friend-age"><strong>33</strong> years old</div>
-						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
-					</div>
-       				<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
-					<button class="button bt-color bt-follow bt-active" type="submit">
-                    	<span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em>
-                  </button>
-  				</li>
-        	</ul>
-        	<!-- end friends list -->
-           
-    </div>
-  </div>
-  <div id="tertiary">&nbsp;</div>
-  <div id="footer">
-		<div class="content nav-drop-trigger"> <a href="#" class="nav-drop-link"><span class="ss-rows"></span><em>More Mamajamas</em></a>
-			<ul class="nav-drop">
-				<li><a href="/">Mamajamas Home</a></li>
-				<li><a href="/about">About Us</a></li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
-				<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+				<li><a href="browse-lists_discover.html">Discover</a></li>
 			</ul>
 		</div>
+	</div>
+	<div id="secondary">
+			<h2 class="visuallyhidden">Following</h2>
+			<div class="friendslistmenu">
+				<div class="friends-sort">Sort by: 
+					<!-- drop-down menu -->
+					<div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+						<ul style="display:none; width:7.5em;">
+							<li><a href="#">Popularity</a></li>
+							<li><a href="#">Name</a></li>
+							<li><a href="#">Last updated</a></li>
+							<li><a href="#">Expert Lists</a></li>
+						</ul>
+					</div>
+					<!-- /drop-down menu --> 
+				</div>
+				<div class="friends-key"> <span class="ss-icon ss-target expert"></span> = Expert List </div>
+			</div>
+			<!-- friends list -->
+			<ul id="friendslist" class="clearfix friends-list">
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+				<li data-relationship-id="" data-friend-id="" id="" class="following"> <a target="_blank" href="#"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/4/friend_fb.jpg" alt="Ryan Eschinger"></a>
+					<div class="friend-info"> <a target="_blank" href="#"><strong class="mom">Ryan Eschinger</strong></a> <em class="ss-icon check">checked</em>
+						<div class="friend-followers"><strong>27</strong> followers</div>
+						<div class="friend-age"><strong>33</strong> years old</div>
+						<div class="friend-updated">Updated list <strong>3 days ago</strong></div>
+					</div>
+					<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  -->
+					<button class="button bt-color bt-follow bt-active" type="submit"> <span class="bt-text1"><span class="ss-check"></span>Following</span><em class="bt-text2"><span class="ss-delete"></span>Unfollow</em> </button>
+				</li>
+			</ul>
+			<!-- end friends list --> 
+	</div>
+	<div id="tertiary">&nbsp;</div>
+	<div id="footer">
+		<div class="content"> </div>
 	</div>
 </div>
 <!-- end body area --> 

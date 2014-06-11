@@ -768,6 +768,11 @@ a#bt-fb-connect-s { /* fb login without button chrome */
 }
 /* sub-columns ------ */
 .grid {
+	overflow: hidden;
+}
+.grid .col {
+	float: left;
+	box-sizing: border-box;	
 }
 .col5 {
 	width: 4.9%;
@@ -1789,7 +1794,7 @@ ul.friends-list {
 	padding: 0 0 20px;
 }
 #prod-search {
-	padding: 10px 10px 0
+	padding: 0 10px 0
 }
 #prod-search p {
 	margin-bottom: .5em;
@@ -1968,7 +1973,7 @@ ul.prod-search-list {
 /* search modal "add your own" */
 #search-modal #field-prodname {
 	display: inline;
-	width: 77%;
+	width: 72%;
 }
 #search-modal .collapsible {
 	margin-bottom: 0;
@@ -1978,7 +1983,7 @@ ul.prod-search-list {
 	padding: 0;
 }
 #search-modal .collapsible strong {
-	color: #999;
+	color: #777;
 	font-weight: normal;
 }
 #search-modal .ss-dropdown,
@@ -1988,9 +1993,16 @@ ul.prod-search-list {
 #search-modal .collapsible-content p {
 	padding-left: 21px;
 }
+#search-modal #frm-addown {
+    margin-right: 30%;
+}
 #search-modal form#frm-addown p label {
 	left: 22px; /* #search-modal .collapsible-content p + 2px */
 	width: 280px;
+}
+#search-modal #frm-addown .button {
+    padding-bottom: 7px;
+    padding-top: 9px;
 }
 /* build list intro ----- */
 #listintro-container {
@@ -2587,7 +2599,7 @@ a[title="Pinterest"]:hover {
 	height: 16px;
 	background-size: 16px 48px;
 	background-repeat: no-repeat;
-        background-position: 0 -32px;
+    background-position: 0 -32px;
 }
 #prod-rec.menu-icon {
 	margin-right: 20px;
@@ -4563,4 +4575,28 @@ ul.menu li.current a {
 }
 .readonly .own input[type='checkbox'] + label {
 	cursor: default;
+}
+/* add to mamajamas callouts ------ */
+#search-modal .addto-callout {
+	font-size: 0.846em;
+	width: 30%;
+	margin-top: -0.8em;
+	padding: 0 25px 0 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	position: absolute;
+	right: 0;
+}
+.addto-callout div {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin: 0;
+	padding: 6px 6px 6px 31px;
+	background: #fff url(../images/bookmark-sm.png) no-repeat 5px 5px;
+	background-size: 20px 40px;
+}
+.addto-callout a {
+	color: #995e9a;
+	font-weight: bold;
 }

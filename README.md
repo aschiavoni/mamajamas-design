@@ -396,3 +396,10 @@ Apr 18
 May 21
 - DES-226: Added "Expert list" icons and expandable user descriptions to Browse Lists.
 - For DES-230: Modal windows (and images) for installation of Add to Mamajamas bookmark. See: install_add-to-mj_bookmark.html
+
+June 7
+- absorbed addtowin-style.css into main stylesheet and resolved conflicts with older styles
+- added "Sort by" and "Expert Lists" menus to Followers and Following lists under Browse Lists
+
+June 11
+- "Add to Mamajamas" bookmark link to Choose modal

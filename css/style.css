@@ -877,9 +877,9 @@ a.more-friends:focus {
 	color: #FFFFFF;
 	background: #68C16B;
 	padding: 7px 4px 1px;
-	border-radius: 11px;
-	-moz-border-radius: 11px;
-	-webkit-border-radius: 11px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
 }
 /* follow sidebar ------ */
 #module-follow {
@@ -1020,12 +1020,13 @@ ul.friends-list {
     display: inline-block;
 }
 .friends-list .check {
-	position: absolute;
-	top: 87px;
-	left: 67px;
+    display: inline-block;
+    top: 89px !important;
+    left: 70px;
+    position: absolute !important;
 }
 .friends-list li:first-child .check {
-	top: 67px;
+    top: 70px !important;
 }
 #findfriends .ss-icon {
 	position: relative;
@@ -1892,6 +1893,9 @@ ul.prod-search-list {
 .prod-search-list li img {
 	vertical-align: middle;
 	height: 105px;
+}
+.prod-search-list .no-search-results {
+    margin-left: 10px;
 }
 /* prod search modal detail */
 .prod-detail-pop {

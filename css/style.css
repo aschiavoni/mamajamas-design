@@ -2727,6 +2727,9 @@ a.bt-addanother,
 	padding: 0 2px;
 	border-radius: 9px;
 }
+.prod-desc h3 a.bt-change {
+  background: #6BB36E;
+}
 a.bt-addanother span {
 	display: none;
 	font-weight: 400;

@@ -3878,10 +3878,10 @@ p.privacy-status {
 #frm-list-settings .privacy-status span.icon-gift {
 	background-position: -30px -50px;
 }
-#listprivacy-select ul li {
+#frm-list-settings #listprivacy-select ul li {
 	color: #777;
 }
-#listprivacy-select label {
+#frm-list-settings #listprivacy-select label {
 	color: #222;
 	font-weight: 600;
 }

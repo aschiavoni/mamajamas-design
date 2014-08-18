@@ -107,7 +107,7 @@ img, object, embed, video {
 	clear: both;
 	float: left;
 	margin-left: 0;
-	width: 16.667%;
+	width: 16.6666%;
 	display: block;
 	border:none;
 }
@@ -115,10 +115,11 @@ img, object, embed, video {
 	clear: none;
 	float: left;
 	width: 70.625%;
+	width: 66.6666%;
 	display: block;
 }
 #secondary > .content {
-	min-height: 450px;
+	min-height: 500px;
 	position: relative;
 }
 #tertiary {

@@ -915,41 +915,43 @@ a.more-friends:focus {
 #p-browse #primary .content {
 	padding-top: 22px;
 }	
-#p-browse.layout_2-7-3 #secondary > .content {
+#p-browse #secondary > .content {	
 	padding-top: 0;
+	border-left: solid 1px #d9d9d9;
+	min-height: 500px;
 }
-.friendslistmenu {
-	background: url(../images/bg_fade-w.png) repeat-x 0 bottom;
-	position: fixed;
-	z-index: 1100;
-    width: 54%;
-	height: 56px;
+#p-browse.layout_2-7-3 #secondary > .content {	
+	border-left: none;
 }
-.friendslistmenu .friends-sort,
-.friendslistmenu .friends-key {
-	position: absolute;
-	top: 20px;
+#findfriendsmenu {
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9;
+    padding: 12px 20px 0;
 }
-.friendslistmenu .friends-key {
-	left: 200px;
-	margin-top: 1px;
+#findfriendsmenu[style] {
+	z-index: 999 !important;
+}
+#findfriendsmenu .menu {
+	margin-bottom: 10px;
+	float: left;
+}
+#findfriendsfilter {
+	border-top: 1px solid #d9d9d9;
+	margin: 0 -20px;
+    padding: 8px 20px 4px;
+	clear: left;
+	color: #777;
 }
 .friends-sort,
 .friends-key {
-	color: #a6a6a6;
+	float: left;
 }
-#findfriends .friends-sort,
-#findfriends .friends-key {
-	position: fixed;
-	z-index: 1100;
-	top: 151px;
-}
-#findfriends .friends-key {
-	margin: 1px 0 0 200px;
+.friends-sort {
+	width: 57%;
 }
 ul.friends-list {
-	margin: 40px 0 0 0;
-	padding: 20px 0 0;
+	margin: 0;
+	padding: 20px;
 	list-style-type: none;
 	background: #fff;
 }
@@ -1064,54 +1066,66 @@ ul.friends-list {
 	margin-right: 5px;
 }
 /* Discover menu and button images ------ */
-#findfriends .menu {
-	background:url(../images/bg_fade-w.png) repeat-x 0 bottom;
-	padding: 40px 0 66px;
-}
-#findfriends .menu a {
+#findfriendsmenu .menu a {
 	padding-left: 44px;
-	background-image: url(../images/icons_find-friends.png);
+	background-image: url(../images/icons_find-friends2.png);
 	background-repeat: no-repeat;
-	background-size: 480px 96px;
-	border: 1px solid #EEEEEE;
+	background-size: 600px 80px;
 }
-#accessibletabsnavigation0-0 a {
+#mamajamasfriends {
+	border-radius: 5px 0 0 5px;
+	background-position: 0 -40px;
+}
+#facebookfriends {
+	background-position: -150px -40px;
+}
+#gmailfriends {
+	background-position: -300px -40px;
+}
+#invitefriend {
+	border-radius: 0 5px 5px 0;
+	background-position: -450px -40px;
+}
+#mamajamasfriends:hover,
+.current #mamajamasfriends {
 	background-position: 0 0;
 }
-#accessibletabsnavigation0-1 a {
-	background-position: -126px 0;
+#facebookfriends:hover,
+.current #facebookfriends {
+	background-position: -150px 0;
 }
-#accessibletabsnavigation0-2 a {
-	background-position: -252px 0;
+#gmailfrields:hover,
+.current #gmailfriends {
+	background-position: -300px 0;
 }
-#accessibletabsnavigation0-3 a {
-	background-position: -378px 0;
+#invitefriend:hover,
+.current #invitefriend {
+	background-position: -450px 0;
 }
-#accessibletabsnavigation0-0 a:hover,
-#accessibletabsnavigation0-0.current a {
-	background-position: 0 -48px;
-	border-color: #FFF;
+#friendssearch {
+	clear: both;
+	margin-bottom: 10px;
 }
-#accessibletabsnavigation0-1 a:hover,
-#accessibletabsnavigation0-1.current a {
-	background-position: -126px -48px;
-	border-color: #FFF;
+#friendssearch input[type="text"] {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+	width: 60.5%;
 }
-#accessibletabsnavigation0-2 a:hover,
-#accessibletabsnavigation0-2.current a {
-	background-position: -252px -48px;
-	border-color: #FFF;
+#friendssearch input[type="submit"] {
+	background: url(../images/icon_search.png) no-repeat 0 50%;
+    border: none;
+	text-indent: -9999px;
+	position: relative;
+	left: -30px;
+    width: 20px;
 }
-#accessibletabsnavigation0-3 a:hover,
-#accessibletabsnavigation0-3.current a {
-	background-position: -378px -48px;
-	border-color: #FFF;
-}
+
 /* Discover prompt ------ */
 #findfriends-prompt {
-	background: url(../images/icon_find-friends.png) no-repeat 0 3px;
+	background: url(../images/icon_find-friends.png) no-repeat 20px 3px;
 	background-size: 75px 55px;
-	padding: 0 40px 0 85px;
+	padding: 0 40px 0 105px;
 }
 #findfriends-prompt h3 {
 	margin-bottom: 0;
@@ -3950,7 +3964,8 @@ p.privacy-status {
 /* text pages, layout_2-7-3, layout_3-6-3 */
 .text-page #title h2,
 .layout_2-7-3 #title h2,
-.layout_3-6-3 #title h2 {
+.layout_3-6-3 #title h2,
+#p-browse #title h2 {
 	padding-left: 0;
 }
 .text-page #secondary > .content,
@@ -3961,12 +3976,14 @@ p.privacy-status {
 }
 .text-page #secondary h3,
 .layout_2-7-3 #secondary h3,
-.layout_3-5-3 #secondary h3 {
+.layout_3-5-3 #secondary h3,
+#p-browse #secondary h3 {
 	margin: 2em 0 1em;
 }
 .text-page #secondary li h4,
 .layout_2-7-3 #secondary li h4,
-.layout_3-6-3 #secondary li h4 {
+.layout_3-6-3 #secondary li h4,
+#p-browse #secondary li h4 {
 	margin: 0;
 }
 .text-page #title {
@@ -4283,7 +4300,7 @@ input[type=text]#field-search {
 	background-image: url(../images/icon_find-friends@2x.png);
 }
 #findfriends .menu a {
-	background-image: url(../images/icons_find-friends@2x.png); /* find friends company logos*/
+	background-image: url(../images/icons_find-friends2@2x.png); /* find friends company logos*/
 }
 .star {
 	background-image: url(../images/icon_rating-stars@2x.png);
@@ -4469,13 +4486,21 @@ ul.sidemenu li.current a:active {
 	padding: 0;
 	border: none;
 	color: #000;
-	font-weight: 400;
+	font-weight: 600;
+}
+ul.sidemenu li.current a:after {
+	font-family:'fontawesome';
+	content:'\F0DA';
+	color: #5daf5d;
+	margin-left: 5px;
 }
 .layout_2-7-3 ul.sidemenu,
-.layout_3-6-3 ul.sidemenu {
+.layout_3-6-3 ul.sidemenu,
+#p-browse ul.sidemenu {
 	padding-top: 2em;
 }
-.layout_2-7-3 ul.sidemenu {
+.layout_2-7-3 ul.sidemenu,
+#p-browse ul.sidemenu {
 	margin-left: 10px;
 }
 .layout_3-6-3 ul.sidemenu {
@@ -4490,29 +4515,32 @@ ul.menu li {
 }
 ul.menu {
 	background: #FFF;
-	margin-bottom: 20px;
-	padding-bottom: 21px;
-	border-bottom: solid 1px #ccc;
+	border: solid 1px #d9d9d9;
+	border-radius: 5px;
 }
 .tabs ul.menu {
 	margin-bottom: 0;
 	border-bottom: none;
 }
 ul.menu li {
-	display: inline;
-	margin-right: 10px;
+	float: left;
+	margin-right: 0;
 }
 ul.menu li a {
-	padding: 15px 9px 12px;
+	display: block;
+	padding: 10px 9px;
 	color: #777;
-	background: #fff;
-	border-radius: 5px;
+	background: #f3f3f3;
+	border-left: solid 1px #d9d9d9;
 }
-ul.menu li a:hover,
-ul.menu li.current a {
+ul.menu li:first-child a {
+	border-left: none;
+}
+ul.menu li.current a,
+ul.menu li a:hover {
 	text-decoration: none;
-	color: #fff;
-	background: #a6a6a6;
+	color: #000;
+	background: #fff;
 }
 /* forms in tabs ------ */
 .tabs .form-page dt,

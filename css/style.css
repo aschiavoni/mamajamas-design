@@ -908,9 +908,12 @@ a.more-friends:focus {
 #module-follow ul a:hover {
 	color: #000;
 }
-/* browse lists (Discover and Following) ------ */
+/* browse lists (Discover, Following, Registry search) ------ */
 #p-browse #title {
 	display: none;
+}
+#p-browse.reg-search #title {
+	display: block;
 }
 #p-browse #primary .content {
 	padding-top: 22px;
@@ -918,10 +921,13 @@ a.more-friends:focus {
 #p-browse #secondary > .content {	
 	padding-top: 0;
 	border-left: solid 1px #d9d9d9;
-	min-height: 500px;
 }
+#p-browse.reg-search #secondary > .content,
 #p-browse.layout_2-7-3 #secondary > .content {	
 	border-left: none;
+}
+#p-browse.reg-search #title h2 {
+    padding-left: 23.188%;
 }
 #findfriendsmenu {
 	background: #fff;
@@ -941,6 +947,9 @@ a.more-friends:focus {
     padding: 8px 20px 4px;
 	clear: left;
 	color: #777;
+}
+.reg-search #findfriendsfilter strong {
+	color: #000;
 }
 .friends-sort,
 .friends-key {
@@ -4542,6 +4551,7 @@ ul.menu li a:hover {
 	color: #000;
 	background: #fff;
 }
+
 /* forms in tabs ------ */
 .tabs .form-page dt,
 .tabs .form-page dd {

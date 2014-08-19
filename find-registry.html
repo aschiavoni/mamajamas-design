@@ -1,0 +1,185 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Find a Registry</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- switching elements from scrolling to fixed -->
+<script src="js/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+
+        // keep headerand title fixed and scroll the rest of the page
+
+        $('#title').scrollToFixed();
+
+		$('#findfriendsmenu').scrollToFixed({ 
+		 	marginTop: $('#title').outerHeight(true)
+		});
+    });
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body id="p-browse" class="reg-search">
+<!-- header area ***** -->
+<div id="hed-wrap">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding">
+				<h1>Mamajamas</h1>
+			</div>
+			<nav id="mainnav">
+				<ul>
+					<li><a href="#">Edit List</a></li>
+					<li class="active"><a href="#">Browse Lists</a></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<input type="text" placeholder="Search">
+			</div>
+			<div id="login">
+				<ul>
+					<!-- <li><a href="#" class="button">Login</a></li>
+					<li><a href="#" class="button">Sign Up</a></li> -->
+					<li id="myaccount"><a href="/profile" class="nav-drop-link"><img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account_161338_708475661_843764735_n"> <span class="ss-icon ss-dropdown"></span> </a>
+						<ul class="nav-drop">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" data-method="delete" href="/users/logout">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" data-method="delete" href="/users/logout">Logout</a> </li>
+						</ul>
+					</li>
+					<li id="sitelinks"> <a href="#" class="nav-drop-link"><span class="ss-icon ss-rows"></span><em>Mamajamas Menu</em></a>
+						<ul class="nav-drop">
+							<li><a href="/">Home</a></li>
+							<li><a href="/blog">Blog</a></li>
+							<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+							<li><a href="/privacy-terms-of-service">Privacy &amp; Terms</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+	<div id="title">
+		<div id="subhed">
+			<h2>Find a Mamajamas list or registry</h2>
+		</div>
+	</div>
+	<div id="primary">
+		<div class="content">
+			
+		</div>
+	</div>
+	<div id="secondary">
+		<div class="content"> 
+			<!-- sorting / key -->
+			<div id="findfriendsmenu" class="clearfix">
+				<div id="friendssearch">
+					<input type="text" placeholder="Search by first or last name">
+					<input type="submit" value="Search">
+				</div>
+				<div id="findfriendsfilter" class="clearfix">
+					6 registry results for <strong>Smith</strong>
+				</div>
+			</div>
+			<!-- friends list -->
+			<ul id="friendslist" class="clearfix friends-list">
+				<li data-relationship-id="90" data-friend-id="3" id="friend_3" class="following"> <a target="_blank" href="#"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="angie testagain"> </a>
+					<div class="friend-info"> <a target="_blank" href="#"> <strong class="mom">Johanna Smith</strong> </a>
+						<div class="friend-data">
+							<div class="friend-followers">Madison, WI</div>
+						</div>
+						<!-- button: View registry -->
+						<button type="submit" class="button bt-color bt-follow follow">View</button>
+					</div>
+				</li>
+				<li data-relationship-id="90" data-friend-id="3" id="friend_3" class="following"> <a target="_blank" href="#"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-6-l.png" alt="angie testagain"> </a>
+					<div class="friend-info"> <a target="_blank" href="#"> <strong class="mom">Jill Smith</strong> </a>
+						<div class="friend-data">
+							<div class="friend-followers">New York, NY</div>
+						</div>
+						<!-- button: View registry -->
+						<button type="submit" class="button bt-color bt-follow follow">View</button>
+					</div>
+				</li>
+				<li data-relationship-id="90" data-friend-id="3" id="friend_3" class="following"> <a target="_blank" href="#"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="angie testagain"> </a>
+					<div class="friend-info"> <a target="_blank" href="#"> <strong class="mom">Johanna Smith</strong> </a>
+						<div class="friend-data">
+							<div class="friend-followers">Madison, WI</div>
+						</div>
+						<!-- button: View registry -->
+						<button type="submit" class="button bt-color bt-follow follow">View</button>
+					</div>
+				</li>
+				<li data-relationship-id="90" data-friend-id="3" id="friend_3" class="following"> <a target="_blank" href="#"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-6-l.png" alt="angie testagain"> </a>
+					<div class="friend-info"> <a target="_blank" href="#"> <strong class="mom">Jill Smith</strong> </a>
+						<div class="friend-data">
+							<div class="friend-followers">New York, NY</div>
+						</div>
+						<!-- button: View registry -->
+						<button type="submit" class="button bt-color bt-follow follow">View</button>
+					</div>
+				</li>
+				<li data-relationship-id="90" data-friend-id="3" id="friend_3" class="following"> <a target="_blank" href="#"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="angie testagain"> </a>
+					<div class="friend-info"> <a target="_blank" href="#"> <strong class="mom">Johanna Smith</strong> </a>
+						<div class="friend-data">
+							<div class="friend-followers">Madison, WI</div>
+						</div>
+						<!-- button: View registry -->
+						<button type="submit" class="button bt-color bt-follow follow">View</button>
+					</div>
+				</li>
+				<li data-relationship-id="90" data-friend-id="3" id="friend_3" class="following"> <a target="_blank" href="#"> <img src="//mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-6-l.png" alt="angie testagain"> </a>
+					<div class="friend-info"> <a target="_blank" href="#"> <strong class="mom">Jill Smith</strong> </a>
+						<div class="friend-data">
+							<div class="friend-followers">New York, NY</div>
+						</div>
+						<!-- button: View registry -->
+						<button type="submit" class="button bt-color bt-follow follow">View</button>
+					</div>
+				</li>
+			</ul>
+			<!-- end friends list --> 
+		</div>
+	</div>
+	<div id="tertiary">&nbsp;</div>
+	<div id="footer">
+		<div class="content"> </div>
+	</div>
+</div>
+<!-- end body area --> 
+
+<!-- Google Analytics -->
+</body>
+</html>

@@ -914,6 +914,7 @@ a.more-friends:focus {
 }
 #p-browse.reg-search #title {
 	display: block;
+	border-bottom: none;
 }
 #p-browse #primary .content {
 	padding-top: 22px;

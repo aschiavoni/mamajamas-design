@@ -5,7 +5,7 @@
 html,
 body {
 	background: #fff;
-	height: 100%;
+	min-height: 100%;
 }
 body,
 button,
@@ -30,7 +30,6 @@ dfn {
 	position: relative;
 }
 .gridContainer {
-	background: #fff;
 	position: relative;
 }
 #hed-wrap .gridContainer {
@@ -59,6 +58,10 @@ dfn {
 	font-weight: 400;
 	line-height: 16px;
 	float: left;
+	border-right: 1px solid #eee;
+}
+#mainnav li:first-child {
+	border-left: 1px solid #eee;
 }
 #mainnav a {
 	display: block;
@@ -87,22 +90,48 @@ dfn {
 	color: #333;
 	width: 226px;
 }
-/* login links */
-#login ul {
+#login > ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	font-size: 1.0769em;
+	display: flex;
+	display: -webkit-flex;
+    justify-content: flex-end;
+	justify-content: -webkit-flex-end;
+    min-height: 1px;
+    position: relative;
 }
 #login > ul {
-	text-align: right;
-	font-size: .923em;
-	margin-top: 23px;
-	margin-right: 13px;
+	margin-top: 30px;
+	margin-right: 20px;
 }
 #login > ul > li {
-	float: right;
-	margin: 0 0 0 10px;
+	margin-left: 15px;
 }
+#login > ul > li:first-child {
+	margin-left: 0;
+}
+#login > ul > li.logingroup {
+	margin-left: 10px;
+}
+#login > ul > li.logingroup.first {
+	margin-left: 20px;
+}
+#login a.button {
+	font-size: 1em;
+	display: inline;
+	line-height: inherit;
+	background: #FFF;
+	color: #6bb36e;
+	border-color: #97CA99;
+    padding: 3px 6px;
+}
+#login a.button:hover {
+	color: #fff;
+	border-color: #222;
+}
+/* login links 
 #login a {
 	color: #6BB36E;
 	text-decoration: none;
@@ -110,16 +139,8 @@ dfn {
 #login a:hover,
 #login a:focus,
 #login a:active {
-	color: #000;
-}
-#login .button {
-	background: #FFF;
-	border-color: #97CA99;
-    padding: 3px 6px;
-}
-#login a.button:hover {
 	color: #fff;
-}
+}*/
 /* "start your list" button */
 #login #startlist {
 	position: absolute;
@@ -416,9 +437,10 @@ a:focus {
 	text-decoration: underline;
 }
 nav a,
-nav a:visited {
+nav a:visited,
+#header a,
+#header a:visited {
 	color: #777;
-	text-shadow: 0 1px 0 #fff;
 }
 nav a:hover,
 nav a:active,
@@ -449,19 +471,25 @@ input[type=password],
 textarea {
 	outline: none;
 	padding: .25em .5em;
-	border: solid 1px #bbb;
+	border: solid 1px #ccc;
 	border-radius: 5px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 2px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 0 2px rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.15);
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 input[type=email]:focus,
 input[type=text]:focus,
 input[type=password]:focus,
 textarea:focus {
-	border-color: #999;
+	border-color: #aaa;
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.15);
 }
 label {
 	color: #777;
@@ -508,7 +536,7 @@ form.label-infield label strong {
 }
 form.label-infield p label {
 	position: absolute;
-	top: 0;
+	top: 1px;
 	left: 0;
 }
 form.label-infield fieldset p br {
@@ -567,11 +595,12 @@ button,
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	display: inline-block;
-	/*vertical-align: middle;*/
-	white-space: nowrap;
 	outline: none;
 	cursor: pointer;
 	background-color: #a6a6a6;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 a.button {
 	text-align: center;
@@ -712,14 +741,8 @@ a.button.disabled:active { /* disabled buttons */
 	text-align: center;
 	background: #5f78ab url(../images/icon_fb.png) no-repeat 25px 50%;
 	margin-bottom: 0.5em;
-	padding: 1em 15px;
+	padding: 1em 35px;
 	border-color: #1e477f;
-}
-a#bt-fb-connect { /* fb login in A tag*/
-	width: 204px;
-}
-#create-account a#bt-fb-connect { /* override button size for create account window */
-	width: 204px;
 }
 #bt-fb-connect span {
 	display: block;
@@ -777,8 +800,9 @@ a#bt-fb-connect-s { /* fb login without button chrome */
 .col5 {
 	width: 4.9%;
 }
+.col33,
 .col35 {
-	width: 34.9%;
+	width: 33.33%;
 }
 .col40 {
 	width: 39.9%;
@@ -796,7 +820,7 @@ a#bt-fb-connect-s { /* fb login without button chrome */
 #follow-moms h3 {
 	font-size: 1.33em;
 	font-weight: 300;
-	color: #407c40;
+	color: #65a565;
 	margin: .75em 0 1em;
 	border-bottom: 1px solid #8cb58c;
 }
@@ -1255,7 +1279,7 @@ ul.friends-list {
 }
 .modal-box h2,
 .simplemodal-data h2 {
-	font-size: 1em;
+	font-size: 0.9231em;
 	font-weight: normal;
 	line-height: 1em;
 	color: #333;
@@ -1263,13 +1287,13 @@ ul.friends-list {
 	letter-spacing: 0.15em;
 	margin: 0 0 5px;
 	padding: 10px 20px;
-	background-color: #ede9e6;
+	background-color: #f3f3f3;
 }
 .modal-box h3,
 .simplemodal-data h3 {
 	font-size: 1.33em;
 	font-weight: 400;
-	color: #407c40;
+	color: #65a565;
 	margin: .75em 0 .5em;
 	border-bottom: 1px solid #ccc;
 }
@@ -2124,6 +2148,96 @@ ul.info-balloons {
 #follow-modal {
 	display: none;
 }
+
+/* modal-look window (narrow page with drop shadow ----- */
+.bgfill {
+	background: #ececec;
+}
+.nestedwin {
+	background: #fff;
+	font-size: 14px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    margin: 20px 16.6667% 40px;
+	padding: 30px 40px 0;
+}
+.nestedwin h2 {
+	margin: -30px -40px 0;
+	padding: 10px 20px;
+	font-size: 0.8571em;
+	font-weight: 300;
+	line-height: 1em;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	background-color: #f3f3f3;
+}
+.nestedwin h3 {
+	font-size: 1.4286em;
+	font-weight: 300;
+	color: #65a565;
+	margin: 1.5em 0 0.5em;
+}
+.nestedwin form .button-row {
+	margin: 40px -60px 0;
+	padding: 10px 20px;
+	text-align: center;
+	border-top: none;
+	background-color: #f3f3f3;
+}
+.nestedwin button,
+.nestedwin .button {
+	font-size: 1em;
+}
+.mjform form {
+	padding: 0 20px;
+}
+/*.mjform label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 4px;
+  color: #333;
+  font-weight: bold;
+}*/
+.mjform .radio {
+	margin: 0 0 1em;
+}
+.mjform .radio label {
+	font-weight: normal;
+	display: block;
+}
+.mjform .radio label strong.col5 {
+	display: inline-block;
+	width: 5%;
+}
+.mjform input[type="radio"],
+.mjform input[type="checkbox"] {
+  margin: 4px 4px 0;
+  line-height: normal;
+}
+.mjform input[type="file"]:focus,
+.mjform input[type="radio"]:focus,
+.mjform input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.mjform .form-group {
+  	margin-bottom: 1em;
+}
+.mjform .form-control {
+	width: 100%;
+}
+.mjform p {
+	color: #777;
+}
+.mjform .col50 {
+	width: 49%;
+	margin-left: 2%;
+}
+.mjform .col50:first-child {
+	margin-left: 0;
+}
+
 /* tips (yellow hints) ----- */
 .tip {
 	display: block;
@@ -3531,7 +3645,7 @@ a.bt-gift:hover {
 #create-profile h3 { /* see also under .form-page */
 	font-size: 1.2143em; /* = 17px */
 	font-weight: 300;
-	color: #407c40;
+	color: #65a565;
 	margin: 2em 0 1em;
 	padding-bottom: 4px;
 	border-bottom: 2px solid #8cb58c;
@@ -3599,7 +3713,7 @@ a.bt-gift:hover {
 #create-profile input[type="text"],
 #create-profile input[type="password"],
 #create-profile textarea {
-	width: 96%;
+	width: 100%;
 }
 #create-profile #field-bdate {
 	float: left;
@@ -3702,6 +3816,7 @@ div.baby-bdate {
 	top: -1em;
 }
 /* collapsible panels */
+.collapsible,
 .collapsible.ss-directright,
 .collapsible.ss-dropdown,
 .collapsible strong {
@@ -3730,6 +3845,20 @@ div.baby-bdate {
 .ie7 .collapsible-content {
 	zoom: 1;
 	position: relative;
+}
+.panel-closed:after {
+	content: '\F0D7';
+	font-family:'fontawesome';
+	margin-left: 5px;
+}
+.panel-open:after {
+	content: '\F0D8';
+	font-family:'fontawesome';
+	margin-left: 5px;
+}
+h3.panel-closed:after,
+h3.panel-open:after {
+	font-size: .8em;
 }
 /* jquery ui elements */
 .ui-widget {
@@ -3899,7 +4028,7 @@ p.privacy-status {
 .form-page h3 {
 	font-size: 1.2143em; /* = 17px */
 	font-weight: 300;
-	color: #407c40;
+	color: #65a565;
 	margin: 2em 0 1em;
 	padding-bottom: 4px;
 	border-bottom: 2px solid #8cb58c;
@@ -3958,8 +4087,11 @@ p.privacy-status {
 .form-page input[type="text"],
 .form-page input[type="password"],
 .form-page textarea {
-	width: 96%;
+	width: 100%;
 	padding: 0.4em 0.5em;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 }
 .form-page form.label-infield fieldset p label {
 	margin: 0.5em;
@@ -4201,10 +4333,16 @@ a#learn-more:hover {
 .beta {
 	font-size: 11px;
 	font-weight: bold;
-	color: #B76EB8;
+	color: #fff;
+	background: #dbb6db;
+	border-radius: 3px;
+	padding: 1px 3px;
 	position: absolute;
 	top: 15px;
-	left: 138px;
+	left: 135px;
+}
+#header a.beta {
+	color: #fff;
 }
 a.beta:hover {
 	text-decoration: none;

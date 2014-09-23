@@ -60,7 +60,8 @@ img, object, embed, video {
 #login {
 	clear: none;
 	float: right;
-	width: 26.042%;
+	/*width: 26.042%;*/
+	width: 41.6667%;
 	display: block;
 }
 #progress {

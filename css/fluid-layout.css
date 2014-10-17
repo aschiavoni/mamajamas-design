@@ -22,7 +22,9 @@ img, object, embed, video {
 
 
 /* Default layout */
-
+.gridContainer {
+	position: relative;
+}
 .gridContainer,
 .modal-scaling {
 	width: 960px;
@@ -31,7 +33,6 @@ img, object, embed, video {
 #header {
 	clear: both;
 	float: left;
-	margin-left: 0;
 	width: 100%;
 	display: block;
 	position:relative;
@@ -39,7 +40,6 @@ img, object, embed, video {
 #branding {
 	clear: both;
 	float: left;
-	margin-left: 0;
 	width: 16.667%;
 	display: block;
 	position: relative;
@@ -67,47 +67,75 @@ img, object, embed, video {
 #progress {
 	clear: both;
 	float: left;
-	margin-left: 0;
 	width: 100%;
 	display: block;
-	position:relative;
 }
 #title {
 	clear: both;
 	float: left;
-	padding: 10px 0 11px;
+	padding: 10px 0;
 	width: 100%;
 	display: block;
-}
-#title.fixed {
-	top: 0;
-	margin: auto;
-    max-width: 1232px;
-    width: 96%;
 }
 #subhed {
 	clear: both;
 	float: left;
-	margin-left: 0;
-	width: 71.875%;
+	padding: 24px 10px 0;
+	width: 72.2222%;
 	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 #title-links {
-	clear: none;
 	float: right;
-	margin-left: 0;
-	margin-right: 10px;
-	padding: 0;
-	width: 26.042%;
+	padding: 2.5em 10px 0;
+	width: 27.7777%;
 	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
 }
 #title-links .button {
-	font-size: 12px;
+	font-size: 13px;
+}
+#listdetails {
+	clear: both;
+	float: left;
+	padding: 30px 0 20px;
+	width: 100%;
+	position: relative;
+}
+#listdetails ul {
+	list-style-type: none;
+	margin:0;
+	padding:0 10px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+#listdetails ul li {
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	margin:0;
+	padding: 0 10px 5px;
+	border-left: solid 1px #ccc;
+}
+#listdetails ul li:first-child {
+	border-left: none;
+}
+#primary,
+#secondary,
+#tertiary {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 #primary {
 	clear: both;
 	float: left;
-	margin-left: 0;
 	width: 16.6666%;
 	display: block;
 	border:none;
@@ -115,7 +143,6 @@ img, object, embed, video {
 #secondary {
 	clear: none;
 	float: left;
-	width: 70.625%;
 	width: 66.6666%;
 	display: block;
 }
@@ -135,9 +162,9 @@ img, object, embed, video {
 	bottom: 0;
 }
 #footer .content {
-   position: relative;
-   padding: 15px 0 10px 3px;
-   left: 7px;
+	position: relative;
+	padding: 15px 0 10px 3px;
+	left: 7px;
 	width: 40px;
 }
 
@@ -151,10 +178,37 @@ img, object, embed, video {
 #buildlist #secondary > .content {
 	min-height:455px;
 }
+#buildlist .prod-note {
+    margin-right: 33.333%;
+    padding-right: 10px;
+}
 
-/* layout adjustments for published list */
+/* layout adjustments for registry (and old #publist) */
 #publist #title {
 	width: 83.1%;
+}
+#registry #subhed,
+#publist #subhed {
+	width: 73.2610%;
+	padding-left: 10px;
+}
+#registry #title-links,
+#publist #title-links,
+#title .pubdate {
+	width: 26.738%;
+}
+#publist #title-links {
+	padding-top: 0;
+}
+#registry #title-links {
+	padding-top: 2.75em;
+}
+#title .pubdate {	
+	float: right;
+	padding: 0 10px 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 #publist #secondary {
 	width: 66.4333%;
@@ -163,16 +217,20 @@ img, object, embed, video {
 #publist #tertiary {
 	margin-top:-7.3em; /* shift up to title area */
 }
-#publist #subhed {
-	width: 78.875%;
+
+/* container for primary and secondary columns on registry page */
+#listwrap {
+	width: 83.33%;
+	float:left;
 }
-#publist #title-links,
-#title .pubdate {
-	width: 19%;
+#listwrap #primary {
+	width: 19.9998%;
 }
-#title .pubdate {
-	float: right;
-	margin-right: 10px;
+#listwrap #secondary {
+	width: 80%;
+}
+#listwrap #title {
+	width: 100%;
 }
 
 /* layout adjustments for create my profile */
@@ -331,7 +389,7 @@ img, object, embed, video {
 @media only screen and (min-width: 1075px) {
 
 #title-links .button {
-	font-size: 14px;
+
 }
 
 }
@@ -357,5 +415,3 @@ img, object, embed, video {
 		bottom: 65px;
 	}
 }
-
-

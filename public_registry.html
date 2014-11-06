@@ -1,0 +1,539 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baby Registry: Angie Schiavoni | Mamajamas </title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- collapsible panels -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		defaultOpen: 'priority-high-hed,priority-med-hed',
+		bind: 'click',
+		speed:200
+    });
+  });
+</script>
+<!-- expanding text (applied to elements with ".expandable." used for product notes.) -->
+<script src="js/jquery.expander.min.js"></script>
+<script src="js/expander-options-editlist.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-social-circle.css" rel="stylesheet" />
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<link href="bootstrap/css/bootstrap.dropdown.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.dropdown.min.js"></script>
+<script src="webfonts/ss-social.js"></script>
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+<div id="hed-wrap" class="progressbar">
+	<div class="gridContainer clearfix">
+		<div id="header">
+			<div id="branding"> <a href="/list">
+				<h1>Mamajamas</h1>
+				</a> <a class="beta tooltip-r" href="/list"> beta <span>“beta” means we’re still working out some of the kinks.<em></em></span> </a> </div>
+			<!-- <nav id="mainnav">
+				<ul>
+					<li class="active"> <a href="/list">Edit List</a> </li>
+					<li class=""> <a class="find-moms" href="/friends/following">Browse Lists</a> </li>
+				</ul>
+			</nav> -->
+			<div id="login">
+				<ul>
+					<li><a href="#">Newsletter</a></li>
+					<li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a target="_blank" href="http://blog.mamajamas.com/">Blog</a></li>
+					<li class="logingroup first"><a href="#" class="button">Login</a></li>
+					<li class="logingroup"><a href="#" class="button">Sign Up</a></li>
+					<!-- User menu *** --> 
+					<!-- <li id="myaccount" class="dropdown"> <a data-toggle="dropdown" href="#"> <img src="https://mamajamas-staging.s3.amazonaws.com/uploads/user/profile_picture/36/account_161338_708475661_843764735_n.jpg" alt="Account 161338 708475661 843764735 n"> <span class="caret"></span> </a>
+						<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+							<li class="user-email"><a href="/profile">rickelizaga@mac.com</a></li>
+							<li><a href="/list">My List</a></li>
+							<li><a href="/profile">My Profile</a></li>
+							<li><a href="/settings">My Settings</a></li>
+							<li><a class="get-bookmark" href="#">Get Bookmark</a></li>
+							<li class="last"> <a rel="nofollow" id="logout" href="/users/logout" data-method="delete">Logout</a> <a style="display: none;" rel="nofollow" id="server-logout" href="/users/logout" data-method="delete">Logout</a> </li>
+						</ul>
+					</li> --> 
+					<!-- / User menu *** -->
+					<li id="startlist"><a href="#" class="button bt-color">Start Your List</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix" id="registry">
+	<div id="listwrap" class="clearfix">
+		<form class="label-infield">
+			<div id="title">
+				<div id="subhed">
+					<div>
+						<h2>Angie’s Baby Registry</h2>
+					</div>
+				</div>
+				<div id="title-links">
+					<ul class="iconrow">
+						<li id="details-link"><a href="#" class="icon-link"><span class="ss-icon ss-info"></span>Details</a></li>
+						<li id="social-links" class="nav-drop-trigger"><a href="#" class="nav-drop-link"><span class="ss-icon ss-redirect"></span>Share</a>
+							<ul class="nav-drop">
+								<li><a href="#" class="ss-icon ss-social-circle" title="Pinterest">Pinterest</a></li>
+								<li><a href="#" class="ss-icon ss-social-circle" title="Twitter">Twitter</a></li>
+								<li><a href="#" class="ss-icon ss-social-circle" title="Facebook">Facebook</a></li>
+							</ul>
+						</li>
+						<li id="print-link"><a href="#" class="ss-icon icon-link" title="Print">Print</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="listdetails" style="display: none;">
+				<ul>
+					<li><em><i class="fa fa-user"></i> Registrant(s):</em> Angie Schiavoni<br>
+						Sep Kamvar</li>
+					<li><em><i class="fa fa-list-ul"></i> Created:</em> 05/22/2013</li>
+					<li><em><i class="fa fa-refresh"></i> Updated:</em> 08/12/2014</li>
+					<li><em><i class="fa fa-calendar-o"></i> Baby due:</em> 09/25/2014</li>
+					<li><em><i class="fa fa-truck"></i> Shipping:</em> 26 Maple Ave. #1<br>
+						Cambridge, MA 02139</li>
+					<li><em><i class="fa fa-envelope"></i> Email:</em> angie@mamajamas.com</li>
+				</ul>
+				<div class="arrow"><span></span></div>
+			</div>
+		</form>
+		<div id="primary">
+			<div class="content">
+				<nav id="categories">
+					<h3>Categories</h3>
+					<ul>
+						<li class=""> <a href="/list/all">All</a> </li>
+						<li class="cat-selected"> <a href="/list/bathing">Bathing</a> </li>
+						<li class=""> <a href="/list/changing">Changing</a> </li>
+						<li class=""> <a href="/list/clothing">Clothing</a> </li>
+						<li class=""> <a href="/list/decorating">Decorating</a> </li>
+						<li class=""> <a href="/list/expecting">Expecting</a> </li>
+						<li class=""> <a href="/list/feeding">Feeding</a> </li>
+						<li class=""> <a href="/list/getting-around">Getting Around</a> </li>
+						<li class=""> <a href="/list/nursing">Nursing</a> </li>
+						<li class=""> <a href="/list/playing">Playing</a> </li>
+						<li class=""> <a href="/list/reading">Reading</a> </li>
+						<li class=""> <a href="/list/sleeping">Sleeping</a> </li>
+						<li class=""> <a href="/list/staying-healthy">Staying Healthy</a> </li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="secondary">
+			<div class="content"> 
+				<!-- notification ***** -->
+				<div id="notifications"> </div>
+				<form data-list-entries-loaded-at="" data-list-entries="" id="my-list" class="label-infield">
+					<div id="listcontrols" class="clearfix">
+						<div id="prod-rec" class="menu-icon">  </div>
+						<div class="listsort">Sort by: 
+							<!-- drop-down menu -->
+							<div class="choicedrop"> <a href="#">Priority <span class="ss-dropdown"></span></a>
+								<ul style="display:none; width:7.5em;">
+									<li><a href="#">Priority</a></li>
+									<li><a href="#">When to buy</a></li>
+									<li><a href="#">Need / Have</a></li>
+								</ul>
+							</div>
+							<!-- /drop-down menu --> 
+						</div>
+						<div class="listsort">Filter by Age: 
+							<!-- drop-down menu -->
+							<div class="choicedrop"> <a href="#">All ages <span class="ss-dropdown"></span></a>
+								<ul style="display:none; width:7.5em;">
+									<li><a href="#">All ages</a></li>
+									<li><a href="#">0-3 mo</a></li>
+									<li><a href="#">4-6 mo</a></li>
+									<li><a href="#">7-12 mo</a></li>
+									<li><a href="#">13-18 mo</a></li>
+									<li><a href="#">19-24 mo</a></li>
+									<li><a href="#">2y</a></li>
+									<li><a href="#">3y</a></li>
+									<li><a href="#">4y</a></li>
+									<li><a href="#">5y+</a></li>
+								</ul>
+							</div>
+							<!-- /drop-down menu --> 
+						</div>
+					</div>
+					<!-- baby gear list content *************** -->
+					<div class="clearfix">
+						<h4 id="priority-high-hed" class="priority priority-high collapsible"><strong>Must-have</strong></h4>
+						<!-- "must-have" content ********* -->
+						<div class="priority-high collapsible-content"> 
+							
+							<!-- product listing ***** -->
+							<div class="prod prod-filled clearfix" id=""> 
+								
+								<!-- product image -->
+								<div class="prod-thumb"> <img alt="" src="assets/products/amazon/41IMtfMJYeL._SL75_.jpg"> </div>
+								
+								<!-- product description -->
+								<div class="prod-desc clearfix"> 
+									
+									<!-- product category, name, rating -->
+									<div class="prod-cat-name-rating">
+										<div class="prod-category"> Bath Toy </div>
+										<h3><a target="_blank" href="#prodlink">Curabitur velit libero, ullamcorper in egestas</a> </h3>
+										<!-- add to my list button --> 
+										<a href="#" class="button bt-color bt-add" title="Add to my list"><span class="ss-plus"></span><strong>Add</strong></a> 
+										<!-- / end add to my list button -->
+										<div class="rating"> <em>My rating:</em>
+											<div class="stars">
+												<div data-rating="1" class="star star-full"></div>
+												<div data-rating="2" class="star star-full"></div>
+												<div data-rating="3" class="star star-half"></div>
+												<div data-rating="4" class="star"></div>
+												<div data-rating="5" class="star"></div>
+											</div>
+										</div>
+									</div>
+									<!-- end product category, name, rating --> 
+									<!-- when to buy, need vs. have -->
+									<div class="prod-when-own">
+										<div class="price"> <strong>$39.99</strong></div>
+										<div class="gift"> <a class="bt-gift" href="#"><span>Gift this to Angie</span></a></div>
+										<div class="when"> <a target="_blank" href="#prodlink">Buy</a> at 4-6 months </div>
+										<div class="own"> <strong>Wants</strong> 1 of these </div>
+									</div>
+									<!-- end when to buy, need vs. have --> 
+									<!-- prod note [filled] *** -->
+									<div class="prod-note"> 
+										
+										<!-- note input trigger -->
+										<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+										<!-- end note input trigger --> 
+										
+										<!-- note input area -->
+										<div class="prod-note-input">
+											<fieldset>
+												<p>
+													<label for="field-notes04"><span class="ss-chat"></span> Review/comment</label>
+													<br />
+													<textarea name="field-notes" value="" id="field-notes04">My son recently received this as a gift for his first birthday, and it is one of his favorite presents! The Sub is very lightweight and easy to maneuver, but bulky and durable at the same time. When you fill it with water, the front acts as a spout and is a great "rinser". If you tip it to the side, the water flows out of the four portholes like a waterfall. My son also loves to spin the propeller on the back. Great toy for a 1 yr old, and up. Highly recommend! </textarea>
+												</p>
+											</fieldset>
+										</div>
+										<!-- end note input area --> 
+										
+										<!-- note content area -->
+										<div class="prod-note-content expandable">
+											<p><span class="ss-chat"></span> My son recently received this as a gift for his first birthday, and it is one of his favorite presents! The Sub is very lightweight and easy to maneuver, but bulky and durable at the same time. When you fill it with water, the front acts as a spout and is a great "rinser". If you tip it to the side, the water flows out of the four portholes like a waterfall. My son also loves to spin the propeller on the back. Great toy for a 1 yr old, and up. Highly recommend!</p>
+										</div>
+										<!-- end note content area --> 
+										
+										<!-- note save-cancel buttons -->
+										<div class="prod-links">
+											<ul>
+												<li>
+													<button class="cancel-item button bt-light" value="Reset" type="reset">Cancel</button>
+												</li>
+												<li>
+													<input type="submit" value="Save" name="commit" class="save-item button bt-color">
+												</li>
+											</ul>
+										</div>
+										<!-- end note save-cancel buttons --> 
+										
+									</div>
+									<!-- end prod note *** --> 
+									
+									<!-- menu: delete, drag, edit -->
+									<div class="prod-edit-menu">
+										<ul>
+											<li><a href="#" class="delete tooltip"><span>Delete<em></em></span></a> </li>
+											<li><a href="#" class="drag tooltip"><span>Drag to reorder<em></em></span></a> </li>
+											<li><a href="#" class="edit tooltip"><span>Edit<em></em></span></a> </li>
+										</ul>
+									</div>
+									<!-- end menu: delete, drag, edit --> 
+									
+									<!-- end product description --> 
+								</div>
+							</div>
+							<!-- end product listing ***** --> 
+							
+						</div>
+						<!-- end "must have" content ********* --> 
+						<!-- "consider" content ********* -->
+						<h4 id="priority-med-hed" class="priority collapsible"><strong>Consider</strong></h4>
+						<div class="priority-med collapsible-content"> 
+							<!-- product listing ***** -->
+							<div id="" class="prod prod-filled clearfix"> 
+								
+								<!-- product image -->
+								<div class="prod-thumb"> <img src="assets/products/amazon/41r6iRzjKQL._SL75_.jpg" alt=""> </div>
+								
+								<!-- product description -->
+								<div class="prod-desc clearfix"> 
+									
+									<!-- product category, name, rating -->
+									<div class="prod-cat-name-rating"><!-- product category, name, rating -->
+										<div class="prod-category"> Bath Tub </div>
+										<h3><a href="#prodlink" target="_blank">Fisher-Price Precious Planet Whale of a Tub</a> <a href="#" class="bt-change"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
+										<!-- add to my list button --> 
+										<a title="Add to my list" class="button bt-color bt-add" href="#"><span class="ss-plus"></span><strong>Add</strong></a> 
+										<!-- / end add to my list button -->
+										<div class="rating"> <em>My rating:</em>
+											<div class="stars">
+												<div class="star star-full" data-rating="1"></div>
+												<div class="star star-full" data-rating="2"></div>
+												<div class="star star-full" data-rating="3"></div>
+												<div class="star" data-rating="4"></div>
+												<div class="star" data-rating="5"></div>
+											</div>
+										</div>
+									</div>
+									<!-- end product category, name, rating --> 
+									<!-- when to buy, need vs. have -->
+									<div class="prod-when-own">
+										<div class="price"> <strong>$39.99</strong></div>
+										<div class="gift"> <a class="bt-gift" href="#"><span>Gift this to Angie</span></a></div>
+										<div class="when"> <a href="#prodlink" target="_blank">Buy</a> at 4-6 months </div>
+										<div class="own"> <strong>Wants</strong> 1 of these </div>
+									</div>
+									<!-- end when to buy, need vs. have --> 
+									<!-- prod note [default state, empty note] *** -->
+									<div class="prod-note prod-note_empty"> 
+										
+										<!-- note input link -->
+										<p class="prod-note-trigger"><span class="ss-chat"></span> <strong>Review/comment</strong></p>
+										<!-- end note input link --> 
+										<!-- end note content area --> 
+										
+									</div>
+									<!-- end prod note --> 
+									
+									<!-- end product description --> 
+								</div>
+							</div>
+							<!-- end product listing ***** --> 
+							
+							<!-- product listing ***** -->
+							<div class="prod prod-filled clearfix" id=""> 
+								
+								<!-- product image -->
+								<div class="prod-thumb"> <img alt="" src="assets/products/amazon/31AhKonzveL._SL75_.jpg"> </div>
+								
+								<!-- product description -->
+								<div class="prod-desc clearfix"> 
+									
+									<!-- product category, name, rating -->
+									<div class="prod-cat-name-rating"><!-- product category, name, rating -->
+										<div class="prod-category"> Shampoo or Body Wash </div>
+										<h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a> </h3>
+										<!-- add to my list button --> 
+										<a href="#" class="button bt-color bt-add" title="Add to my list"><span class="ss-plus"></span><strong>Add</strong></a> 
+										<!-- / end add to my list button -->
+										<div class="rating"> <em>My rating:</em>
+											<div class="stars">
+												<div data-rating="1" class="star star-full"></div>
+												<div data-rating="2" class="star star-full"></div>
+												<div data-rating="3" class="star star-full"></div>
+												<div data-rating="4" class="star"></div>
+												<div data-rating="5" class="star"></div>
+											</div>
+										</div>
+									</div>
+									<!-- end product category, name, rating --> 
+									<!-- when to buy, need vs. have -->
+									<div class="prod-when-own">
+										<div class="price"> <strong>$39.99</strong></div>
+										<div class="gift"> <a class="bt-gift" href="#"><span>Gift this to Angie</span></a></div>
+										<div class="when"> <a target="_blank" href="#prodlink">Buy</a> at 4-6 months </div>
+										<div class="own"> <strong>Wants</strong> 1 of these </div>
+									</div>
+									<!-- end when to buy, need vs. have --> 
+									<!-- prod note -->
+									<div class="prod-note"> 
+										
+										<!-- note content area -->
+										<div class="prod-note-content expandable">
+											<p><span class="ss-chat"></span> A lot of Aveeno products are great for the sensitive skin aspect. This one is iffy. It's a good product but if your baby is extra sensitive, it could make them break out. I've avoided that with my baby because I use a very, VERY small amount each time. If I don't, he does get a little red and I've got to be very cautious with him. But the right amount and that problem is eliminated.</p>
+										</div>
+										<!-- end note content area --> 
+										
+									</div>
+									<!-- end prod note --> 
+									
+									<!-- end product description --> 
+								</div>
+							</div>
+							<!-- end product listing ***** --> 
+							
+						</div>
+						<!-- end "consider" content ********* --> 
+						<!-- "don't bother" content ********* -->
+						<h4 id="priority-low-hed" class="priority collapsible ss-directright"><strong>Don’t Bother</strong></h4>
+						<div class="priority-low collapsible-content" style="min-height: 80px; display: none;"> </div>
+						<!-- end "don't bother" content ********* --> 
+						
+						<!-- add new ***** -->
+						<h4 id="priority-new-hed" class="priority"><strong>Add an Item</strong></h4>
+						<div class="prod clearfix" id="add-new">
+							<div class="prod-thumb"> <img alt="" src="assets/products/icons/add_new@2x.png"> </div>
+							<div class="prod-category"> Looking for something not listed above? Add it here.</div>
+							<div class="prod-links">
+								<ul>
+									<li><a class="new-item button bt-color" href="#"><span class="ss-plus"></span>Add new</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- end add new ***** --> 
+						
+					</div>
+					<!-- end baby gear list *************** -->
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="tertiary" class="light">
+		<div class="content">
+			<div id="module-profile">
+				<form class="label-infield">
+					<div class="content">
+						<p id="sharedby"><span></span>Profile</p>
+						<h3>Angie Schiavoni</h3>
+						<div id="profile-photo"> <img src="images/public_list_Kamvar-Schiavoni-42.jpg" alt="Profile photo"> </div>
+						<div class="center follow"> 
+							<!-- button: state 1: Follow, state 2: Following, state 2 hover: Unfollow  --> 
+							<a href="shared-list-following.html" id="bt-follow" class="button bt-color"><span class="ss-check"></span>Follow</a> </div>
+						<!-- expandable profile text -->
+						<div class="expandable">
+							<p> Has a 2 1/2 year old son. I gravitate towards organic and wholesome parenting type products. I am willing to spend a little more for quality, but have a hard time spending a lot unless I'm really excited about something. I am also a huge fan of finding great baby gear at consignment or thrift stores (especially clothes!) and love a good bargain. I also have a slight addiction to amazon.com. I order way too many items late night on my phone (do not get the amazon iphone app unless you are ready to impulse buy!).</p>
+						</div>
+						<!-- end expandable profile text --> 
+					</div>
+				</form>
+			</div>
+			<div id="module-friends">
+				<div class="content">
+					<h3>Following</h3>
+					<ul class="clearfix">
+						<li> <a title="francesca" href="/francesca"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="francesca"> </a></li>
+						<li> <a title="Gsmom" href="/gsmom"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/18/friend_41476_787804174_9453_n.jpg" alt="Gsmom"> </a></li>
+						<li> <a title="Barba" href="/barba"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/16/friend_DSCN1387.JPG" alt="Barba"> </a></li>
+						<li> <a title="adil shah" href="/adilshah"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-12-l.png" alt="adil shah"> </a></li>
+						<li> <a title="Alyssa Barringer" href="/alyssacal"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-7-l.png" alt="Alyssa Barringer"> </a></li>
+						<li> <a title="Amanda Teo" href="/amandateo"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/42/friend_372322_694256152_1545929288_n.jpg" alt="Amanda Teo"> </a></li>
+						<li> <a title="Amanda Hansen" href="/amandahansen3939"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/135/friend_195368_564094653_1928754_n.jpg" alt="Amanda Hansen"> </a></li>
+						<li> <a title="Amanda Herzberger" href="/amandaherzberger"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/255/friend_6532_688913689285_8376640_n.jpg" alt="Amanda Herzberger"> </a></li>
+						<li> <a title="Amanda Filoso" href="/amandafiloso"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/409/friend_IMG_2134.jpg" alt="Amanda Filoso"> </a></li>
+						<li> <a title="Amy Howell" href="/amyahowell"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/143/friend_1399394_10101123192295431_1351692214_o.jpg" alt="Amy Howell"> </a></li>
+						<li> <a title="Amy Smith" href="/amysitasmith"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-11-l.png" alt="Amy Smith"> </a></li>
+						<li> <a title="andrea" href="/andrea"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-2-l.png" alt="andrea"> </a></li>
+						<li> <a title="Anna Sheerer" href="/annasheerer"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-5-l.png" alt="Anna Sheerer"> </a></li>
+						<li> <a title="Anne Getzin" href="/agetzin"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-10-l.png" alt="Anne Getzin"> </a></li>
+						<li> <a title="Anne Robinson" href="/annewrobinson"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/51/friend_49143_537911114_2587_n.jpg" alt="Anne Robinson"> </a></li>
+						<li> <a title="Annie Hughes" href="/anniemhughes"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/153/friend_White_House_Photo.jpg" alt="Annie Hughes"> </a></li>
+						<li> <a title="Arian Hushyar" href="/arianhushyar"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/3164/friend_smashsolo.jpg" alt="Arian Hushyar"> </a></li>
+						<li> <a title="Arika Easley-Houser" href="/aeasleyhouser"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/607/friend_Baby_Houser_at_12_w_5_d.jpg" alt="Arika Easley-Houser"> </a></li>
+						<li> <a title="Ashley Conrad-Saydah" href="/ashescs"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/39/friend_preceremony_detail.jpeg" alt="Ashley Conrad-Saydah"> </a></li>
+						<li> <a title="Ashley Behncke" href="/ashleybehncke"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/158/friend_IMG_5232.jpg" alt="Ashley Behncke"> </a></li>
+						<li> <a title="Ben Statz" href="/statz"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/129/friend_370811_674039432_798869196_n.jpg" alt="Ben Statz"> </a></li>
+						<li> <a title="Brynn Harrington" href="/brynnharrington"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/252/friend_623468_700187185_1688483021_n.jpg" alt="Brynn Harrington"> </a></li>
+						<li> <a title="Caitrin Wright" href="/cwright"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/159/friend_1117947_6570_566929093_n.jpg" alt="Caitrin Wright"> </a></li>
+						<li> <a title="Carmela Castelli" href="/cabriolina"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-11-l.png" alt="Carmela Castelli"> </a></li>
+						<li> <a title="Cassie Goodwin" href="/cassiegoodwin"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/780/friend_1118539_1383984033_2089865985_n.jpg" alt="Cassie Goodwin"> </a></li>
+						<li> <a title="Cassondra Manickram" href="/cassondramanickram"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/2015/friend_abdul_and_I.jpg" alt="Cassondra Manickram"> </a></li>
+						<li> <a title="Catie Honeyman" href="/catieh"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/76/friend_186408_8622_964612143_n.jpg" alt="Catie Honeyman"> </a></li>
+						<li> <a title="Chandler Sanders" href="/chandlersanders79"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/770/friend_2011_308.jpg" alt="Chandler Sanders"> </a></li>
+						<li> <a title="Christy Mraz" href="/christymraz"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/1471/friend_mrazb-3-2.jpg" alt="Christy Mraz"> </a></li>
+						<li> <a title="Cindy Phillips Weflen" href="/cindyphillipsweflen"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/224/friend_186207_1004097121_2126319958_n.jpg" alt="Cindy Phillips Weflen"> </a></li>
+						<li> <a title="Claire Beckett" href="/clairebeckett"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/644/friend_260762_617153589_963059909_n.jpg" alt="Claire Beckett"> </a></li>
+						<li> <a title="Cynthia Quan" href="/cynthia"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/1200/friend_1117594_723876468_1976596934_n.jpg" alt="Cynthia Quan"> </a></li>
+						<li> <a title="Danyelle Cottrell" href="/danyellecottrell"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/47/friend_370966_1151430246_1911954603_n.jpg" alt="Danyelle Cottrell"> </a></li>
+						<li> <a title="Daria Pahlavan" href="/dariapahlavan"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/152/friend_photo_1__4_.JPG" alt="Daria Pahlavan"> </a></li>
+						<li> <a title="Debbie Hellweg" href="/hellweg"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/177/friend_195683_754205437_1789943647_n.jpg" alt="Debbie Hellweg"> </a></li>
+						<li> <a title="Devon Westervelt" href="/devonwestervelt"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/83/friend_274190_1636192083_2019108841_n.jpg" alt="Devon Westervelt"> </a></li>
+						<li> <a title="Dima Bilbaisi" href="/dimabilbaisi"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/68/friend_Dima_Iphone_4s_008__7_.JPG" alt="Dima Bilbaisi"> </a></li>
+						<li> <a title="Edward Faulkner" href="/edwardfaulkner"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/841/friend_1655863_10152213638192710_1602613948_n.jpg" alt="Edward Faulkner"> </a></li>
+						<li> <a title="elizabeth christoforetti" href="/echristoforetti"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/142/friend_211446_1050042890_2053324578_n.jpg" alt="elizabeth christoforetti"> </a></li>
+						<li> <a title="Elizabeth Barber" href="/lizzymbarber"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/61/friend_ProfilePhoto.jpg" alt="Elizabeth Barber"> </a></li>
+						<li> <a title="Emily Rummo" href="/emilyrummo"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/246/friend_DSC_0181.JPG" alt="Emily Rummo"> </a></li>
+						<li> <a title="Emily Wall" href="/emilykwall"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/214/friend_247C5013.JPG" alt="Emily Wall"> </a></li>
+						<li> <a title="Emily Rodgers" href="/emilyrodgers"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/14/friend_203344_763807237_781217538_n.jpg" alt="Emily Rodgers"> </a></li>
+						<li> <a title="ericaturner" href="/ericaturner"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/12/friend_photo__18_.JPG" alt="ericaturner"> </a></li>
+						<li> <a title="Erin Evans" href="/erinevans"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/728/friend_Family_B.jpg" alt="Erin Evans"> </a></li>
+						<li> <a title="Eve Kagan" href="/kagan"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/2618/friend_Eve_Kagan.JPEG" alt="Eve Kagan"> </a></li>
+						<li> <a title="Gabrielle Jacobs" href="/gckarta"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-7-l.png" alt="Gabrielle Jacobs"> </a></li>
+						<li> <a title="Gerry Kaufman" href="/gerrykaufman"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/306/friend_6a011570d70884970b019b041b8900970d-650wi__1_.jpg" alt="Gerry Kaufman"> </a></li>
+						<li> <a title="Greta Schmitt" href="/greta"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/182/friend_IMG_0801.JPG" alt="Greta Schmitt"> </a></li>
+						<li> <a title="Hagar Berlin" href="/hagarberlin"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/28/friend_369222_1079540049_89866473_n.jpg" alt="Hagar Berlin"> </a></li>
+						<li> <a title="Ila Deshmukh" href="/iladeshmukh"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-1-l.png" alt="Ila Deshmukh"> </a></li>
+						<li> <a title="Jake Munz" href="/jacobmunz"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/209/friend_182310_10152289335260478_1522174573_n.jpg" alt="Jake Munz"> </a></li>
+						<li> <a title="Janine Liberty" href="/jliberty"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-4-l.png" alt="Janine Liberty"> </a></li>
+						<li> <a title="Jeff Wilczewski" href="/jeffwilczewski"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/444/friend_Peyters3.jpg" alt="Jeff Wilczewski"> </a></li>
+						<li> <a title="Jenna Carl" href="/jennacarl"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/527/friend_1115750_542949127_754936805_n.jpg" alt="Jenna Carl"> </a></li>
+						<li> <a title="Jenni Won" href="/jenniwon"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-6-l.png" alt="Jenni Won"> </a></li>
+						<li> <a title="Jennifer Forster" href="/jennifertforster"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-1-l.png" alt="Jennifer Forster"> </a></li>
+						<li> <a title="Jennifer Burdick" href="/burdickjen"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/328/friend_1117002_8402381_1017803255_n.jpg" alt="Jennifer Burdick"> </a></li>
+						<li> <a title="Jenny Stefanotti" href="/jennystefanotti"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/361/friend_186907_858825494_987097020_n.jpg" alt="Jenny Stefanotti"> </a></li>
+						<li> <a title="Jessica Zelfand Munroe" href="/jessica"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/2192/friend_mamajamas.jpg" alt="Jessica Zelfand Munroe"> </a></li>
+						<li> <a title="Jessica Kamvar" href="/jessicastokeskamvar"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/116/friend_369660_639598080_824103850_n.jpg" alt="Jessica Kamvar"> </a></li>
+						<li> <a title="Jill Allen Murray" href="/jillsallen"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/414/friend_49461_543060443_209765919_n.jpg" alt="Jill Allen Murray"> </a></li>
+						<li> <a title="Jim Sturm" href="/sturvoni"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/5/friend_September_Ends_096.JPG" alt="Jim Sturm"> </a></li>
+						<li> <a title="Joanne Pons" href="/joanne_pons"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/138/friend_mamajamas.jpg" alt="Joanne Pons"> </a></li>
+						<li> <a title="Johanna C" href="/johannacockburn"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/692/friend_DSC_0085-001.JPG" alt="Johanna C"> </a></li>
+						<li> <a title="Josh Thompson" href="/3pic3mail"> <img src="https://mamajamas.s3.amazonaws.com/assets/avatars/avatars-10-l.png" alt="Josh Thompson"> </a></li>
+						<li> <a title="Juliana Gamble" href="/julianagamble"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/1942/friend_10541043_10152324845646733_802479507477098353_n.jpg" alt="Juliana Gamble"> </a></li>
+						<li> <a title="Kara Engelbrecht" href="/mothercraftmidwifery"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/103/friend_275711_657347819_1643199233_n.jpg" alt="Kara Engelbrecht"> </a></li>
+						<li> <a title="Kat Speyer" href="/katspeyer"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/203/friend_50159_11511730_1374936972_n.jpg" alt="Kat Speyer"> </a></li>
+						<li> <a title="Kate Coxerado" href="/katecoxerado"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/387/friend_274620_654650411_1547043572_n.jpg" alt="Kate Coxerado"> </a></li>
+						<li> <a title="Kate McCarthy" href="/katemccarthy"> <img src="https://mamajamas.s3.amazonaws.com/uploads/user/profile_picture/568/friend_211271_206209_1788002246_n.jpg" alt="Kate McCarthy"> </a></li>
+					</ul>
+					<div class="border"><a href="#">Show all</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="content"> </div>
+	</div>
+</div>
+</div>
+<!-- end body area --> 
+<!-- Google Analytics -->
+
+</body>
+</html>

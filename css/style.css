@@ -82,6 +82,9 @@ img.float-r {
 .margintop0 {
 	margin-top: 0 !important;
 }
+.marginbottom0 {
+	margin-bottom: 0 !important;
+}
 .small {
 	font-size: .923em;
 }
@@ -512,29 +515,29 @@ legend span {
 	color: #ea7526; /* orange */
 }
 /* forms: in-field input labels -- */
-form.label-infield fieldset p {
+.label-infield fieldset p {
 	position: relative;
 }
-form.label-infield label {
+.label-infield label {
 	color: #AAA;
 }
-form.label-infield label strong {
+.label-infield label strong {
 	color: #222;
 }
-form.label-infield p label {
+.label-infield p label {
 	position: absolute;
 	top: 1px;
 	left: 0;
 }
-form.label-infield fieldset p br {
+.label-infield fieldset p br {
 	display: none; /* cancel BRs inside fieldsets with in-field labels (preserves list formatting) */
 }
-form.label-infield fieldset p input,
-form.label-infield fieldset p textarea,
-form.label-infield fieldset p.normal br {
+.label-infield fieldset p input,
+.label-infield fieldset p textarea,
+.label-infield fieldset p.normal br {
 	display: block;
 }
-form.label-infield fieldset p label {
+.label-infield fieldset p label {
 	display: block;
 	margin: .35em .5em;
 }
@@ -783,6 +786,9 @@ a#bt-fb-connect-s { /* fb login without button chrome */
 	float: left;
 	box-sizing: border-box;
 }
+.padded .col {
+	padding: 0 2%;
+}
 .col5 {
 	width: 4.9%;
 }
@@ -951,6 +957,7 @@ a.more-friends:focus {
 #findfriendsmenu .menu {
 	margin-bottom: 10px;
 	float: left;
+	border-radius: 5px;
 }
 #findfriendsfilter {
 	border-top: 1px solid #d9d9d9;
@@ -1070,6 +1077,7 @@ ul.friends-list {
 	cursor: pointer;
 }
 #findfriends .content {
+	border: none;
 	padding: 0;
 }
 #findfriends .form-page {
@@ -2158,14 +2166,17 @@ ul.info-balloons {
 	font-size: 1.4286em;
 	font-weight: 300;
 	color: #65a565;
-	margin: 1.5em 0 0.5em;
+	margin: 1.5em 0 0.25em;
 }
-.nestedwin form .button-row {
-	margin: 40px -60px 0;
+.nestedwin .button-row {
+	margin: 40px -40px 0;
 	padding: 10px 20px;
 	text-align: center;
 	border-top: none;
 	background-color: #f3f3f3;
+}
+.nestedwin form .button-row {
+	margin: 40px -60px 0;
 }
 .nestedwin button,
 .nestedwin .button {
@@ -2174,13 +2185,6 @@ ul.info-balloons {
 .mjform form {
 	padding: 0 20px;
 }
-/*.mjform label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 4px;
-  color: #333;
-  font-weight: bold;
-}*/
 .mjform .radio {
 	margin: 0 0 1em;
 }
@@ -2220,6 +2224,110 @@ ul.info-balloons {
 .mjform .col50:first-child {
 	margin-left: 0;
 }
+/* gifting path ----- */
+.giftingwin h3 {
+	color: #000000;
+	font-size: 2.5em;
+	margin-top: .5em;
+}
+.giftingwin h3.icon {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: url(../images/icon_gift@2x.png);
+	padding-left: 50px;
+}
+.giftingwin .prod {
+	font-size: 0.9286em;
+	line-height: 1.6923em;
+	margin: 0 0 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background: #f5f5f5;
+}
+.giftingwin .prod h3 {
+	font-size: 1.2308em;
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+.giftingwin .prod h3 a {
+	color: #000;
+}
+.giftingwin .prod-thumb {
+	border-color: #ccc;
+	margin-left: 0;
+}
+.giftingwin .prod-thumb img {
+	height: 78px;
+}
+.giftingwin .prod-cat-name-rating {
+	margin-left: 100px;
+}
+.giftingwin .prod-cat-name-rating,
+.giftingwin .prod-when-own > div {
+	margin-right: 0;
+	padding-right: 0;
+}
+.infobox {
+	padding: 10px;
+	border: solid 1px #d9d9d9;
+}	
+.giftingwin .infobox {
+	margin: 0 0 1em;
+}
+.giftingwin .infobox h3,
+.giftingwin .tabs h3  {
+	font-size: 1.2308em;
+	font-weight: 600;
+	margin: 0 0 1em;
+	padding: 0;
+	text-align: left;
+}
+.giftingwin .prod,
+.giftingwin .infobox,
+.giftingwin .tabs,
+.giftingwin h3 {
+	margin-right: 8.3333%;
+	margin-left: 8.3333%;
+}
+.giftingwin .tabs .menu strong {
+	display: block;
+	font-size: 1.1429em;
+}
+.giftingwin ul.menu li {
+	position: relative;
+}
+.giftingwin ul.menu li a {
+	background: #fff;
+	color: #bbb;
+}
+.giftingwin ul.menu li.current a {
+	color: #000;
+}
+.giftingwin #step1:after, /* example only */
+.giftingwin .complete:after {
+	content: '\F058';
+	font-family: 'fontawesome';
+	font-size: 1.7143em;
+	color: #5daf5d;
+	position: absolute;
+	top: .5em;
+	right: 15px;
+}
+.giftingwin .tabs input[type="text"],
+.giftingwin .tabs input[type="email"],
+.giftingwin .tabs label {
+	width: 100%;
+}
+.giftingwin .tabs .tabbody {
+	padding-left: 16.6667%;
+	padding-right: 16.6667%;
+}
+.giftingwin .button-row {
+	margin-top: 10px;
+}
+
 /* tips (yellow hints) ----- */
 .tip {
 	display: block;
@@ -3657,6 +3765,7 @@ a.bt-gift:hover {
 }
 #listdetails {
 	background: #f4f4f4; /* details drawer background */
+	box-shadow: inset 0 0 3px 0 rgba(0,0,0,.125);
 	border-bottom: 1px solid #d9d9d9;
 }
 #listdetails .arrow {
@@ -3775,8 +3884,12 @@ a.bt-gift:hover {
 #registry #module-profile .progress-container {
 	text-align: center;
 }
-#registry #module-profile .progress-container .button {
+#registry #module-profile .progress-container .button,
+#registry #module-profile .center .button {
 	min-width: 49%;
+}
+#registry #module-profile .follow {
+	margin-bottom: 10px;
 }
 #registry #module-profile #profile-photo .progress-container {
 	width: 100%;
@@ -4792,10 +4905,11 @@ a.bt-gift {
 	left: -999em;
 }
 .js .tabs .content {
-	/*border-top: 1px solid #CCCCCC;*/
+	border: 1px solid #d9d9d9;
+	border-top: none;
 	clear: both;
 	margin-bottom: -1px;
-	padding: 2em 0 0;
+	padding: 30px 20px 20px;
 	position: relative;
 	top: -1px;
 }
@@ -4914,15 +5028,20 @@ ul.menu li {
 ul.menu {
 	background: #FFF;
 	border: solid 1px #d9d9d9;
-	border-radius: 5px;
+	display: flex;
+	display: -webkit-flex;
 }
 .tabs ul.menu {
 	margin-bottom: 0;
-	border-bottom: none;
 }
 ul.menu li {
-	float: left;
 	margin-right: 0;
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+}
+.ie9 ul.menu li,
+.oldie ul.menu li {
+	float: left;
 }
 ul.menu li a {
 	display: block;
@@ -4939,6 +5058,11 @@ ul.menu li a:hover {
 	text-decoration: none;
 	color: #000;
 	background: #fff;
+}
+.tabs ul.menu li.current a {
+	margin-bottom: -1px;
+	border-top: solid 2px #5daf5d;
+	border-bottom: solid 1px #fff;
 }
 /* forms in tabs ------ */
 .tabs .form-page dt,

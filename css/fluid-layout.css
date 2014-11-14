@@ -9,7 +9,7 @@ img, object, embed, video {
 }
 /* IE 6 does not support max-width so default to width 100% */
 .ie6 img {
-	width:100%;
+	width: 100%;
 }
 
 /* Mobile Layout: 480px and below. */
@@ -35,7 +35,7 @@ img, object, embed, video {
 	float: left;
 	width: 100%;
 	display: block;
-	position:relative;
+	position: relative;
 }
 #branding {
 	clear: both;
@@ -55,12 +55,11 @@ img, object, embed, video {
 	float: left;
 	width: 16.667%;
 	display: none;
-	position:relative;
+	position: relative;
 }
 #login {
 	clear: none;
 	float: right;
-	/*width: 26.042%;*/
 	width: 41.6667%;
 	display: block;
 }
@@ -109,8 +108,8 @@ img, object, embed, video {
 }
 #listdetails ul {
 	list-style-type: none;
-	margin:0;
-	padding:0 10px;
+	margin: 0;
+	padding: 0 10px;
 	display: flex;
 	display: -webkit-flex;
 	justify-content: flex-start;
@@ -119,7 +118,7 @@ img, object, embed, video {
 #listdetails ul li {
 	flex-grow: 1;
 	-webkit-flex-grow: 1;
-	margin:0;
+	margin: 0;
 	padding: 0 10px 5px;
 	border-left: solid 1px #ccc;
 }
@@ -138,7 +137,7 @@ img, object, embed, video {
 	float: left;
 	width: 16.6666%;
 	display: block;
-	border:none;
+	border: none;
 }
 #secondary {
 	clear: none;
@@ -155,34 +154,26 @@ img, object, embed, video {
 	float: right;
 	width: 16.6666%;
 	display: block;
-	border:none;
+	border: none;
 }
 #footer {
-    position: fixed;
-	bottom: 0;
 }
 #footer .content {
-	position: relative;
-	padding: 15px 0 10px 3px;
-	left: 7px;
-	width: 40px;
 }
-
 /* layout adjustments for build list */
 #buildlist #secondary {
-	width:83.1%;
+	width: 83.1%;
 }
 #buildlist #tertiary {
-	display:none;
+	display: none;
 }
 #buildlist #secondary > .content {
-	min-height:455px;
+	min-height: 455px;
 }
 #buildlist .prod-note {
-    margin-right: 33.333%;
-    padding-right: 10px;
+	margin-right: 33.333%;
+	padding-right: 10px;
 }
-
 /* layout adjustments for registry (and old #publist) */
 #publist #title {
 	width: 83.1%;
@@ -203,7 +194,7 @@ img, object, embed, video {
 #registry #title-links {
 	padding-top: 2.75em;
 }
-#title .pubdate {	
+#title .pubdate {
 	float: right;
 	padding: 0 10px 0;
 	box-sizing: border-box;
@@ -215,13 +206,12 @@ img, object, embed, video {
 	min-height: 820px;
 }
 #publist #tertiary {
-	margin-top:-7.3em; /* shift up to title area */
+	margin-top: -7.3em; /* shift up to title area */
 }
-
 /* container for primary and secondary columns on registry page */
 #listwrap {
 	width: 83.33%;
-	float:left;
+	float: left;
 }
 #listwrap #primary {
 	width: 19.9998%;
@@ -232,90 +222,84 @@ img, object, embed, video {
 #listwrap #title {
 	width: 100%;
 }
-
 /* layout adjustments for create my profile */
 #create-profile #subhed {
-	width:30.02%;
+	width: 30.02%;
 }
 #create-profile #primary {
-	width:28%;
+	width: 28%;
 }
 #create-profile #primary > .content {
-	padding-top:20px;
-	padding-left:48%;
+	padding-top: 20px;
+	padding-left: 48%;
 }
 #create-profile #secondary {
-	width:52%;
-	margin-left:20px;
+	width: 52%;
+	margin-left: 20px;
 }
-
 /* layout adjustments for form page */
 .form-page #subhed {
-	width:47.92%;
-	margin-left:24%;
-	padding-left:20px;
-	float:none;
+	width: 47.92%;
+	margin-left: 24%;
+	padding-left: 20px;
+	float: none;
 }
 .form-page #title .instruction {
-	margin-left:26%;
+	margin-left: 26%;
 }
 .form-page #primary {
-	width:24%;
+	width: 24%;
 }
 .form-page #secondary {
-	width:47.92%;
-	margin-left:20px;
+	width: 47.92%;
+	margin-left: 20px;
 }
 .form-page #tertiary {
-	width:24%;
+	width: 24%;
 }
-
 /* layout adjustments for text pages (3, 6, 3) */
 .text-page #subhed,
 .layout_3-6-3 #subhed {
-	margin-left:24%;
-	padding-left:20px;
-	float:none;
+	margin-left: 24%;
+	padding-left: 20px;
+	float: none;
 }
 .text-page #title-links,
 .layout_3-6-3 #title-links {
-	padding:0;
+	padding: 0;
 }
 .text-page #primary,
 .layout_3-6-3 #primary {
-	width:24%;
+	width: 24%;
 }
 .text-page #secondary,
 .layout_3-6-3 #secondary {
-	width:47.92%;
-	margin-left:20px;
+	width: 47.92%;
+	margin-left: 20px;
 }
 .text-page #tertiary,
 .layout_3-6-3 #tertiary {
-	width:24%;
+	width: 24%;
 }
-
 /* layout 2, 7, 3 */
 .layout_2-7-3 #subhed {
-	margin-left:15.625%;
-	padding-left:20px;
-	float:none;
+	margin-left: 15.625%;
+	padding-left: 20px;
+	float: none;
 }
 .layout_2-7-3 #title-links {
-	padding:0;
+	padding: 0;
 }
 .layout_2-7-3 #primary {
-	width:15.625%; /* 150px/960px */
+	width: 15.625%; /* 150px/960px */
 }
 .layout_2-7-3 #secondary {
-	width:56.25%; /* 540px/960px */
-	margin-left:20px;
+	width: 56.25%; /* 540px/960px */
+	margin-left: 20px;
 }
 .layout_2-7-3 #tertiary {
-	width:23.958%; /* 230px/960px */
+	width: 23.958%; /* 230px/960px */
 }
-
-
 /* layout for home page */
 .home > .gridContainer {
 	width: 100%;
@@ -328,43 +312,38 @@ img, object, embed, video {
 	top: 0;
 }
 .home #primary > .content {
-	width: 33.33%;
-	margin-left: 62.494%;
-	padding: 20px 2.0833%;
+	width: 50%;
+	margin-left: 50%;
+	padding: 20px 8.3333% 20px 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 .home #learn-more {
 	position: absolute;
-	bottom: 10px;
+	bottom: -20px;
 	z-index: 300;
 }
 .home #secondary {
 	width: 100%;
 }
 .home #secondary > .content {
-	min-height:0;
-	padding: 40px 9.375% 10px;
+	min-height: 0;
+	padding: 0;
 }
 .home #tertiary {
 	width: 100%;
-	position:relative;
+	position: relative;
 }
-.home #tertiary > .content {
-	padding: 0;
+.home #tertiary .content {
+	padding: 70px 0 35px;
 }
 .home #footer {
-	position: static;
-   clear: both;
-   display: block;
-   float: left;
-   margin-left: 0;
-   width: 100%;
-	max-width: 1232px;
+	clear: both;
+	position: relative;
 }
 .home #footer .content {
-	position: static;
-	padding: 8px 1.05%;
+	padding: 35px 0 70px;
 }
-
 /* list intro modal position */
 #listintro-container {
 	left: 59%;
@@ -373,45 +352,40 @@ img, object, embed, video {
 /* Large screen layout */
 
 @media only screen and (min-width: 1000px) {
-
 .gridContainer,
 .modal-scaling {
-	width:96%;
+	width: 96%;
 	max-width: 1232px;
 	margin: auto;
-	}
+}
 .home > .gridContainer {
 	width: 100%;
 }
-
 }
 
-@media only screen and (min-width: 1075px) {
-
-#title-links .button {
-
+@media only screen and (max-width: 1075px) {
+.home #primary > .content {
+	width: 58.33333%;
+	margin-left: 41.66667%;
+}
 }
 
+@media only screen and (max-width: 980px) {
 }
-
 
 @media only screen and (min-width: 1245px) {
-
 /* list intro modal position */
 #listintro-container {
 	left: 64%;
 }
-
 }
 
 /* position Learn More */
-@media only screen and (max-height: 630px) {
-	.home #learn-more {
-		bottom: 50px;
-	}
+@media only screen and (max-height: 650px) {
+.home #learn-more {
+	bottom: 160px;
 }
-@media only screen and (max-height: 600px) {
-	.home #learn-more {
-		bottom: 65px;
-	}
+.home a#learn-more {
+	background-color:rgba(255,255,255,.7);
+}
 }

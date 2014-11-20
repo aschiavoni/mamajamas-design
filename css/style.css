@@ -673,13 +673,17 @@ input[type=text] + .button {
 }
 .bt-buy em {
 	display: inline-block;
-	vertical-align: middle;
-	text-indent: -9999px;
-	overflow: hidden;
 	width: 53px;
 	height: 16px;
 	background: url(../images/logo_amazon-s.png) no-repeat 0 0;
 }
+.bt-buy.amazon em {
+        vertical-align: middle;
+        text-indent: -9999px;
+        overflow: hidden;
+	background: url(../images/logo_amazon-s.png) no-repeat 0 0;
+}
+ 
 a.bt-buy:hover {
 	background-color: #e6a400 !important;
 	border-color: #e6a400 !important;

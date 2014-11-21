@@ -79,6 +79,9 @@ img.float-r {
 .light {
 	color: #a6a6a6;
 }
+.light1 {
+	color: #777;
+}
 .margintop0 {
 	margin-top: 0 !important;
 }
@@ -2925,8 +2928,10 @@ h4.collapsible:focus {
 	text-align: center;
 	font-size: 0.846em;
 }
-.bt-thumb-upload span,
-#bt-upload span {
+.bt-thumb-upload span[class^="ss-"],
+.bt-thumb-upload span[class*=" ss-"],
+#bt-upload span[class^="ss-"],
+#bt-upload span[class*=" ss-"] {
 	position: relative;
 	top: .1em;
 	margin-right: 3px;
@@ -3598,8 +3603,8 @@ a.bt-gift:hover {
 	background-color: #5BAA5D;
 	background-position: 4px -30px;
 }
-/* public list follow button ------- */
-#publist #bt-follow {
+/* follow button ------- */
+#bt-follow {
 	margin-bottom: 10px;
 	margin-top: 4px;
 	display: block;
@@ -3707,6 +3712,9 @@ a.bt-gift:hover {
 #module-friends h3 {
 	margin-bottom: .26em;
 	color: #000;
+}
+#module-friends #bt-follow {
+	margin-top: 6px;
 }
 #module-friends .content {
 	padding: 10px 0;

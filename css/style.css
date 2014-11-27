@@ -5,6 +5,7 @@
 html,
 body {
 	background: #fff;
+	height: 100%;
 	min-height: 100%;
 }
 body,
@@ -272,6 +273,9 @@ a.nav-drop-link:hover span {
 	height: 1px;
 	width: 1px;
 	color: #fff;
+}
+.icon-link em {
+	display: inline;
 }
 .nav-drop {
 	font-size: 12px;
@@ -667,27 +671,28 @@ input[type=text] + .button {
 	padding: 3px 6px .125em;
 }
 .bt-buy {
+	text-align: center;
+	color: #fff;
+	border-color: #7bbfc9;
+	background: #7bbfc9;
+}
+.bt-buy.amazon {/* overrides default .bt-buy colors */
+	padding: 4px 5px .2em;
+	line-height: 1em;
 	color: #222;
 	border-color: #e6a400;
 	background: #ffd875;
-	text-align: center;
-	padding: 4px 12px .2em;
-	line-height: 1em;
 }
-.bt-buy em {
-	display: inline-block;
-	width: 53px;
+.bt-buy.amazon em { /* hides and replaces text inside em with image, aligns */
+    width: 53px;
 	height: 16px;
+	text-indent: -9999px;
+	overflow: hidden;
 	background: url(../images/logo_amazon-s.png) no-repeat 0 0;
+	display: inline-block;
+    vertical-align: middle;
 }
-.bt-buy.amazon em {
-        vertical-align: middle;
-        text-indent: -9999px;
-        overflow: hidden;
-	background: url(../images/logo_amazon-s.png) no-repeat 0 0;
-}
- 
-a.bt-buy:hover {
+a.bt-buy.amazon:hover {
 	background-color: #e6a400 !important;
 	border-color: #e6a400 !important;
 }
@@ -1005,7 +1010,7 @@ ul.friends-list {
 .tabbody ul.friends-list {
 	margin: 0;
 }
-.friends-list li {
+.friends-list > li {
 	position: relative;
 	float: left;
 	width: 100%;
@@ -1227,7 +1232,6 @@ ul.friends-list {
 }
 .vertical-offset { /* determines vertical positioning */
 	float: left;
-	/*height: 50%;*/
 	height: 270px;
 	margin-bottom: -220px; /* should be approx. half modal window height. a calculated height may be defined as an inline style. */
 }
@@ -1269,15 +1273,12 @@ ul.friends-list {
 	display: none;
 }
 .simplemodal-overlay {
-	background-color: #e9e9e9; /* overlay background. control opacity in js options (default 75). */
+	background-color: #ececec; /* overlay background. control opacity in js options (default 75). */
 }
 .simplemodal-data {
 	width: 480px; /* used as default simplemodal width. override via modal ID. */
 	background: #fff;
-	border: 1px solid #d9d9d9;
-	box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
-	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
-	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 }
 .simplemodal-close {
 	top: 11px;
@@ -1292,9 +1293,10 @@ ul.friends-list {
 	color: #7c7c7c;
 }
 .modal-box h2,
-.simplemodal-data h2 {
+.simplemodal-data h2,
+.nestedwin h2 {
 	font-size: 0.9231em;
-	font-weight: normal;
+	font-weight: 300;
 	line-height: 1em;
 	color: #333;
 	text-transform: uppercase;
@@ -2168,7 +2170,6 @@ ul.info-balloons {
 }
 .nestedwin {
 	background: #fff;
-	font-size: 14px;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 	margin: 20px 16.6667% 40px;
 	padding: 30px 40px 0;
@@ -2176,13 +2177,6 @@ ul.info-balloons {
 .nestedwin h2 {
 	margin: -30px -40px 0;
 	padding: 10px 20px;
-	font-size: 0.8571em;
-	font-weight: 300;
-	line-height: 1em;
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
-	background-color: #f3f3f3;
 }
 .nestedwin h3 {
 	font-size: 1.4286em;
@@ -2249,19 +2243,24 @@ ul.info-balloons {
 /* gifting path ----- */
 .giftingwin h3 {
 	color: #000000;
-	font-size: 2.5em;
+	font-size: 2.4615em;
+	font-weight: 300;
 	margin-top: .5em;
+	margin-bottom: 0px;
 }
 .giftingwin h3.icon {
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 0 -1px;
 	background-image: url(../images/icon_gift@2x.png);
 	padding-left: 50px;
+	border-bottom: 0;
 }
 .giftingwin .prod {
-	font-size: 0.9286em;
 	line-height: 1.6923em;
-	margin: 0 0 10px;
+	margin-top: 10px;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
 	background: #f5f5f5;
@@ -2276,14 +2275,32 @@ ul.info-balloons {
 .giftingwin .prod h3 a {
 	color: #000;
 }
-.giftingwin .prod-thumb {
+.giftingwin .prod-thumb,
+.giftingwin .friends-list img {
 	border-color: #ccc;
 	margin-left: 0;
 }
 .giftingwin .prod-thumb img {
 	height: 78px;
 }
-.giftingwin .prod-cat-name-rating {
+.giftingwin table.friends-list {
+	width: 100%;
+	margin: 20px 0;
+	box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+}
+.giftingwin .friends-list th {
+	font-weight: normal;
+	text-align: left;
+	color: #999;
+	padding: 10px 0;
+}
+.giftingwin .friends-list img {
+	width: 78px;
+	height: auto;
+}
+.giftingwin .prod-cat-name-rating,
+.giftingwin .friends-list .friend-info {
 	margin-left: 100px;
 }
 .giftingwin .prod-cat-name-rating,
@@ -2309,7 +2326,8 @@ ul.info-balloons {
 .giftingwin .prod,
 .giftingwin .infobox,
 .giftingwin .tabs,
-.giftingwin h3 {
+.giftingwin h3,
+.giftingwin #giftinglist {
 	margin-right: 8.3333%;
 	margin-left: 8.3333%;
 }
@@ -2348,6 +2366,73 @@ ul.info-balloons {
 }
 .giftingwin .button-row {
 	margin-top: 10px;
+}
+.giftingwin .prod h3 {
+	border-bottom: none;
+}
+.giftingwin .prod ul.own {
+	color: #999;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+.giftingwin .prod .own li {
+	list-style-type: none;
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	margin: 0;
+	padding: 0 10px 0 0;
+}
+.giftingwin .prod .own li strong {
+	color: #000;
+	font-weight: 600;
+}
+#giftinglist {
+	padding: 0 20px;
+}
+.giftingwin .friends-list .icon-link {
+	display: inline-block;
+	text-align: left;
+	min-width: 100px;
+}
+.giftingwin .friends-list .icon-link .fa {
+	font-size: 1.5385em;
+	line-height: 1em;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+.giftingwin .friends-list .button.icon-link {
+	color: #a6a6a6;
+	background: #fff;
+	border: 1px solid #fff;
+	padding-top:1px;
+}
+.giftingwin .friends-list .button.icon-link:hover {
+	color: #fff;
+}
+.giftingwin .friends-list .button.icon-link span {
+	line-height: 1em;
+	display: none;
+}
+.giftingwin .friends-list .button.icon-link:hover span {
+	display: inline-block;
+}
+.giftingwin td.friend-info p {
+	white-space:nowrap;
+	margin-left:100px;
+}
+#giftdetail-modal.simplemodal-data {
+	width: 821px;
+	margin: 1px;
+}
+.giftingwin table.friends-list {
+	color: #333;
+	font-size: 0.9231em;
+	line-height: 1.4583em;
 }
 
 /* tips (yellow hints) ----- */
@@ -3075,6 +3160,10 @@ form.label-infield .prod-desc fieldset p label {
 	color: #777;
 	padding-right: 20px;
 }
+.own strong {
+	font-weight: normal;
+	color: #000;
+}
 .prod-links {
 	margin: 7px 0;
 }
@@ -3365,10 +3454,6 @@ input[type=text].field-prodname {
 	width: 71%;
 	display: inline-block;
 }
-.find-item {
-	width: 26%;
-	text-align: center;
-}
 .list-item-link {
 	width: 100%;
 }
@@ -3594,13 +3679,11 @@ a.bt-gift {
 	color: #5BAA5D;
 	background: url(../images/icon_gift.png) no-repeat 4px 0;
 	background-size: 19px 50px;
-	padding: 0 2px 0 26px;
-	border-radius: 4px;
+	padding-left: 26px;
 }
 a.bt-gift:hover {
 	text-decoration: none;
-	color: #fff;
-	background-color: #5BAA5D;
+	color: #000;
 	background-position: 4px -30px;
 }
 /* follow button ------- */

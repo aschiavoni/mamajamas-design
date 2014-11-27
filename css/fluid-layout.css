@@ -122,8 +122,19 @@ img, object, embed, video {
 	padding: 0 10px 5px;
 	border-left: solid 1px #ccc;
 }
+.giftingwin table.friends-list td {
+	padding: 20px 10px;
+	border-top: dotted 1px #ccc;
+}
 #listdetails ul li:first-child {
 	border-left: none;
+}
+.giftingwin table.friends-list th {
+	padding-left: 10px;
+}
+.giftingwin table.friends-list th:first-child,
+.giftingwin table.friends-list td:first-child {
+	padding-left: 0;
 }
 #primary,
 #secondary,

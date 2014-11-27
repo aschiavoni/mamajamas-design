@@ -403,3 +403,15 @@ June 7
 
 June 11
 - "Add to Mamajamas" bookmark link to Choose modal
+
+.... (skipping about 5 months!)
+
+Nov 27
+- DES-278: Added quantities to "Want" and "Have" product info (see "edit_registry_c.html")
+- DES-278: Added gift info modal listing gift and gifter details (click "Gift details" on "edit_registry_c.html") or see "gift-details.html" for non-modal version.
+- Adjusted .bt-buy button styling to move Amazon styling to separate class
+- Minor CSS clean-up
+
+
+
+

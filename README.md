@@ -412,6 +412,11 @@ Nov 27
 - Adjusted .bt-buy button styling to move Amazon styling to separate class
 - Minor CSS clean-up
 
+Dec 1
+- DES-281: Style empty search results
+- DES-282: Home page adjustment
+- DES-279: Add email to Share menu.  “edit_registry_c.html” and “public_registry.html” use
+click-to-open behavior on Share dropdown menu and demoonstrate email modal window. “edit_registry.html” and “edit_registry_b.html” open Share menu on hover and do not show email modal.
 
 
 

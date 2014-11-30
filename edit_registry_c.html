@@ -53,7 +53,18 @@
 	  $('.bt-gift').click(function (e) {
 		  $('#giftdetail-modal').modal({
 			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
-			  overlayClose: true
+			  overlayClose: true,
+			  opacity:85
+			  });
+		  return false;
+	  });
+	  // Load dialog on click
+	  $('.bt-email').click(function (e) {
+		  $('#email-modal').modal({
+			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+			  focus: false,
+			  overlayClose: true,
+			  opacity:85
 			  });
 		  return false;
 	  });
@@ -136,8 +147,9 @@
         <div id="title-links">
           <ul class="iconrow">
             <li id="details-link"><a href="#" class="icon-link"><span class="ss-icon ss-info"></span>Details</a></li>
-            <li id="social-links" class="nav-drop-trigger"><a href="#" class="nav-drop-link"><span class="ss-icon ss-redirect"></span>Share</a>
-              <ul class="nav-drop">
+            <li id="social-links" class="dropdown"><a href="#" data-toggle="dropdown"><span class="ss-icon ss-redirect"></span>Share</a>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="ss-icon ss-email bt-email" title="Email">Email</a></li>
                 <li><a href="#" class="ss-icon ss-social-circle" title="Pinterest">Pinterest</a></li>
                 <li><a href="#" class="ss-icon ss-social-circle" title="Twitter">Twitter</a></li>
                 <li><a href="#" class="ss-icon ss-social-circle" title="Facebook">Facebook</a></li>
@@ -239,7 +251,6 @@
                   <div class="prod-cat-name-rating">
                     <div class="prod-category"> Bath Toy <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a></div>
                     <h3><a target="_blank" href="#prodlink">Curabitur velit libero, ullamcorper in egestas</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
-                    
                     <div class="rating"> <em>My rating:</em>
                       <div class="stars">
                         <div data-rating="1" class="star star-full"></div>
@@ -358,7 +369,6 @@
                   <div class="prod-cat-name-rating"><!-- product category, name, rating -->
                     <div class="prod-category"> Bath Tub <a href="#" class="bt-addanother"><span class="ss-icon ss-plus"></span> <span>Add another</span></a></div>
                     <h3><a href="#prodlink" target="_blank">Fisher-Price Precious Planet Whale of a Tub</a> <a href="#" class="bt-change"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
-                    
                     <div class="rating"> <em>My rating:</em>
                       <div class="stars">
                         <div class="star star-full" data-rating="1"></div>
@@ -432,7 +442,6 @@
                   <div class="prod-cat-name-rating"><!-- product category, name, rating -->
                     <div class="prod-category"> Shampoo or Body Wash <a class="bt-addanother" href="#"><span class="ss-icon ss-plus"></span> <span>Add another</span></a></div>
                     <h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a> <a class="bt-change" href="#"><span class="ss-icon ss-search"></span><span>Change</span></a></h3>
-                    
                     <div class="rating"> <em>My rating:</em>
                       <div class="stars">
                         <div data-rating="1" class="star star-full"></div>
@@ -552,72 +561,134 @@
 </div>
 <!-- end body area --> 
 
-<!-- modal window box -->
+<!-- gift detail modal window -->
 <div id="giftdetail-modal" class="modal-win giftingwin"> 
   <!-- modal window header -->
   <h2>Angie’s Baby Gear Registry</h2>
-  
   <h3 class="icon">Gift Details</h3>
-    
-    <!-- product -->
-    <div id="" class="prod clearfix">
-      <div class="prod-thumb"> <img src="assets/products/amazon/41r6iRzjKQL._SL75_.jpg" alt=""> </div>
-      <div class="prod-cat-name-rating">
-        <div class="prod-category">Shampoo or Body Wash</div>
-        <h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a></h3>
-        <div class="prod-when-own">
-          <div class="price"> <strong>$39.99</strong></div>
-          <div>
-            <ul class="own">
-              <li>Want <strong>2</strong> </li>
-              <li>Have <strong>2</strong></li>
-              <li>Received <strong>2</strong></li>
-            </ul>
-          </div>
+  
+  <!-- product -->
+  <div id="" class="prod clearfix">
+    <div class="prod-thumb"> <img src="assets/products/amazon/41r6iRzjKQL._SL75_.jpg" alt=""> </div>
+    <div class="prod-cat-name-rating">
+      <div class="prod-category">Shampoo or Body Wash</div>
+      <h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a></h3>
+      <div class="prod-when-own">
+        <div class="price"> <strong>$39.99</strong></div>
+        <div>
+          <ul class="own">
+            <li>Want <strong>2</strong> </li>
+            <li>Have <strong>2</strong></li>
+            <li>Received <strong>2</strong></li>
+          </ul>
         </div>
       </div>
     </div>
-    <!-- /product --> 
-    <!-- gifting list -->
-    <div id="giftinglist" class-"clearfix">
-      <table border="0" class="friends-list">
-        <tbody>
-          <tr>
-            <th scope="col">Gifted by</th>
-            <th scope="col">Date ordered</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Confirm/Reset</th>
-          </tr>
-          <tr>
-            <td class="friend-info"><a target="_blank" href="/johndoe2"><img src="https://mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-13-l.png" alt="John Doe"></a> <p><strong class="mom">John Doe</strong><br>
+  </div>
+  <!-- /product --> 
+  <!-- gifting list -->
+  <div id="giftinglist" class-"clearfix">
+    <table border="0" class="friends-list">
+      <tbody>
+        <tr>
+          <th scope="col">Gifted by</th>
+          <th scope="col">Date ordered</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Confirm/Reset</th>
+        </tr>
+        <tr>
+          <td class="friend-info"><a target="_blank" href="/johndoe2"><img src="https://mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-13-l.png" alt="John Doe"></a>
+            <p><strong class="mom">John Doe</strong><br>
               2 Ellsworth Park<br>
               Cambridge, MA 02149<br>
               <a href="#">john@doe.com</a></p></td>
-            <td>09/25/2014</td>
-            <td class="center">1</td>
-            <td>
-            	<a href="#" class="button icon-link" title="Confirm"><i class="fa fa-check-square-o"></i><span>Confirm</span></a><br>
-				<a href="#" class="button icon-link" title="Reset"><i class="fa fa-minus-square-o"></i><span>Reset</span></a>
-            </td>
-          </tr>
-          <tr>
-            <td class="friend-info"><a target="_blank" href="/johndoe2"><img src="https://mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-13-l.png" alt="John Doe"></a> <strong class="mom">John Doe</strong><br>
-              <p>2 Ellsworth Park<br>
+          <td>09/25/2014</td>
+          <td class="center">1</td>
+          <td><a href="#" class="button icon-link" title="Confirm"><i class="fa fa-check-square-o"></i><span>Confirm</span></a><br>
+            <a href="#" class="button icon-link" title="Reset"><i class="fa fa-minus-square-o"></i><span>Reset</span></a></td>
+        </tr>
+        <tr>
+          <td class="friend-info"><a target="_blank" href="/johndoe2"><img src="https://mamajamas-staging.s3.amazonaws.com/assets/avatars/avatars-13-l.png" alt="John Doe"></a> <strong class="mom">John Doe</strong><br>
+            <p>2 Ellsworth Park<br>
               Cambridge, MA 02149<br>
               <a href="#">john@doe.com</a></p></td>
-            <td>09/25/2014</td>
-            <td class="center">1</td>
-            <td>
-            	<a href="#" class="button icon-link" title="Confirm"><i class="fa fa-check-square-o"></i><span>Confirm</span></a><br>
-				<a href="#" class="button icon-link" title="Reset"><i class="fa fa-minus-square-o"></i><span>Reset</span></a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  
+          <td>09/25/2014</td>
+          <td class="center">1</td>
+          <td><a href="#" class="button icon-link" title="Confirm"><i class="fa fa-check-square-o"></i><span>Confirm</span></a><br>
+            <a href="#" class="button icon-link" title="Reset"><i class="fa fa-minus-square-o"></i><span>Reset</span></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-<!-- end modal window box --> 
+<!-- end gift detail win --> 
+
+<!-- share by email win -->
+<div id="email-modal" class="modal-win form-page">
+  <h2>Share Registry</h2>
+  <div class="content">
+    <form method="post" id="frm-create-email-invite" class="label-infield" action="/api/invites" accept-charset="UTF-8">
+      <div style="margin:0;padding:0;display:inline">
+        <input type="hidden" value="✓" name="utf8">
+        <input type="hidden" value="h4RHVjuSRCrYf0PpWDCZgL89fZbHbEygcUah57jasJg=" name="authenticity_token">
+      </div>
+      <input type="hidden" value="mamajamas" name="invite[provider]" id="invite_provider">
+      <dl class="clearfix">
+        <dt></dt>
+        <dd>
+          <p class="intro">Share your baby registry with friends and family.</p>
+        </dd>
+        <fieldset>
+          <!-- row -->
+          <dt>To<strong class="required">*</strong></dt>
+          <dd>
+            <p>
+              <label for="share_email">Email (required)</label>
+              <br>
+              <input type="text" size="30" name="share[email]" id="share_email">
+            </p>
+          </dd>
+          <!-- row -->
+          <dt>From</dt>
+          <dd>
+            <p>
+              <label for="share_from">Your name</label>
+              <br>
+              <input type="text" size="30" name="share[from]" id="share_from">
+            </p>
+          </dd>
+        </fieldset>
+        <!-- row -->
+        <fieldset>
+          <dt>Subject</dt>
+          <dd>
+            <p>
+              <label for="share_subject">Subject</label>
+              <br>
+              <input type="text" size="30" name="share[subject]" id="share_subject" value="Check out my baby registry at Mamajamas.com">
+            </p>
+          </dd>
+          <!-- row -->
+          <dt>Message</dt>
+          <dd>
+            <p>
+              <label for="invite_message">Personalized message</label>
+              <br>
+              <textarea rows="2" name="invite[message]" id="invite_message" cols="40"></textarea>
+            </p>
+            <p class="normal"><span class="instruction">Your message will include the following text:</span><br>
+              <strong>You can find my global baby registry at:</strong> <a href="http://www.mamajamas.com">www.mamajamas.com/angie</a></p>
+          </dd>
+        </fieldset>
+      </dl>
+      <div class="button-row">
+        <button id="bt-cancel" class="button" type="reset">Cancel</button>
+        <button id="bt-name" class="button bt-color bt-send" type="submit"><span class="ss-icon ss-send"></span>Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- end share by email win --> 
 
 <!-- Google Analytics -->
 

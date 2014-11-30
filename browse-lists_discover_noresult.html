@@ -1,0 +1,171 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas: Browse Lists</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<!-- in-field labels -->
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- switching elements from scrolling to fixed -->
+<script src="js/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+
+        // keep header, primary nav and list nav fixed and scroll the rest of the page
+
+        $('#hed-wrap').scrollToFixed();
+
+		$('#primary').scrollToFixed({ 
+		 	marginTop: $('#hed-wrap').outerHeight(true) 
+		});
+
+		$('#findfriendsmenu').scrollToFixed({ 
+		 	marginTop: $('#hed-wrap').outerHeight(true) 
+		});
+    });
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="css/fluid-layout.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body id="p-browse">
+<!-- header area ***** -->
+<div id="hed-wrap" class="scroll-to-fixed-fixed">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding"> <a href="/">
+        <h1>Mamajamas</h1>
+        </a> <a class="beta tooltip-r" href="/"> beta <span>“beta” means we’re still working out some of the kinks.<em></em></span> </a> </div>
+      <nav id="mainnav"> </nav>
+      <div id="login">
+        <ul>
+          <li><a href="mailto:angie@mamajamas.com">Contact</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="http://blog.mamajamas.com/" target="_blank">Blog</a></li>
+          <li> <a class="button" href="/users/login" id="login-link">Login</a> </li>
+          <li> <a class="button" href="/users/signup" id="signup-link">Sign Up</a> </li>
+          <li id="startlist"> <a class="button bt-color" href="/quiz">Start Your List</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+  <div id="title">
+    <div id="subhed">
+      <h2>Browse Lists</h2>
+    </div>
+  </div>
+  <div id="primary">
+    <div class="content"> </div>
+  </div>
+  <div id="secondary">
+    <div class="content"> 
+      
+      <!-- sorting / key -->
+      <div id="findfriendsmenu" class="clearfix">
+        <ul class="clearfix menu">
+          <li class="current first"><a href="#" id="mamajamasfriends">Mamajamas</a></li>
+          <li><a href="#" id="facebookfriends">Facebook</a></li>
+          <li><a href="#" id="gmailfriends">Gmail</a></li>
+          <li class="last"><a href="#" id="invitefriend">Invite a Friend</a></li>
+        </ul>
+        <div id="friendssearch">
+          <input type="text" placeholder="Search by first or last name">
+          <input type="submit" value="Search">
+        </div>
+        <div id="findfriendsfilter" class="clearfix">
+          <div class="friends-sort">Sort by: 
+            <!-- drop-down menu -->
+            <div class="choicedrop"> <a href="#">Popularity <span class="ss-dropdown"></span></a>
+              <ul style="display:none; width:7.5em;">
+                <li><a href="#">Popularity</a></li>
+                <li><a href="#">Name</a></li>
+                <li><a href="#">Last updated</a></li>
+                <li><a href="#">Expert Lists</a></li>
+              </ul>
+            </div>
+            <!-- /drop-down menu --> 
+          </div>
+          <div class="friends-key"> <span class="ss-icon ss-target expert"></span> = Expert List </div>
+        </div>
+      </div>
+      <div id="findfriends"> 
+        
+        <!-- Mamajamas friends tab -->
+        <div id="mamajamasfriends-tab" style="display: block;">
+          <ul class="clearfix friends-list findfriends-lists" style="height: 320px;">
+            <!-- no result -->
+            <li class="list-search-no-results"> <img src="images/no-result@2x.png" alt="no results">
+              <div class="friend-info"> <strong class="mom">No lists found.</strong><br>
+                <a href="#" class="clear-list-search button"><span class="fa fa-times"></span>Clear search</a> </div>
+            </li>
+            <!-- end no result -->
+            
+          </ul>
+        </div>
+        <!-- end mamajamas friends tab --> 
+        <!-- facebook friends tab -->
+        <div id="facebookfriends-tab" style="display: none;">
+          <div id="findfriends-prompt">
+            <h3>Find your friends</h3>
+            <p>Search your contacts for people you already know who have Mamajamas Lists.</p>
+            <a class="button bt-color bt-authfb"><span class="ss-check"></span>Authorize Facebook</a> </div>
+        </div>
+        <!-- end facebook friends tab --> 
+        <!-- gmail friends tab -->
+        <div id="gmailfriends-tab" style="display: none;">
+          <div id="findfriends-prompt">
+            <h3>Find your friends</h3>
+            <p>Search your contacts for people you already know who have Mamajamas Lists.</p>
+            <a class="button bt-color bt-authgoogle"><span class="ss-check"></span>Authorize Gmail</a> </div>
+        </div>
+        <!-- end gmail friends tab --> 
+        <!-- invite friends tab --> 
+        <!-- end invite friends tab --> 
+        
+      </div>
+      <!-- end findfriends--> 
+    </div>
+    <!-- end .content --> 
+  </div>
+  <!-- end #secondary -->
+  <div id="tertiary">&nbsp;</div>
+  <div id="footer">
+    <div class="content"> </div>
+  </div>
+</div>
+<!-- end body area --> 
+<!-- Google Analytics -->
+</body>
+</html>

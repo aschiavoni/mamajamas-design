@@ -206,7 +206,7 @@ img.float-r {
 	border-color: #222;
 }
 /* "start your list" button */
-#startlist a.button {
+#login #startlist a.button {
 	font-size: 1em;
 	display: inline;
 	line-height: inherit;
@@ -380,6 +380,11 @@ li#myaccount + li#sitelinks {
 }
 #sitelinks:hover .nav-drop-link > .ss-icon {
 	color: #000;
+}
+.dropdown a,
+.dropdown a:hover,
+.dropdown a:active {
+	text-decoration: none !important;
 }
 /* sub-headers ------ */
 #title {
@@ -710,6 +715,9 @@ a.button.disabled:active { /* disabled buttons */
 	top: .2em;
 	font-size: 1.33em;
 	line-height: .55em;
+	margin-right: 0.2em;
+}
+.button .fa {
 	margin-right: 0.2em;
 }
 .button-row {
@@ -1108,6 +1116,15 @@ ul.friends-list {
 #findfriends .form-page {
 	padding: 20px 0 0;
 }
+li.list-search-no-results {
+	margin-top: 10px;
+}
+.list-search-no-results img {
+    border: none;
+}
+.clear-list-search.button {
+	margin-top: 1em;
+}
 /* invite buttons */
 .fb-invite,
 .google-invite {
@@ -1279,6 +1296,9 @@ ul.friends-list {
 	width: 480px; /* used as default simplemodal width. override via modal ID. */
 	background: #fff;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 }
 .simplemodal-close {
 	top: 11px;
@@ -2813,7 +2833,11 @@ opacity:0;
 }
 #social-links .nav-drop {
 	margin: 2px;
-	width: 106px;
+}
+#social-links .nav-drop,
+#social-links .dropdown-menu {
+	min-width: 140px;
+	width: 140px;
 }
 #social-links li {
 	display: inline-block;
@@ -2828,24 +2852,47 @@ opacity:0;
 	margin-bottom: 0;
 	padding: 2px;
 }
-#social-links .nav-drop a {
+#social-links .nav-drop a,
+#social-links .dropdown-menu > li > a {
+	color: #a6a6a6;
 	display: block;
 	margin: 0;
 	padding: 5px 3px 1px;
 	width: 22px;
 }
-#social-links .nav-drop a:hover {
+#social-links .nav-drop a:hover,
+#social-links .dropdown-menu > li > a:hover {
 	background: #fff;
 }
+a[title="Email"]:hover {
+	color: #222 !important;
+}
 a[title="Facebook"]:hover {
-	color: #3b5998;
+	color: #3b5998 !important;
 }
 a[title="Twitter"]:hover {
-	color: #00c3f8;
+	color: #00c3f8 !important;
 }
 a[title="Pinterest"]:hover {
-	color: #cb2027;
+	color: #cb2027 !important;
 }
+
+/*social links: email ---- */
+#email-modal.simplemodal-data {
+	width: 821px;
+	margin: 1px;
+}
+#email-modal.simplemodal-data input[type=email],
+#email-modal.simplemodal-data input[type=text],
+#email-modal.simplemodal-data label {
+	font-size: 1em;
+	width: 66%;
+	text-align: left;
+}
+#email-modal p strong {
+	color: #333;
+}
+
 /* print button ---- */
 #title-links #print-link {
 	position: absolute;
@@ -4765,14 +4812,18 @@ a#learn-more:hover {
 	width: 33.3%;
 	float: left;
 }
-.home #secondary li strong {
+.home #secondary strong {
 	position: absolute;
 	margin-left: -20%;
 	display: block;
 	width: 20%;
 	text-align: center;
 }
-.home #secondary li strong em {
+.home #secondary em {
+	font-weight: 800;
+	font-style: normal;
+}
+.home #secondary strong em {
 	font-size: 42px;
 	line-height: 51px;
 	font-weight: 400;

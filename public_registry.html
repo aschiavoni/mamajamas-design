@@ -45,6 +45,22 @@
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+  jQuery(function ($) {
+	  // Load dialog on click
+	  $('.bt-email').click(function (e) {
+		  $('#email-modal').modal({
+			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+			  focus: false,
+			  overlayClose: true,
+			  opacity:85
+			  });
+		  return false;
+	  });
+  });
+</script>
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="css/fluid-layout.css" rel="stylesheet">
 <link href="webfonts/ss-social-circle.css" rel="stylesheet" />
@@ -112,13 +128,14 @@
 				<div id="title-links">
 					<ul class="iconrow">
 						<li id="details-link"><a href="#" class="icon-link"><span class="ss-icon ss-info"></span>Details</a></li>
-						<li id="social-links" class="nav-drop-trigger"><a href="#" class="nav-drop-link"><span class="ss-icon ss-redirect"></span>Share</a>
-							<ul class="nav-drop">
-								<li><a href="#" class="ss-icon ss-social-circle" title="Pinterest">Pinterest</a></li>
-								<li><a href="#" class="ss-icon ss-social-circle" title="Twitter">Twitter</a></li>
-								<li><a href="#" class="ss-icon ss-social-circle" title="Facebook">Facebook</a></li>
-							</ul>
-						</li>
+						<li id="social-links" class="dropdown"><a href="#" data-toggle="dropdown"><span class="ss-icon ss-redirect"></span>Share</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#" class="ss-icon ss-email bt-email" title="Email">Email</a></li>
+                            <li><a href="#" class="ss-icon ss-social-circle" title="Pinterest">Pinterest</a></li>
+                            <li><a href="#" class="ss-icon ss-social-circle" title="Twitter">Twitter</a></li>
+                            <li><a href="#" class="ss-icon ss-social-circle" title="Facebook">Facebook</a></li>
+                          </ul>
+                        </li>
 						<li id="print-link"><a href="#" class="ss-icon icon-link" title="Print">Print</a></li>
 					</ul>
 				</div>
@@ -533,7 +550,74 @@
 </div>
 </div>
 <!-- end body area --> 
-<!-- Google Analytics -->
 
+<!-- share by email win -->
+<div id="email-modal" class="modal-win form-page">
+  <h2>Share Registry</h2>
+  <div class="content">
+    <form method="post" id="frm-create-email-invite" class="label-infield" action="/api/invites" accept-charset="UTF-8">
+      <div style="margin:0;padding:0;display:inline">
+        <input type="hidden" value="✓" name="utf8">
+        <input type="hidden" value="h4RHVjuSRCrYf0PpWDCZgL89fZbHbEygcUah57jasJg=" name="authenticity_token">
+      </div>
+      <input type="hidden" value="mamajamas" name="invite[provider]" id="invite_provider">
+      <dl class="clearfix">
+        <dt></dt>
+        <dd>
+          <p class="intro">Share this baby registry with friends and family.</p>
+        </dd>
+        <fieldset>
+          <!-- row -->
+          <dt>To<strong class="required">*</strong></dt>
+          <dd>
+            <p>
+              <label for="share_email">Email (required)</label>
+              <br>
+              <input type="text" size="30" name="share[email]" id="share_email">
+            </p>
+          </dd>
+          <!-- row -->
+          <dt>From</dt>
+          <dd>
+            <p>
+              <label for="share_from">Your name</label>
+              <br>
+              <input type="text" size="30" name="share[from]" id="share_from">
+            </p>
+          </dd>
+        </fieldset>
+        <!-- row -->
+        <fieldset>
+          <dt>Subject</dt>
+          <dd>
+            <p>
+              <label for="share_subject">Subject</label>
+              <br>
+              <input type="text" size="30" name="share[subject]" id="share_subject" value="Check out this baby registry at Mamajamas.com">
+            </p>
+          </dd>
+          <!-- row -->
+          <dt>Message</dt>
+          <dd>
+            <p>
+              <label for="invite_message">Personalized message</label>
+              <br>
+              <textarea rows="2" name="invite[message]" id="invite_message" cols="40"></textarea>
+            </p>
+            <p class="normal"><span class="instruction">Your message will include the following text:</span><br>
+              <strong>I thought you’d be interested in this Mamajamas baby registry:</strong> <a href="http://www.mamajamas.com">www.mamajamas.com/angie</a></p>
+          </dd>
+        </fieldset>
+      </dl>
+      <div class="button-row">
+        <button id="bt-cancel" class="button" type="reset">Cancel</button>
+        <button id="bt-name" class="button bt-color bt-send" type="submit"><span class="ss-icon ss-send"></span>Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- end share by email win --> 
+
+<!-- Google Analytics -->
 </body>
 </html>

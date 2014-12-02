@@ -3624,6 +3624,9 @@ background: #FFF;
 	float: right;
 	margin-top: -3.3846em
 }
+#buildlist .edit-mode .prod-when-own {
+	margin-top: -8em;
+}
 /* public list page colors ---- */
 #publist {
 	background: url("../images/bg_sharedlist-light.png") repeat-y right 0;
@@ -3994,6 +3997,9 @@ a.bt-gift:hover {
 	width: 33.333%;
 	float: right;
 	margin-top: -3.3846em;
+}
+#registry .edit-mode .prod-when-own {
+	margin-top: -8em;
 }
 #registry .price a.bt-gift {
 	margin-left: 4px;

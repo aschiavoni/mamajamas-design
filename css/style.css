@@ -3139,7 +3139,6 @@ a.bt-addanother:hover span {
 }
 /* item change button */
 .prod-desc h3 a.bt-change span {
-	display: none;
 	font-weight: 400;
 	padding: 0 4px 0 2px;
 }

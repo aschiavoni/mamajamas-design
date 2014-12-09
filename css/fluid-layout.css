@@ -88,7 +88,7 @@ img, object, embed, video {
 }
 #title-links {
 	float: right;
-	padding: 2.5em 10px 0;
+	padding: 2.5em 10px 0 0;
 	width: 27.7777%;
 	display: block;
 	box-sizing: border-box;
@@ -203,7 +203,7 @@ img, object, embed, video {
 	padding-top: 0;
 }
 #registry #title-links {
-	padding-top: 2.75em;
+	padding-top: 3em;
 }
 #title .pubdate {
 	float: right;
@@ -379,9 +379,6 @@ img, object, embed, video {
 	width: 58.33333%;
 	margin-left: 41.66667%;
 }
-}
-
-@media only screen and (max-width: 980px) {
 }
 
 @media only screen and (min-width: 1245px) {

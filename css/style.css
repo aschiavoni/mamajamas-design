@@ -5,7 +5,6 @@
 html,
 body {
 	background: #fff;
-	height: 100%;
 	min-height: 100%;
 }
 body,
@@ -80,8 +79,14 @@ img.float-r {
 .light {
 	color: #a6a6a6;
 }
+em.light {
+	font-style: normal;
+}
 .light1 {
 	color: #777;
+}
+em.light1 {
+	font-style: normal;
 }
 .margintop0 {
 	margin-top: 0 !important;
@@ -409,7 +414,8 @@ li#myaccount + li#sitelinks {
 	color: #6BB36E;
 	background: #FFF;
 	border-color: #97CA99;
-	margin: 9px 10px 0 20px;
+	margin: 10px 10px 0 20px;
+	vertical-align: top;
 }
 #subhed .button:hover {
 	color: #FFF;
@@ -2199,10 +2205,13 @@ ul.info-balloons {
 	padding: 10px 20px;
 }
 .nestedwin h3 {
-	font-size: 1.4286em;
+	font-size: 1.2301em;
 	font-weight: 300;
+	line-height: 1.5em;
 	color: #65a565;
-	margin: 1.5em 0 0.25em;
+	margin: 2em 0 1em;
+	padding-bottom: 0.3125em;
+	border-bottom: solid 3px #8cbc8c;
 }
 .nestedwin .button-row {
 	margin: 40px -40px 0;
@@ -2221,12 +2230,16 @@ ul.info-balloons {
 .mjform form {
 	padding: 0 20px;
 }
+.mjform .label-infield p label {
+	top: 0;
+}
 .mjform .radio {
 	margin: 0 0 1em;
 }
 .mjform .radio label {
 	font-weight: normal;
 	display: block;
+	color: #808080;
 }
 .mjform .radio label strong.col5 {
 	display: inline-block;
@@ -2253,12 +2266,72 @@ ul.info-balloons {
 .mjform p {
 	color: #777;
 }
+.mjform p strong {
+	color: #222;
+	font-weight: 400;
+}
+.mjform p strong.required {
+	color: #ea7526;
+}
 .mjform .col50 {
 	width: 49%;
 	margin-left: 2%;
 }
 .mjform .col50:first-child {
 	margin-left: 0;
+}
+.mjform dl {
+	width: 99.9%;
+	margin-bottom: 0;
+}
+.mjform dt,
+.mjform dd {
+	float: left;
+	margin-left: 1.9%;
+}
+.mjform dt {
+	color: #808080;
+	clear: left;
+	width: 15.5%;
+	padding: .3em 0;
+	text-align: right;
+}
+.mjform dd {
+	width: 80.5%;
+}
+.mjform dd.half {
+	width: 38.5%;
+}
+.mjform dd p {
+	padding-left: .5em;
+}
+.mjform dd em {
+	font-style: normal;
+}
+.mjform dd p input,
+.mjform dd p textarea {
+	margin-left: -.5em;
+}
+.mjform dd.pad {
+	padding: .3em 0;
+}
+.mjform input[type="email"],
+.mjform input[type="text"],
+.mjform input[type="password"],
+.mjform textarea {
+	width: 100%;
+}
+select#shipping_country {
+	font-size: 1.27em;
+}
+.mjform #field-bdate,
+.mjform #field-duedate {
+	float: left;
+	margin-right: 5px;
+	width: 85%;
+}
+.mjform .button-row {
+	margin-top: 4em;
 }
 /* gifting path ----- */
 .giftingwin h3 {
@@ -2800,8 +2873,6 @@ opacity:0;
 	padding: 0;
 	display: flex;
 	display: -webkit-flex;
-	justify-content: flex-end;
-	-webkit-justify-content: flex-end;
 }
 #title-links > ul > li {
 	margin: 0 10px 0 10px;
@@ -2810,12 +2881,32 @@ opacity:0;
 	width: 100%;
 	margin-bottom: 5px;
 }
+@media only screen and (max-width: 1120px) {
+	#details-link > a,
+	#social-links > a {
+		font-size:.95em;
+	}
+}
+@media only screen and (max-width: 1055px) {
+	#registry #title-links {
+		padding-top: 3.25em;
+	}
+	#details-link > a,
+	#social-links > a {
+		font-size:.8461em;
+	}
+}
+
 /* title right icon links */
 .iconrow a {
 	display: block;
+	color: #777;
+}
+.iconrow a span {
 	color: #a6a6a6;
 }
-.iconrow a:hover {
+.iconrow a:hover,
+.iconrow a:hover span {
 	color: #333;
 	text-decoration: none;
 }
@@ -2901,6 +2992,10 @@ a[title="Pinterest"]:hover {
 }
 li#print-link a {
 	font-size: 1.2308em;
+	color: #a6a6a6;
+}
+li#print-link a:hover {
+	color: #333;
 }
 /* list details drawer ---- */
 #listdetails {
@@ -3638,6 +3733,9 @@ background: #FFF;
 	background: #dedede;
 }
 /* publist title bar menu ---- */
+.publist #title h2 {
+	display: inline-block;
+}
 #title .pubdate {
 	color: #a6a6a6;
 	text-align: right;
@@ -4239,6 +4337,10 @@ p:hover .icon-edit,
 #create-profile textarea {
 	width: 100%;
 }
+select#shipping_country {
+	font-size: 1.27em;
+	width: 100%;
+}
 #create-profile #field-bdate {
 	float: left;
 	margin-right: 5px;
@@ -4247,10 +4349,6 @@ p:hover .icon-edit,
 #create-profile #top-tags {
 	font-size: .857em;
 	color: #808080;
-}
-#create-profile .button-row {
-	border-top: none;
-	padding: 10px 20px 0 0;
 }
 /* create profile: custom checkboxes ---- */
 /* (based on work by Wufoo, Ryan Seddon and Lea Verou) */
@@ -4456,8 +4554,14 @@ em.privacy-status { /* used on list preview and my settings */
 #listprivacy-hed.collapsible .helper {
 	color: #777;
 }
-#listprivacy-hed.collapsible.ss-directright:hover,
-#listprivacy-hed.collapsible.ss-dropdown:hover {
+.privacy-status span.ss-icon {
+	position: relative;
+	top: 3px;
+	margin: 0 3px;
+	display: inline-block;
+	color: #80a3ba;
+	font-size: 1.35em;
+	line-height: 18px;
 }
 .privacy-status span.icon-globe,
 .privacy-status span.icon-bird,
@@ -4503,12 +4607,13 @@ em.privacy-status { /* used on list preview and my settings */
 }
 /* my settings: list privacy */
 p.privacy-status {
-	margin: 1.5em 0;
 	padding: 4px 10px 10px;
-	border: solid 1px #93B9CE;
+	border: 1px solid #EBF0F4;
 	border-radius: 5px;
 	background: #f0f4f7;
-	;
+}
+.form-page #frm-list-settings {
+	margin-bottom: 60em;
 }
 #frm-list-settings em.privacy-status {
 	color: #222;
@@ -4533,7 +4638,7 @@ p.privacy-status {
 .settings-select input {
 	margin-right: 5px;
 }
-.settings-select label {
+.settings-select li label {
 	color: #222;
 }
 .settings-select ul li {
@@ -4543,21 +4648,19 @@ p.privacy-status {
 }
 /* form page */
 .form-page form {
-	font-size: 1.077em;
+	font-size: 1em;
 }
 .form-page #title h2 {
 	padding-left: 0;
 }
 .form-page h3 {
-	font-size: 1.2143em; /* = 17px */
+	font-size: 1.2301em;
 	font-weight: 300;
+	line-height: 1.5em;
 	color: #65a565;
 	margin: 2em 0 1em;
-	padding-bottom: 4px;
-	border-bottom: 2px solid #8cb58c;
-}
-.form-page h3:first-child {
-	margin-top: .75em !important;
+	padding-bottom: 0.3125em;
+	border-bottom: solid 3px #8cbc8c;
 }
 .form-page #title .instruction {
 	font-size: .923em;
@@ -4606,7 +4709,7 @@ p.privacy-status {
 .form-page dd.pad {
 	padding: .3em 0;
 }
-.form-page input[type="email"],
+/*.form-page input[type="email"],
 .form-page input[type="text"],
 .form-page input[type="password"],
 .form-page textarea {
@@ -4618,7 +4721,7 @@ p.privacy-status {
 }
 .form-page form.label-infield fieldset p label {
 	margin: 0.5em;
-}
+}*/
 .form-page form .instruction {
 	font-size: .857em;
 	color: #999;
@@ -5170,6 +5273,7 @@ ul.sidemenu {
 	padding: 0;
 	list-style-type: none;
 	z-index: 500;
+	font-size:1.231em;
 }
 ul.sidemenu li {
 	margin: 0 0 .5em;
@@ -5178,7 +5282,6 @@ ul.sidemenu li a {
 	display: block;
 	margin: 0;
 	padding: 0;
-	font-size: 1.231em;
 	font-weight: 300;
 	line-height: 1.5em;
 	color: #777;

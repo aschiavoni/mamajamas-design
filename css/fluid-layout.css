@@ -181,10 +181,7 @@ img, object, embed, video {
 #buildlist #secondary > .content {
 	min-height: 455px;
 }
-#buildlist .prod-note {
-	margin-right: 33.333%;
-	padding-right: 10px;
-}
+
 /* layout adjustments for registry (and old #publist) */
 #publist #title {
 	width: 83.1%;

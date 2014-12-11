@@ -2394,7 +2394,8 @@ select#shipping_country {
 }
 .giftingwin .prod-cat-name-rating,
 .giftingwin .friends-list .friend-info {
-	margin-left: 100px;
+	margin-left: 20px;
+	margin-bottom: 0;
 }
 .giftingwin .prod-cat-name-rating,
 .giftingwin .prod-when-own > div {
@@ -2727,7 +2728,7 @@ a.tooltip-b:hover span,
 	left: 50%;
 	margin-left: -241px;
 	position: fixed;
-	top: 50px;
+	top: 43px;
 	z-index: 4000;
 }
 .notification {
@@ -2735,10 +2736,9 @@ a.tooltip-b:hover span,
 	font-size: 11px;
 	width: 460px;
 	margin: 0.5em auto;
-	padding: 0.3em 10px 0.5em;
+	padding: 0.5em 10px;
 	text-align: center;
-	background: #ffffff;
-	border: solid 1px #dddddd;
+	background: #ffffcd;
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .notification strong.ss-icon {
@@ -2896,7 +2896,6 @@ opacity:0;
 		font-size:.8461em;
 	}
 }
-
 /* title right icon links */
 .iconrow a {
 	display: block;
@@ -2975,6 +2974,7 @@ a[title="Pinterest"]:hover {
 }
 #email-modal.simplemodal-data input[type=email],
 #email-modal.simplemodal-data input[type=text],
+#email-modal textarea,
 #email-modal.simplemodal-data label {
 	font-size: 1em;
 	width: 66%;
@@ -3135,7 +3135,7 @@ h4.collapsible:focus {
 .prod-thumb {
 	float: left;
 	width: 78px;
-	margin: 3px 20px 0;
+	margin: 3px 0 0 3%;
 	text-align: center;
 	border: solid 1px #fff;
 	background: #FFF;
@@ -3150,7 +3150,7 @@ h4.collapsible:focus {
 .oldie .bt-thumb-upload {
 	position: absolute;
 	top: 105px;
-	left: 20px;
+	left: 3%;
 	width: 80px;
 	text-align: center;
 	font-size: 0.846em;
@@ -3163,10 +3163,6 @@ h4.collapsible:focus {
 	top: .1em;
 	margin-right: 3px;
 	font-size: 1.18em;
-}
-.prod-cat-name-rating {
-	margin-right: 33.333%;
-	padding-right: 10px;
 }
 .prod-category {
 	color: #777;
@@ -3185,6 +3181,10 @@ h4.collapsible:focus {
 }
 .prod-desc {
 	line-height: 1.7692em;
+	width: 100%;
+	padding-left: 17%;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 a.bt-addanother,
 .prod-desc h3 a.bt-change {
@@ -3322,7 +3322,7 @@ form.label-infield .prod-desc fieldset p label {
 .prod-note {
 	line-height: 1.5em;
 	color: #777;
-	margin: 1.7692em 20px 0 120px;
+	margin: 0 20px 0 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -3589,7 +3589,10 @@ form.label-infield .prod-note .ss-chat {
 	background: #bbb;
 }
 .prod-cat-name-rating {
-	margin-left: 120px;
+	float: left;
+	width: 60%;
+	margin-bottom: 1em;
+	padding-right: 10px;
 }
 input[type=text].field-prodname {
 	width: 71%;
@@ -3682,6 +3685,10 @@ form.label-infield .edit-mode .prod-note label {
 #add-new {
 	margin-bottom: 240px;
 }
+#add-new .prod-category,
+#add-new .prod-links {
+	margin-left: 17%;
+}
 @-webkit-keyframes yellow-fade {
  0% {
 background: #fff6d2;
@@ -3712,14 +3719,43 @@ background: #FFF;
 	right: 1%;
 	width: 20px;
 }
+#buildlist .prod-desc {
+	padding-left: 14%;
+}
+#buildlist .prod-cat-name-rating {
+	width: 61.5%;
+}
 #buildlist .prod-when-own {
 	padding: 0 40px 0 10px;
-	width: 33.333%;
+	width: 38.5%;
 	float: right;
-	margin-top: -3.3846em
 }
-#buildlist .edit-mode .prod-when-own {
-	margin-top: -8em;
+#buildlist .prod-note {
+	margin-right: 38.5%;
+	padding-right: 10px;
+	clear:both;
+}
+#buildlist #add-new .prod-category,
+#buildlist #add-new .prod-links {
+	margin-left: 14%;
+}
+@media only screen and (max-width: 1000px) {
+	#buildlist .prod-desc {
+		padding-left: 16%;
+	}
+	#buildlist .prod-cat-name-rating {
+		width: 60.5%;
+	}
+	#buildlist .prod-when-own {
+		width: 39.5%;
+	}
+	#buildlist .prod-note {
+		margin-right: 39.5%;
+	}
+	#buildlist #add-new .prod-category,
+	#buildlist #add-new .prod-links {
+		margin-left: 16%;
+	}
 }
 /* public list page colors ---- */
 #publist {
@@ -4091,12 +4127,8 @@ a.bt-gift:hover {
 }
 #registry .prod-when-own {
 	padding: 0 40px 0 10px;
-	width: 33.333%;
+	width: 40%;
 	float: right;
-	margin-top: -3.3846em;
-}
-#registry .edit-mode .prod-when-own {
-	margin-top: -8em;
 }
 #registry .price a.bt-gift {
 	margin-left: 4px;
@@ -4118,7 +4150,7 @@ a.bt-gift:hover {
 	right: 10px;
 }
 #registry .prod-note {
-	margin-right: 33.3333%;
+	width: 60%;
 	padding-right: 10px;
 }
 #registry #tertiary p a,
@@ -4918,7 +4950,7 @@ a#learn-more:hover {
 	width: 33.3%;
 	float: left;
 }
-.home #secondary strong {
+.home #secondary li strong {
 	position: absolute;
 	margin-left: -20%;
 	display: block;

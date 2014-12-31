@@ -609,17 +609,18 @@ input.button {
 button,
 .button {
 	font-size: 12px;
+	font-weight: 400;
 	line-height: 1.4167em;
 	color: #fff;
 	padding: .25em 12px;
-	border: 1px solid #a6a6a6;
+	border: 1px solid #b1b1b1;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	display: inline-block;
 	outline: none;
 	cursor: pointer;
-	background-color: #a6a6a6;
+	background-color: #b1b1b1;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -824,6 +825,7 @@ a#bt-fb-connect-s { /* fb login without button chrome */
 .grid .col {
 	float: left;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 .padded .col {
 	padding: 0 2%;
@@ -2734,6 +2736,7 @@ a.tooltip-b:hover span,
 .notification {
 	clear: both;
 	font-size: 11px;
+	font-weight: 400;
 	width: 460px;
 	margin: 0.5em auto;
 	padding: 0.5em 10px;
@@ -4827,11 +4830,6 @@ p.privacy-status {
 	-webkit-transition: all 0.25s ease;
 	-moz-transition: all 0.25s ease;
 }
-@media only screen and (max-height: 650px) {
-	.home #primary h1 {
-		margin: 40px 0 0;
-	}
-}
 .home #primary h1 em {
 	font-size: 0.51212em;
 	font-style: normal;
@@ -4850,10 +4848,11 @@ p.privacy-status {
 	padding: 0;
 }
 .home #primary a {
-	color: #fff;
-	font-size: 1.2308em;
+	color: #874789;
+	font-size: 1.3333em;
 	text-align: right;
-	margin-right: 5px;
+	margin-right: 1px;
+	padding: 5px 10px;	
 }
 .home #primary a.button {
 	font-size: 1.6154em;
@@ -4861,54 +4860,67 @@ p.privacy-status {
 	margin: 0 0 20px;
 	padding: 20px;	
 	display: block;
-	color: #FFF;
+	color: #fff;
 	background: #874789;
 	text-align: center;
 	border: none;
 	border-radius: 0;
-	box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 .home .option {
 	text-align: right;
 }
 .home .option a {
-	text-shadow: 0 0 15px rgba(0,0,0,0.2);
+	background: #fff;
 }
 .home .option a:hover {
-	color: #333;
+	color: #fff !important;
+	background: #333;
+	text-decoration: none;
 }
 .home .sq-button {
 	padding: 8px;
 	font-size: 12px;
-	font-weight: 400;
 	line-height: 1.2306em;
 	text-align: center;
 	color: #333;
 }
 a.sq-button:hover,
 a.sq-button:active,
-a.sq-button:focus {
+a.sq-button:focus,
+a#learn-more:hover,
+a#learn-more:active,
+a#learn-more:focus {
 	text-decoration: none;
 }
 .home #learn-more {
 	left: 50%;
+	font-size: 1.5em;
 	font-weight: 400;
-	margin-left: -60px;
-	width: 104px;
+	text-align: center;
+	margin-left: -20px;
+	padding: 10px;
+	width: 40px;
+	height: 40px;
 	background: #FFF;
-	box-shadow: 0 1px 2px 1px rgba(0,0,0,.2);
+	border-radius: 50%;
+	box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	-webkit-transition: all 0.25s ease;
 	-moz-transition: all 0.25s ease;
 }
 #learn-more .ss-icon {
 	color: #999;
-	margin-right: 4px;
 	position: relative;
-	top: 1px;
+	top: 2px;
 }
 a#learn-more:hover {
-	color: #FFF;
 	background: #333;
+}
+a#learn-more:hover,
+a#learn-more:hover .ss-icon {
+	color: #FFF;
 }
 .home #secondary #notifications {
 	line-height: 1.231;
@@ -4917,16 +4929,14 @@ a#learn-more:hover {
 	margin-left: 0;
 }
 .home #secondary {
-	font-size: 1.2308em;
+	font-size: 1.0769em;
 	font-weight: 300;
 	line-height: 1.5em;
 	color: #000;
-	background: rgba(255,255,255,0.7);
-	box-shadow: 0 -1px 3px rgba(77,77,77,0.1);
+	background: #f4f4f4;
+	border-top: solid 1px #fff;
+	box-shadow: inset 0 0 45px rgba(119,119,119,0.1);
 	clear: both;
-	height: 150px;
-	position: absolute;
-	top: 430px;
 }
 .home #secondary ul {
 	margin: 0;
@@ -4941,78 +4951,97 @@ a#learn-more:hover {
 	box-sizing:border-box;
 	-webkit-box-sizing: border-box;
 	margin-left: 0;
-	padding: 20px 20px 20px 0;
-	width: 33.3%;
+	padding: 30px 10px 20px;
+	width: 20%;
+	text-align: center;
 	flex:1;
 	-webkit-flex: 1;
 }
 .oldie .home #secondary li {
-	width: 33.3%;
+	width: 20%;
 	float: left;
 }
 .home #secondary li strong {
-	position: absolute;
-	margin-left: -20%;
 	display: block;
-	width: 20%;
 	text-align: center;
 }
 .home #secondary em {
 	font-weight: 800;
 	font-style: normal;
+	display: block;	
 }
 .home #secondary strong em {
-	font-size: 42px;
-	line-height: 51px;
+	font-size: 2.3125em;
 	font-weight: 400;
 	font-style: normal;
-	color: #874789;
-	background: #fff;
-	display: block;
-	width: 55px;
-	height: 55px;
-	padding: 0 0 0 1px;
-	border-radius: 50%;
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+	color: #6bb36e;
+	display: block;	
+	line-height: 51px;
 	box-sizing:border-box;
 	-webkit-box-sizing: border-box;
-}
-.home #secondary li p {
-	margin-left: 25%;
 }
 .home #tertiary {
 	font-size: 1.2308em;
 	font-weight: 300;
 	line-height: 1.5em;
 	color: #000;
-	background: url(../images/paper-tile.jpg);
-}
-.home #tertiary > .content {
 	border-top: solid 1px #FFF;
 	border-bottom: solid 1px #FFF;
+	background: url(../images/paper-tile.jpg);
 }
-.home #tertiary p {
-	margin-left: 33.3333%;
-	margin-right: 16.6667%;
+.home #tertiary .col {
+	float: left;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
-.home img.float-l {
-	position: absolute;
-	width: 14.6667%;
+.home #tertiary .col:first-child {
+	width: 33.3333%;
+	padding-left: 16.6667%;
+	padding-right: 20px;
+}
+.home #tertiary .col {
+	width: 66.6666%;
+	padding-right: 16.6667%;
+}
+.home #tertiary h2 {
+	font-size: 2.4em;
+	font-weight: 300;
+	line-height: 1em;
+	color: #6bb36e;
+	margin-top: 0;
+}
+.home #tertiary img {
 	height: auto;
-	left: 16.6667%;
+}
+.home #bt-promo {
+	padding: 0 25% 30px;
+}
+.home #bt-promo .button {
+	font-size: 1.3125em;
+	font-weight: 400;
+	margin: 0 0 20px;
+	padding: 20px;	
+	display: block;
+	color: #fff;
+	text-align: center;
+	border: none;
+	border-radius: 0;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 }
 .home #footer {
 	background: #84a6c1;
-	box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 45px rgba(0,0,0,0.125);
 }
 .home #footer p {
 	font-size: 1.2308em;
 	font-weight: 600;
 	line-height: 1.5em;
 	color: #fff;
-	margin-left: 33.3333%;
-	margin-right: 16.6667%;
-	text-shadow: 0 0 15px rgba(0,0,0,0.15);
+	margin-top: 10px;
+	margin-left: 25%;
+	margin-right: 25%;
+	text-align: center;
+	text-shadow: 0 0 15px rgba(0,0,0,0.175);
 }
 .home #tertiary em,
 .home #footer em {
@@ -5025,10 +5054,21 @@ a#learn-more:hover {
 .home #footer .testimonial {
 	border-radius: 50%;
 	overflow: hidden;
-	position: absolute;
-	width: 8.3333%;
+	position: relative;
+	width: 120px;
 	height: auto;
-	left: 23%;
+	left: 50%;
+	margin-left: -60px;
+}
+@media only screen and (max-height: 650px) {
+	.home #primary h1 {
+		margin: 40px 0 0;
+	}
+}
+@media only screen and (min-height: 1035px) {
+	.home #tertiary h2 {
+		font-size: 2.625em;
+		}
 }
 .beta {
 	font-size: 11px;

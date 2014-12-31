@@ -9,7 +9,7 @@
 .quiz-box {
 	font-family: 'Open Sans', sans-serif;
 	clear: both;
-	width: 740px;
+	width: 821px;
 	min-height:377px;
 	position: relative;
 	z-index: 40003;
@@ -30,7 +30,7 @@
 }
 #quiz-modal.simplemodal-data,
 .quiz-modal.simplemodal-data {
-	width: 740px;
+	width: 821px;
 	}
 #quiz-modal.simplemodal-data input[type=email],
 #quiz-modal.simplemodal-data input[type=text],
@@ -110,12 +110,14 @@
 .quiz-box-s .button-row {
 	position:absolute;
 	bottom:0;
-	margin: 1px;
-	padding: 10px 20px 8px;
-	width:698px;
+	padding: 10px 20px;
+	width:100%;
 	text-align: center;
 	border-top: none;
 	background:#f6f4f2;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 }
 .quiz-box .divider,
 .quiz-box-s .divider {
@@ -253,7 +255,7 @@ div.choicedrop {
 	display: block;
 	padding: .35em 0 0.4em;
 	font-size: .667em;
-	font-weight: 300;
+	font-weight: 400;
 	text-transform: lowercase;
 	text-align: center;
 	color: #FFF;
@@ -375,9 +377,12 @@ div.checked { /* checkbox overlay for selected item */
 	font-family: 'Open Sans', sans-serif;
 	padding: 5px 25px .35em;
 	border: none;
-	background-color: #c7c7c7;
 	text-transform:uppercase;
 	letter-spacing:.15em;
+}
+.quiz-results .button-row button, 
+.quiz-results .button-row .button {
+	padding: 5px 15px .35em;
 }
 .simplemodal-data .quiz-box-s .button-row button,
 .simplemodal-data .quiz-box-s .button-row .button {
@@ -395,13 +400,7 @@ span.ss-navigateright {
 }
 #bt-start {
 	margin-top:30px;
-}
-#bt-start,
-#bt-next {
 	padding-left: 32px;
-}
-#bt-prev {
-	padding-right: 32px;
 }
 #bt-build {
 	background: #5BAA5D;
@@ -597,7 +596,8 @@ span.ss-navigateright {
 }
 .gallery .content {
 	font-size: 1em;
-	color: #a6a6a6;
+	font-weight: 400;
+	color: #b6b6b6;
 	text-align: left;
 }
 .gallery .content a {

@@ -25,7 +25,8 @@
 		top:75px;
 		border: 1px solid #c9c9c9;
 	}
-.quiz-box-s {
+.quiz-box-s,
+.quiz-results {
 	min-height:377px;
 }
 #quiz-modal.simplemodal-data,
@@ -107,7 +108,8 @@
 	margin-top: 1em;
 }
 .quiz-box .button-row,
-.quiz-box-s .button-row {
+.quiz-box-s .button-row,
+.quiz-results .button-row {
 	position:absolute;
 	bottom:0;
 	padding: 10px 20px;
@@ -373,7 +375,9 @@ div.checked { /* checkbox overlay for selected item */
 .quiz-box button, 
 .quiz-box .button,
 .quiz-box-s button, 
-.quiz-box-s .button {
+.quiz-box-s .button,
+.quiz-results .button-row button, 
+.quiz-results .button-row .button {
 	font-family: 'Open Sans', sans-serif;
 	padding: 5px 25px .35em;
 	border: none;
@@ -385,11 +389,14 @@ div.checked { /* checkbox overlay for selected item */
 	padding: 5px 15px .35em;
 }
 .simplemodal-data .quiz-box-s .button-row button,
-.simplemodal-data .quiz-box-s .button-row .button {
+.simplemodal-data .quiz-box-s .button-row .button,
+.simplemodal-data .quiz-results .button-row button,
+.simplemodal-data .quiz-results .button-row .button{
 	font-size: 12px;
 }
 .quiz-box .bt-color,
-.quiz-box-s .bt-color {
+.quiz-box-s .bt-color,
+.quiz-results .button-row .bt-color {
 	background: #874789;
 }
 span.ss-navigateleft,
@@ -406,7 +413,8 @@ span.ss-navigateright {
 	background: #5BAA5D;
 }
 .quiz-box .button-row p,
-.quiz-box-s .button-row p {
+.quiz-box-s .button-row p,
+.quiz-results .button-row p {
 	font-size:1.077em;
 	color:#808080;
 	position:absolute;
@@ -417,11 +425,13 @@ span.ss-navigateright {
 	text-align:center;
 }
 .quiz-box .button-row p a,
-.quiz-box-s .button-row p a {
+.quiz-box-s .button-row p a,
+.quiz-results .button-row p a {
 	color:#696969;
 }
 .quiz-box .button-row p a:hover,
-.quiz-box-s .button-row p a:hover  {
+.quiz-box-s .button-row p a:hover, 
+.quiz-results .button-row p a:hover {
 	color:#000;
 }
 .skip {
@@ -580,6 +590,10 @@ span.ss-navigateright {
 }
 #quiz09 li:hover .thumb {
 	z-index: 40100;
+}
+.quiz-results .content {
+	padding-top: 0;
+	padding-bottom: 50px;
 }
 
 /* modal gallery */

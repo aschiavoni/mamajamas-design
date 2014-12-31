@@ -1300,10 +1300,12 @@ li.list-search-no-results {
 .simplemodal-overlay {
 	background-color: #ececec; /* overlay background. control opacity in js options (default 75). */
 }
+.simplemodal-container {
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
 .simplemodal-data {
 	width: 480px; /* used as default simplemodal width. override via modal ID. */
 	background: #fff;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -1324,7 +1326,7 @@ li.list-search-no-results {
 .simplemodal-data h2,
 .nestedwin h2 {
 	font-size: 0.9231em;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1em;
 	color: #333;
 	text-transform: uppercase;
@@ -1332,6 +1334,10 @@ li.list-search-no-results {
 	margin: 0 0 5px;
 	padding: 10px 20px;
 	background-color: #f3f3f3;
+}
+.simplemodal-data h2 strong {
+	font-weight: 400;
+	color: #000;
 }
 .modal-box h3,
 .simplemodal-data h3 {
@@ -2192,6 +2198,19 @@ ul.info-balloons {
 #follow-modal {
 	display: none;
 }
+/* recommended modal (quiz results */
+.quiz-results #listcontrols .listsort:first-child a {
+	width: 100px;
+}
+.quiz-results h3 em {
+	font-size: .66em;
+	font-style: normal;
+	color: #777;
+}
+.quiz-results .prodlist {
+	overflow:auto;
+	max-height:395px;/* list will scroll if beyond this height */
+}
 /* modal-look window (narrow page with drop shadow ----- */
 .bgfill {
 	background: #ececec;
@@ -2336,19 +2355,20 @@ select#shipping_country {
 	margin-top: 4em;
 }
 /* gifting path ----- */
-.giftingwin h3 {
+.giftingwin h3,
+.quiz-results h3 {
 	color: #000000;
 	font-size: 2.4615em;
 	font-weight: 300;
 	margin-top: .5em;
 	margin-bottom: 0px;
+	border-bottom: 0;
 }
 .giftingwin h3.icon {
 	background-repeat: no-repeat;
 	background-position: 0 -1px;
 	background-image: url(../images/icon_gift@2x.png);
 	padding-left: 50px;
-	border-bottom: 0;
 }
 .giftingwin .prod {
 	line-height: 1.6923em;
@@ -2879,6 +2899,7 @@ opacity:0;
 }
 #title-links > ul > li {
 	margin: 0 10px 0 10px;
+	line-height:1.25em;
 }
 #title-links .button {
 	width: 100%;
@@ -3069,6 +3090,10 @@ li#print-link a:hover {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+}
+.listsort .button {
+	margin-top: -4px;
+	margin-bottom: -1px;
 }
 #prod-rec a {
 	background-image: url(../images/icon_recommended@2x.png);
@@ -3520,9 +3545,6 @@ form.label-infield .prod-note .ss-chat {
 	padding-left: 7%;
 }
 /* gear list dropdown menus */
-#my-list .choicedrop {
-	border-color: #d9d9d9;
-}
 #my-list .choicedrop:hover {
 	border-color: #c3c3c3;
 }
@@ -3760,7 +3782,8 @@ background: #FFF;
 		margin-left: 16%;
 	}
 }
-/* public list page colors ---- */
+
+/* public list page colors (ID #publist is legacy) ---- */
 #publist {
 	background: url("../images/bg_sharedlist-light.png") repeat-y right 0;
 }
@@ -3849,7 +3872,7 @@ background: #FFF;
 .bt-add:hover strong {
 	display: inline;
 	position: relative;
-	top: -1px;
+	top: -2px;
 }
 #publist #tertiary p a,
 #publist #tertiary span a {
@@ -4100,7 +4123,9 @@ a.bt-gift:hover {
 	border-left: 1px solid #d1d1d1;
 }
 #registry #listcontrols > div,
-#registry #listcontrols .listsort {
+#registry #listcontrols .listsort,
+.quiz-results #listcontrols > div,
+.quiz-results #listcontrols .listsort {
 	width: 33.33%;
 	padding: 8px 10px 4px;
 	float: left;
@@ -4142,7 +4167,8 @@ a.bt-gift:hover {
 #registry .gift {
 	margin-left: -4px;
 }
-#registry .bt-add {
+#registry .bt-add,
+.quiz-results .bt-add {
 	position: absolute;
 	top: 48px;
 	left: 10px;

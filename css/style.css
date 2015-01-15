@@ -3912,12 +3912,15 @@ a.bt-gift:hover {
 /* hide "bt-text1" on hover and "bt-text2" by default */
 #publist a#bt-follow:hover .bt-text1,
 #publist a#bt-follow .bt-text2,
+#registry a#bt-follow:hover .bt-text1,
+#registry a#bt-follow .bt-text2,
 .bt-follow:hover .bt-text1,
 .bt-follow .bt-text2 {
 	display: none;
 }
 /* show bt-text2 on hover */
 #publist a#bt-follow:hover .bt-text2,
+#registry a#bt-follow:hover .bt-text2,
 .bt-follow:hover .bt-text2 {
 	display: inline;
 	color: #ddd !important;

@@ -1,7 +1,373 @@
 @charset "UTF-8";
 /* CSS Document */
 
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width: 100%;
+}
+
+/* Default layout */
+.gridContainer {
+	position: relative;
+}
+.gridContainer,
+.modal-scaling {
+	width: 98%;
+	min-width: 768px;
+	max-width: 1280px;
+	margin: auto;
+}
+#header {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#branding {
+	clear: both;
+	float: left;
+	width: 16.667%;
+	display: block;
+	position: relative;
+}
+#mainnav {
+	clear: none;
+	float: left;
+	width: 36%;
+	display: block;
+}
+#search {
+	clear: none;
+	float: left;
+	width: 16.667%;
+	display: none;
+	position: relative;
+}
+#login {
+	clear: none;
+	float: right;
+	width: 46%;
+	display: block;
+}
+#progress {
+	clear: both;
+	float: left;
+	width: 100%;
+	display: block;
+}
+#title {
+	clear: both;
+	float: left;
+	padding: 10px 0;
+	width: 100%;
+	display: block;
+}
+#subhed {
+	clear: both;
+	float: left;
+	padding: 24px 10px 0;
+	width: 72.2222%;
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#title-links {
+	float: right;
+	padding: 2.5em 10px 0 0;
+	width: 27.7777%;
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+}
+#title-links .button {
+	font-size: 13px;
+}
+#listdetails {
+	clear: both;
+	float: left;
+	padding: 30px 0 20px;
+	width: 100%;
+	position: relative;
+}
+#listdetails ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 10px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+#listdetails ul li {
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	margin: 0;
+	padding: 0 10px 5px;
+	border-left: solid 1px #ccc;
+}
+.giftingwin table.friends-list td {
+	padding: 20px 10px;
+	border-top: dotted 1px #ccc;
+}
+#listdetails ul li:first-child {
+	border-left: none;
+}
+.giftingwin table.friends-list th {
+	padding-left: 10px;
+}
+.giftingwin table.friends-list th:first-child,
+.giftingwin table.friends-list td:first-child {
+	padding-left: 0;
+}
+#primary,
+#secondary,
+#tertiary {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#primary {
+	clear: both;
+	float: left;
+	width: 16.6666%;
+	display: block;
+	border: none;
+}
+#secondary {
+	clear: none;
+	float: left;
+	width: 66.6666%;
+	display: block;
+}
+#secondary > .content {
+	min-height: 500px;
+	position: relative;
+}
+#tertiary {
+	clear: none;
+	float: right;
+	width: 16.6666%;
+	display: block;
+	border: none;
+}
+#footer {
+}
+#footer .content {
+}
+/* layout adjustments for build list */
+#buildlist #secondary {
+	width: 83.1%;
+}
+#buildlist #tertiary {
+	display: none;
+}
+#buildlist #secondary > .content {
+	min-height: 455px;
+}
+
+/* layout adjustments for registry (and old #publist) */
+#publist #title {
+	width: 83.1%;
+}
+#registry #subhed,
+#publist #subhed {
+	width: 73.2610%;
+	padding-left: 10px;
+}
+#registry #title-links,
+#publist #title-links,
+#title .pubdate {
+	width: 26.738%;
+}
+#publist #title-links {
+	padding-top: 0;
+}
+#registry #title-links {
+	padding-top: 3em;
+}
+#title .pubdate {
+	float: right;
+	padding: 0 10px 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#publist #secondary {
+	width: 66.4333%;
+	min-height: 820px;
+}
+#publist #tertiary {
+	margin-top: -7.3em; /* shift up to title area */
+}
+/* container for primary and secondary columns on registry page */
+#listwrap {
+	width: 83.33%;
+	float: left;
+}
+#listwrap #primary {
+	width: 19.9998%;
+}
+#listwrap #secondary {
+	width: 80%;
+}
+#listwrap #title {
+	width: 100%;
+}
+/* layout adjustments for create my profile */
+#create-profile #subhed {
+	width: 30.02%;
+}
+#create-profile #primary {
+	width: 28%;
+}
+#create-profile #primary > .content {
+	padding-top: 20px;
+	padding-left: 48%;
+}
+#create-profile #secondary {
+	width: 52%;
+	margin-left: 20px;
+}
+/* layout adjustments for form page */
+.form-page #subhed {
+	width: 47.92%;
+	margin-left: 24%;
+	padding-left: 20px;
+	float: none;
+}
+.form-page #title .instruction {
+	margin-left: 26%;
+}
+.form-page #primary {
+	width: 24%;
+}
+.form-page #secondary {
+	width: 47.92%;
+	margin-left: 20px;
+}
+.form-page #tertiary {
+	width: 24%;
+}
+/* layout adjustments for text pages (3, 6, 3) */
+.text-page #subhed,
+.layout_3-6-3 #subhed {
+	margin-left: 24%;
+	padding-left: 20px;
+	float: none;
+}
+.text-page #title-links,
+.layout_3-6-3 #title-links {
+	padding: 0;
+}
+.text-page #primary,
+.layout_3-6-3 #primary {
+	width: 24%;
+}
+.text-page #secondary,
+.layout_3-6-3 #secondary {
+	width: 47.92%;
+	margin-left: 20px;
+}
+.text-page #tertiary,
+.layout_3-6-3 #tertiary {
+	width: 24%;
+}
+/* layout 2, 7, 3 */
+.layout_2-7-3 #subhed {
+	margin-left: 15.625%;
+	padding-left: 20px;
+	float: none;
+}
+.layout_2-7-3 #title-links {
+	padding: 0;
+}
+.layout_2-7-3 #primary {
+	width: 15.625%; /* 150px/960px */
+}
+.layout_2-7-3 #secondary {
+	width: 56.25%; /* 540px/960px */
+	margin-left: 20px;
+}
+.layout_2-7-3 #tertiary {
+	width: 23.958%; /* 230px/960px */
+}
+/* layout for home page */
+.home > .gridContainer {
+	width: 100%;
+}
+.home #primary {
+	float: none;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+.home #primary > .content {
+	width: 50%;
+	margin-left: 50%;
+	padding: 20px 8.3333% 20px 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.home #learn-more {
+	position: absolute;
+	bottom: 20px;
+	z-index: 300;
+}
+.home #secondary {
+	width: 100%;
+}
+.home #secondary > .content {
+	min-height: 0;
+	padding: 0;
+}
+.home #tertiary {
+	width: 100%;
+	position: relative;
+}
+.home #tertiary .content {
+	padding: 70px 0 35px;
+}
+.home #footer {
+	clear: both;
+	position: relative;
+}
+.home #footer .content {
+	padding: 35px 0 70px;
+}
+/* list intro modal position */
+#listintro-container {
+	left: 59%;
+}
+
+/* modal and modal-style windows */
+.nestedwin {
+	margin: 20px 16.6667% 40px;
+	padding: 30px 40px 0 40px;
+}
+.modal-box h2,
+.simplemodal-data h2 {
+	margin: 0 0 5px;
+}
+.nestedwin h2 {
+	margin: -30px -40px 0;
+}
+.nestedwin.giftingwin h2 {
+	margin-top: -10px;
+}
+
+
 /* general backgrounds, borders, colors ------ */
+html {
+	background: #fff;
+	height: 100%;
+}
 html,
 body {
 	background: #fff;
@@ -128,6 +494,9 @@ em.light1 {
 	font-size: 1.0769em;
 	width: 33.33%;
 	padding: 25px 0 0 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 #header #friendssearch input[type="text"] {
 	width: 90%;
@@ -1331,7 +1700,6 @@ li.list-search-no-results {
 	color: #333;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
-	margin: 0 0 5px;
 	padding: 10px 20px;
 	background-color: #f3f3f3;
 }
@@ -2218,11 +2586,8 @@ ul.info-balloons {
 .nestedwin {
 	background: #fff;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
-	margin: 20px 16.6667% 40px;
-	padding: 30px 40px 0;
 }
 .nestedwin h2 {
-	margin: -30px -40px 0;
 	padding: 10px 20px;
 }
 .nestedwin h3 {
@@ -2355,13 +2720,20 @@ select#shipping_country {
 	margin-top: 4em;
 }
 /* gifting path ----- */
+.nestedwin.giftingwin {
+	padding-top: 10px;
+}
+.giftingwin {
+	position: relative;
+}
 .giftingwin h3,
 .quiz-results h3 {
 	color: #000000;
 	font-size: 2.4615em;
 	font-weight: 300;
 	margin-top: .5em;
-	margin-bottom: 0px;
+	margin-bottom: 0;
+	padding-bottom: 0;
 	border-bottom: 0;
 }
 .giftingwin h3.icon {
@@ -2372,13 +2744,14 @@ select#shipping_country {
 }
 .giftingwin .prod {
 	line-height: 1.6923em;
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-right: 0;
 	margin-left: 0;
 	margin-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	background: #f5f5f5;
+	/*background: #f5f5f5;*/
+	border: 1px solid #e9e9e9;
 }
 .giftingwin .prod h3 {
 	font-size: 1.2308em;
@@ -2426,10 +2799,13 @@ select#shipping_country {
 }
 .infobox {
 	padding: 10px;
-	border: solid 1px #d9d9d9;
+	border: 1px solid #e9e9e9;
 }	
 .giftingwin .infobox {
+	line-height: 18px;
 	margin: 0 0 1em;
+	background: #fff6d2;
+	border: 1px solid #F0E7C4;
 }
 .giftingwin .infobox h3,
 .giftingwin .tabs h3  {
@@ -2440,10 +2816,10 @@ select#shipping_country {
 	text-align: left;
 }
 .giftingwin .prod,
-.giftingwin .infobox,
 .giftingwin .tabs,
 .giftingwin h3,
-.giftingwin #giftinglist {
+.giftingwin #giftinglist,
+#giftinghelp {
 	margin-right: 8.3333%;
 	margin-left: 8.3333%;
 }
@@ -2461,7 +2837,6 @@ select#shipping_country {
 .giftingwin ul.menu li.current a {
 	color: #000;
 }
-.giftingwin #step1:after, /* example only */
 .giftingwin .complete:after {
 	content: '\F058';
 	font-family: 'fontawesome';
@@ -2549,6 +2924,125 @@ select#shipping_country {
 	color: #333;
 	font-size: 0.9231em;
 	line-height: 1.4583em;
+}
+
+/* video help (collapsible) ------ */
+#giftinghelp {
+	background: #5dc7ce;
+	border: 1px solid #42BDC6;
+	border-radius: 0 0 5px 5px;
+}
+#giftinghelp .collapsible {
+	font-size: 1.231em;
+	font-weight: 300;
+	line-height: 1.5em;
+	color: #184E52;
+	margin: 0;
+	padding: 7px 10px;
+}
+.coll-closed:before {
+	content:'\F105';
+	font-family:'fontawesome';
+	margin-right: 5px;
+}
+.coll-open:before {
+	content:'\F107';
+	font-family:'fontawesome';
+	margin-right: 5px;
+}
+#giftinghelp em {
+	font-weight: 600;
+	font-style: normal;
+	display: block;
+	color: #fff;
+}
+#giftinghelp .collapsible-content {
+	background: #444;
+	margin: 0 -1px -1px;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	border-radius: 0 0 5px 5px;
+}
+.collapsible-content .close {
+	color: #fff;
+	opacity: .7;
+	text-decoration: none;
+	font-size: 1.231em;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.collapsible-content .close span {
+	display: none;
+}
+.collapsible-content .close:before {
+	content:'\F00D';
+	font-family:'fontawesome';
+}
+
+/* help callout */
+.giftingwin .help-callout {
+	position: absolute;
+	top: 35px;
+	right: -2px;
+}
+.help-callout {
+	padding: 0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.help-callout a {
+	display: block;
+	margin: 0;
+	padding: 3px 12px;
+	font-size: 1em;
+	line-height: 2em;
+	color: #fff;	
+	background-color: #3BB8C0;
+}
+.help-callout a:hover {
+	text-decoration: none;
+	background-color: #222;
+}
+.help-callout a .fa {
+	vertical-align: middle;
+	line-height: .75em;
+}
+.help-callout strong {
+	font-weight: bold;
+}
+
+/* video help (modal)*/
+#giftingvid-container.simplemodal-container {
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+#giftingvid-container a.ss-icon {
+	color: #fff;
+}
+#giftingvid.simplemodal-data {
+	background-color: #3BB8C0;
+	width: 620px;
+}
+#giftingvid h2 {	
+	font-size: 2em;
+	font-weight: 300;
+	letter-spacing: 0;
+	text-transform: none;
+	text-align: center;
+	padding-top: 15px;
+	border-bottom: none;
+	color: #fff;
+	background: transparent;
+}
+#giftingvid h2 strong {
+	color: #fff;
+}
+#giftingvid .content {
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 15px;
 }
 
 /* tips (yellow hints) ----- */
@@ -3763,24 +4257,6 @@ background: #FFF;
 #buildlist #add-new .prod-category,
 #buildlist #add-new .prod-links {
 	margin-left: 14%;
-}
-@media only screen and (max-width: 1000px) {
-	#buildlist .prod-desc {
-		padding-left: 16%;
-	}
-	#buildlist .prod-cat-name-rating {
-		width: 60.5%;
-	}
-	#buildlist .prod-when-own {
-		width: 39.5%;
-	}
-	#buildlist .prod-note {
-		margin-right: 39.5%;
-	}
-	#buildlist #add-new .prod-category,
-	#buildlist #add-new .prod-links {
-		margin-left: 16%;
-	}
 }
 
 /* public list page colors (ID #publist is legacy) ---- */
@@ -5313,7 +5789,7 @@ a.bt-gift {
 	border-top: none;
 	clear: both;
 	margin-bottom: -1px;
-	padding: 30px 20px 20px;
+	padding: 20px 20px 20px;
 	position: relative;
 	top: -1px;
 }
@@ -5527,4 +6003,193 @@ ul.menu li a:hover {
 .addto-callout a {
 	color: #995e9a;
 	font-weight: bold;
+}
+
+/* media queries ------------ */
+
+@media only screen and (min-width: 1245px) {
+/* list intro modal position */
+	#listintro-container {
+		left: 64%;
+	}
+}
+
+@media only screen and (min-width: 1232px) {
+	.home #feature {
+		background-size: cover;
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+	.home #primary > .content {
+		width: 58.33333%;
+		margin-left: 41.66667%;
+	}
+	.nestedwin {
+		margin-right: 8.33%;
+		margin-left: 8.33%;
+	}
+}
+
+@media only screen and (max-width: 920px) {
+	#branding {
+		width: 100%;
+		border-bottom: 1px solid #d9d9d9;
+	}
+	#mainnav {
+		width: 45%;
+	}
+	#login {
+		width: 55%;
+	}
+	.gridContainer,
+	.modal-scaling {
+		width: 100%;
+	}
+	 #mainnav a {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	#login > ul {
+		margin: 0 20px 0 0;
+		padding: 15px 0;
+	}
+	#login #startlist {
+		left: 10px;
+	}
+	#registry .prod-desc {
+		padding-left: 110px;
+	}
+	#registry .prod-cat-name-rating {
+		width: 100%;
+		float: none;
+		padding-right: 40px;
+	}
+	#registry .prod-when-own {
+		padding-left: 0;
+		padding-bottom: 1.5em;
+		width: 100%;
+		float: none;
+	}
+	#registry .prod-note {
+		width: 100%;
+	}
+	#header #friendssearch {
+		width: 45%;
+		padding-top: 10px;
+		padding-bottom: 15px;
+	}
+	.home #feature {
+		background-position: 35%;
+	}
+	.home #primary h1 {
+		font-size: 3em;
+	}
+	.home #primary > .content {
+		width: 64.33333%;
+		margin-left: 35.66667%;
+	 }
+	 .home #secondary {
+		font-size: 1em;
+	}
+	.home #tertiary .col:first-child {
+		padding-left: 8.3333%;
+	}
+	.home #tertiary .col {
+		padding-right: 8.3333%;
+	}
+	.home #footer p {
+		margin-left: 12.5%;
+		margin-right: 12.5%;
+	}
+	 #listintro-container {
+		left: 45%;
+	 }
+	 div#listintro-container.simplemodal-container {
+		z-index: 4002 !important;
+	 }
+	 #title h2 {
+		white-space:normal;	
+	 }
+	.nestedwin {
+		margin-right: 2%;
+		margin-left: 2%;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.nestedwin h2 {
+		margin-top: -30px;	
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+	.nestedwin .button-row {
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+	.text-page #subhed,
+	.layout_3-6-3 #subhed {
+		margin-left: 12.5%;
+	}
+	.text-page #primary,
+	.layout_3-6-3 #primary,
+	.text-page #tertiary,
+	.layout_3-6-3 #tertiary {
+		width: 12.5%;
+	}
+	.text-page #secondary,
+	.layout_3-6-3 #secondary {
+		width: 72.92%;
+	}
+	.layout_2-7-3 #subhed {
+		margin-left: 20%;
+	}
+	.layout_2-7-3 #primary {
+		width: 20%; 
+	}
+	.layout_2-7-3 #secondary {
+		width: 76%; 
+	}
+	.layout_2-7-3 #tertiary {
+		display: none; 
+	}
+}
+
+/* position Learn More */
+@media only screen and (max-height: 650px) {
+  .home #learn-more {
+	  bottom: 120px;
+  }
+  .home a#learn-more {
+	  background-color:rgba(255,255,255,.7);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+	.giftingwin .prod,
+	.giftingwin .tabs,
+	.giftingwin h3,
+	.giftingwin #giftinglist,
+	#giftinghelp {
+		margin-right: 4.15%;
+		margin-left: 4.15%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	#buildlist .prod-desc {
+		padding-left: 16%;
+	}
+	#buildlist .prod-cat-name-rating {
+		width: 60.5%;
+	}
+	#buildlist .prod-when-own {
+		width: 39.5%;
+	}
+	#buildlist .prod-note {
+		margin-right: 39.5%;
+	}
+	#buildlist #add-new .prod-category,
+	#buildlist #add-new .prod-links {
+		margin-left: 16%;
+	}
 }

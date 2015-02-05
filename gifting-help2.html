@@ -21,29 +21,6 @@
 <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
 <!-- jquery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<!-- simple modal -->
-<script src="js/jquery.simplemodal.min.js"></script>
-<script type="text/javascript">
-	jQuery(function ($) {
-   
-   	$(document).ready(function() {
-   		$('#giftingvid').modal({
-			  	containerId:'giftingvid-container',
-			  	closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>'
-				});			 
-			return false;
-	});
-   
-	// Load modal on click
-	$('#helpvid1').click(function (e) {
-		  $('#giftingvid').modal({
-			  containerId:'giftingvid-container',
-			  closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
-			  });
-		  return false;
-		});
-	});	
-</script>
 <!-- allow saving state of tabs -->
 <script src="js/jquery.cookie.js"></script>
 <!-- tabs -->
@@ -78,6 +55,28 @@
 	$(document).ready(function(){
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
+</script>
+<!-- collapsible panel -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'coll-closed',
+    	cssOpen: 'coll-open',
+		speed:200
+    });
+	
+	function closeColl() {
+		$('.collapsible').collapsible('close');
+	}
+
+	$('#close-coll').click(function(event) {
+		event.preventDefault();
+		closeColl();
+	});
+	
+  });
 </script>
 <link href="css/boilerplate.css" rel="stylesheet">
 
@@ -132,14 +131,21 @@
 <!-- body area ***** -->
 <div class="gridContainer clearfix" id="">
 	<div class="nestedwin giftingwin clearfix">
+		<h2>Angie Schiavoni’s Baby Registry</h2>
         
-   		<h3 class="icon">Give [Angie] a Gift</h3>
-		
-        <!-- help video link -->
-        <div class="help-callout">
-        	<a href="#" id="helpvid1">Get video help: <i class="fa fa-2x fa-play-circle-o"></i> <strong>How to Gift</strong></a>
+         <!-- help video link -->
+        <div id="giftinghelp">
+          <p class="center collapsible coll-closed">Need help? Watch now: <em><i class="fa fa-lg fa-play-circle-o"></i> How to Gift</em></p>
+          <div class="collapsible-content" style="display: none;">
+          <!-- video embed ***** -->
+          <iframe src="//player.vimeo.com/video/117741451?color=874789" width="500" height="305" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <!-- / video embed ***** -->
+          <a href="#" class="close" id="close-coll" title="close panel"><span>Close</span></a>
+          </div>
         </div>
         
+		<h3 class="icon">Give Angie a Gift</h3>
+		        
 		<!-- product -->
 		<div id="" class="prod clearfix">
 			<div class="prod-thumb"> <img src="assets/products/amazon/41r6iRzjKQL._SL75_.jpg" alt=""> </div>
@@ -148,7 +154,7 @@
 				<h3><a target="_blank" href="#prodlink">Aveeno Baby Wash &amp; Shampoo, 18  Ounce</a></h3>
 				<div class="prod-when-own">
 					<div class="price"> <strong>$39.99</strong></div>
-					<div class="own"> [Angie] wants 1 of these </div>
+					<div class="own"> <strong>Wants</strong> 1 of these </div>
 				</div>
 			</div>
 		</div>
@@ -158,7 +164,7 @@
 			<form>
 				<h3 id="step1"><strong>Step 1</strong> Enter your info</h3>
 				<div class="tabbody label-infield">
-				  <p class="center">Please provide your name and email so we can send confirmations to you and [Angie].</p>
+				  <p class="center">Please provide your name and email so we can send confirmations to you and the gift recipient.</p>
 				  <fieldset>
 						<p>
 							<label for="user_realname">First and last name</label>
@@ -229,19 +235,7 @@
 	</div>
 </div>
 <!-- end body area --> 
-  <!-- modal window ************ -->
-      <div id="giftingvid" class="modal-win">
-        <h2>New to gifting? Watch now: <strong>How to Gift</strong></h2>
-        <!-- modal window content -->
-        <div class="content">
-          <!-- video embed ***** -->
-          <iframe src="//player.vimeo.com/video/117741451?color=874789" width="500" height="305" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          <!-- / video embed ***** -->
-          <p></p>
-        </div>
-        <!-- end modal window content --> 
-      </div>
-  <!-- /end modal window ************ --> 
+        
 <!-- Google Analytics -->
 </body>
 </html>

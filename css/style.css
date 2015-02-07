@@ -4660,6 +4660,7 @@ a.bt-gift:hover {
 #registry .prod-note {
 	width: 60%;
 	padding-right: 10px;
+	clear: left;
 }
 #registry #tertiary p a,
 #registry #tertiary span a {

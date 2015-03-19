@@ -29,6 +29,9 @@
 .quiz-results {
 	min-height:377px;
 }
+#quiz-modal {
+	max-height: 560px;
+}
 #quiz-modal.simplemodal-data,
 .quiz-modal.simplemodal-data {
 	width: 821px;

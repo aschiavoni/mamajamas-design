@@ -107,7 +107,7 @@
     <h3>Your baby gear recommendations <em>(based on your quiz results)</em></h3>
     <p class="intro">Add any products to your registry that look interesting. You can change or delete them later.</p>
     <div id="listcontrols" class="clearfix">
-      <div class="listsort"><a class="button bt-color" href="#"><span class="ss-plus"></span>Add All</a> </div>
+            <div class="listsort"><a class="button bt-color disabled" href="#"><span class="ss-plus"></span>Add All</a> </div>
       <div class="listsort">Categories: 
         <!-- drop-down menu -->
         <div class="choicedrop"> <a href="#">All <span class="ss-dropdown"></span></a>
@@ -133,7 +133,7 @@
       </div>
     </div>
     <!-- product list ***** -->
-    <div class="prodlist">
+    <div class="prodlist" style="overflow: hidden;">
       <h4 id="priority-high-hed" class="priority priority-high collapsible"><strong>Must-have</strong></h4>
       <!-- "must-have" content ********* -->
       <div class="priority-high collapsible-content"> 
@@ -378,8 +378,17 @@
         
         <!-- end product listing ***** --> 
       </div>
+      <!-- loading overlay -->
+      <div class="loading">
+          <h1>All recommendations have been added to your registry.</h1>
+          <p>
+          <span class="ss ss-check"></span>
+          </p>
+	  </div>
+      <!-- end loading overlay -->
     </div>
     <!-- end product list ***** --> 
+    
   </div>
   <!-- end modal window content -->
   <div class="button-row clearfix"> 

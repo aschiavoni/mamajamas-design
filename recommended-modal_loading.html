@@ -1,0 +1,164 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mamajamas : Quiz</title>
+<meta name="description" content="">
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- for Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114.png">
+<!-- for iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72.png">
+<!-- for iPhone: -->
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57.png">
+<!-- jquery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- in-field form labels (jquery plugin from doug neiner) -->
+<script src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
+	});
+</script>
+<!-- simple modal -->
+<script src="js/jquery.simplemodal.min.js"></script>
+<script type="text/javascript">
+	jQuery(function ($) {
+	// Load modal on page load
+		$(window).load(function(){
+			$('#quiz-modal').modal({
+				closeHTML:'<a class="bt-close ss-icon" href="#">Close</a>',
+				position:['7%', null]
+				});			 
+			return false;
+		});
+	});
+</script>
+<!-- collapsible panels -->
+<script src="js/jquery.collapsible.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    //collapsible management
+    $('.collapsible').collapsible({
+      	cssClose: 'ss-directright',
+    	cssOpen: 'ss-dropdown',
+		defaultOpen: 'priority-high-hed,priority-med-hed',
+		bind: 'click',
+		speed:200
+    });
+  });
+</script>
+<link href="css/boilerplate.css" rel="stylesheet">
+<link href="webfonts/ss-standard.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/quiz.css" rel="stylesheet">
+<script src="webfonts/ss-standard.js"></script>
+<script src="js/modernizr-dev.js"></script>
+</head>
+<body>
+<!-- header area ***** -->
+<div id="hed-wrap">
+  <div class="gridContainer clearfix">
+    <div id="header">
+      <div id="branding">
+        <h1>Mamajamas</h1>
+      </div>
+      <div id="search">
+        <input type="text" placeholder="Search">
+      </div>
+      <div id="login">
+        <ul>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header area --> 
+<!-- body area ***** -->
+<div class="gridContainer clearfix">
+  <div id="primary">
+    <div class="content"></div>
+  </div>
+  <div id="secondary">
+    <div class="content"> </div>
+  </div>
+  <div id="tertiary"> </div>
+  <div id="footer">
+    <div class="content"></div>
+  </div>
+</div>
+<!-- end body area --> 
+
+<!-- modal window box -->
+<div id="quiz-modal" class="modal-win quiz-results">
+  <h2>Recommendations</h2>
+  <!-- modal window content -->
+  <div class="content">
+    <h3>Your baby gear recommendations <em>(based on your quiz results)</em></h3>
+    <p class="intro">Add any products to your registry that look interesting. You can change or delete them later.</p>
+    <div id="listcontrols" class="clearfix">
+      <div class="listsort"><a class="button bt-color disabled" href="#"><span class="ss-plus"></span>Add All</a> </div>
+      <div class="listsort">Categories: 
+        <!-- drop-down menu -->
+        <div class="choicedrop"> <a href="#">All <span class="ss-dropdown"></span></a>
+          <ul style="display:none; width:7.5em;">
+            <li class="cat-selected"> <a href="#all">All</a> </li>
+            <li class=""> <a href="#bathing">Bathing</a> </li>
+            <li class=""> <a href="#changing">Changing</a> </li>
+            <li class=""> <a href="#clothing">Clothing</a> </li>
+            <li class=""> <a href="#decorating">Decorating</a> </li>
+            <li class=""> <a href="#expecting">Expecting</a> </li>
+            <li class=""> <a href="#feeding">Feeding</a> </li>
+            <li class=""> <a href="#getting-around">Getting Around</a> </li>
+            <li class=""> <a href="#nursing">Nursing</a> </li>
+            <li class=""> <a href="#playing">Playing</a> </li>
+            <li class=""> <a href="#potty-training">Potty Training</a> </li>
+            <li class=""> <a href="#reading">Reading</a> </li>
+            <li class=""> <a href="#sleeping">Sleeping</a> </li>
+            <li class=""> <a href="#staying-healthy">Staying Healthy</a> </li>
+            <li class=""> <a href="#traveling">Traveling</a> </li>
+          </ul>
+        </div>
+        <!-- /drop-down menu --> 
+      </div>
+    </div>
+    <!-- product list ***** -->
+    <div class="prodlist">
+      <div class="loading">
+			<h1>Please wait while we get your recommendations...</h1>
+			<p>
+			<img alt="Loader" src="images/loader36-f.gif" />
+			</p>
+	  </div>
+    </div>
+    <!-- end product list ***** --> 
+  </div>
+  <!-- end modal window content -->
+  <div class="button-row clearfix"> 
+    <!-- instructions -->
+    <p><a class="skip" href="#">Skip this</a> and build my registry.</p>
+    <!-- previous and next buttons -->
+    <div class="col50 float-l left"> <a id="bt-prev" class="button disabled" href="#"><span class="ss-navigateleft"></span>Previous</a> </div>
+    <div class="col50 float-r right"> <a href="#" class="button bt-color disabled" id="bt-next">Build my Registry<span class="ss-navigateright"></span></a></div>
+  </div>
+  <!-- quiz progress bar -->
+  <div title="Step 9 of 9" id="q-progress">
+    <div class="bar"></div>
+  </div>
+  <!-- end quiz progress bar --> 
+</div>
+<!-- end modal window box --> 
+
+<!-- Google Analytics -->
+</body>
+</html>

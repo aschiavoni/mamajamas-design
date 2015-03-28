@@ -92,9 +92,14 @@ img, object, embed, video {
 #listdetails {
 	clear: both;
 	float: left;
-	padding: 30px 0 20px;
+	padding: 20px 0 20px;
 	width: 100%;
 	position: relative;
+}
+#listdetails > p {
+	margin: 0 10px 10px;
+	padding: 0 10px 5px;
+	border-bottom: dotted 1px #bbb;
 }
 #listdetails ul {
 	list-style-type: none;
@@ -110,7 +115,7 @@ img, object, embed, video {
 	-webkit-flex-grow: 1;
 	margin: 0;
 	padding: 0 10px 5px;
-	border-left: solid 1px #ccc;
+	border-left: dotted 1px #bbb;
 }
 .giftingwin table.friends-list td {
 	padding: 20px 10px;
@@ -157,10 +162,7 @@ img, object, embed, video {
 	display: block;
 	border: none;
 }
-#footer {
-}
-#footer .content {
-}
+
 /* layout adjustments for build list */
 #buildlist #secondary {
 	width: 83.1%;
@@ -3604,10 +3606,15 @@ li#print-link a:hover {
 	font-size: 0.9231em;
 	line-height: 1.4583em;
 }
-#listdetails em {
+#listdetails em {	
 	color: #999;
-	display: block;
 	font-style: normal;
+}
+#listdetails > p em {
+	margin-right: 5px;
+}
+#listdetails li em {
+	display: block;
 	margin-bottom: .5em;
 }
 #listdetails .fa,
@@ -3899,16 +3906,9 @@ form.label-infield .prod-desc fieldset p label {
 	font-weight: 400;
 	color: #777;
 }
-.when,
-.own,
-.priorityset,
-.gifting {
+.prod-when-own {
 	color: #777;
 	padding-right: 20px;
-}
-.own strong {
-	font-weight: normal;
-	color: #000;
 }
 .prod-links {
 	margin: 7px 0;
@@ -4388,7 +4388,7 @@ background: #FFF;
 	border-top: none;
 }
 #publist .prod-when-own strong {
-	color: #666;
+	color: #222;
 }
 #publist .when,
 #publist .own,
@@ -4403,6 +4403,13 @@ background: #FFF;
 #publist .own {
 	margin-right: 0;
 	padding-right: 10px;
+}
+#publist .own ul,
+#publist .own ul li {
+	list-style-type: none;
+}
+#publist .own li {
+	display: inline;
 }
 #publist .gift {
 	padding-left: 10px;
@@ -4441,23 +4448,26 @@ background: #FFF;
 }
 #publist #tertiary p a,
 #publist #tertiary span a {
-	color: #93b9ce;
-}
-#publist #tertiary.light p a,
-#publist #tertiary.light span a {
 	color: #337BA3;
+}
+#publist #tertiary p a.button {
+	color: #fff;
 }
 a.bt-gift {
 	display: inline-block;
-	color: #5BAA5D;
-	background: url(../images/icon_gift.png) no-repeat 4px 0;
-	background-size: 19px 100px;
-	padding-left: 26px;
+	color: #fff;
+	background: #b1b1b1 url(../images/icon_gift-w.png) no-repeat 15px 2px;
+	background-size: 19px 20px;
+	padding-right: 15px;
+	padding-left: 39px;
+	border-radius: 4px;
+}
+.publist a.bt-gift {
+	background-color: #6BB36E;
 }
 a.bt-gift:hover {
 	text-decoration: none;
-	color: #000;
-	background-position: 4px -80px;
+	color: #FFFFFF;
 }
 /* follow button ------- */
 #bt-follow {
@@ -4561,6 +4571,31 @@ a.bt-gift:hover {
 	position: relative;
 	top: -10px;
 	margin-bottom: 0;
+}
+/* link sidebar module  ------ */
+#module-link {
+	font-size: 11px;
+	margin-bottom: 7px;
+	border-top: solid 1px #ccc;
+}
+#module-link h3 {
+	margin-bottom: .26em;
+	color: #000;
+}
+#module-link .content {
+	padding: 10px 0;
+}
+input[type=text].mjlink {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	width:100%;
+	margin: .35em 0;
+}
+input[type=text].mjlink:focus,
+input[type=text].mjlink:active,
+input[type=text].mjlink.copy {
+	background: ;
 }
 /* friends sidebar module  ------ */
 #module-friends {
@@ -4726,14 +4761,45 @@ a.bt-gift:hover {
 	width: 40%;
 	float: right;
 }
-#registry .price a.bt-gift {
-	margin-left: 4px;
+#registry .prod-when-own strong {
+	color: #000;
 }
-#registry .price strong {
-	color: #222;
+#registry a.bt-gift {
+	padding-top: 2px;
+	padding-bottom: 1px;
 }
 #registry .gift {
+	margin-top: -3px;
+	margin-bottom: 2px;
 	margin-left: -4px;
+}
+.merchant {
+	display: inline-block;
+	text-indent: -9999px;
+	overflow: hidden;
+	margin-left: 5px;
+}
+.merchant.amazon {
+    width: 53px;
+	height: 17px;
+	background: url(../images/logo_amazon-s.png) no-repeat 0 1px;
+}
+#registry .own ul,
+#registry .own li {
+	list-style-type: none;
+	margin:0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+#registry .own li {
+	display: inline;
+}
+#registry .own li:first-child {
+	margin-right: 11px;
+}
+#registry .when strong {
+	font-weight: normal;
 }
 #registry .bt-add,
 .quiz-results .bt-add {
@@ -4753,11 +4819,10 @@ a.bt-gift:hover {
 }
 #registry #tertiary p a,
 #registry #tertiary span a {
-	color: #93b9ce;
-}
-#registry #tertiary.light p a,
-#registry #tertiary.light span a {
 	color: #337BA3;
+}
+#registry #tertiary p a.button {
+	color: #fff;
 }
 #registry #tertiary #module-friends ul a {
 	color: #aaa;
@@ -5788,7 +5853,7 @@ input[type=text]#field-search {
 	background-image: url(../images/icon_rating-stars@2x.png);
 }
 a.bt-gift {
-	background-image: url(../images/icon_gift@2x.png);
+	background-image: url(../images/icon_gift-w@2x.png);
 }
 .privacy-status span.icon-globe,
 .privacy-status span.icon-bird,

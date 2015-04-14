@@ -45,6 +45,17 @@
   	$("label").inFieldLabels({ fadeDuration:200,fadeOpacity:.55 });
 	});
 </script>
+<script type="text/javascript" src="js/jquery.tooltipster.js"></script>
+<script>
+    $(document).ready(function() {
+    	$('.tooltipster').tooltipster({
+			position:'left',
+			maxWidth:180,
+			speed:200
+		});
+    });
+    </script>
+<link href="css/tooltipster.css" rel="stylesheet">
 <link href="css/boilerplate.css" rel="stylesheet">
 <link href="webfonts/ss-social-circle.css" rel="stylesheet" />
 <link href="webfonts/ss-standard.css" rel="stylesheet">
@@ -241,7 +252,7 @@
                   <!-- end product category, name, rating --> 
                   <!-- when to buy, need vs. have -->
                   <div class="prod-when-own">
-                  <div class="gift dropdown"> <a class="bt-gift" href="#" data-toggle="dropdown"><span>Gifted by Joan and Oliver</span><i class="caret"></i></a>
+                  <div class="gift dropdown"> <a class="bt-gift" href="#" data-toggle="dropdown"><span>Gift details</span><i class="caret"></i></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                         <li><a href="#"><i class="fa fa-check"></i> <strong>Verify:</strong> Item received</a></li>
                         <li><a href="#"><i class="fa fa-ban"></i> <strong>Reset:</strong> Item not gifted</a></li>
@@ -532,9 +543,11 @@
         </form>
       </div>
       <div id="module-link">
-        <div class="content">
-          <h3>Mamajamas unique link</h3>
-          <p><input class="mjlink" type="text" value="http://www.mamajamas.com/angie"><a href="#" class="button">Copy</a></p>
+        <div class="content clearfix">
+          <h3>Registry link</h3>
+          <span class="ss-standard ss-info tooltipster" title="The web address of your Mamajamas baby gear registry, for bookmarking and sharing."></span>
+          <div class="mjlink"><div class="tooltipster" title="Select and copy to your clipboard for sharing">http://www.mamajamas.com/angie</div> <a href="http://www.mamajamas.com/angie" class="mjlink fa tooltipster" title="Visit your public list.">&#xf08e;</a></div>
+          
         </div>
       </div>
       <div id="module-friends">

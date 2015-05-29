@@ -456,6 +456,9 @@ em.light {
 em.light1 {
 	font-style: normal;
 }
+.margintop {
+	margin-top: 1em !important;
+}
 .margintop0 {
 	margin-top: 0 !important;
 }
@@ -2099,10 +2102,10 @@ li.list-search-no-results {
 	padding-left: 30px;
 }
 #bookmark-modal-help .help-label {
-	background : #5BB0CE;
-	background : rgba(91, 176, 206, 1);
-	box-shadow : 1px 2px 2px rgba(0, 0, 0, 0.2);
- filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=2, Color='#000000');
+	background: #5BB0CE;
+	background: rgba(91, 176, 206, 1);
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+ 	-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=2, Color='#000000')";
 	position: absolute;
 	font-size: 1.231em;
 	padding: 7px 15px;
@@ -2679,6 +2682,11 @@ ul.info-balloons {
 .nestedwin .button {
 	font-size: 1em;
 }
+.nestedwin button.bt-lg,
+.nestedwin .button.bt-lg {
+	font-size: 1.2307em;
+	padding-bottom: .35em;
+}
 .mjform form {
 	padding: 0 20px;
 }
@@ -2863,6 +2871,9 @@ select#shipping_country {
 	margin-right: 0;
 	padding-right: 0;
 }
+.giftingwin .prod-cat-name-rating {
+	width: 70%;
+}
 .infobox {
 	padding: 10px;
 	border: 1px solid #e9e9e9;
@@ -2880,6 +2891,25 @@ select#shipping_country {
 	margin: 0 0 1em;
 	padding: 0;
 	text-align: left;
+}
+.giftingwin .threecol {
+	margin: 1em 0 0;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	align-items: stretch;
+	-webkit-align-items: stretch;
+}
+.giftingwin .threecol .button {
+	width: 31%;
+	padding-top: .7em;
+	padding-bottom: .6em;
+	vertical-align:middle;
+}
+.giftingwin .button strong {
+	font-weight: 400;
+	font-size: 1.2307em;
 }
 .giftingwin .prod,
 .giftingwin .tabs,
